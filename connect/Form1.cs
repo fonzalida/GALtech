@@ -27,7 +27,7 @@ namespace connect
             string contrasena = txtContraseña.Text;
             string datos = "";
 
-            string cadenaConexion = "server = " + servidor + "; port = " + puerto + "; user = id= " + usuario + "; password = " + contrasena + "; database = mysql;";
+            string cadenaConexion = "server=" + servidor + ";port=" + puerto + ";user id=" + usuario + ";password=" + contrasena + ";database=biosgastro;";
 
             MySqlConnection conexionBD = new MySqlConnection(cadenaConexion);
 
@@ -50,6 +50,11 @@ namespace connect
             }
 
             MessageBox.Show(datos);
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
 
         }
     }
