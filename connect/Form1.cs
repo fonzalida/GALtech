@@ -1,12 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace connect
@@ -36,7 +29,7 @@ namespace connect
 
                 MySqlDataReader reader = null;
 
-                MySqlCommand cmd = new MySqlCommand("SHOW DATABASES", conexionBD);
+                MySqlCommand cmd = new MySqlCommand("SHOW TABLES", conexionBD);
                 reader = cmd.ExecuteReader();
 
                 while (reader.Read())
