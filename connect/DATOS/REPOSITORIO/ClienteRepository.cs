@@ -3,35 +3,35 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using CoolSoft.DATOS.ENTIDADES
+using CoolSoft.DATOS.ENTIDADES;
 
 namespace CoolSoft.DATOS.REPOSITORIO
 {
-
     static class ClienteRepository
     {
         static void agregar(Cliente p)
         {
-            String query = "Insert into Persona (IdCLiente, nombre, domicilio, telefono) values ("p.IdCliente+","+p.nombre+","+p.Domicilio+","+p.Telefono+")";
+            String query = "Insert into Persona (IdCliente, nombre, domicilio, telefono) values ("+p.IdCliente+","+p.nombre+ "," +p.Domicilio+ "," +p.Telefono+")";
 
             Conexion conexion = new Conexion();
-            conexion.QueryInsert(query); 
+            conexion.QueryInsert(query);
         }
 
         static void eliminar(Cliente p)
         {
-            String query = "Delete from Persona where IdCliente = "+p.IdCliente;
+            String query = "Delete from Persona where dni = " + p.IdCliente;
 
-            Conexion conexion=new Conexion();
+            Conexion conexion = new Conexion();
             conexion.QueryInsert(query);
         }
 
-        static List<Cliente> ListarTodos(Cliente p)
+        static void/*List<Persona>*/ ListarTodos(Cliente p)
         {
             String query = "";
 
-            Conexion conexion=new Conexion();
+            Conexion conexion = new Conexion();
             conexion.QuerySelect(query);
+
         }
     }
 }

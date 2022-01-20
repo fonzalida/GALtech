@@ -12,7 +12,7 @@ namespace CoolSoft.DATOS.REPOSITORIO
     {
         static void agregar(Persona p)
         {
-            String query = "Insert into Persona (dni, nombre, apellido) values ("p.dni+","+p.nombre+","+p.apellido+")";
+            String query = "Insert into Persona (dni, nombre, apellido) values ("+p.dni+","+p.nombre+","+p.apellido+")";
 
             Conexion conexion = new Conexion();
             conexion.QueryInsert(query); 
@@ -26,12 +26,13 @@ namespace CoolSoft.DATOS.REPOSITORIO
             conexion.QueryInsert(query);
         }
 
-        static List<Persona> ListarTodos(Persona p)
+        static void/*List<Persona>*/ ListarTodos(Persona p)
         {
             String query = "";
 
             Conexion conexion=new Conexion();
             conexion.QuerySelect(query);
+            
         }
     }
 }

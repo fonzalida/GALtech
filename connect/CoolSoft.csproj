@@ -51,7 +51,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DATOS\Conexion.cs" />
+    <Compile Include="DATOS\ENTIDADES\Cliente.cs" />
     <Compile Include="DATOS\ENTIDADES\Persona.cs" />
+    <Compile Include="DATOS\REPOSITORIO\ClienteRepository.cs" />
     <Compile Include="DATOS\REPOSITORIO\PersonaRepository.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
