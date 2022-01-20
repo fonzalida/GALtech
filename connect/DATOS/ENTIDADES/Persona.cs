@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace CoolSoft.DATOS.ENTIDADES
 {
-    class Persona
+    public class Persona
     {
+       public int dni {get;set;}
+       public String nombre {get;set;}
+       public String apellido {get;set;}
+    
+
+    public Persona() { }
     }
 }
