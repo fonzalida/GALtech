@@ -12,7 +12,7 @@ namespace CoolSoft.DATOS.REPOSITORIO
     {
         static void agregar(Persona p)
         {
-            String query = "Insert into Persona (dni, nombre, apellido) values ("+p.dni+","+p.nombre+","+p.apellido+")";
+            String query = "Insert into persona (dni, nombre, apellido) values ("+p.dni+","+p.nombre+","+p.apellido+")";
 
             Conexion conexion = new Conexion();
             conexion.QueryInsert(query); 
@@ -20,7 +20,7 @@ namespace CoolSoft.DATOS.REPOSITORIO
 
         static void eliminar(Persona p)
         {
-            String query = "Delete from Persona where dni = "+p.dni;
+            String query = "Delete from persona where dni = "+p.dni;
 
             Conexion conexion=new Conexion();
             conexion.QueryInsert(query);

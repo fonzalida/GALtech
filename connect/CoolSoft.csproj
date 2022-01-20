@@ -52,9 +52,21 @@
   <ItemGroup>
     <Compile Include="DATOS\Conexion.cs" />
     <Compile Include="DATOS\ENTIDADES\Cliente.cs" />
+    <Compile Include="DATOS\ENTIDADES\Material.cs" />
+    <Compile Include="DATOS\ENTIDADES\Orden.cs" />
+    <Compile Include="DATOS\ENTIDADES\Parte_Orden.cs" />
     <Compile Include="DATOS\ENTIDADES\Persona.cs" />
+    <Compile Include="DATOS\ENTIDADES\Tecnico.cs" />
+    <Compile Include="DATOS\ENTIDADES\Tecnico_Orden.cs" />
+    <Compile Include="DATOS\ENTIDADES\Titular.cs" />
     <Compile Include="DATOS\REPOSITORIO\ClienteRepository.cs" />
+    <Compile Include="DATOS\REPOSITORIO\MaterialRepository.cs" />
+    <Compile Include="DATOS\REPOSITORIO\OrdenRepository.cs" />
+    <Compile Include="DATOS\REPOSITORIO\ParteOrdenRepository.cs" />
     <Compile Include="DATOS\REPOSITORIO\PersonaRepository.cs" />
+    <Compile Include="DATOS\REPOSITORIO\TecnicoOrdenRepository.cs" />
+    <Compile Include="DATOS\REPOSITORIO\TecnicoRepository.cs" />
+    <Compile Include="DATOS\REPOSITORIO\TitularRepository.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -7,25 +7,25 @@ using CoolSoft.DATOS.ENTIDADES;
 
 namespace CoolSoft.DATOS.REPOSITORIO
 {
-    static class ClienteRepository
+    static class TitularRepository
     {
-        static void agregar(Cliente p)
+        static void agregar(Titular p)
         {
-            String query = "Insert into Cliente(IdCliente, nombre, domicilio, telefono) values ("+p.IdCliente+","+p.nombre+ "," +p.Domicilio+ "," +p.Telefono+")";
+            String query = "Insert into Titular (dni, IdCliente) values (" + p.dni + "," + p.IdCliente+")";
 
             Conexion conexion = new Conexion();
             conexion.QueryInsert(query);
         }
 
-        static void eliminar(Cliente p)
+        static void eliminar(Titular p)
         {
-            String query = "Delete from Cliente where IdCliente = " + p.IdCliente;
+            String query = "Delete from Titular where dni = " + p.dni;
 
             Conexion conexion = new Conexion();
             conexion.QueryInsert(query);
         }
 
-        static void/*List<Cliente>*/ ListarTodos(Cliente p)
+        static void/*List<Persona>*/ ListarTodos(Titular p)
         {
             String query = "";
 
