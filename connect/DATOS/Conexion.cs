@@ -1,5 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
-
+using System.Data;
+using System.Windows.Forms;
 
 namespace CoolSoft.DATOS
 {
@@ -20,30 +21,34 @@ namespace CoolSoft.DATOS
             conexionBD = new MySqlConnection(cadenaConexion);
         }
 
-        public string QuerySelect(string Query)
+        public DataTable QuerySelect(string Query)
         {
+            DataTable dt = new DataTable();
             string datos = "";
             try
             {
                 conexionBD.Open();
 
-                MySqlDataReader reader = null;
-
                 MySqlCommand cmd = new MySqlCommand(Query, conexionBD);
-                reader = cmd.ExecuteReader();
+                MySqlDataReader reader = cmd.ExecuteReader();
 
-                while (reader.Read())
-                {
-                    datos += reader.GetString(0) + "\n";
-                }
+               
+                dt.Load(reader);
+
+
+                //while (reader.Read())
+                //{
+                //    datos += reader.GetString(0) + "\n";
+                //}
             }
             catch (MySqlException ex)
             {
-                datos = "ERROR " + ex.ToString();
+                MessageBox.Show("ERROR " + ex.ToString());
             }
 
-            return datos;
+            return dt;
         }
+
 
         public string QueryInsert(string Query) //QUERY INSERT, DELETE, UPDATE
         {
