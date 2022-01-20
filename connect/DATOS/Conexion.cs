@@ -10,7 +10,7 @@ namespace CoolSoft.DATOS
 
         public Conexion()
         {
-            string cadenaConexion = "server=localhost;port=3306;user id=root;password=;database=biosgatro;"; 
+            string cadenaConexion = "server=localhost;port=3306;user id=root;database=biosgastro"; 
             conexionBD = new MySqlConnection(cadenaConexion);
         }
 

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,17 +9,17 @@ using CoolSoft.DATOS.ENTIDADES;
 namespace CoolSoft.DATOS.REPOSITORIO
 {
 
-    static class PersonaRepository
+    static public class PersonaRepository
     {
-        static void agregar(Persona p)
+        public static void agregar(Persona p)
         {
-            String query = "Insert into persona (dni, nombre, apellido) values ("+p.dni+","+p.nombre+","+p.apellido+")";
+            String query = "Insert into persona (Dni, Nombre, Apellido) values (\"" + p.dni+ "\",\"" + p.nombre+ "\",\"" + p.apellido+ "\");";
 
             Conexion conexion = new Conexion();
             conexion.QueryInsert(query); 
         }
 
-        static void eliminar(Persona p)
+        public static void eliminar(Persona p)
         {
             String query = "Delete from persona where dni = "+p.dni;
 
@@ -26,12 +27,12 @@ namespace CoolSoft.DATOS.REPOSITORIO
             conexion.QueryInsert(query);
         }
 
-        static void/*List<Persona>*/ ListarTodos(Persona p)
+        public static DataTable/*List<Persona>*/ ListarTodos()
         {
-            String query = "";
+            String query = "SELECT * FROM PERSONA";
 
             Conexion conexion=new Conexion();
-            conexion.QuerySelect(query);
+            return conexion.QuerySelect(query);
             
         }
     }

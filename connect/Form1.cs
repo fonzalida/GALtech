@@ -1,4 +1,6 @@
-﻿using MySql.Data.MySqlClient;
+﻿using CoolSoft.DATOS.ENTIDADES;
+using CoolSoft.DATOS.REPOSITORIO;
+using MySql.Data.MySqlClient;
 using System;
 using System.Windows.Forms;
 
@@ -48,6 +50,23 @@ namespace connect
 
         private void Form1_Load(object sender, EventArgs e)
         {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = PersonaRepository.ListarTodos();
+            dataGridView1.Refresh();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Persona p = new Persona();
+            p.dni = int.Parse(tbDni.Text);
+            p.nombre = tbNombre.Text;
+            p.apellido = tbApellido.Text;
+
+            PersonaRepository.agregar(p);
 
         }
     }

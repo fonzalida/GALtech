@@ -13,6 +13,8 @@ namespace CoolSoft.DATOS.ENTIDADES
        public String apellido {get;set;}
     
 
-    public Persona() { }
+    public Persona() {
+        
+        }
     }
 }
