@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.txtServidor = new System.Windows.Forms.TextBox();
             this.Puerto = new System.Windows.Forms.Label();
@@ -52,15 +51,7 @@
             this.tbCompletado = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.personaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.materialBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.personaBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.personaBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.materialBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.personaBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -314,10 +305,6 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.personaBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.materialBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.personaBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -351,16 +338,10 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.BindingSource biosgastroDataSetBindingSource;
 
-        private System.Windows.Forms.BindingSource clienteBindingSource;
-
-        private System.Windows.Forms.BindingSource personaBindingSource;
-
         private System.Windows.Forms.BindingSource personaBindingSource1;
-        private System.Windows.Forms.BindingSource materialBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn dniDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn apellidoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource personaBindingSource2;
         private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
