@@ -18,7 +18,7 @@ namespace CoolSoft.DATOS.REPOSITORIO
             MySqlCommand cmd = new MySqlCommand(
                 "INSERT INTO ORDEN"+
                 "(IdOrden, FechaRecepcion, TareaDesarrollar, TareaDesarrollada, Precio, IdCliente, Completada)"+
-                " VALUES (@IdOrden, now(), @TareaDesarrollar, @TareaDesarrollada, @Precio, @IdCliente, @Completada)"
+                " VALUES (@IdOrden, @FechaRecepcion, @TareaDesarrollar, @TareaDesarrollada, @Precio, @IdCliente, @Completada)"
                 );
 
             cmd.Parameters.AddWithValue("@IdOrden",p.IdOrden);

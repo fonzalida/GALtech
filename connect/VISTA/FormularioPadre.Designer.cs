@@ -35,7 +35,7 @@ namespace CoolSoft.VISTA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1039, 450);
             this.IsMdiContainer = true;
             this.Name = "FormularioPadre";
             this.Text = "CoolSoft Sistema de Gestión";
