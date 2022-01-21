@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using CoolSoft.DATOS.ENTIDADES;
+using System.Data;
+using MySql.Data.MySqlClient;
 
 namespace CoolSoft.DATOS.REPOSITORIO
 {
@@ -11,26 +13,44 @@ namespace CoolSoft.DATOS.REPOSITORIO
     {
         static void agregar(Material p)
         {
-            String query = "Insert into material (IdMat, IdOrden, Cantidad, Descripcion) values (" + p.IdMat + "," + p.IdOrden + "," + p.cantidad + "," + p.descripcion + ")";
+            //String query = "Insert into material (IdMat, IdOrden, Cantidad, Descripcion) values (" + p.IdMat + "," + p.IdOrden + "," + p.cantidad + "," + p.descripcion + ")";
+           
+            MySqlCommand cmd = new MySqlCommand(
+                           "INSERT INTO MATERIAL" +
+                           "(IdMat, IdOrden, Cantidad, Descripcion)" +
+                           " VALUES (@IdMat, @IdOrden, @Cantidad, @Descripcion)"
+                           );
+
+            cmd.Parameters.AddWithValue("@IdMat", p.IdMat);
+            cmd.Parameters.AddWithValue("@IdOrden", p.IdOrden);
+            cmd.Parameters.AddWithValue("@Cantidad", p.cantidad);
+            cmd.Parameters.AddWithValue("@descripcion", p.descripcion);
 
             Conexion conexion = new Conexion();
-            //conexion.QueryInsert(query);
+            conexion.QueryInsert(cmd);
         }
 
         static void eliminar(Material p)
         {
-            String query = "Delete from material where IdMat = " + p.IdMat;
-
             Conexion conexion = new Conexion();
-            //conexion.QueryInsert(query);
+
+            MySqlCommand cmd = new MySqlCommand(
+                "DELETE FROM MATERIAL " +
+                "where IdMat = @IdMat and IdOrden=@IdOrden"
+                );
+
+            cmd.Parameters.AddWithValue("@IdMat", p.IdMat);
+            cmd.Parameters.AddWithValue("@IdOrden", p.IdOrden);
+
+            conexion.QueryInsert(cmd);
         }
 
-        static void/*List<Material>*/ ListarTodos(Material p)
+        public static DataTable/*List<Material>*/ ListarTodos()
         {
-            String query = "";
+            String query = "SELECT * FROM MATERIAL";
 
             Conexion conexion = new Conexion();
-            conexion.QuerySelect(query);
+            return conexion.QuerySelect(query);
 
         }
     }

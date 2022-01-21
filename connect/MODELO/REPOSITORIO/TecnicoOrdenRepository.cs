@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using CoolSoft.DATOS.ENTIDADES;
+using System.Data;
+using MySql.Data.MySqlClient;
 
 namespace CoolSoft.DATOS.REPOSITORIO
 {
@@ -11,26 +13,42 @@ namespace CoolSoft.DATOS.REPOSITORIO
     {
         static void agregar(Tecnico_Orden p)
         {
-            String query = "Insert into tecnicoorden (dni, idp, id) values (" + p.dni + "," + p.idp + "," + p.id + ")";
+            //String query = "Insert into tecnicoorden (dni, idp, id) values (" + p.dni + "," + p.idp + "," + p.id + ")";
+
+            MySqlCommand cmd = new MySqlCommand(
+                            "INSERT INTO TECNICOORDEN" +
+                             "(Dni, IdP, Id)" +
+                             " VALUES (@Dni, @IdP, @Id)"
+                             );
+
+            cmd.Parameters.AddWithValue("@Dni", p.dni);
+            cmd.Parameters.AddWithValue("@IdP", p.idp);
+            cmd.Parameters.AddWithValue("@Id", p.id);
 
             Conexion conexion = new Conexion();
-            //conexion.QueryInsert(query);
+            conexion.QueryInsert(cmd);
         }
 
         static void eliminar(Tecnico_Orden p)
         {
-            String query = "Delete from tecnicoorden where dni = " + p.dni;
-
             Conexion conexion = new Conexion();
-            //conexion.QueryInsert(query);
+
+            MySqlCommand cmd = new MySqlCommand(
+                "DELETE FROM TECNICOORDEN " +
+                "where Dni = @Dni"
+                );
+
+            cmd.Parameters.AddWithValue("@Dni", p.dni);
+
+            conexion.QueryInsert(cmd);
         }
 
-        static void/*List<Tecnico_Orden>*/ ListarTodos(Tecnico_Orden p)
+        public static DataTable/*List<Tecnico_Orden>*/ ListarTodos()
         {
-            String query = "";
+            String query = "SELECT * FROM TECNICOORDEN";
 
             Conexion conexion = new Conexion();
-            conexion.QuerySelect(query);
+            return conexion.QuerySelect(query);
 
         }
     }

@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using CoolSoft.DATOS.ENTIDADES;
+using System.Data;
+using MySql.Data.MySqlClient;
 
 namespace CoolSoft.DATOS.REPOSITORIO
 {
@@ -11,26 +13,40 @@ namespace CoolSoft.DATOS.REPOSITORIO
     {
         static void agregar(Tecnico p)
         {
-            String query = "Insert into Tecnico (dni) values (" + p.dni +")";
+            // String query = "Insert into Tecnico (dni) values (" + p.dni +")";
+
+            MySqlCommand cmd = new MySqlCommand(
+               "INSERT INTO TECNICO" +
+               "(dni)" +
+               " VALUES (@dni)"
+               );
+
+            cmd.Parameters.AddWithValue("@dni", p.dni);
 
             Conexion conexion = new Conexion();
-            //conexion.QueryInsert(query);
+            conexion.QueryInsert(cmd);
         }
 
         static void eliminar(Tecnico p)
         {
-            String query = "Delete from Tecnico where dni = " + p.dni;
-
             Conexion conexion = new Conexion();
-            //conexion.QueryInsert(query);
+
+            MySqlCommand cmd = new MySqlCommand(
+                "DELETE FROM TECNICO" +
+                "where dni = @dni"
+                );
+
+            cmd.Parameters.AddWithValue("@dni", p.dni);
+
+            conexion.QueryInsert(cmd);
         }
 
-        static void/*List<Persona>*/ ListarTodos(Tecnico p)
+        public static DataTable/*List<Persona>*/ ListarTodos()
         {
-            String query = "";
+            String query = "SELECT * FROM TECNICO";
 
             Conexion conexion = new Conexion();
-            conexion.QuerySelect(query);
+            return conexion.QuerySelect(query);
 
         }
     }

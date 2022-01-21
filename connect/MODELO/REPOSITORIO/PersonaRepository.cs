@@ -4,6 +4,8 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MySql.Data.MySqlClient;
+
 using CoolSoft.DATOS.ENTIDADES;
 
 namespace CoolSoft.DATOS.REPOSITORIO
@@ -13,24 +15,39 @@ namespace CoolSoft.DATOS.REPOSITORIO
     {
         public static void agregar(Persona p)
         {
-            //String query = "Insert into persona (Dni, Nombre, Apellido) values (\"" + p.dni+ "\",\"" + p.nombre+ "\",\"" + p.apellido+ "\");";
+            //String query = string.Format(
+            //    "Insert into persona (dni, nombre, apellido) values ('{0}','{1}','{2}');",
+            //    p.dni,
+            //    p.nombre,
+            //    p.apellido);
 
-            String query = string.Format(
-                "Insert into persona (dni, nombre, apellido) values ('{0}','{1}','{2}');",
-                p.dni,
-                p.nombre,
-                p.apellido);
+            MySqlCommand cmd = new MySqlCommand(
+               "INSERT INTO PERSONA" +
+               "(dni, nombre, apellido)" +
+               " VALUES (@dni, @nombre, @apellido)"
+               );
+
+            cmd.Parameters.AddWithValue("@IdCliente", p.dni);
+            cmd.Parameters.AddWithValue("@nombre", p.nombre);
+            cmd.Parameters.AddWithValue("@domicilio", p.apellido);
 
             Conexion conexion = new Conexion();
-            //conexion.QueryInsert(query); 
+            conexion.QueryInsert(cmd);
+
         }
 
         public static void eliminar(Persona p)
         {
-            String query = "Delete from persona where dni = "+p.dni;
+            Conexion conexion = new Conexion();
 
-            Conexion conexion=new Conexion();
-            //conexion.QueryInsert(query);
+            MySqlCommand cmd = new MySqlCommand(
+                "DELETE FROM PERSONA" +
+                "where dni = @dni"
+                );
+
+            cmd.Parameters.AddWithValue("@dni", p.dni);
+
+            conexion.QueryInsert(cmd);
         }
 
         public static DataTable/*List<Persona>*/ ListarTodos()
