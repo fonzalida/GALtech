@@ -42,13 +42,6 @@
             this.tbApellido = new System.Windows.Forms.TextBox();
             this.tbDni = new System.Windows.Forms.MaskedTextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dniDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.apellidoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.personaBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.biosgastroDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.biosgastroDataSet = new CoolSoft.biosgastroDataSet();
             this.button2 = new System.Windows.Forms.Button();
             this.tbIdOrden = new System.Windows.Forms.TextBox();
             this.tbFechaRecepcion = new System.Windows.Forms.TextBox();
@@ -60,20 +53,15 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.clienteTableAdapter = new CoolSoft.biosgastroDataSetTableAdapters.clienteTableAdapter();
             this.personaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.personaTableAdapter = new CoolSoft.biosgastroDataSetTableAdapters.personaTableAdapter();
             this.materialBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.materialTableAdapter = new CoolSoft.biosgastroDataSetTableAdapters.materialTableAdapter();
             this.personaBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.personaBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.biosgastroDataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.biosgastroDataSet)).BeginInit();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.personaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.materialBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.personaBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -197,65 +185,6 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dniDataGridViewTextBoxColumn,
-            this.nombreDataGridViewTextBoxColumn,
-            this.apellidoDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.personaBindingSource1;
-            this.dataGridView1.Location = new System.Drawing.Point(539, 220);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(626, 217);
-            this.dataGridView1.TabIndex = 13;
-            // 
-            // dniDataGridViewTextBoxColumn
-            // 
-            this.dniDataGridViewTextBoxColumn.DataPropertyName = "Dni";
-            this.dniDataGridViewTextBoxColumn.HeaderText = "Dni";
-            this.dniDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.dniDataGridViewTextBoxColumn.Name = "dniDataGridViewTextBoxColumn";
-            this.dniDataGridViewTextBoxColumn.ReadOnly = true;
-            this.dniDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // nombreDataGridViewTextBoxColumn
-            // 
-            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre";
-            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
-            this.nombreDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
-            this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nombreDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // apellidoDataGridViewTextBoxColumn
-            // 
-            this.apellidoDataGridViewTextBoxColumn.DataPropertyName = "Apellido";
-            this.apellidoDataGridViewTextBoxColumn.HeaderText = "Apellido";
-            this.apellidoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.apellidoDataGridViewTextBoxColumn.Name = "apellidoDataGridViewTextBoxColumn";
-            this.apellidoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.apellidoDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // personaBindingSource1
-            // 
-            this.personaBindingSource1.DataMember = "persona";
-            this.personaBindingSource1.DataSource = this.biosgastroDataSetBindingSource;
-            // 
-            // biosgastroDataSetBindingSource
-            // 
-            this.biosgastroDataSetBindingSource.DataSource = this.biosgastroDataSet;
-            this.biosgastroDataSetBindingSource.Position = 0;
-            // 
-            // biosgastroDataSet
-            // 
-            this.biosgastroDataSet.DataSetName = "biosgastroDataSet";
-            this.biosgastroDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(539, 465);
@@ -342,43 +271,22 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // clienteBindingSource
+            // dataGridView1
             // 
-            this.clienteBindingSource.DataMember = "cliente";
-            this.clienteBindingSource.DataSource = this.biosgastroDataSetBindingSource;
-            // 
-            // clienteTableAdapter
-            // 
-            this.clienteTableAdapter.ClearBeforeFill = true;
-            // 
-            // personaBindingSource
-            // 
-            this.personaBindingSource.DataMember = "persona";
-            this.personaBindingSource.DataSource = this.biosgastroDataSetBindingSource;
-            // 
-            // personaTableAdapter
-            // 
-            this.personaTableAdapter.ClearBeforeFill = true;
-            // 
-            // materialBindingSource
-            // 
-            this.materialBindingSource.DataMember = "material";
-            this.materialBindingSource.DataSource = this.biosgastroDataSetBindingSource;
-            // 
-            // materialTableAdapter
-            // 
-            this.materialTableAdapter.ClearBeforeFill = true;
-            // 
-            // personaBindingSource2
-            // 
-            this.personaBindingSource2.DataMember = "persona";
-            this.personaBindingSource2.DataSource = this.biosgastroDataSetBindingSource;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(539, 241);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(562, 189);
+            this.dataGridView1.TabIndex = 25;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1379, 554);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.tbCompletado);
@@ -389,7 +297,6 @@
             this.Controls.Add(this.tbFechaRecepcion);
             this.Controls.Add(this.tbIdOrden);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.tbDni);
             this.Controls.Add(this.tbApellido);
@@ -407,14 +314,11 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.personaBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.biosgastroDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.biosgastroDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.personaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.materialBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.personaBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -435,7 +339,6 @@
         private System.Windows.Forms.TextBox tbApellido;
         private System.Windows.Forms.MaskedTextBox tbDni;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox tbIdOrden;
         private System.Windows.Forms.TextBox tbFechaRecepcion;
@@ -447,18 +350,18 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.BindingSource biosgastroDataSetBindingSource;
-        private CoolSoft.biosgastroDataSet biosgastroDataSet;
+
         private System.Windows.Forms.BindingSource clienteBindingSource;
-        private CoolSoft.biosgastroDataSetTableAdapters.clienteTableAdapter clienteTableAdapter;
+
         private System.Windows.Forms.BindingSource personaBindingSource;
-        private CoolSoft.biosgastroDataSetTableAdapters.personaTableAdapter personaTableAdapter;
+
         private System.Windows.Forms.BindingSource personaBindingSource1;
         private System.Windows.Forms.BindingSource materialBindingSource;
-        private CoolSoft.biosgastroDataSetTableAdapters.materialTableAdapter materialTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn dniDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn apellidoDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource personaBindingSource2;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
 
