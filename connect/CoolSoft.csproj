@@ -83,6 +83,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VISTA\FormularioPadre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VISTA\FormularioPadre.Designer.cs">
+      <DependentUpon>FormularioPadre.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -96,6 +102,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="VISTA\FormularioPadre.resx">
+      <DependentUpon>FormularioPadre.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="biosgastroDataSet.xsc">
       <DependentUpon>biosgastroDataSet.xsd</DependentUpon>
     </None>
@@ -122,7 +131,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="CONTROLADOR\" />
-    <Folder Include="VISTA\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
