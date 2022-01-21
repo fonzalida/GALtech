@@ -50,6 +50,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="biosgastroDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>biosgastroDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DATOS\Conexion.cs" />
     <Compile Include="DATOS\ENTIDADES\Cliente.cs" />
     <Compile Include="DATOS\ENTIDADES\Material.cs" />
@@ -88,6 +93,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="biosgastroDataSet.xsc">
+      <DependentUpon>biosgastroDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="biosgastroDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>biosgastroDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="biosgastroDataSet.xss">
+      <DependentUpon>biosgastroDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

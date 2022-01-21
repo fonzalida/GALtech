@@ -13,7 +13,13 @@ namespace CoolSoft.DATOS.REPOSITORIO
     {
         public static void agregar(Persona p)
         {
-            String query = "Insert into persona (Dni, Nombre, Apellido) values (\"" + p.dni+ "\",\"" + p.nombre+ "\",\"" + p.apellido+ "\");";
+            //String query = "Insert into persona (Dni, Nombre, Apellido) values (\"" + p.dni+ "\",\"" + p.nombre+ "\",\"" + p.apellido+ "\");";
+
+            String query = string.Format(
+                "Insert into persona (dni, nombre, apellido) values ('{0}','{1}','{2}');",
+                p.dni,
+                p.nombre,
+                p.apellido);
 
             Conexion conexion = new Conexion();
             conexion.QueryInsert(query); 

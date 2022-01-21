@@ -50,6 +50,7 @@ namespace connect
 
         private void Form1_Load(object sender, EventArgs e)
         {
+           
 
         }
 
@@ -69,5 +70,28 @@ namespace connect
             PersonaRepository.agregar(p);
 
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Orden o = new Orden();
+            o.IdOrden = 1; //int.Parse(tbIdOrden.Text);
+            o.FechaRecepcion = DateTime.Now.Date; //DateTime.Parse(tbFechaRecepcion.Text)
+            o.TareaDesarrollar = tbTareaADesarrollar.Text;
+            o.TareaDesarrollada = tbTareaDesarrollada.Text;
+            o.Precio = float.Parse(tbPrecio.Text);
+            o.IdCliente = 1; //int.Parse(tbIdCliente.Text);
+            o.Completada = true; //bool.Parse(tbCompletado.Text);
+
+            OrdenRepository.agregar(o);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = OrdenRepository.ListarTodos();
+            dataGridView1.Refresh();
+            
+        }
+
+       
     }
 }

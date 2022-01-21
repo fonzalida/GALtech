@@ -50,13 +50,12 @@ namespace CoolSoft.DATOS
         }
 
 
-        public string QueryInsert(string Query) //QUERY INSERT, DELETE, UPDATE
+        public string QueryInsert(MySqlCommand cmd) //QUERY INSERT, DELETE, UPDATE
         {
             string datos = "";
             try
             {
                 conexionBD.Open();
-
                 MySqlCommand cmd = new MySqlCommand(Query, conexionBD);
                 datos = cmd.ExecuteNonQuery().ToString();
 

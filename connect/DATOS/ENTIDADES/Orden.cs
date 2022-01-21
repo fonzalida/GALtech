@@ -14,7 +14,7 @@ namespace CoolSoft.DATOS.ENTIDADES
         public string TareaDesarrollada { get; set; }
         public float Precio { get; set; }
         public int IdCliente { get; set; }
-        public int Completada { get; set; }
+        public bool Completada { get; set; }
 
         public Orden() { }
 
