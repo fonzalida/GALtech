@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CoolSoft.DATOS.SERVICIO
 {
-    class ClienteService
+    static class TecnicoService
     {
     }
 }

@@ -55,26 +55,26 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>biosgastroDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="DATOS\Conexion.cs" />
-    <Compile Include="DATOS\ENTIDADES\Cliente.cs" />
-    <Compile Include="DATOS\ENTIDADES\Material.cs" />
-    <Compile Include="DATOS\ENTIDADES\Orden.cs" />
-    <Compile Include="DATOS\ENTIDADES\Parte_Orden.cs" />
-    <Compile Include="DATOS\ENTIDADES\Persona.cs" />
-    <Compile Include="DATOS\ENTIDADES\Tecnico.cs" />
-    <Compile Include="DATOS\ENTIDADES\Tecnico_Orden.cs" />
-    <Compile Include="DATOS\ENTIDADES\Titular.cs" />
-    <Compile Include="DATOS\REPOSITORIO\ClienteRepository.cs" />
-    <Compile Include="DATOS\REPOSITORIO\MaterialRepository.cs" />
-    <Compile Include="DATOS\REPOSITORIO\OrdenRepository.cs" />
-    <Compile Include="DATOS\REPOSITORIO\ParteOrdenRepository.cs" />
-    <Compile Include="DATOS\REPOSITORIO\PersonaRepository.cs" />
-    <Compile Include="DATOS\REPOSITORIO\TecnicoOrdenRepository.cs" />
-    <Compile Include="DATOS\REPOSITORIO\TecnicoRepository.cs" />
-    <Compile Include="DATOS\REPOSITORIO\TitularRepository.cs" />
-    <Compile Include="DATOS\SERVICIO\ClienteService.cs" />
-    <Compile Include="DATOS\SERVICIO\OrdenService.cs" />
-    <Compile Include="DATOS\SERVICIO\TecnicoService.cs" />
+    <Compile Include="MODELO\Conexion.cs" />
+    <Compile Include="MODELO\ENTIDADES\Cliente.cs" />
+    <Compile Include="MODELO\ENTIDADES\Material.cs" />
+    <Compile Include="MODELO\ENTIDADES\Orden.cs" />
+    <Compile Include="MODELO\ENTIDADES\Parte_Orden.cs" />
+    <Compile Include="MODELO\ENTIDADES\Persona.cs" />
+    <Compile Include="MODELO\ENTIDADES\Tecnico.cs" />
+    <Compile Include="MODELO\ENTIDADES\Tecnico_Orden.cs" />
+    <Compile Include="MODELO\ENTIDADES\Titular.cs" />
+    <Compile Include="MODELO\REPOSITORIO\ClienteRepository.cs" />
+    <Compile Include="MODELO\REPOSITORIO\MaterialRepository.cs" />
+    <Compile Include="MODELO\REPOSITORIO\OrdenRepository.cs" />
+    <Compile Include="MODELO\REPOSITORIO\ParteOrdenRepository.cs" />
+    <Compile Include="MODELO\REPOSITORIO\PersonaRepository.cs" />
+    <Compile Include="MODELO\REPOSITORIO\TecnicoOrdenRepository.cs" />
+    <Compile Include="MODELO\REPOSITORIO\TecnicoRepository.cs" />
+    <Compile Include="MODELO\REPOSITORIO\TitularRepository.cs" />
+    <Compile Include="MODELO\SERVICIO\ClienteService.cs" />
+    <Compile Include="MODELO\SERVICIO\OrdenService.cs" />
+    <Compile Include="MODELO\SERVICIO\TecnicoService.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,8 +121,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="NEGOCIO\" />
-    <Folder Include="PRESENTACION\" />
+    <Folder Include="CONTROLADOR\" />
+    <Folder Include="VISTA\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
