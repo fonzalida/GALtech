@@ -14,7 +14,7 @@ namespace CoolSoft.DATOS.REPOSITORIO
             String query = "Insert into Tecnico (dni) values (" + p.dni +")";
 
             Conexion conexion = new Conexion();
-            conexion.QueryInsert(query);
+            //conexion.QueryInsert(query);
         }
 
         static void eliminar(Tecnico p)
@@ -22,7 +22,7 @@ namespace CoolSoft.DATOS.REPOSITORIO
             String query = "Delete from Tecnico where dni = " + p.dni;
 
             Conexion conexion = new Conexion();
-            conexion.QueryInsert(query);
+            //conexion.QueryInsert(query);
         }
 
         static void/*List<Persona>*/ ListarTodos(Tecnico p)

@@ -72,6 +72,9 @@
     <Compile Include="DATOS\REPOSITORIO\TecnicoOrdenRepository.cs" />
     <Compile Include="DATOS\REPOSITORIO\TecnicoRepository.cs" />
     <Compile Include="DATOS\REPOSITORIO\TitularRepository.cs" />
+    <Compile Include="DATOS\SERVICIO\ClienteService.cs" />
+    <Compile Include="DATOS\SERVICIO\OrdenService.cs" />
+    <Compile Include="DATOS\SERVICIO\TecnicoService.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

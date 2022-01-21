@@ -14,7 +14,7 @@ namespace CoolSoft.DATOS.REPOSITORIO
             String query = "Insert into material (IdMat, IdOrden, Cantidad, Descripcion) values (" + p.IdMat + "," + p.IdOrden + "," + p.cantidad + "," + p.descripcion + ")";
 
             Conexion conexion = new Conexion();
-            conexion.QueryInsert(query);
+            //conexion.QueryInsert(query);
         }
 
         static void eliminar(Material p)
@@ -22,7 +22,7 @@ namespace CoolSoft.DATOS.REPOSITORIO
             String query = "Delete from material where IdMat = " + p.IdMat;
 
             Conexion conexion = new Conexion();
-            conexion.QueryInsert(query);
+            //conexion.QueryInsert(query);
         }
 
         static void/*List<Material>*/ ListarTodos(Material p)

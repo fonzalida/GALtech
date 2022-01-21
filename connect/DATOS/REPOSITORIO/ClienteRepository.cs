@@ -14,7 +14,7 @@ namespace CoolSoft.DATOS.REPOSITORIO
             String query = "Insert into Cliente(IdCliente, nombre, domicilio, telefono) values ("+p.IdCliente+","+p.nombre+ "," +p.Domicilio+ "," +p.Telefono+")";
 
             Conexion conexion = new Conexion();
-            conexion.QueryInsert(query);
+            //conexion.QueryInsert(query);
         }
 
         static void eliminar(Cliente p)
@@ -22,7 +22,7 @@ namespace CoolSoft.DATOS.REPOSITORIO
             String query = "Delete from Cliente where IdCliente = " + p.IdCliente;
 
             Conexion conexion = new Conexion();
-            conexion.QueryInsert(query);
+            //conexion.QueryInsert(query);
         }
 
         static void/*List<Cliente>*/ ListarTodos(Cliente p)

@@ -14,7 +14,7 @@ namespace CoolSoft.DATOS.REPOSITORIO
             String query = "Insert into parteorden (idp, id, fechainicio, fechafin, completa) values (" + p.IdP + "," + p.Id + "," + p.FechaInicio + "," + p.FechaFin + "," + p.Completa + ")";
 
             Conexion conexion = new Conexion();
-            conexion.QueryInsert(query);
+            //conexion.QueryInsert(query);
         }
 
         static void eliminar(Parte_Orden p)
@@ -22,7 +22,7 @@ namespace CoolSoft.DATOS.REPOSITORIO
             String query = "Delete from parteorden where IdP = " + p.IdP;
 
             Conexion conexion = new Conexion();
-            conexion.QueryInsert(query);
+            //conexion.QueryInsert(query);
         }
 
         static void/*List<Parte_Orden>*/ ListarTodos(Parte_Orden p)

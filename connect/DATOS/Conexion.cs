@@ -1,5 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 using System.Data;
+using System.Diagnostics;
 using System.Windows.Forms;
 
 namespace CoolSoft.DATOS
@@ -56,13 +57,16 @@ namespace CoolSoft.DATOS
             try
             {
                 conexionBD.Open();
-                MySqlCommand cmd = new MySqlCommand(Query, conexionBD);
+                cmd.Connection = conexionBD;
+                //MySqlCommand cmd = new MySqlCommand(Query, conexionBD);
                 datos = cmd.ExecuteNonQuery().ToString();
 
             }
             catch (MySqlException ex)
             {
+                
                 datos = "ERROR " + ex.ToString();
+                MessageBox.Show(datos);
             }
 
             return datos;

@@ -22,7 +22,7 @@ namespace CoolSoft.DATOS.REPOSITORIO
                 p.apellido);
 
             Conexion conexion = new Conexion();
-            conexion.QueryInsert(query); 
+            //conexion.QueryInsert(query); 
         }
 
         public static void eliminar(Persona p)
@@ -30,7 +30,7 @@ namespace CoolSoft.DATOS.REPOSITORIO
             String query = "Delete from persona where dni = "+p.dni;
 
             Conexion conexion=new Conexion();
-            conexion.QueryInsert(query);
+            //conexion.QueryInsert(query);
         }
 
         public static DataTable/*List<Persona>*/ ListarTodos()

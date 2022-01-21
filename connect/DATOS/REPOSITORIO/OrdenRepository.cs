@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using CoolSoft.DATOS.ENTIDADES;
+using MySql.Data.MySqlClient;
 
 namespace CoolSoft.DATOS.REPOSITORIO
 {
@@ -14,30 +15,37 @@ namespace CoolSoft.DATOS.REPOSITORIO
         {
             //String query = "Insert into orden (IdOrden, Fecha_Recepcion, Tarea_Desarrollar, Tarea_Desarrollada, Precio, IdCliente, Completada) values (" + p.IdOrden + "," + p.FechaRecepcion + "," + p.TareaDesarrollar + "," + p.TareaDesarrollada + "," + p.Precio + "," + p.IdCliente + "," + p.Completada + ")";
 
-            
-
-            String query = String.Format(
-                "Insert into orden (IdOrden, FechaRecepcion, TareaDesarrollar, TareaDesarrollada, Precio, IdCliente, Completada) values ('1', now(), '{2}', '{3}', '{4}', '{5}', '{6}')",
-                //"Insert into orden (IdOrden, FechaRecepcion, TareaDesarrollar, TareaDesarrollada, Precio, IdCliente, Completada) values ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}')",
-                p.IdOrden, 
-                //p.FechaRecepcion.Date.ToString("yyyy-MM-dd"),
-                p.TareaDesarrollar,
-                p.TareaDesarrollada,
-                p.Precio,
-                p.IdCliente//,
-                //p.Completada
+            MySqlCommand cmd = new MySqlCommand(
+                "INSERT INTO ORDEN"+
+                "(IdOrden, FechaRecepcion, TareaDesarrollar, TareaDesarrollada, Precio, IdCliente, Completada)"+
+                " VALUES (@IdOrden, now(), @TareaDesarrollar, @TareaDesarrollada, @Precio, @IdCliente, @Completada)"
                 );
 
+            cmd.Parameters.AddWithValue("@IdOrden",p.IdOrden);
+            cmd.Parameters.AddWithValue("@FechaRecepcion",p.FechaRecepcion);
+            cmd.Parameters.AddWithValue("@TareaDesarrollar", p.TareaDesarrollar);
+            cmd.Parameters.AddWithValue("@TareaDesarrollada", p.TareaDesarrollada);
+            cmd.Parameters.AddWithValue("@Precio",p.Precio);
+            cmd.Parameters.AddWithValue("@IdCliente",p.IdCliente);
+            cmd.Parameters.AddWithValue("@Completada",p.Completada);
+
             Conexion conexion = new Conexion();
-            conexion.QueryInsert(query);
+            conexion.QueryInsert(cmd);
         }
 
         public static void eliminar(Orden p)
         {
-            String query = "Delete from orden where IdOrden = " + p.IdOrden;
-
+            
             Conexion conexion = new Conexion();
-            conexion.QueryInsert(query);
+
+            MySqlCommand cmd = new MySqlCommand(
+                "Delete from orden "+ 
+                "where IdOrden = @IdOrden"
+                );
+
+            cmd.Parameters.AddWithValue("@IdOrden", p.IdOrden);
+
+            conexion.QueryInsert(cmd);
         }
 
         public static DataTable/*List<Orden>*/ ListarTodos()
