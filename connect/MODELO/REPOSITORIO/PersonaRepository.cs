@@ -27,7 +27,7 @@ namespace CoolSoft.DATOS.REPOSITORIO
                " VALUES (@dni, @nombre, @apellido)"
                );
 
-            cmd.Parameters.AddWithValue("@IdCliente", p.dni);
+            cmd.Parameters.AddWithValue("@dni", p.dni);
             cmd.Parameters.AddWithValue("@nombre", p.nombre);
             cmd.Parameters.AddWithValue("@domicilio", p.apellido);
 
