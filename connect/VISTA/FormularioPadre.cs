@@ -1,4 +1,5 @@
-﻿using System;
+﻿using connect;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,14 @@ namespace CoolSoft.VISTA
         public FormularioPadre()
         {
             InitializeComponent();
+        }
+
+        private void FormularioPadre_Load(object sender, EventArgs e)
+        {
+            Form1 newFrm = new Form1();
+            
+            newFrm.MdiParent = this;
+            newFrm.Show();
         }
     }
 }

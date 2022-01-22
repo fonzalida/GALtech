@@ -59,5 +59,35 @@ namespace CoolSoft.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Icon similar a (Icono).
+        /// </summary>
+        internal static System.Drawing.Icon ICONO_COOLSOFT {
+            get {
+                object obj = ResourceManager.GetObject("ICONO_COOLSOFT", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap LOGO_CHIQUITO {
+            get {
+                object obj = ResourceManager.GetObject("LOGO_CHIQUITO", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Icon similar a (Icono).
+        /// </summary>
+        internal static System.Drawing.Icon PROGRAMA_COOLSOFT {
+            get {
+                object obj = ResourceManager.GetObject("PROGRAMA_COOLSOFT", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
     }
 }
