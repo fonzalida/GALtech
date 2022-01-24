@@ -17,7 +17,7 @@ namespace CoolSoft.DATOS.SERVICIO
             int i;
             ClienteRepository.agregar(c); //retornar la id de cliente
 
-            
+            //EQUISDE
 
             PersonaRepository.agregar(p);
 
