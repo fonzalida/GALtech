@@ -52,14 +52,14 @@ namespace CoolSoft.DATOS.REPOSITORIO
 
         public static bool/*List<Persona>*/ BuscarUno(int dni)
         {
-            String query = "SELECT * FROM PERSONA WHERE dni = "+dni+"";
+            String query = "SELECT * FROM PERSONA WHERE dni = \"" + dni+"\"";
 
             Conexion conexion = new Conexion();
-            if (conexion.QuerySelect(query).Rows != null)
+            if (conexion.QuerySelect(query).Rows.Count != 1)
             {
-                return true;
+                return false;
             }
-            else return false;
+            else return true;
             
 
         }
