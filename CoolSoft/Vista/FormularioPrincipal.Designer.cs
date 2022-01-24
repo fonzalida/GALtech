@@ -1,7 +1,7 @@
 ﻿
 namespace CoolSoft.VISTA
 {
-    partial class FormularioPadre
+    partial class FormularioPrincipal
     {
         /// <summary>
         /// Required designer variable.
@@ -29,19 +29,19 @@ namespace CoolSoft.VISTA
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormularioPadre));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormularioPrincipal));
             this.SuspendLayout();
             // 
-            // FormularioPadre
+            // FormularioPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.BackgroundImage = global::CoolSoft.Properties.Resources.LOGO_CHIQUITO;
-            this.ClientSize = new System.Drawing.Size(1005, 444);
+            this.ClientSize = new System.Drawing.Size(1163, 582);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
-            this.Name = "FormularioPadre";
+            this.Name = "FormularioPrincipal";
             this.Text = "CoolSoft Sistema de Gestión";
             this.Load += new System.EventHandler(this.FormularioPadre_Load);
             this.ResumeLayout(false);

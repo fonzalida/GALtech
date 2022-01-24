@@ -6,9 +6,9 @@ using System.Windows.Forms;
 
 namespace connect
 {
-    public partial class Form1 : Form
+    public partial class Test : Form
     {
-        public Form1()
+        public Test()
         {
             InitializeComponent();
         }
@@ -48,7 +48,7 @@ namespace connect
 
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void Test_Load(object sender, EventArgs e)
         {
            
 

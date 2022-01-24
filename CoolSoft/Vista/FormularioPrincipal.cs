@@ -11,16 +11,16 @@ using System.Windows.Forms;
 
 namespace CoolSoft.VISTA
 {
-    public partial class FormularioPadre : Form
+    public partial class FormularioPrincipal : Form
     {
-        public FormularioPadre()
+        public FormularioPrincipal()
         {
             InitializeComponent();
         }
 
         private void FormularioPadre_Load(object sender, EventArgs e)
         {
-            Form1 newFrm = new Form1();
+            Test newFrm = new Test();
             
             newFrm.MdiParent = this;
             newFrm.Show();

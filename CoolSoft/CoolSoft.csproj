@@ -11,9 +11,24 @@
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-    <Deterministic>true</Deterministic>
+    <Deterministic>false</Deterministic>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.0</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -36,6 +51,9 @@
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>Resources\ICONO COOLSOFT.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="MySql.Data, Version=8.0.28.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
@@ -64,42 +82,42 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MODELO\Conexion.cs" />
-    <Compile Include="MODELO\ENTIDADES\Cliente.cs" />
-    <Compile Include="MODELO\ENTIDADES\Material.cs" />
-    <Compile Include="MODELO\ENTIDADES\Orden.cs" />
-    <Compile Include="MODELO\ENTIDADES\Parte_Orden.cs" />
-    <Compile Include="MODELO\ENTIDADES\Persona.cs" />
-    <Compile Include="MODELO\ENTIDADES\Tecnico.cs" />
-    <Compile Include="MODELO\ENTIDADES\Tecnico_Orden.cs" />
-    <Compile Include="MODELO\ENTIDADES\Titular.cs" />
-    <Compile Include="MODELO\REPOSITORIO\ClienteRepository.cs" />
-    <Compile Include="MODELO\REPOSITORIO\MaterialRepository.cs" />
-    <Compile Include="MODELO\REPOSITORIO\OrdenRepository.cs" />
-    <Compile Include="MODELO\REPOSITORIO\ParteOrdenRepository.cs" />
-    <Compile Include="MODELO\REPOSITORIO\PersonaRepository.cs" />
-    <Compile Include="MODELO\REPOSITORIO\TecnicoOrdenRepository.cs" />
-    <Compile Include="MODELO\REPOSITORIO\TecnicoRepository.cs" />
-    <Compile Include="MODELO\REPOSITORIO\TitularRepository.cs" />
-    <Compile Include="MODELO\SERVICIO\ClienteService.cs" />
-    <Compile Include="MODELO\SERVICIO\OrdenService.cs" />
-    <Compile Include="MODELO\SERVICIO\TecnicoService.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="Modelo\Conexion.cs" />
+    <Compile Include="Modelo\ENTIDADES\Cliente.cs" />
+    <Compile Include="Modelo\ENTIDADES\Material.cs" />
+    <Compile Include="Modelo\ENTIDADES\Orden.cs" />
+    <Compile Include="Modelo\ENTIDADES\Parte_Orden.cs" />
+    <Compile Include="Modelo\ENTIDADES\Persona.cs" />
+    <Compile Include="Modelo\ENTIDADES\Tecnico.cs" />
+    <Compile Include="Modelo\ENTIDADES\Tecnico_Orden.cs" />
+    <Compile Include="Modelo\ENTIDADES\Titular.cs" />
+    <Compile Include="Modelo\REPOSITORIO\ClienteRepository.cs" />
+    <Compile Include="Modelo\REPOSITORIO\MaterialRepository.cs" />
+    <Compile Include="Modelo\REPOSITORIO\OrdenRepository.cs" />
+    <Compile Include="Modelo\REPOSITORIO\ParteOrdenRepository.cs" />
+    <Compile Include="Modelo\REPOSITORIO\PersonaRepository.cs" />
+    <Compile Include="Modelo\REPOSITORIO\TecnicoOrdenRepository.cs" />
+    <Compile Include="Modelo\REPOSITORIO\TecnicoRepository.cs" />
+    <Compile Include="Modelo\REPOSITORIO\TitularRepository.cs" />
+    <Compile Include="Modelo\SERVICIO\ClienteService.cs" />
+    <Compile Include="Modelo\SERVICIO\OrdenService.cs" />
+    <Compile Include="Modelo\SERVICIO\TecnicoService.cs" />
+    <Compile Include="Test.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Test.Designer.cs">
+      <DependentUpon>Test.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="VISTA\FormularioPadre.cs">
+    <Compile Include="Vista\FormularioPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="VISTA\FormularioPadre.Designer.cs">
-      <DependentUpon>FormularioPadre.cs</DependentUpon>
+    <Compile Include="Vista\FormularioPrincipal.Designer.cs">
+      <DependentUpon>FormularioPrincipal.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Test.resx">
+      <DependentUpon>Test.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -111,8 +129,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="VISTA\FormularioPadre.resx">
-      <DependentUpon>FormularioPadre.cs</DependentUpon>
+    <EmbeddedResource Include="Vista\FormularioPrincipal.resx">
+      <DependentUpon>FormularioPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -145,6 +163,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\PROGRAMA COOLSOFT.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
