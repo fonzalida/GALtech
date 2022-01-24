@@ -52,6 +52,18 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.tbCIdCliente = new System.Windows.Forms.TextBox();
+            this.tbcNombre = new System.Windows.Forms.TextBox();
+            this.tbcDomicilio = new System.Windows.Forms.TextBox();
+            this.tbcTelefono = new System.Windows.Forms.TextBox();
+            this.tbpDni = new System.Windows.Forms.TextBox();
+            this.tbpNombre = new System.Windows.Forms.TextBox();
+            this.tbpApellido = new System.Windows.Forms.TextBox();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.button7 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -168,7 +180,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(331, 107);
+            this.button1.Location = new System.Drawing.Point(340, 155);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 23);
             this.button1.TabIndex = 12;
@@ -269,14 +281,126 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(288, 189);
+            this.dataGridView1.Size = new System.Drawing.Size(571, 189);
             this.dataGridView1.TabIndex = 25;
             // 
-            // Form1
+            // tbCIdCliente
+            // 
+            this.tbCIdCliente.Location = new System.Drawing.Point(731, 20);
+            this.tbCIdCliente.Name = "tbCIdCliente";
+            this.tbCIdCliente.Size = new System.Drawing.Size(100, 22);
+            this.tbCIdCliente.TabIndex = 26;
+            this.tbCIdCliente.Text = "IdCliente";
+            // 
+            // tbcNombre
+            // 
+            this.tbcNombre.Location = new System.Drawing.Point(731, 47);
+            this.tbcNombre.Name = "tbcNombre";
+            this.tbcNombre.Size = new System.Drawing.Size(100, 22);
+            this.tbcNombre.TabIndex = 27;
+            this.tbcNombre.Text = "Nombre";
+            // 
+            // tbcDomicilio
+            // 
+            this.tbcDomicilio.Location = new System.Drawing.Point(731, 76);
+            this.tbcDomicilio.Name = "tbcDomicilio";
+            this.tbcDomicilio.Size = new System.Drawing.Size(100, 22);
+            this.tbcDomicilio.TabIndex = 28;
+            this.tbcDomicilio.Text = "Domicilio";
+            // 
+            // tbcTelefono
+            // 
+            this.tbcTelefono.Location = new System.Drawing.Point(731, 105);
+            this.tbcTelefono.Name = "tbcTelefono";
+            this.tbcTelefono.Size = new System.Drawing.Size(100, 22);
+            this.tbcTelefono.TabIndex = 29;
+            this.tbcTelefono.Text = "Telefono";
+            // 
+            // tbpDni
+            // 
+            this.tbpDni.Location = new System.Drawing.Point(731, 134);
+            this.tbpDni.Name = "tbpDni";
+            this.tbpDni.Size = new System.Drawing.Size(100, 22);
+            this.tbpDni.TabIndex = 30;
+            this.tbpDni.Text = "Dni";
+            // 
+            // tbpNombre
+            // 
+            this.tbpNombre.Location = new System.Drawing.Point(731, 163);
+            this.tbpNombre.Name = "tbpNombre";
+            this.tbpNombre.Size = new System.Drawing.Size(100, 22);
+            this.tbpNombre.TabIndex = 31;
+            this.tbpNombre.Text = "Nombre";
+            // 
+            // tbpApellido
+            // 
+            this.tbpApellido.Location = new System.Drawing.Point(731, 192);
+            this.tbpApellido.Name = "tbpApellido";
+            this.tbpApellido.Size = new System.Drawing.Size(100, 22);
+            this.tbpApellido.TabIndex = 32;
+            this.tbpApellido.Text = "Apellido";
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(731, 223);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(124, 23);
+            this.button5.TabIndex = 33;
+            this.button5.Text = "Cargar Cliente";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(731, 474);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(100, 23);
+            this.button6.TabIndex = 34;
+            this.button6.Text = "Ver Cliente";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(930, 58);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 22);
+            this.textBox1.TabIndex = 35;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(930, 87);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 22);
+            this.textBox2.TabIndex = 36;
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(930, 161);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(75, 23);
+            this.button7.TabIndex = 37;
+            this.button7.Text = "button7";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // Test
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(669, 523);
+            this.ClientSize = new System.Drawing.Size(1275, 542);
+            this.Controls.Add(this.button7);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.button6);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.tbpApellido);
+            this.Controls.Add(this.tbpNombre);
+            this.Controls.Add(this.tbpDni);
+            this.Controls.Add(this.tbcTelefono);
+            this.Controls.Add(this.tbcDomicilio);
+            this.Controls.Add(this.tbcNombre);
+            this.Controls.Add(this.tbCIdCliente);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
@@ -302,7 +426,7 @@
             this.Controls.Add(this.txtServidor);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "Form1";
+            this.Name = "Test";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Test_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -343,6 +467,18 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn apellidoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox tbCIdCliente;
+        private System.Windows.Forms.TextBox tbcNombre;
+        private System.Windows.Forms.TextBox tbcDomicilio;
+        private System.Windows.Forms.TextBox tbcTelefono;
+        private System.Windows.Forms.TextBox tbpDni;
+        private System.Windows.Forms.TextBox tbpNombre;
+        private System.Windows.Forms.TextBox tbpApellido;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button button7;
     }
 }
 

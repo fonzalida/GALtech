@@ -1,5 +1,6 @@
 ﻿using CoolSoft.DATOS.ENTIDADES;
 using CoolSoft.DATOS.REPOSITORIO;
+using CoolSoft.DATOS.SERVICIO;
 using MySql.Data.MySqlClient;
 using System;
 using System.Windows.Forms;
@@ -94,6 +95,39 @@ namespace connect
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = ClienteRepository.ListarTodos();
+            dataGridView1.Refresh();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Cliente c = new Cliente();
+            c.nombre = tbcNombre.Text;
+            c.Domicilio = tbcDomicilio.Text;
+            c.Telefono = int.Parse(tbcTelefono.Text);
+
+
+
+            Persona p = new Persona();
+            p.dni = int.Parse(tbpDni.Text);
+            p.nombre = tbpNombre.Text;
+            p.apellido = tbpApellido.Text;
+
+
+            ClienteService.Agregar(c, p);
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Titular t = new Titular();
+            t.IdCliente = int.Parse(tbCIdCliente.Text);
+            t.dni = int.Parse(tbpDni.Text);
+            TitularRepository.agregar(t);
 
         }
     }

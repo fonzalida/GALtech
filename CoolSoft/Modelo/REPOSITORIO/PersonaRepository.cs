@@ -29,7 +29,7 @@ namespace CoolSoft.DATOS.REPOSITORIO
 
             cmd.Parameters.AddWithValue("@dni", p.dni);
             cmd.Parameters.AddWithValue("@nombre", p.nombre);
-            cmd.Parameters.AddWithValue("@domicilio", p.apellido);
+            cmd.Parameters.AddWithValue("@apellido", p.apellido);
 
             Conexion conexion = new Conexion();
             conexion.QueryInsert(cmd);
