@@ -3,12 +3,16 @@ using CoolSoft.DATOS.REPOSITORIO;
 using CoolSoft.DATOS.SERVICIO;
 using MySql.Data.MySqlClient;
 using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace connect
 {
     public partial class Test : Form
     {
+
+
+        List<Persona> listPersona;
         public Test()
         {
             InitializeComponent();
@@ -51,7 +55,8 @@ namespace connect
 
         private void Test_Load(object sender, EventArgs e)
         {
-           
+            listPersona = new List<Persona>();
+            dgvPersona.DataSource = listPersona;
 
         }
 
@@ -106,28 +111,41 @@ namespace connect
 
         private void button5_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            //Titular t = new Titular();
+            //t.IdCliente = int.Parse(tbCIdCliente.Text);
+            //t.dni = int.Parse(tbpDni.Text);
+            //TitularRepository.agregar(t);
+
             Cliente c = new Cliente();
             c.nombre = tbcNombre.Text;
             c.Domicilio = tbcDomicilio.Text;
             c.Telefono = int.Parse(tbcTelefono.Text);
 
+            ClienteService.Agregar(c, listPersona);
 
-
-            Persona p = new Persona();
-            p.dni = int.Parse(tbpDni.Text);
-            p.nombre = tbpNombre.Text;
-            p.apellido = tbpApellido.Text;
-
-
-            ClienteService.Agregar(c, p);
         }
 
-        private void button7_Click(object sender, EventArgs e)
+        
+
+        private void AgregarPersona_Click(object sender, EventArgs e)
         {
-            Titular t = new Titular();
-            t.IdCliente = int.Parse(tbCIdCliente.Text);
-            t.dni = int.Parse(tbpDni.Text);
-            TitularRepository.agregar(t);
+            Persona p = new Persona();
+            p.dni = int.Parse(textBoxDni.Text);
+            p.nombre = textBoxNombre.Text;
+            p.apellido = textBoxApellido.Text;
+
+            listPersona.Add(p);
+            textBoxDni.Text = "";
+            textBoxNombre.Text = "";
+            textBoxApellido.Text = "";
+
+            dgvPersona.DataSource = null;
+            dgvPersona.DataSource = listPersona;
 
         }
     }

@@ -56,15 +56,18 @@
             this.tbcNombre = new System.Windows.Forms.TextBox();
             this.tbcDomicilio = new System.Windows.Forms.TextBox();
             this.tbcTelefono = new System.Windows.Forms.TextBox();
-            this.tbpDni = new System.Windows.Forms.TextBox();
-            this.tbpNombre = new System.Windows.Forms.TextBox();
-            this.tbpApellido = new System.Windows.Forms.TextBox();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button7 = new System.Windows.Forms.Button();
+            this.textBoxNombre = new System.Windows.Forms.TextBox();
+            this.textBoxApellido = new System.Windows.Forms.TextBox();
+            this.Transaccion = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.textBoxDni = new System.Windows.Forms.TextBox();
+            this.AgregarPersona = new System.Windows.Forms.Button();
+            this.dgvPersona = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPersona)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -200,7 +203,7 @@
             // 
             // tbIdOrden
             // 
-            this.tbIdOrden.Location = new System.Drawing.Point(519, 15);
+            this.tbIdOrden.Location = new System.Drawing.Point(471, 14);
             this.tbIdOrden.Name = "tbIdOrden";
             this.tbIdOrden.Size = new System.Drawing.Size(100, 22);
             this.tbIdOrden.TabIndex = 15;
@@ -208,7 +211,7 @@
             // 
             // tbFechaRecepcion
             // 
-            this.tbFechaRecepcion.Location = new System.Drawing.Point(519, 43);
+            this.tbFechaRecepcion.Location = new System.Drawing.Point(471, 42);
             this.tbFechaRecepcion.Name = "tbFechaRecepcion";
             this.tbFechaRecepcion.Size = new System.Drawing.Size(100, 22);
             this.tbFechaRecepcion.TabIndex = 16;
@@ -216,7 +219,7 @@
             // 
             // tbTareaDesarrollada
             // 
-            this.tbTareaDesarrollada.Location = new System.Drawing.Point(519, 100);
+            this.tbTareaDesarrollada.Location = new System.Drawing.Point(471, 99);
             this.tbTareaDesarrollada.Name = "tbTareaDesarrollada";
             this.tbTareaDesarrollada.Size = new System.Drawing.Size(100, 22);
             this.tbTareaDesarrollada.TabIndex = 17;
@@ -224,7 +227,7 @@
             // 
             // tbPrecio
             // 
-            this.tbPrecio.Location = new System.Drawing.Point(519, 128);
+            this.tbPrecio.Location = new System.Drawing.Point(471, 127);
             this.tbPrecio.Name = "tbPrecio";
             this.tbPrecio.Size = new System.Drawing.Size(100, 22);
             this.tbPrecio.TabIndex = 18;
@@ -232,7 +235,7 @@
             // 
             // tbTareaADesarrollar
             // 
-            this.tbTareaADesarrollar.Location = new System.Drawing.Point(519, 71);
+            this.tbTareaADesarrollar.Location = new System.Drawing.Point(471, 70);
             this.tbTareaADesarrollar.Name = "tbTareaADesarrollar";
             this.tbTareaADesarrollar.Size = new System.Drawing.Size(100, 22);
             this.tbTareaADesarrollar.TabIndex = 19;
@@ -240,7 +243,7 @@
             // 
             // tbIdCliente
             // 
-            this.tbIdCliente.Location = new System.Drawing.Point(519, 156);
+            this.tbIdCliente.Location = new System.Drawing.Point(471, 155);
             this.tbIdCliente.Name = "tbIdCliente";
             this.tbIdCliente.Size = new System.Drawing.Size(100, 22);
             this.tbIdCliente.TabIndex = 20;
@@ -248,7 +251,7 @@
             // 
             // tbCompletado
             // 
-            this.tbCompletado.Location = new System.Drawing.Point(519, 186);
+            this.tbCompletado.Location = new System.Drawing.Point(471, 185);
             this.tbCompletado.Name = "tbCompletado";
             this.tbCompletado.Size = new System.Drawing.Size(100, 22);
             this.tbCompletado.TabIndex = 21;
@@ -256,7 +259,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(519, 224);
+            this.button3.Location = new System.Drawing.Point(471, 223);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(100, 23);
             this.button3.TabIndex = 22;
@@ -266,7 +269,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(510, 475);
+            this.button4.Location = new System.Drawing.Point(480, 475);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(109, 23);
             this.button4.TabIndex = 24;
@@ -281,12 +284,12 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(571, 189);
+            this.dataGridView1.Size = new System.Drawing.Size(394, 189);
             this.dataGridView1.TabIndex = 25;
             // 
             // tbCIdCliente
             // 
-            this.tbCIdCliente.Location = new System.Drawing.Point(731, 20);
+            this.tbCIdCliente.Location = new System.Drawing.Point(12, 13);
             this.tbCIdCliente.Name = "tbCIdCliente";
             this.tbCIdCliente.Size = new System.Drawing.Size(100, 22);
             this.tbCIdCliente.TabIndex = 26;
@@ -294,7 +297,7 @@
             // 
             // tbcNombre
             // 
-            this.tbcNombre.Location = new System.Drawing.Point(731, 47);
+            this.tbcNombre.Location = new System.Drawing.Point(12, 40);
             this.tbcNombre.Name = "tbcNombre";
             this.tbcNombre.Size = new System.Drawing.Size(100, 22);
             this.tbcNombre.TabIndex = 27;
@@ -302,7 +305,7 @@
             // 
             // tbcDomicilio
             // 
-            this.tbcDomicilio.Location = new System.Drawing.Point(731, 76);
+            this.tbcDomicilio.Location = new System.Drawing.Point(12, 69);
             this.tbcDomicilio.Name = "tbcDomicilio";
             this.tbcDomicilio.Size = new System.Drawing.Size(100, 22);
             this.tbcDomicilio.TabIndex = 28;
@@ -310,39 +313,15 @@
             // 
             // tbcTelefono
             // 
-            this.tbcTelefono.Location = new System.Drawing.Point(731, 105);
+            this.tbcTelefono.Location = new System.Drawing.Point(12, 98);
             this.tbcTelefono.Name = "tbcTelefono";
             this.tbcTelefono.Size = new System.Drawing.Size(100, 22);
             this.tbcTelefono.TabIndex = 29;
             this.tbcTelefono.Text = "Telefono";
             // 
-            // tbpDni
-            // 
-            this.tbpDni.Location = new System.Drawing.Point(731, 134);
-            this.tbpDni.Name = "tbpDni";
-            this.tbpDni.Size = new System.Drawing.Size(100, 22);
-            this.tbpDni.TabIndex = 30;
-            this.tbpDni.Text = "Dni";
-            // 
-            // tbpNombre
-            // 
-            this.tbpNombre.Location = new System.Drawing.Point(731, 163);
-            this.tbpNombre.Name = "tbpNombre";
-            this.tbpNombre.Size = new System.Drawing.Size(100, 22);
-            this.tbpNombre.TabIndex = 31;
-            this.tbpNombre.Text = "Nombre";
-            // 
-            // tbpApellido
-            // 
-            this.tbpApellido.Location = new System.Drawing.Point(731, 192);
-            this.tbpApellido.Name = "tbpApellido";
-            this.tbpApellido.Size = new System.Drawing.Size(100, 22);
-            this.tbpApellido.TabIndex = 32;
-            this.tbpApellido.Text = "Apellido";
-            // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(731, 223);
+            this.button5.Location = new System.Drawing.Point(12, 147);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(124, 23);
             this.button5.TabIndex = 33;
@@ -352,7 +331,7 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(731, 474);
+            this.button6.Location = new System.Drawing.Point(625, 475);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(100, 23);
             this.button6.TabIndex = 34;
@@ -360,47 +339,86 @@
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
-            // textBox1
+            // textBoxNombre
             // 
-            this.textBox1.Location = new System.Drawing.Point(930, 58);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 35;
+            this.textBoxNombre.Location = new System.Drawing.Point(175, 176);
+            this.textBoxNombre.Name = "textBoxNombre";
+            this.textBoxNombre.Size = new System.Drawing.Size(100, 22);
+            this.textBoxNombre.TabIndex = 35;
             // 
-            // textBox2
+            // textBoxApellido
             // 
-            this.textBox2.Location = new System.Drawing.Point(930, 87);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 22);
-            this.textBox2.TabIndex = 36;
+            this.textBoxApellido.Location = new System.Drawing.Point(175, 204);
+            this.textBoxApellido.Name = "textBoxApellido";
+            this.textBoxApellido.Size = new System.Drawing.Size(100, 22);
+            this.textBoxApellido.TabIndex = 36;
             // 
-            // button7
+            // Transaccion
             // 
-            this.button7.Location = new System.Drawing.Point(930, 161);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(75, 23);
-            this.button7.TabIndex = 37;
-            this.button7.Text = "button7";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.Transaccion.Location = new System.Drawing.Point(77, 417);
+            this.Transaccion.Name = "Transaccion";
+            this.Transaccion.Size = new System.Drawing.Size(144, 29);
+            this.Transaccion.TabIndex = 37;
+            this.Transaccion.Text = "Cargar en bd";
+            this.Transaccion.UseVisualStyleBackColor = true;
+            this.Transaccion.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.textBoxDni);
+            this.panel1.Controls.Add(this.AgregarPersona);
+            this.panel1.Controls.Add(this.button5);
+            this.panel1.Controls.Add(this.tbcTelefono);
+            this.panel1.Controls.Add(this.dgvPersona);
+            this.panel1.Controls.Add(this.tbcDomicilio);
+            this.panel1.Controls.Add(this.textBoxNombre);
+            this.panel1.Controls.Add(this.tbcNombre);
+            this.panel1.Controls.Add(this.Transaccion);
+            this.panel1.Controls.Add(this.tbCIdCliente);
+            this.panel1.Controls.Add(this.textBoxApellido);
+            this.panel1.Location = new System.Drawing.Point(768, 20);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(296, 451);
+            this.panel1.TabIndex = 38;
+            // 
+            // textBoxDni
+            // 
+            this.textBoxDni.Location = new System.Drawing.Point(175, 148);
+            this.textBoxDni.Name = "textBoxDni";
+            this.textBoxDni.Size = new System.Drawing.Size(100, 22);
+            this.textBoxDni.TabIndex = 40;
+            // 
+            // AgregarPersona
+            // 
+            this.AgregarPersona.Location = new System.Drawing.Point(131, 232);
+            this.AgregarPersona.Name = "AgregarPersona";
+            this.AgregarPersona.Size = new System.Drawing.Size(144, 23);
+            this.AgregarPersona.TabIndex = 39;
+            this.AgregarPersona.Text = "AgregarPersona";
+            this.AgregarPersona.UseVisualStyleBackColor = true;
+            this.AgregarPersona.Click += new System.EventHandler(this.AgregarPersona_Click);
+            // 
+            // dgvPersona
+            // 
+            this.dgvPersona.AllowUserToAddRows = false;
+            this.dgvPersona.AllowUserToDeleteRows = false;
+            this.dgvPersona.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPersona.Location = new System.Drawing.Point(27, 261);
+            this.dgvPersona.Name = "dgvPersona";
+            this.dgvPersona.ReadOnly = true;
+            this.dgvPersona.RowHeadersWidth = 51;
+            this.dgvPersona.RowTemplate.Height = 24;
+            this.dgvPersona.Size = new System.Drawing.Size(248, 150);
+            this.dgvPersona.TabIndex = 38;
             // 
             // Test
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1275, 542);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.ClientSize = new System.Drawing.Size(1076, 542);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.tbpApellido);
-            this.Controls.Add(this.tbpNombre);
-            this.Controls.Add(this.tbpDni);
-            this.Controls.Add(this.tbcTelefono);
-            this.Controls.Add(this.tbcDomicilio);
-            this.Controls.Add(this.tbcNombre);
-            this.Controls.Add(this.tbCIdCliente);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
@@ -430,6 +448,9 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Test_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPersona)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -471,14 +492,15 @@
         private System.Windows.Forms.TextBox tbcNombre;
         private System.Windows.Forms.TextBox tbcDomicilio;
         private System.Windows.Forms.TextBox tbcTelefono;
-        private System.Windows.Forms.TextBox tbpDni;
-        private System.Windows.Forms.TextBox tbpNombre;
-        private System.Windows.Forms.TextBox tbpApellido;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.TextBox textBoxNombre;
+        private System.Windows.Forms.TextBox textBoxApellido;
+        private System.Windows.Forms.Button Transaccion;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.DataGridView dgvPersona;
+        private System.Windows.Forms.TextBox textBoxDni;
+        private System.Windows.Forms.Button AgregarPersona;
     }
 }
 

@@ -11,20 +11,26 @@ namespace CoolSoft.DATOS.SERVICIO
 {
     static public class ClienteService
     {
-        static public bool Agregar(Cliente c, Persona p)
+        static public bool Agregar(Cliente c, List<Persona> ListaP)
         {
 
             int i;
             ClienteRepository.agregar(c); //retornar la id de cliente
 
-            //EQUISDE
+            foreach(Persona p in ListaP)
+            {
+                PersonaRepository.agregar(p);
+                
+                Titular t = new Titular();
+                t.dni = p.dni;
+                t.IdCliente = c.IdCliente;
+                TitularRepository.agregar(t);
 
-            PersonaRepository.agregar(p);
 
-            Titular t = new Titular();
-            t.dni = p.dni;
-            t.IdCliente = c.IdCliente;
-            TitularRepository.agregar(t);
+            }
+
+            
+            
 
             return true;
         }
