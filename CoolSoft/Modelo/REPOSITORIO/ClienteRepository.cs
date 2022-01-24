@@ -11,7 +11,7 @@ namespace CoolSoft.DATOS.REPOSITORIO
 {
     static class ClienteRepository
     {
-        static void agregar(Cliente p)
+        static public void agregar(Cliente p)
         {
             //String query = "Insert into Cliente(IdCliente, nombre, domicilio, telefono) values ("+p.IdCliente+","+p.nombre+ "," +p.Domicilio+ "," +p.Telefono+")";
 
@@ -30,7 +30,7 @@ namespace CoolSoft.DATOS.REPOSITORIO
             conexion.QueryInsert(cmd);
         }
 
-        static void eliminar(Cliente p)
+        static public void eliminar(Cliente p)
         {
             
             Conexion conexion = new Conexion();
