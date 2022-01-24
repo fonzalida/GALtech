@@ -28,7 +28,7 @@ namespace CoolSoft.DATOS.REPOSITORIO
             conexion.QueryInsert(cmd);
         }
 
-        static void eliminar(Titular p)
+        static public void eliminar(Titular p)
         {
             Conexion conexion = new Conexion();
 

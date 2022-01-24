@@ -11,7 +11,7 @@ namespace CoolSoft.DATOS.REPOSITORIO
 {
     static class ParteOrdenRepository
     {
-        static void agregar(Parte_Orden p)
+        static public void agregar(Parte_Orden p)
         {
             // String query = "Insert into parteorden (idp, id, fechainicio, fechafin, completa) values (" + p.IdP + "," + p.Id + "," + p.FechaInicio + "," + p.FechaFin + "," + p.Completa + ")";
 
@@ -31,7 +31,7 @@ namespace CoolSoft.DATOS.REPOSITORIO
             conexion.QueryInsert(cmd);
         }
 
-        static void eliminar(Parte_Orden p)
+        static public void eliminar(Parte_Orden p)
         {
             Conexion conexion = new Conexion();
 

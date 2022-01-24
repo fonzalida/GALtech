@@ -50,6 +50,20 @@ namespace CoolSoft.DATOS.REPOSITORIO
             conexion.QueryInsert(cmd);
         }
 
+        public static bool/*List<Persona>*/ BuscarUno(int dni)
+        {
+            String query = "SELECT * FROM PERSONA WHERE dni = "+dni+"";
+
+            Conexion conexion = new Conexion();
+            if (conexion.QuerySelect(query).Rows != null)
+            {
+                return true;
+            }
+            else return false;
+            
+
+        }
+
         public static DataTable/*List<Persona>*/ ListarTodos()
         {
             String query = "SELECT * FROM PERSONA";

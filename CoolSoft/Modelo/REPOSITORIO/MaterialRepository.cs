@@ -11,7 +11,7 @@ namespace CoolSoft.DATOS.REPOSITORIO
 {
     static class MaterialRepository
     {
-        static void agregar(Material p)
+        static public void agregar(Material p)
         {
             //String query = "Insert into material (IdMat, IdOrden, Cantidad, Descripcion) values (" + p.IdMat + "," + p.IdOrden + "," + p.cantidad + "," + p.descripcion + ")";
            
@@ -30,7 +30,7 @@ namespace CoolSoft.DATOS.REPOSITORIO
             conexion.QueryInsert(cmd);
         }
 
-        static void eliminar(Material p)
+        static public void eliminar(Material p)
         {
             Conexion conexion = new Conexion();
 

@@ -11,7 +11,7 @@ namespace CoolSoft.DATOS.REPOSITORIO
 {
     static class TecnicoRepository
     {
-        static void agregar(Tecnico p)
+        static public void agregar(Tecnico p)
         {
             // String query = "Insert into Tecnico (dni) values (" + p.dni +")";
 
@@ -27,7 +27,7 @@ namespace CoolSoft.DATOS.REPOSITORIO
             conexion.QueryInsert(cmd);
         }
 
-        static void eliminar(Tecnico p)
+        static public void eliminar(Tecnico p)
         {
             Conexion conexion = new Conexion();
 
