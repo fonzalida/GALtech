@@ -11,7 +11,7 @@ namespace CoolSoft.DATOS.REPOSITORIO
 {
     static class TitularRepository
     {
-        static void agregar(Titular p)
+        static public void agregar(Titular p)
         {
             //String query = "Insert into Titular (dni, IdCliente) values (" + p.dni + "," + p.IdCliente+")";
 
