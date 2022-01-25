@@ -31,11 +31,11 @@ namespace CoolSoft.DATOS.SERVICIO
 
         }
 
-        static public bool Eliminar(Persona p)
+        static public bool Eliminar(Tecnico t)
         {
-            if (TecnicoRepository.BuscarUno(p.dni))
+            if (TecnicoRepository.BuscarUno(t.dni))
             {
-                TecnicoRepository.eliminar(new Tecnico(p.dni));
+                TecnicoRepository.eliminar(t);
                 return true;
             }
             else
