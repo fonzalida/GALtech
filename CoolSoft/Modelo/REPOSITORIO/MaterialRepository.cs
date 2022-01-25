@@ -27,7 +27,7 @@ namespace CoolSoft.DATOS.REPOSITORIO
             cmd.Parameters.AddWithValue("@descripcion", p.descripcion);
 
             Conexion conexion = new Conexion();
-            conexion.QueryInsert(cmd);
+            conexion.QueryInsertDeleteUpdate(cmd);
         }
 
         static public void eliminar(Material p)
@@ -42,7 +42,7 @@ namespace CoolSoft.DATOS.REPOSITORIO
             cmd.Parameters.AddWithValue("@IdMat", p.IdMat);
             cmd.Parameters.AddWithValue("@IdOrden", p.IdOrden);
 
-            conexion.QueryInsert(cmd);
+            conexion.QueryInsertDeleteUpdate(cmd);
         }
 
         public static DataTable/*List<Material>*/ ListarTodos()

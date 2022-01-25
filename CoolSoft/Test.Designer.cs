@@ -52,11 +52,9 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.tbCIdCliente = new System.Windows.Forms.TextBox();
             this.tbcNombre = new System.Windows.Forms.TextBox();
             this.tbcDomicilio = new System.Windows.Forms.TextBox();
             this.tbcTelefono = new System.Windows.Forms.TextBox();
-            this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.textBoxNombre = new System.Windows.Forms.TextBox();
             this.textBoxApellido = new System.Windows.Forms.TextBox();
@@ -65,15 +63,21 @@
             this.textBoxDni = new System.Windows.Forms.TextBox();
             this.AgregarPersona = new System.Windows.Forms.Button();
             this.dgvPersona = new System.Windows.Forms.DataGridView();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.button7 = new System.Windows.Forms.Button();
+            this.textBoxIDCLIENTE = new System.Windows.Forms.TextBox();
+            this.panel3 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPersona)).BeginInit();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(23, 17);
+            this.label1.Location = new System.Drawing.Point(10, 22);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(61, 17);
@@ -82,7 +86,7 @@
             // 
             // txtServidor
             // 
-            this.txtServidor.Location = new System.Drawing.Point(143, 13);
+            this.txtServidor.Location = new System.Drawing.Point(130, 18);
             this.txtServidor.Margin = new System.Windows.Forms.Padding(4);
             this.txtServidor.Name = "txtServidor";
             this.txtServidor.Size = new System.Drawing.Size(129, 22);
@@ -92,7 +96,7 @@
             // Puerto
             // 
             this.Puerto.AutoSize = true;
-            this.Puerto.Location = new System.Drawing.Point(23, 43);
+            this.Puerto.Location = new System.Drawing.Point(10, 48);
             this.Puerto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Puerto.Name = "Puerto";
             this.Puerto.Size = new System.Drawing.Size(50, 17);
@@ -101,7 +105,7 @@
             // 
             // txtPuerto
             // 
-            this.txtPuerto.Location = new System.Drawing.Point(143, 43);
+            this.txtPuerto.Location = new System.Drawing.Point(130, 48);
             this.txtPuerto.Margin = new System.Windows.Forms.Padding(4);
             this.txtPuerto.Name = "txtPuerto";
             this.txtPuerto.Size = new System.Drawing.Size(129, 22);
@@ -111,7 +115,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(23, 77);
+            this.label2.Location = new System.Drawing.Point(10, 82);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(57, 17);
@@ -120,7 +124,7 @@
             // 
             // txtUsuario
             // 
-            this.txtUsuario.Location = new System.Drawing.Point(143, 77);
+            this.txtUsuario.Location = new System.Drawing.Point(130, 82);
             this.txtUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(129, 22);
@@ -130,7 +134,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(23, 107);
+            this.label3.Location = new System.Drawing.Point(10, 112);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(81, 17);
@@ -139,7 +143,7 @@
             // 
             // txtContraseña
             // 
-            this.txtContraseña.Location = new System.Drawing.Point(143, 107);
+            this.txtContraseña.Location = new System.Drawing.Point(130, 112);
             this.txtContraseña.Margin = new System.Windows.Forms.Padding(4);
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.Size = new System.Drawing.Size(129, 22);
@@ -148,7 +152,7 @@
             // 
             // btnConectar
             // 
-            this.btnConectar.Location = new System.Drawing.Point(52, 162);
+            this.btnConectar.Location = new System.Drawing.Point(13, 150);
             this.btnConectar.Margin = new System.Windows.Forms.Padding(4);
             this.btnConectar.Name = "btnConectar";
             this.btnConectar.Size = new System.Drawing.Size(184, 46);
@@ -159,21 +163,21 @@
             // 
             // tbNombre
             // 
-            this.tbNombre.Location = new System.Drawing.Point(331, 48);
+            this.tbNombre.Location = new System.Drawing.Point(331, 133);
             this.tbNombre.Name = "tbNombre";
             this.tbNombre.Size = new System.Drawing.Size(100, 22);
             this.tbNombre.TabIndex = 9;
             // 
             // tbApellido
             // 
-            this.tbApellido.Location = new System.Drawing.Point(331, 77);
+            this.tbApellido.Location = new System.Drawing.Point(331, 162);
             this.tbApellido.Name = "tbApellido";
             this.tbApellido.Size = new System.Drawing.Size(100, 22);
             this.tbApellido.TabIndex = 10;
             // 
             // tbDni
             // 
-            this.tbDni.Location = new System.Drawing.Point(331, 20);
+            this.tbDni.Location = new System.Drawing.Point(331, 105);
             this.tbDni.Mask = "99999999";
             this.tbDni.Name = "tbDni";
             this.tbDni.PromptChar = ' ';
@@ -183,11 +187,11 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(340, 155);
+            this.button1.Location = new System.Drawing.Point(331, 194);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 23);
+            this.button1.Size = new System.Drawing.Size(115, 53);
             this.button1.TabIndex = 12;
-            this.button1.Text = "Cargar";
+            this.button1.Text = "Cargar Persona";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -259,11 +263,11 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(471, 223);
+            this.button3.Location = new System.Drawing.Point(471, 213);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(100, 23);
+            this.button3.Size = new System.Drawing.Size(118, 34);
             this.button3.TabIndex = 22;
-            this.button3.Text = "Cargar";
+            this.button3.Text = "Cargar Orden";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -279,21 +283,16 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(331, 264);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(394, 189);
             this.dataGridView1.TabIndex = 25;
-            // 
-            // tbCIdCliente
-            // 
-            this.tbCIdCliente.Location = new System.Drawing.Point(12, 13);
-            this.tbCIdCliente.Name = "tbCIdCliente";
-            this.tbCIdCliente.Size = new System.Drawing.Size(100, 22);
-            this.tbCIdCliente.TabIndex = 26;
-            this.tbCIdCliente.Text = "IdCliente";
             // 
             // tbcNombre
             // 
@@ -318,16 +317,6 @@
             this.tbcTelefono.Size = new System.Drawing.Size(100, 22);
             this.tbcTelefono.TabIndex = 29;
             this.tbcTelefono.Text = "Telefono";
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(12, 147);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(124, 23);
-            this.button5.TabIndex = 33;
-            this.button5.Text = "Cargar Cliente";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button6
             // 
@@ -368,14 +357,12 @@
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.textBoxDni);
             this.panel1.Controls.Add(this.AgregarPersona);
-            this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.tbcTelefono);
             this.panel1.Controls.Add(this.dgvPersona);
             this.panel1.Controls.Add(this.tbcDomicilio);
             this.panel1.Controls.Add(this.textBoxNombre);
             this.panel1.Controls.Add(this.tbcNombre);
             this.panel1.Controls.Add(this.Transaccion);
-            this.panel1.Controls.Add(this.tbCIdCliente);
             this.panel1.Controls.Add(this.textBoxApellido);
             this.panel1.Location = new System.Drawing.Point(768, 20);
             this.panel1.Name = "panel1";
@@ -412,11 +399,57 @@
             this.dgvPersona.Size = new System.Drawing.Size(248, 150);
             this.dgvPersona.TabIndex = 38;
             // 
+            // panel2
+            // 
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.textBoxIDCLIENTE);
+            this.panel2.Controls.Add(this.button7);
+            this.panel2.Location = new System.Drawing.Point(25, 354);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(200, 99);
+            this.panel2.TabIndex = 39;
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(13, 38);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(135, 37);
+            this.button7.TabIndex = 0;
+            this.button7.Text = "ObtenerIdCliente";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click_1);
+            // 
+            // textBoxIDCLIENTE
+            // 
+            this.textBoxIDCLIENTE.Location = new System.Drawing.Point(13, 10);
+            this.textBoxIDCLIENTE.Name = "textBoxIDCLIENTE";
+            this.textBoxIDCLIENTE.Size = new System.Drawing.Size(100, 22);
+            this.textBoxIDCLIENTE.TabIndex = 1;
+            // 
+            // panel3
+            // 
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.btnConectar);
+            this.panel3.Controls.Add(this.label1);
+            this.panel3.Controls.Add(this.txtServidor);
+            this.panel3.Controls.Add(this.Puerto);
+            this.panel3.Controls.Add(this.txtPuerto);
+            this.panel3.Controls.Add(this.label2);
+            this.panel3.Controls.Add(this.txtUsuario);
+            this.panel3.Controls.Add(this.label3);
+            this.panel3.Controls.Add(this.txtContraseña);
+            this.panel3.Location = new System.Drawing.Point(12, 14);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(280, 205);
+            this.panel3.TabIndex = 40;
+            // 
             // Test
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1076, 542);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.dataGridView1);
@@ -434,15 +467,6 @@
             this.Controls.Add(this.tbDni);
             this.Controls.Add(this.tbApellido);
             this.Controls.Add(this.tbNombre);
-            this.Controls.Add(this.btnConectar);
-            this.Controls.Add(this.txtContraseña);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtUsuario);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtPuerto);
-            this.Controls.Add(this.Puerto);
-            this.Controls.Add(this.txtServidor);
-            this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Test";
             this.Text = "Form1";
@@ -451,6 +475,10 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPersona)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -488,11 +516,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn apellidoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox tbCIdCliente;
         private System.Windows.Forms.TextBox tbcNombre;
         private System.Windows.Forms.TextBox tbcDomicilio;
         private System.Windows.Forms.TextBox tbcTelefono;
-        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.TextBox textBoxNombre;
         private System.Windows.Forms.TextBox textBoxApellido;
@@ -501,6 +527,10 @@
         private System.Windows.Forms.DataGridView dgvPersona;
         private System.Windows.Forms.TextBox textBoxDni;
         private System.Windows.Forms.Button AgregarPersona;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.TextBox textBoxIDCLIENTE;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Panel panel3;
     }
 }
 

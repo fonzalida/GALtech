@@ -1,5 +1,8 @@
 ﻿using MySql.Data.MySqlClient;
+using System;
+using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using System.Diagnostics;
 using System.Windows.Forms;
 
@@ -25,7 +28,6 @@ namespace CoolSoft.DATOS
         public DataTable QuerySelect(string Query)
         {
             DataTable dt = new DataTable();
-            string datos = "";
             try
             {
                 conexionBD.Open();
@@ -50,8 +52,28 @@ namespace CoolSoft.DATOS
             return dt;
         }
 
+        public int QueryId(MySqlCommand cmd)
+        {
+            int resultado = -1;
+            try
+            {
+                conexionBD.Open();
 
-        public string QueryInsert(MySqlCommand cmd) //QUERY INSERT, DELETE, UPDATE
+                cmd.Connection = conexionBD;
+                resultado = Convert.ToInt32(cmd.ExecuteScalar());
+
+                
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("ERROR " + ex.ToString());
+            }
+            return resultado;
+            //return dt.Rows[0].Field<int>(0);
+        }
+
+
+        public string QueryInsertDeleteUpdate(MySqlCommand cmd) //QUERY INSERT, DELETE, UPDATE
         {
             string datos = "";
             try
@@ -70,6 +92,57 @@ namespace CoolSoft.DATOS
             }
 
             return datos;
+        }
+
+        public void QueryInsertTransaction(List<string> querys)
+        {
+            conexionBD.Open();
+
+            MySqlCommand myCommand = conexionBD.CreateCommand();
+            MySqlTransaction myTrans;
+
+            // Start a local transaction
+            myTrans = conexionBD.BeginTransaction();
+            // Must assign both transaction object and connection
+            // to Command object for a pending local transaction
+            myCommand.Connection = conexionBD;
+            myCommand.Transaction = myTrans;
+
+            try
+            {
+                int i = 0;
+                foreach(string query in querys)
+                {
+                    myCommand.CommandText = query;
+                    i += myCommand.ExecuteNonQuery();
+
+                }
+                myTrans.Commit();
+                Console.WriteLine(i +" registros cargados");
+            }
+            catch (Exception e)
+            {
+                try
+                {
+                    myTrans.Rollback();
+                }
+                catch (SqlException ex)
+                {
+                    if (myTrans.Connection != null)
+                    {
+                        Console.WriteLine("An exception of type " + ex.GetType() +
+                        " was encountered while attempting to roll back the transaction.");
+                    }
+                }
+
+                Console.WriteLine("An exception of type " + e.GetType() +
+                " was encountered while inserting the data.");
+                Console.WriteLine("Neither record was written to database.");
+            }
+            finally
+            {
+                conexionBD.Close();
+            }
         }
 
     }

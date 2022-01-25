@@ -73,7 +73,7 @@ namespace connect
             p.nombre = tbNombre.Text;
             p.apellido = tbApellido.Text;
 
-            PersonaRepository.agregar(p);
+            PersonaRepository.Agregar(p);
 
         }
 
@@ -147,6 +147,11 @@ namespace connect
             dgvPersona.DataSource = null;
             dgvPersona.DataSource = listPersona;
 
+        }
+
+        private void button7_Click_1(object sender, EventArgs e)
+        {
+            //textBoxIDCLIENTE.Text = ClienteRepository.ObtenerId().ToString();
         }
     }
 }

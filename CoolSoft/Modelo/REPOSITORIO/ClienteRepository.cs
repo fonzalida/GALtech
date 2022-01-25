@@ -11,23 +11,43 @@ namespace CoolSoft.DATOS.REPOSITORIO
 {
     static class ClienteRepository
     {
-        static public void agregar(Cliente p)
+        static public int Agregar(Cliente p)
         {
-            //String query = "Insert into Cliente(IdCliente, nombre, domicilio, telefono) values ("+p.IdCliente+","+p.nombre+ "," +p.Domicilio+ "," +p.Telefono+")";
+            //MySqlCommand cmd = new MySqlCommand(
+            //   "INSERT INTO CLIENTE" +
+            //   "(IdCliente, nombre, domicilio, telefono)" +
+            //   " VALUES (@IdCliente, @nombre, @domicilio, @telefono)"
+            //   );
+
+            //cmd.Parameters.AddWithValue("@IdCliente", p.IdCliente);
+            //cmd.Parameters.AddWithValue("@nombre", p.nombre);
+            //cmd.Parameters.AddWithValue("@domicilio", p.Domicilio);
+            //cmd.Parameters.AddWithValue("@telefono", p.Telefono);
+
+            //Conexion conexion = new Conexion();
+            //conexion.QueryInsertDeleteUpdate(cmd);
+
+            ////RETORNAR EL ID DEL CLIENTE CARGADO
+            //String query = "SELECT SCOPE_IDENTITY();";
+
+            //return conexion.QuerySelect(query).Rows[0].Field<int>(0);
 
             MySqlCommand cmd = new MySqlCommand(
                "INSERT INTO CLIENTE" +
-               "(IdCliente, nombre, domicilio, telefono)" +
-               " VALUES (@IdCliente, @nombre, @domicilio, @telefono)"
+               "(nombre, domicilio, telefono)" +
+               " VALUES (@nombre, @domicilio, @telefono); " +
+               //"SELECT SCOPE_IDENTITY();"
+               "SELECT LAST_INSERT_ID();"
                );
 
-            cmd.Parameters.AddWithValue("@IdCliente", p.IdCliente);
             cmd.Parameters.AddWithValue("@nombre", p.nombre);
             cmd.Parameters.AddWithValue("@domicilio", p.Domicilio);
             cmd.Parameters.AddWithValue("@telefono", p.Telefono);
-            
+
             Conexion conexion = new Conexion();
-            conexion.QueryInsert(cmd);
+
+            return conexion.QueryId(cmd);
+
         }
 
         static public void eliminar(Cliente p)
@@ -42,10 +62,10 @@ namespace CoolSoft.DATOS.REPOSITORIO
 
             cmd.Parameters.AddWithValue("@IdCliente", p.IdCliente);
 
-            conexion.QueryInsert(cmd);
+            conexion.QueryInsertDeleteUpdate(cmd);
         }
 
-        public static DataTable/*List<Cliente>*/ ListarTodos()
+        public static DataTable ListarTodos()
         {
             String query = "SELECT * FROM CLIENTE";
 
@@ -53,5 +73,13 @@ namespace CoolSoft.DATOS.REPOSITORIO
             return conexion.QuerySelect(query);
 
         }
+
+        //public static int ObtenerId()
+        //{
+        //    String query = "SELECT MAX(IdCliente) FROM CLIENTE";
+
+        //    Conexion conexion = new Conexion();
+        //    return conexion.QuerySelect(query).Rows[0].Field<int>(0);
+        //}
     }
 }

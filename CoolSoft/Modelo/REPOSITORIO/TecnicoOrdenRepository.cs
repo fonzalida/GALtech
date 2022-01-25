@@ -26,7 +26,7 @@ namespace CoolSoft.DATOS.REPOSITORIO
             cmd.Parameters.AddWithValue("@Id", p.id);
 
             Conexion conexion = new Conexion();
-            conexion.QueryInsert(cmd);
+            conexion.QueryInsertDeleteUpdate(cmd);
         }
 
         static public void eliminar(Tecnico_Orden p)
@@ -40,7 +40,7 @@ namespace CoolSoft.DATOS.REPOSITORIO
 
             cmd.Parameters.AddWithValue("@Dni", p.dni);
 
-            conexion.QueryInsert(cmd);
+            conexion.QueryInsertDeleteUpdate(cmd);
         }
 
         public static DataTable/*List<Tecnico_Orden>*/ ListarTodos()

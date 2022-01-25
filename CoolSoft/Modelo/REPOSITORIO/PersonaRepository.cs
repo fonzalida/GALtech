@@ -13,7 +13,7 @@ namespace CoolSoft.DATOS.REPOSITORIO
 
     static public class PersonaRepository
     {
-        public static void agregar(Persona p)
+        public static void Agregar(Persona p)
         {
             //String query = string.Format(
             //    "Insert into persona (dni, nombre, apellido) values ('{0}','{1}','{2}');",
@@ -32,9 +32,10 @@ namespace CoolSoft.DATOS.REPOSITORIO
             cmd.Parameters.AddWithValue("@apellido", p.apellido);
 
             Conexion conexion = new Conexion();
-            conexion.QueryInsert(cmd);
+            conexion.QueryInsertDeleteUpdate(cmd);
 
         }
+
 
         public static void eliminar(Persona p)
         {
@@ -47,21 +48,19 @@ namespace CoolSoft.DATOS.REPOSITORIO
 
             cmd.Parameters.AddWithValue("@dni", p.dni);
 
-            conexion.QueryInsert(cmd);
+            conexion.QueryInsertDeleteUpdate(cmd);
         }
 
-        public static bool/*List<Persona>*/ BuscarUno(int dni)
+        public static bool BuscarUno(int dni)
         {
             String query = "SELECT * FROM PERSONA WHERE dni = \"" + dni+"\"";
 
             Conexion conexion = new Conexion();
-            if (conexion.QuerySelect(query).Rows.Count != 1)
-            {
+            if (conexion.QuerySelect(query).Rows.Count == 1)
+                return true;
+            else 
                 return false;
-            }
-            else return true;
             
-
         }
 
         public static DataTable/*List<Persona>*/ ListarTodos()

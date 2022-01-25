@@ -28,7 +28,7 @@ namespace CoolSoft.DATOS.REPOSITORIO
           cmd.Parameters.AddWithValue("@Completa", p.Completa);
 
             Conexion conexion = new Conexion();
-            conexion.QueryInsert(cmd);
+            conexion.QueryInsertDeleteUpdate(cmd);
         }
 
         static public void eliminar(Parte_Orden p)
@@ -42,7 +42,7 @@ namespace CoolSoft.DATOS.REPOSITORIO
 
             cmd.Parameters.AddWithValue("@IdP", p.IdP);
 
-            conexion.QueryInsert(cmd);
+            conexion.QueryInsertDeleteUpdate(cmd);
         }
 
         public static DataTable/*List<Parte_Orden>*/ ListarTodos()

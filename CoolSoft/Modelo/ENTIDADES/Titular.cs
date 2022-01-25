@@ -10,5 +10,13 @@ namespace CoolSoft.DATOS.ENTIDADES
     {
         public int dni { get; set; }
         public int IdCliente { get; set; }
+
+
+        public Titular() { }
+        public Titular(int dni, int id) 
+        {
+            this.dni = dni;
+            IdCliente = id;
+        }
     }
 }

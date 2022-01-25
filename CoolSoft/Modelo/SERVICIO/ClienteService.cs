@@ -14,23 +14,16 @@ namespace CoolSoft.DATOS.SERVICIO
         static public bool Agregar(Cliente c, List<Persona> ListaP)
         {
 
-            int i;
-            ClienteRepository.agregar(c); //retornar la id de cliente
+            
+            int IdCliente = ClienteRepository.Agregar(c); //retornar la id de cliente
 
             foreach(Persona p in ListaP)
             {
-                PersonaRepository.agregar(p);
-                
-                Titular t = new Titular();
-                t.dni = p.dni;
-                t.IdCliente = c.IdCliente;
-                TitularRepository.agregar(t);
+                if(!PersonaRepository.BuscarUno(p.dni))
+                    PersonaRepository.Agregar(p);
 
-
+                TitularRepository.Agregar(new Titular(p.dni, IdCliente));
             }
-
-            
-            
 
             return true;
         }

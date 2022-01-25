@@ -11,7 +11,7 @@ namespace CoolSoft.DATOS.REPOSITORIO
 {
     static class TitularRepository
     {
-        static public void agregar(Titular p)
+        static public void Agregar(Titular p)
         {
             //String query = "Insert into Titular (dni, IdCliente) values (" + p.dni + "," + p.IdCliente+")";
 
@@ -25,7 +25,7 @@ namespace CoolSoft.DATOS.REPOSITORIO
             cmd.Parameters.AddWithValue("@IdCliente", p.IdCliente);
 
             Conexion conexion = new Conexion();
-            conexion.QueryInsert(cmd);
+            conexion.QueryInsertDeleteUpdate(cmd);
         }
 
         static public void eliminar(Titular p)
@@ -39,7 +39,7 @@ namespace CoolSoft.DATOS.REPOSITORIO
 
             cmd.Parameters.AddWithValue("@dni", p.dni);
 
-            conexion.QueryInsert(cmd);
+            conexion.QueryInsertDeleteUpdate(cmd);
         }
 
         public static DataTable/*List<Persona>*/ ListarTodos()
