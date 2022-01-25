@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CoolSoft.DATOS.SERVICIO
 {
-    static class OrdenService
+    static public class OrdenService
     {
     }
 }
