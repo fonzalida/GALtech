@@ -11,20 +11,21 @@ namespace CoolSoft.DATOS.REPOSITORIO
 {
     static class TecnicoRepository
     {
-        static public void agregar(Tecnico p)
+        static public int agregar(Tecnico p)
         {
             // String query = "Insert into Tecnico (dni) values (" + p.dni +")";
 
             MySqlCommand cmd = new MySqlCommand(
                "INSERT INTO TECNICO" +
                "(dni)" +
-               " VALUES (@dni)"
+               " VALUES (@dni)"+
+               "SELECT LAST_INSERT_ID();"
                );
 
             cmd.Parameters.AddWithValue("@dni", p.dni);
 
             Conexion conexion = new Conexion();
-            conexion.QueryInsertDeleteUpdate(cmd);
+            return int.Parse(conexion.QueryInsertDeleteUpdate(cmd));
         }
 
         static public void eliminar(Tecnico p)

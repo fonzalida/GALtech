@@ -28,5 +28,11 @@ namespace CoolSoft.DATOS.SERVICIO
             return true;
         }
 
+        static public bool Eliminar(Cliente c)
+        {
+
+            return true;
+        }
+
     }
 }
