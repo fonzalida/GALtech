@@ -13,7 +13,7 @@ namespace CoolSoft.DATOS.REPOSITORIO
     {
         public static int agregar(Orden p)
         {
-            //String query = "Insert into orden ( Fecha_Recepcion, Tarea_Desarrollar, Tarea_Desarrollada, Precio, IdCliente, Completada) values (" + p.IdOrden + "," + p.FechaRecepcion + "," + p.TareaDesarrollar + "," + p.TareaDesarrollada + "," + p.Precio + "," + p.IdCliente + "," + p.Completada + ")";
+            //String query = "Insert into orden (IdOrden, Fecha_Recepcion, Tarea_Desarrollar, Tarea_Desarrollada, Precio, IdCliente, Completada) values (" + p.IdOrden + "," + p.FechaRecepcion + "," + p.TareaDesarrollar + "," + p.TareaDesarrollada + "," + p.Precio + "," + p.IdCliente + "," + p.Completada + ")";
 
             MySqlCommand cmd = new MySqlCommand(
                 "INSERT INTO ORDEN"+
@@ -22,6 +22,7 @@ namespace CoolSoft.DATOS.REPOSITORIO
                "SELECT LAST_INSERT_ID();"
                 );
 
+            //cmd.Parameters.AddWithValue("@IdOrden",p.IdOrden);
             cmd.Parameters.AddWithValue("@FechaRecepcion",p.FechaRecepcion);
             cmd.Parameters.AddWithValue("@TareaDesarrollar", p.TareaDesarrollar);
             cmd.Parameters.AddWithValue("@TareaDesarrollada", p.TareaDesarrollada);
