@@ -8,6 +8,8 @@ namespace CoolSoft.DATOS.ENTIDADES
 {
     public class Orden
     {
+        private object idClient;
+
         public int IdOrden { get; set; }
         public DateTime FechaRecepcion { get; set; } 
         public string TareaDesarrollar { get; set; }
@@ -18,5 +20,10 @@ namespace CoolSoft.DATOS.ENTIDADES
 
         public Orden() { }
 
+        public Orden(int idOrden, object idClient)
+        {
+            IdOrden = idOrden;
+            this.idClient = idClient;
+        }
     }
 }

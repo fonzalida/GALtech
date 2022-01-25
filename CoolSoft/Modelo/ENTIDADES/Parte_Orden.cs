@@ -15,5 +15,10 @@ namespace CoolSoft.DATOS.ENTIDADES
         public int Completa { get; set; }
 
         public Parte_Orden() { }
+
+        public Parte_Orden(int id)
+        {
+            Id = id;
+        }
     }
 }

@@ -5,27 +5,29 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace CoolSoft.DATOS.SERVICIO
 {
     static public class OrdenService
     {
-        static public bool Agregar(Orden p, Cliente c)
+        static public bool Agregar(Orden o, Cliente c)
         {
-
-            if (!PersonaRepository.BuscarUno(p.dni))
-                PersonaRepository.Agregar(p);
-
-            if (TecnicoRepository.BuscarUno(p.dni))
+             int id = c.IdCliente;
+            if (!ClienteRepository.BuscarUno(c.IdCliente))
             {
-                MessageBox.Show("El tecnico ya se encuentra cargado");
-                return false;
+                int IdCliente = ClienteRepository.Agregar(c); //retornar la id de cliente
+                id = IdCliente;
+
+
             }
-            else
-            {
-                TecnicoRepository.agregar(new Tecnico(p.dni));
-                return true;
-            }
+
+            OrdenRepository.agregar(new Orden(o.IdOrden, id));
+            ParteOrdenRepository.agregar(new Parte_Orden( id));
+
+
+            return true;
+            
 
 
 
