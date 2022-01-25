@@ -45,6 +45,18 @@ namespace CoolSoft.DATOS.REPOSITORIO
             conexion.QueryInsertDeleteUpdate(cmd);
         }
 
+        public static bool BuscarUno(int IdMat, int IdOrden)
+        {
+            String query = "SELECT * FROM MATERIAL WHERE Idmat = \"" + IdMat + "\" and IdOrden = \"" + IdOrden + "\"";
+
+            Conexion conexion = new Conexion();
+            if (conexion.QuerySelect(query).Rows.Count == 1)
+                return true;
+            else
+                return false;
+
+        }
+
         public static DataTable/*List<Material>*/ ListarTodos()
         {
             String query = "SELECT * FROM MATERIAL";

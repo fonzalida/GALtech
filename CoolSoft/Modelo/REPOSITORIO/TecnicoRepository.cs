@@ -41,6 +41,18 @@ namespace CoolSoft.DATOS.REPOSITORIO
             conexion.QueryInsertDeleteUpdate(cmd);
         }
 
+        public static bool BuscarUno(int dni)
+        {
+            String query = "SELECT * FROM TECNICO WHERE dni = \"" + dni + "\"";
+
+            Conexion conexion = new Conexion();
+            if (conexion.QuerySelect(query).Rows.Count == 1)
+                return true;
+            else
+                return false;
+
+        }
+
         public static DataTable/*List<Persona>*/ ListarTodos()
         {
             String query = "SELECT * FROM TECNICO";

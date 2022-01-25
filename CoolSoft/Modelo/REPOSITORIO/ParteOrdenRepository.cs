@@ -37,12 +37,25 @@ namespace CoolSoft.DATOS.REPOSITORIO
 
             MySqlCommand cmd = new MySqlCommand(
                 "DELETE FROM PARTEORDEN " +
-                "where IdP = @IdP"
+                "where IdP = @IdP and Id = @Id"
                 );
 
             cmd.Parameters.AddWithValue("@IdP", p.IdP);
+            cmd.Parameters.AddWithValue("@Id", p.Id);
 
             conexion.QueryInsertDeleteUpdate(cmd);
+        }
+
+        public static bool BuscarUno(int Idp, int Id)
+        {
+            String query = "SELECT * FROM PARTEORDEN WHERE Idp = \"" + Idp + "\" and Id = \"" + Id + "\"";
+
+            Conexion conexion = new Conexion();
+            if (conexion.QuerySelect(query).Rows.Count == 1)
+                return true;
+            else
+                return false;
+
         }
 
         public static DataTable/*List<Parte_Orden>*/ ListarTodos()

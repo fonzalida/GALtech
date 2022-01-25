@@ -65,6 +65,18 @@ namespace CoolSoft.DATOS.REPOSITORIO
             conexion.QueryInsertDeleteUpdate(cmd);
         }
 
+        public static bool BuscarUno(int IdCliente)
+        {
+            String query = "SELECT * FROM CLIENTE WHERE IdCliente = \"" + IdCliente + "\"";
+
+            Conexion conexion = new Conexion();
+            if (conexion.QuerySelect(query).Rows.Count == 1)
+                return true;
+            else
+                return false;
+
+        }
+
         public static DataTable ListarTodos()
         {
             String query = "SELECT * FROM CLIENTE";

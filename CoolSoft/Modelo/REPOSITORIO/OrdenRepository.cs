@@ -48,6 +48,18 @@ namespace CoolSoft.DATOS.REPOSITORIO
             conexion.QueryInsertDeleteUpdate(cmd);
         }
 
+        public static bool BuscarUno(int IdOrden)
+        {
+            String query = "SELECT * FROM ORDEN WHERE IdOrden = \"" + IdOrden + "\"";
+
+            Conexion conexion = new Conexion();
+            if (conexion.QuerySelect(query).Rows.Count == 1)
+                return true;
+            else
+                return false;
+
+        }
+
         public static DataTable/*List<Orden>*/ ListarTodos()
         {
             String query = "SELECT * FROM ORDEN";

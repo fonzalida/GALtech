@@ -34,12 +34,25 @@ namespace CoolSoft.DATOS.REPOSITORIO
 
             MySqlCommand cmd = new MySqlCommand(
                 "DELETE FROM TITULAR" +
-                "where dni = @dni"
+                "where dni = @dni and IdCliente = @IdCliente"
                 );
 
             cmd.Parameters.AddWithValue("@dni", p.dni);
+            cmd.Parameters.AddWithValue("@IdCliente", p.IdCliente);
 
             conexion.QueryInsertDeleteUpdate(cmd);
+        }
+
+        public static bool BuscarUno(int dni, int IdCliente)
+        {
+            String query = "SELECT * FROM TITULAR WHERE dni = \"" + dni + "\" and IdCliente = \"" + IdCliente + "\"";
+
+            Conexion conexion = new Conexion();
+            if (conexion.QuerySelect(query).Rows.Count == 1)
+                return true;
+            else
+                return false;
+
         }
 
         public static DataTable/*List<Persona>*/ ListarTodos()
