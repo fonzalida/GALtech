@@ -11,26 +11,28 @@ namespace CoolSoft.DATOS.REPOSITORIO
 {
     public static class OrdenRepository
     {
-        public static void agregar(Orden p)
+        public static int agregar(Orden p)
         {
             //String query = "Insert into orden (IdOrden, Fecha_Recepcion, Tarea_Desarrollar, Tarea_Desarrollada, Precio, IdCliente, Completada) values (" + p.IdOrden + "," + p.FechaRecepcion + "," + p.TareaDesarrollar + "," + p.TareaDesarrollada + "," + p.Precio + "," + p.IdCliente + "," + p.Completada + ")";
 
             MySqlCommand cmd = new MySqlCommand(
                 "INSERT INTO ORDEN"+
-                "(IdOrden, FechaRecepcion, TareaDesarrollar, TareaDesarrollada, Precio, IdCliente, Completada)"+
-                " VALUES (@IdOrden, @FechaRecepcion, @TareaDesarrollar, @TareaDesarrollada, @Precio, @IdCliente, @Completada)"
+                "(FechaRecepcion, TareaDesarrollar, TareaDesarrollada, IdCliente, Completada)"+
+                " VALUES (@FechaRecepcion, @TareaDesarrollar, @TareaDesarrollada, @IdCliente, @Completada)" +
+               "SELECT LAST_INSERT_ID();"
                 );
 
-            cmd.Parameters.AddWithValue("@IdOrden",p.IdOrden);
+            //cmd.Parameters.AddWithValue("@IdOrden",p.IdOrden);
             cmd.Parameters.AddWithValue("@FechaRecepcion",p.FechaRecepcion);
             cmd.Parameters.AddWithValue("@TareaDesarrollar", p.TareaDesarrollar);
             cmd.Parameters.AddWithValue("@TareaDesarrollada", p.TareaDesarrollada);
-            cmd.Parameters.AddWithValue("@Precio",p.Precio);
+            //cmd.Parameters.AddWithValue("@Precio",p.Precio);
             cmd.Parameters.AddWithValue("@IdCliente",p.IdCliente);
             cmd.Parameters.AddWithValue("@Completada",p.Completada);
 
             Conexion conexion = new Conexion();
-            conexion.QueryInsertDeleteUpdate(cmd);
+            //conexion.QueryInsertDeleteUpdate(cmd);
+            return conexion.QueryId(cmd);
         }
 
         public static void eliminar(Orden p)

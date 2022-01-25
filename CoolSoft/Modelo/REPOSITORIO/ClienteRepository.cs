@@ -13,30 +13,11 @@ namespace CoolSoft.DATOS.REPOSITORIO
     {
         static public int Agregar(Cliente p)
         {
-            //MySqlCommand cmd = new MySqlCommand(
-            //   "INSERT INTO CLIENTE" +
-            //   "(IdCliente, nombre, domicilio, telefono)" +
-            //   " VALUES (@IdCliente, @nombre, @domicilio, @telefono)"
-            //   );
-
-            //cmd.Parameters.AddWithValue("@IdCliente", p.IdCliente);
-            //cmd.Parameters.AddWithValue("@nombre", p.nombre);
-            //cmd.Parameters.AddWithValue("@domicilio", p.Domicilio);
-            //cmd.Parameters.AddWithValue("@telefono", p.Telefono);
-
-            //Conexion conexion = new Conexion();
-            //conexion.QueryInsertDeleteUpdate(cmd);
-
-            ////RETORNAR EL ID DEL CLIENTE CARGADO
-            //String query = "SELECT SCOPE_IDENTITY();";
-
-            //return conexion.QuerySelect(query).Rows[0].Field<int>(0);
-
+           
             MySqlCommand cmd = new MySqlCommand(
                "INSERT INTO CLIENTE" +
                "(nombre, domicilio, telefono)" +
                " VALUES (@nombre, @domicilio, @telefono); " +
-               //"SELECT SCOPE_IDENTITY();"
                "SELECT LAST_INSERT_ID();"
                );
 
@@ -47,6 +28,21 @@ namespace CoolSoft.DATOS.REPOSITORIO
             Conexion conexion = new Conexion();
 
             return conexion.QueryId(cmd);
+
+            //MySqlCommand cmd = new MySqlCommand(
+            //   "INSERT INTO CLIENTE" +
+            //   "(IdCliente, nombre, domicilio, telefono)" +
+            //   " VALUES (@IdCliente, @nombre, @domicilio, @telefono)"
+            //   );
+            //cmd.Parameters.AddWithValue("@IdCliente", p.IdCliente);
+            //cmd.Parameters.AddWithValue("@nombre", p.nombre);
+            //cmd.Parameters.AddWithValue("@domicilio", p.Domicilio);
+            //cmd.Parameters.AddWithValue("@telefono", p.Telefono);
+            //Conexion conexion = new Conexion();
+            //conexion.QueryInsertDeleteUpdate(cmd);
+            ////RETORNAR EL ID DEL CLIENTE CARGADO
+            //String query = "SELECT SCOPE_IDENTITY();";
+            //return conexion.QuerySelect(query).Rows[0].Field<int>(0);
 
         }
 
