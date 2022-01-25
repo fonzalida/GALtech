@@ -22,6 +22,7 @@ namespace CoolSoft.DATOS.REPOSITORIO
                "SELECT LAST_INSERT_ID();"
                 );
 
+            cmd.Parameters.AddWithValue("@IdOrden",p.IdOrden);
             cmd.Parameters.AddWithValue("@FechaRecepcion",p.FechaRecepcion);
             cmd.Parameters.AddWithValue("@TareaDesarrollar", p.TareaDesarrollar);
             cmd.Parameters.AddWithValue("@TareaDesarrollada", p.TareaDesarrollada);
