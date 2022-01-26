@@ -57,6 +57,25 @@ namespace CoolSoft.DATOS.REPOSITORIO
 
         }
 
+
+        public static void modificar(TecnicoOrden p)
+        {
+
+            MySqlCommand cmd = new MySqlCommand(
+                "UPDATE PARTEORDEN" +
+                 "SET Dni = @Dni, IdParte = @IdParte ,IdOrden = @IdOrden" +
+                  "where Dni = @Dni and IdParte = @IdParte and IdOrden = @IdOrden");
+
+
+            cmd.Parameters.AddWithValue("@Dni", p.dni);
+            cmd.Parameters.AddWithValue("@IdParte", p.idParte);
+            cmd.Parameters.AddWithValue("@IdOrden", p.idOrden);
+
+            Conexion conexion = new Conexion();
+
+            conexion.QueryInsertDeleteUpdate(cmd);
+        }
+
         public static DataTable/*List<Tecnico_Orden>*/ ListarTodos()
         {
             String query = "SELECT * FROM TECNICOORDEN";

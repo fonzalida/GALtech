@@ -68,6 +68,29 @@ namespace CoolSoft.DATOS.REPOSITORIO
 
         }
 
+        public static void modificar(Orden p)
+        {
+
+            MySqlCommand cmd = new MySqlCommand(
+                "UPDATE Orden" +
+                 "SET FechaRecepcion = @FechaRecepcion, TareaDesarrollar = @TareaDesarrollar, TareaDesarrollada = @TareaDesarrollada, Precio = @Precio ,IdCliente = @IdCliente, Completada = @Completada" +
+                  "WHERE IdOrden = @IdOrden ");
+                
+
+           
+            cmd.Parameters.AddWithValue("@FechaRecepcion",p.FechaRecepcion);
+            cmd.Parameters.AddWithValue("@TareaDesarrollar", p.TareaDesarrollar);
+            cmd.Parameters.AddWithValue("@TareaDesarrollada", p.TareaDesarrollada);
+            cmd.Parameters.AddWithValue("@Precio",p.Precio);
+            cmd.Parameters.AddWithValue("@IdCliente", p.IdCliente);
+            cmd.Parameters.AddWithValue("@Completada", p.Completada);
+
+            Conexion conexion = new Conexion();
+            //conexion.QueryId(cmd) no necesitamos retornar el id
+            conexion.QueryInsertDeleteUpdate(cmd);
+            
+        }
+
         public static DataTable/*List<Orden>*/ ListarTodos()
         {
             String query = "SELECT * FROM ORDEN";
