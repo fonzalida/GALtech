@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 19-01-2022 a las 22:50:28
+-- Tiempo de generación: 26-01-2022 a las 02:43:15
 -- Versión del servidor: 10.4.21-MariaDB
 -- Versión de PHP: 8.0.11
 
@@ -34,6 +34,13 @@ CREATE TABLE `cliente` (
   `IdCliente` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
+--
+-- Volcado de datos para la tabla `cliente`
+--
+
+INSERT INTO `cliente` (`Nombre`, `Domicilio`, `Telefono`, `IdCliente`) VALUES
+('Empresa', 'Domicilio', 124215, 4);
+
 -- --------------------------------------------------------
 
 --
@@ -54,11 +61,11 @@ CREATE TABLE `material` (
 --
 
 CREATE TABLE `orden` (
-  `FechaRecepcion` date NOT NULL,
+  `FechaRecepcion` datetime DEFAULT NULL,
   `IdOrden` int(11) NOT NULL,
-  `TareaDesarrollar` varchar(256) COLLATE utf8_spanish_ci NOT NULL,
-  `TareaDesarrollada` varchar(256) COLLATE utf8_spanish_ci NOT NULL,
-  `Precio` float NOT NULL,
+  `TareaDesarrollar` varchar(256) COLLATE utf8_spanish_ci DEFAULT NULL,
+  `TareaDesarrollada` varchar(256) COLLATE utf8_spanish_ci DEFAULT NULL,
+  `Precio` float DEFAULT NULL,
   `IdCliente` int(11) NOT NULL,
   `Completada` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
@@ -70,10 +77,10 @@ CREATE TABLE `orden` (
 --
 
 CREATE TABLE `parteorden` (
-  `IdP` int(11) NOT NULL,
-  `FechaInicio` date NOT NULL,
-  `FechaFin` date NOT NULL,
-  `Id` int(11) NOT NULL,
+  `IdParte` int(11) NOT NULL,
+  `FechaInicio` datetime NOT NULL,
+  `FechaFin` datetime NOT NULL,
+  `IdOrden` int(11) NOT NULL,
   `Completa` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
@@ -86,9 +93,12 @@ CREATE TABLE `parteorden` (
 CREATE TABLE `persona` (
   `Dni` int(11) NOT NULL,
   `Nombre` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
-  `Apellido` varchar(50) COLLATE utf8_spanish_ci NOT NULL
+  `Apellido` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
+  `Telefono` int(20) COLLATE utf8_spanish_ci DEFAULT NULL
+
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
+--
 -- --------------------------------------------------------
 
 --
@@ -107,8 +117,8 @@ CREATE TABLE `tecnico` (
 
 CREATE TABLE `tecnicoorden` (
   `Dni` int(11) NOT NULL,
-  `IdP` int(11) NOT NULL,
-  `Id` int(11) NOT NULL
+  `IdParte` int(11) NOT NULL,
+  `IdOrden` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 -- --------------------------------------------------------
@@ -121,6 +131,10 @@ CREATE TABLE `titular` (
   `Dni` int(11) NOT NULL,
   `IdCliente` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `titular`
+--
 
 --
 -- Índices para tablas volcadas
@@ -150,8 +164,8 @@ ALTER TABLE `orden`
 -- Indices de la tabla `parteorden`
 --
 ALTER TABLE `parteorden`
-  ADD PRIMARY KEY (`IdP`,`Id`),
-  ADD KEY `Id` (`Id`);
+  ADD PRIMARY KEY (`IdParte`,`IdOrden`),
+  ADD KEY `IdOrden` (`IdOrden`);
 
 --
 -- Indices de la tabla `persona`
@@ -169,8 +183,8 @@ ALTER TABLE `tecnico`
 -- Indices de la tabla `tecnicoorden`
 --
 ALTER TABLE `tecnicoorden`
-  ADD PRIMARY KEY (`Dni`,`IdP`,`Id`),
-  ADD KEY `IdP` (`IdP`,`Id`);
+  ADD PRIMARY KEY (`Dni`,`IdParte`,`IdOrden`),
+  ADD KEY `IdParte` (`IdParte`,`IdOrden`);
 
 --
 -- Indices de la tabla `titular`
@@ -187,13 +201,13 @@ ALTER TABLE `titular`
 -- AUTO_INCREMENT de la tabla `cliente`
 --
 ALTER TABLE `cliente`
-  MODIFY `IdCliente` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `IdCliente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
 
 --
 -- AUTO_INCREMENT de la tabla `orden`
 --
 ALTER TABLE `orden`
-  MODIFY `IdOrden` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `IdOrden` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
 
 --
 -- Restricciones para tablas volcadas
@@ -215,7 +229,7 @@ ALTER TABLE `orden`
 -- Filtros para la tabla `parteorden`
 --
 ALTER TABLE `parteorden`
-  ADD CONSTRAINT `parteorden_ibfk_1` FOREIGN KEY (`Id`) REFERENCES `orden` (`IdOrden`);
+  ADD CONSTRAINT `parteorden_ibfk_1` FOREIGN KEY (`IdOrden`) REFERENCES `orden` (`IdOrden`);
 
 --
 -- Filtros para la tabla `tecnico`
@@ -228,7 +242,7 @@ ALTER TABLE `tecnico`
 --
 ALTER TABLE `tecnicoorden`
   ADD CONSTRAINT `tecnicoorden_ibfk_1` FOREIGN KEY (`Dni`) REFERENCES `tecnico` (`Dni`),
-  ADD CONSTRAINT `tecnicoorden_ibfk_2` FOREIGN KEY (`IdP`,`Id`) REFERENCES `parteorden` (`IdP`, `Id`);
+  ADD CONSTRAINT `tecnicoorden_ibfk_2` FOREIGN KEY (`IdParte`,`IdOrden`) REFERENCES `parteorden` (`IdParte`, `IdOrden`);
 
 --
 -- Filtros para la tabla `titular`
