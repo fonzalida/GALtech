@@ -63,12 +63,10 @@ namespace CoolSoft.DATOS.REPOSITORIO
 
             MySqlCommand cmd = new MySqlCommand(
                 "UPDATE PARTEORDEN" +
-                 "SET IdParte = @IdParte, IdOrden = @IdOrden, FechaInicio = @FechaInicio, FechaFin = @FechaFin, Completa = @Completa" +
+                 "SET FechaInicio = @FechaInicio, FechaFin = @FechaFin, Completa = @Completa" +
                   "where IdParte = @IdParte and IdOrden = @IdOrden");
            
-
-            cmd.Parameters.AddWithValue("@IdParte", p.IdParte);
-            cmd.Parameters.AddWithValue("@IdOrden", p.IdOrden);
+ 
             cmd.Parameters.AddWithValue("@FechaInicio", p.FechaInicio);
             cmd.Parameters.AddWithValue("@FechaFin", p.FechaFin);
             cmd.Parameters.AddWithValue("@Completa", p.Completa);
