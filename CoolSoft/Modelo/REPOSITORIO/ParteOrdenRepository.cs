@@ -11,7 +11,7 @@ namespace CoolSoft.DATOS.REPOSITORIO
 {
     static class ParteOrdenRepository
     {
-        static public void agregar(Parte_Orden p)
+        static public void agregar(ParteOrden p)
         {
             // String query = "Insert into parteorden (idp, id, fechainicio, fechafin, completa) values (" + p.IdP + "," + p.Id + "," + p.FechaInicio + "," + p.FechaFin + "," + p.Completa + ")";
 
@@ -21,8 +21,8 @@ namespace CoolSoft.DATOS.REPOSITORIO
                        " VALUES (@IdP, @Id, @Fechainicio, @Fechafin, @Completa)"
                        );
 
-          cmd.Parameters.AddWithValue("@IdP", p.IdP);
-          cmd.Parameters.AddWithValue("@Id", p.Id);
+          cmd.Parameters.AddWithValue("@IdP", p.IdParte);
+          cmd.Parameters.AddWithValue("@Id", p.IdOrden);
           cmd.Parameters.AddWithValue("@Fechainicio", p.FechaInicio);
           cmd.Parameters.AddWithValue("@FechaFin", p.FechaFin);
           cmd.Parameters.AddWithValue("@Completa", p.Completa);
@@ -31,7 +31,7 @@ namespace CoolSoft.DATOS.REPOSITORIO
             conexion.QueryInsertDeleteUpdate(cmd);
         }
 
-        static public void eliminar(Parte_Orden p)
+        static public void eliminar(ParteOrden p)
         {
             Conexion conexion = new Conexion();
 
@@ -40,8 +40,8 @@ namespace CoolSoft.DATOS.REPOSITORIO
                 "where IdP = @IdP and Id = @Id"
                 );
 
-            cmd.Parameters.AddWithValue("@IdP", p.IdP);
-            cmd.Parameters.AddWithValue("@Id", p.Id);
+            cmd.Parameters.AddWithValue("@IdP", p.IdParte);
+            cmd.Parameters.AddWithValue("@Id", p.IdOrden);
 
             conexion.QueryInsertDeleteUpdate(cmd);
         }

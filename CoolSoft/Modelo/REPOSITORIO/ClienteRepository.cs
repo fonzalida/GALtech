@@ -22,8 +22,8 @@ namespace CoolSoft.DATOS.REPOSITORIO
                );
 
             cmd.Parameters.AddWithValue("@nombre", p.nombre);
-            cmd.Parameters.AddWithValue("@domicilio", p.Domicilio);
-            cmd.Parameters.AddWithValue("@telefono", p.Telefono);
+            cmd.Parameters.AddWithValue("@domicilio", p.domicilio);
+            cmd.Parameters.AddWithValue("@telefono", p.telefono);
 
             Conexion conexion = new Conexion();
 
@@ -56,7 +56,7 @@ namespace CoolSoft.DATOS.REPOSITORIO
                "where IdCliente = @IdCliente"
                );
 
-            cmd.Parameters.AddWithValue("@IdCliente", p.IdCliente);
+            cmd.Parameters.AddWithValue("@IdCliente", p.idCliente);
 
             conexion.QueryInsertDeleteUpdate(cmd);
         }

@@ -15,7 +15,7 @@ namespace CoolSoft.DATOS.SERVICIO
         {
 
             int idOrden = OrdenRepository.agregar(o);
-            ParteOrdenRepository.agregar(new Parte_Orden(idOrden, 1));
+            ParteOrdenRepository.agregar(new ParteOrden(idOrden, 1));
 
             return true;
 

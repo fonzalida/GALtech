@@ -11,9 +11,10 @@ namespace CoolSoft.DATOS.ENTIDADES
        public int dni {get;set;}
        public String nombre {get;set;}
        public String apellido {get;set;}
-    
+       public int telefono { get; set; }
 
-    public Persona() {
+
+        public Persona() {
         
         }
     }

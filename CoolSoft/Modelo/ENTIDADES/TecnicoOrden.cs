@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace CoolSoft.DATOS.ENTIDADES
 {
-    public class Tecnico_Orden
+    public class TecnicoOrden
     {
         public int dni { get; set; }
-        public int idp { get; set; }
-        public int id { get; set; }
+        public int idParte { get; set; }
+        public int idOrden { get; set; }
 
-        public Tecnico_Orden() { }
+        public TecnicoOrden() { }
     }
 }

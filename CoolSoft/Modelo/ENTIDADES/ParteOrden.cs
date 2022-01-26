@@ -6,20 +6,20 @@ using System.Threading.Tasks;
 
 namespace CoolSoft.DATOS.ENTIDADES
 {
-    public class Parte_Orden
+    public class ParteOrden
     {
-        public int IdP { get; set; }
-        public int Id { get; set; }
+        public int IdParte { get; set; }
+        public int IdOrden { get; set; }
         public DateTime FechaInicio { get; set; }
         public DateTime FechaFin { get; set; }
         public int Completa { get; set; }
 
-        public Parte_Orden() { }
+        public ParteOrden() { }
 
-        public Parte_Orden(int idP, int id)
+        public ParteOrden(int idP, int idO)
         {
-            IdP = idP;
-            Id = id;
+            IdParte = idP;
+            IdOrden = idO;
         }
     }
 }

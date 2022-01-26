@@ -123,8 +123,8 @@ namespace connect
 
             Cliente c = new Cliente();
             c.nombre = tbcNombre.Text;
-            c.Domicilio = tbcDomicilio.Text;
-            c.Telefono = int.Parse(tbcTelefono.Text);
+            c.domicilio = tbcDomicilio.Text;
+            c.telefono = int.Parse(tbcTelefono.Text);
 
             ClienteService.Agregar(c, listPersona);
 

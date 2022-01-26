@@ -11,7 +11,7 @@ namespace CoolSoft.DATOS.REPOSITORIO
 {
     static class TecnicoOrdenRepository
     {
-        static public void agregar(Tecnico_Orden p)
+        static public void agregar(TecnicoOrden p)
         {
             //String query = "Insert into tecnicoorden (dni, idp, id) values (" + p.dni + "," + p.idp + "," + p.id + ")";
 
@@ -22,14 +22,14 @@ namespace CoolSoft.DATOS.REPOSITORIO
                              );
 
             cmd.Parameters.AddWithValue("@Dni", p.dni);
-            cmd.Parameters.AddWithValue("@IdP", p.idp);
-            cmd.Parameters.AddWithValue("@Id", p.id);
+            cmd.Parameters.AddWithValue("@IdP", p.idParte);
+            cmd.Parameters.AddWithValue("@Id", p.idOrden);
 
             Conexion conexion = new Conexion();
             conexion.QueryInsertDeleteUpdate(cmd);
         }
 
-        static public void eliminar(Tecnico_Orden p)
+        static public void eliminar(TecnicoOrden p)
         {
             Conexion conexion = new Conexion();
 
@@ -39,8 +39,8 @@ namespace CoolSoft.DATOS.REPOSITORIO
                 );
 
             cmd.Parameters.AddWithValue("@Dni", p.dni);
-            cmd.Parameters.AddWithValue("@IdP", p.idp);
-            cmd.Parameters.AddWithValue("@Id", p.id);
+            cmd.Parameters.AddWithValue("@IdP", p.idParte);
+            cmd.Parameters.AddWithValue("@Id", p.idOrden);
 
             conexion.QueryInsertDeleteUpdate(cmd);
         }

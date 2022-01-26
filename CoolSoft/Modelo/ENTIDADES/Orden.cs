@@ -20,10 +20,5 @@ namespace CoolSoft.DATOS.ENTIDADES
 
         public Orden() { }
 
-        public Orden(int idOrden, object idClient)
-        {
-            IdOrden = idOrden;
-            this.idClient = idClient;
-        }
     }
 }
