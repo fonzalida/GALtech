@@ -21,6 +21,24 @@ namespace CoolSoft.DATOS.SERVICIO
 
         }
 
+        static public bool Eliminar(Orden o)
+        {
+            if (OrdenRepository.BuscarUno(o.IdOrden))
+            {
+                OrdenRepository.eliminar(o);
+                return true;
+            }
+            else
+            {
+                MessageBox.Show("La orden no existe");
+                return false;
+            }
+
+
+        }
+
 
     }
+
+    
 }
