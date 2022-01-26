@@ -11,25 +11,13 @@ namespace CoolSoft.DATOS.SERVICIO
 {
     static public class OrdenService
     {
-        static public bool Agregar(Orden o, Cliente c)
+        static public bool Agregar(Orden o)
         {
-             int id = c.IdCliente;
-            if (!ClienteRepository.BuscarUno(c.IdCliente))
-            {
-                int IdCliente = ClienteRepository.Agregar(c); //retornar la id de cliente
-                id = IdCliente;
 
-
-            }
-
-            OrdenRepository.agregar(new Orden(o.IdOrden, id));
-            ParteOrdenRepository.agregar(new Parte_Orden( id));
-
+            int idOrden = OrdenRepository.agregar(o);
+            ParteOrdenRepository.agregar(new Parte_Orden(idOrden, 1));
 
             return true;
-            
-
-
 
         }
 

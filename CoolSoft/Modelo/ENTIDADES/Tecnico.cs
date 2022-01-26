@@ -8,11 +8,16 @@ namespace CoolSoft.DATOS.ENTIDADES
 {
     public class Tecnico
     {
+        public int dni { get; set; }
+
+
+
+        public Tecnico() { }
         public Tecnico(int dni)
         {
             this.dni = dni;
         }
 
-        public int dni { get; set; }
+       
     }
 }
