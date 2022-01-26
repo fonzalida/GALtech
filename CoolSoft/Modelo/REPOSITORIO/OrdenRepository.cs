@@ -15,14 +15,20 @@ namespace CoolSoft.DATOS.REPOSITORIO
         {
             //String query = "Insert into orden ( Fecha_Recepcion, Tarea_Desarrollar, Tarea_Desarrollada, Precio, IdCliente, Completada) values (" + p.IdOrden + "," + p.FechaRecepcion + "," + p.TareaDesarrollar + "," + p.TareaDesarrollada + "," + p.Precio + "," + p.IdCliente + "," + p.Completada + ")";
 
+            //MySqlCommand cmd = new MySqlCommand(
+            //    "INSERT INTO ORDEN"+
+            //    "(FechaRecepcion, TareaDesarrollar, TareaDesarrollada, IdCliente, Completada)"+
+            //    " VALUES (@FechaRecepcion, @TareaDesarrollar, @TareaDesarrollada, @IdCliente, @Completada)" +
+            //   "SELECT LAST_INSERT_ID();"
+            //    );
             MySqlCommand cmd = new MySqlCommand(
-                "INSERT INTO ORDEN"+
-                "(FechaRecepcion, TareaDesarrollar, TareaDesarrollada, IdCliente, Completada)"+
-                " VALUES (@FechaRecepcion, @TareaDesarrollar, @TareaDesarrollada, @IdCliente, @Completada)" +
+                "INSERT INTO ORDEN" +
+                "(TareaDesarrollar, TareaDesarrollada, IdCliente, Completada)" +
+                " VALUES (@TareaDesarrollar, @TareaDesarrollada, @IdCliente, @Completada)" +
                "SELECT LAST_INSERT_ID();"
                 );
 
-            cmd.Parameters.AddWithValue("@IdOrden",p.IdOrden);
+            //cmd.Parameters.AddWithValue("@IdOrden",p.IdOrden);
             cmd.Parameters.AddWithValue("@FechaRecepcion",p.FechaRecepcion);
             cmd.Parameters.AddWithValue("@TareaDesarrollar", p.TareaDesarrollar);
             cmd.Parameters.AddWithValue("@TareaDesarrollada", p.TareaDesarrollada);

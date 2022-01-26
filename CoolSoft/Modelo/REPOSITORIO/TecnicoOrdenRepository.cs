@@ -17,13 +17,13 @@ namespace CoolSoft.DATOS.REPOSITORIO
 
             MySqlCommand cmd = new MySqlCommand(
                             "INSERT INTO TECNICOORDEN" +
-                             "(Dni, IdP, Id)" +
-                             " VALUES (@Dni, @IdP, @Id)"
+                             "(Dni, IdParte, IdOrden)" +
+                             " VALUES (@Dni, @IdParte, @IdOrden)"
                              );
 
             cmd.Parameters.AddWithValue("@Dni", p.dni);
-            cmd.Parameters.AddWithValue("@IdP", p.idParte);
-            cmd.Parameters.AddWithValue("@Id", p.idOrden);
+            cmd.Parameters.AddWithValue("@IdParte", p.idParte);
+            cmd.Parameters.AddWithValue("@IdOrden", p.idOrden);
 
             Conexion conexion = new Conexion();
             conexion.QueryInsertDeleteUpdate(cmd);
@@ -35,19 +35,19 @@ namespace CoolSoft.DATOS.REPOSITORIO
 
             MySqlCommand cmd = new MySqlCommand(
                 "DELETE FROM TECNICOORDEN " +
-                "where Dni = @Dni and Idp = @IdP and Id = @Id"
+                "where Dni = @Dni and IdParte = @IdParte and IdOrden = @IdOrden"
                 );
 
             cmd.Parameters.AddWithValue("@Dni", p.dni);
-            cmd.Parameters.AddWithValue("@IdP", p.idParte);
-            cmd.Parameters.AddWithValue("@Id", p.idOrden);
+            cmd.Parameters.AddWithValue("@IdParte", p.idParte);
+            cmd.Parameters.AddWithValue("@IdOrden", p.idOrden);
 
             conexion.QueryInsertDeleteUpdate(cmd);
         }
 
-        public static bool BuscarUno(int dni, int IdP, int Id)
+        public static bool BuscarUno(int dni, int IdParte, int IdOrden)
         {
-            String query = "SELECT * FROM TECNICOORDEN WHERE dni = \"" + dni + "\" and IdP = \"" + IdP + "\" and Id = \"" + Id + "\"";
+            String query = "SELECT * FROM TECNICOORDEN WHERE dni = \"" + dni + "\" and IdParte = \"" + IdParte + "\" and IdOrden = \"" + IdOrden + "\"";
 
             Conexion conexion = new Conexion();
             if (conexion.QuerySelect(query).Rows.Count == 1)

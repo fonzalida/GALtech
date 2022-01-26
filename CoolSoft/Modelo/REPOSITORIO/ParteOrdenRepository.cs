@@ -17,13 +17,13 @@ namespace CoolSoft.DATOS.REPOSITORIO
 
          MySqlCommand cmd = new MySqlCommand(
                       "INSERT INTO PARTEORDEN" +
-                       "(Idp, Id, Fechainicio, Fechafin, Completa)" +
-                       " VALUES (@IdP, @Id, @Fechainicio, @Fechafin, @Completa)"
+                       "(IdParte, IdOrden, FechaInicio, FechaFin, Completa)" +
+                       " VALUES (@IdParte, @IdOrden, @FechaInicio, @FechaFin, @Completa)"
                        );
 
-          cmd.Parameters.AddWithValue("@IdP", p.IdParte);
-          cmd.Parameters.AddWithValue("@Id", p.IdOrden);
-          cmd.Parameters.AddWithValue("@Fechainicio", p.FechaInicio);
+          cmd.Parameters.AddWithValue("@IdParte", p.IdParte);
+          cmd.Parameters.AddWithValue("@IdOrden", p.IdOrden);
+          cmd.Parameters.AddWithValue("@FechaInicio", p.FechaInicio);
           cmd.Parameters.AddWithValue("@FechaFin", p.FechaFin);
           cmd.Parameters.AddWithValue("@Completa", p.Completa);
 
@@ -37,18 +37,18 @@ namespace CoolSoft.DATOS.REPOSITORIO
 
             MySqlCommand cmd = new MySqlCommand(
                 "DELETE FROM PARTEORDEN " +
-                "where IdP = @IdP and Id = @Id"
+                "where IdParte = @IdParte and IdOrden = @IdOrden"
                 );
 
-            cmd.Parameters.AddWithValue("@IdP", p.IdParte);
-            cmd.Parameters.AddWithValue("@Id", p.IdOrden);
+            cmd.Parameters.AddWithValue("@IdParte", p.IdParte);
+            cmd.Parameters.AddWithValue("@IdOrden", p.IdOrden);
 
             conexion.QueryInsertDeleteUpdate(cmd);
         }
 
-        public static bool BuscarUno(int Idp, int Id)
+        public static bool BuscarUno(int IdParte, int IdOrden)
         {
-            String query = "SELECT * FROM PARTEORDEN WHERE Idp = \"" + Idp + "\" and Id = \"" + Id + "\"";
+            String query = "SELECT * FROM PARTEORDEN WHERE IdParte = \"" + IdParte + "\" and IdOrden = \"" + IdOrden + "\"";
 
             Conexion conexion = new Conexion();
             if (conexion.QuerySelect(query).Rows.Count == 1)
@@ -58,7 +58,7 @@ namespace CoolSoft.DATOS.REPOSITORIO
 
         }
 
-        public static DataTable/*List<Parte_Orden>*/ ListarTodos()
+        public static DataTable ListarTodos()
         {
             String query = "SELECT * FROM PARTEORDEN";
 
