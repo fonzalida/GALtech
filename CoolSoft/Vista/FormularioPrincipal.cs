@@ -21,9 +21,10 @@ namespace CoolSoft.VISTA
         private void FormularioPadre_Load(object sender, EventArgs e)
         {
             Test newFrm = new Test();
-            
             newFrm.MdiParent = this;
             newFrm.Show();
         }
+
+        
     }
 }
