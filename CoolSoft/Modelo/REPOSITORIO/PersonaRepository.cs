@@ -63,6 +63,25 @@ namespace CoolSoft.DATOS.REPOSITORIO
             
         }
 
+        public static void modificar(Persona p, Persona pn)
+        {
+
+            MySqlCommand cmd = new MySqlCommand(
+                "UPDATE PERSONA" +
+                 "SET Dni = @Dni2, Nombre = @nombre2, Apellido = @apellido2  " +
+                  "where Dni = @Dni ");
+
+
+            cmd.Parameters.AddWithValue("@dni", p.dni);
+            cmd.Parameters.AddWithValue("@dni2", pn.dni);
+            cmd.Parameters.AddWithValue("@nombre2", pn.nombre);
+            cmd.Parameters.AddWithValue("@apellido2", pn.apellido);
+
+            Conexion conexion = new Conexion();
+
+            conexion.QueryInsertDeleteUpdate(cmd);
+        }
+
         public static DataTable/*List<Persona>*/ ListarTodos()
         {
             String query = "SELECT * FROM PERSONA";

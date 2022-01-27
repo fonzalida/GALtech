@@ -34,5 +34,18 @@ namespace CoolSoft.DATOS.SERVICIO
             return true;
         }
 
+        static public void modificarCliente(Cliente c ,bool cliente , bool persona , bool titular , Titular t , Titular tn ,Persona p ,Persona pn )
+        {
+            // bool orden si modifico orden 
+            
+            if (cliente)
+                ClienteRepository.modificar(c,c);
+            if (persona)
+                PersonaRepository.modificar(p,pn);
+            if (titular)
+                TitularRepository.modificar(t, tn);
+
+        }
+
     }
 }
