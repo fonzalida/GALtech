@@ -38,6 +38,25 @@ namespace CoolSoft.DATOS.SERVICIO
         }
 
 
+        static public void modificarOrden(Orden o, bool orden , ParteOrden p, TecnicoOrden t1, Tecnico t2, bool parte, bool tecnico)
+        {
+            // bool orden si modifico orden 
+            // bool parte si modifico o no la parte 
+            // bool tecnico si modifico el tecnico
+            if (orden)
+                OrdenRepository.modificar(o);
+            if (parte)
+                ParteOrdenRepository.modificar(p);
+            if (tecnico)
+                TecnicoOrdenRepository.modificar(t2, t1);
+
+        }
+
+      
+
+       
+
+
     }
 
     
