@@ -52,9 +52,20 @@ namespace CoolSoft.DATOS.SERVICIO
 
         }
 
-      
+        static public void modificarMaterial(List<Material> lm )
+        {
+            
+            foreach(Material m in lm)
+            {
+                MaterialRepository.modificar(m,m);
+            }
+                
 
-       
+        }
+
+
+
+
 
 
     }
