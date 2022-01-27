@@ -57,6 +57,25 @@ namespace CoolSoft.DATOS.REPOSITORIO
 
         }
 
+        public static void modificar(Material p, Material pn)
+        {
+
+            MySqlCommand cmd = new MySqlCommand(
+                "UPDATE MATERIAL" +
+                 "SET Cantidad = @Cantidad, Descripcion = @Descripcion " +
+                  "where IdMat = @IdMat and IdOrden = @IdOrden ");
+
+
+            cmd.Parameters.AddWithValue("@IdMat", p.IdMat);
+            cmd.Parameters.AddWithValue("@IdOrden", p.IdOrden);
+            cmd.Parameters.AddWithValue("@Cantidad", pn.cantidad);
+            cmd.Parameters.AddWithValue("@Descripcion", pn.descripcion);
+
+            Conexion conexion = new Conexion();
+
+            conexion.QueryInsertDeleteUpdate(cmd);
+        }
+
         public static DataTable/*List<Material>*/ ListarTodos()
         {
             String query = "SELECT * FROM MATERIAL";
