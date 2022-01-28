@@ -1,7 +1,7 @@
 ﻿
 namespace CoolSoft.Vista.Cliente
 {
-    partial class ClienteAgregarModificar
+    partial class ClienteAgregar
     {
         /// <summary>
         /// Required designer variable.
@@ -31,13 +31,14 @@ namespace CoolSoft.Vista.Cliente
         {
             this.SuspendLayout();
             // 
-            // ClienteAgregarModificar
+            // ClienteAgregar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(551, 398);
-            this.Name = "ClienteAgregarModificar";
-            this.Text = "ClienteAgregarEditar";
+            this.ClientSize = new System.Drawing.Size(464, 386);
+            this.Name = "ClienteAgregar";
+            this.Text = "ClienteAgregar";
+            this.Load += new System.EventHandler(this.ClienteAgregar_Load);
             this.ResumeLayout(false);
 
         }

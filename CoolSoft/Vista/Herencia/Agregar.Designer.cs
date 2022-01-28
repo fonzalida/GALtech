@@ -34,7 +34,7 @@ namespace CoolSoft.Vista.Herencia
             // 
             // bAgregar
             // 
-            this.bAgregar.Location = new System.Drawing.Point(364, 31);
+            this.bAgregar.Location = new System.Drawing.Point(385, 43);
             this.bAgregar.Name = "bAgregar";
             this.bAgregar.Size = new System.Drawing.Size(75, 23);
             this.bAgregar.TabIndex = 0;
@@ -45,10 +45,11 @@ namespace CoolSoft.Vista.Herencia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(472, 385);
+            this.ClientSize = new System.Drawing.Size(464, 386);
             this.Controls.Add(this.bAgregar);
             this.Name = "Agregar";
             this.Text = "Agregar";
+            this.Load += new System.EventHandler(this.Agregar_Load);
             this.ResumeLayout(false);
 
         }

@@ -115,11 +115,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Vista\Cliente\ClienteAgregarModificar.cs">
+    <Compile Include="Vista\Cliente\ClienteAgregar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vista\Cliente\ClienteAgregarModificar.Designer.cs">
-      <DependentUpon>ClienteAgregarModificar.cs</DependentUpon>
+    <Compile Include="Vista\Cliente\ClienteAgregar.Designer.cs">
+      <DependentUpon>ClienteAgregar.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\FormularioPrincipal.cs">
       <SubType>Form</SubType>
@@ -146,8 +146,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Vista\Cliente\ClienteAgregarModificar.resx">
-      <DependentUpon>ClienteAgregarModificar.cs</DependentUpon>
+    <EmbeddedResource Include="Vista\Cliente\ClienteAgregar.resx">
+      <DependentUpon>ClienteAgregar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\FormularioPrincipal.resx">
       <DependentUpon>FormularioPrincipal.cs</DependentUpon>

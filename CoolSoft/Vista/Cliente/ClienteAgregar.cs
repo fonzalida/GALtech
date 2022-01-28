@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace CoolSoft.Vista.Cliente
 {
-    public partial class ClienteAgregarModificar : Form
+    public partial class ClienteAgregar : Herencia.Agregar
     {
-        public ClienteAgregarModificar()
+        public ClienteAgregar()
         {
             InitializeComponent();
+        }
+
+        private void ClienteAgregar_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
