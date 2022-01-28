@@ -28,21 +28,16 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `cliente` (
-  `Nombre` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
-  `Domicilio` varchar(256) COLLATE utf8_spanish_ci NOT NULL,
-  `Telefono` int(20) NOT NULL,
-  `IdCliente` int(11) NOT NULL
+  `DniCuit` int(20) NOT NULL,
+  `Nombre` varchar(50) COLLATE utf8_spanish_ci DEFAULT NULL,
+  `Domicilio` varchar(256) COLLATE utf8_spanish_ci DEFAULT NULL,
+  `Localidad` varchar(256) COLLATE utf8_spanish_ci DEFAULT NULL,
+  `Provincia` varchar(256) COLLATE utf8_spanish_ci DEFAULT NULL,
+  `Telefono1` int(20) DEFAULT NULL,
+  `Telefono2` int(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
--- Volcado de datos para la tabla `cliente`
---
-
-INSERT INTO `cliente` (`Nombre`, `Domicilio`, `Telefono`, `IdCliente`) VALUES
-('Empresa', 'Domicilio', 124215, 4);
-
--- --------------------------------------------------------
-
 --
 -- Estructura de tabla para la tabla `material`
 --
@@ -66,7 +61,7 @@ CREATE TABLE `orden` (
   `TareaDesarrollar` varchar(256) COLLATE utf8_spanish_ci DEFAULT NULL,
   `TareaDesarrollada` varchar(256) COLLATE utf8_spanish_ci DEFAULT NULL,
   `Precio` float DEFAULT NULL,
-  `IdCliente` int(11) NOT NULL,
+  `DniCuit` int(20) NOT NULL,
   `Completada` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
@@ -90,13 +85,13 @@ CREATE TABLE `parteorden` (
 -- Estructura de tabla para la tabla `persona`
 --
 
-CREATE TABLE `persona` (
-  `Dni` int(11) NOT NULL,
-  `Nombre` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
-  `Apellido` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
-  `Telefono` int(20) COLLATE utf8_spanish_ci DEFAULT NULL
+-- CREATE TABLE `persona` (
+--   `Dni` int(11) NOT NULL,
+--   `Nombre` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
+--   `Apellido` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
+--   `Telefono` int(20) COLLATE utf8_spanish_ci DEFAULT NULL
 
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+-- ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
 -- --------------------------------------------------------
@@ -106,7 +101,9 @@ CREATE TABLE `persona` (
 --
 
 CREATE TABLE `tecnico` (
-  `Dni` int(11) NOT NULL
+  `Dni` int(11) NOT NULL,
+  `Nombre` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
+  `Telefono` int(20) COLLATE utf8_spanish_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 -- --------------------------------------------------------
@@ -127,24 +124,19 @@ CREATE TABLE `tecnicoorden` (
 -- Estructura de tabla para la tabla `titular`
 --
 
-CREATE TABLE `titular` (
-  `Dni` int(11) NOT NULL,
-  `IdCliente` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+-- CREATE TABLE `titular` (
+--   `Dni` int(11) NOT NULL,
+--   `IdCliente` int(11) NOT NULL
+-- ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
--- Volcado de datos para la tabla `titular`
---
 
---
--- Índices para tablas volcadas
---
 
 --
 -- Indices de la tabla `cliente`
 --
 ALTER TABLE `cliente`
-  ADD PRIMARY KEY (`IdCliente`);
+  ADD PRIMARY KEY (`DniCuit`);
 
 --
 -- Indices de la tabla `material`
@@ -158,7 +150,7 @@ ALTER TABLE `material`
 --
 ALTER TABLE `orden`
   ADD PRIMARY KEY (`IdOrden`),
-  ADD KEY `IdCliente` (`IdCliente`);
+  ADD KEY `DniCuit` (`DniCuit`);
 
 --
 -- Indices de la tabla `parteorden`
@@ -170,8 +162,8 @@ ALTER TABLE `parteorden`
 --
 -- Indices de la tabla `persona`
 --
-ALTER TABLE `persona`
-  ADD PRIMARY KEY (`Dni`);
+-- ALTER TABLE `persona`
+--   ADD PRIMARY KEY (`Dni`);
 
 --
 -- Indices de la tabla `tecnico`
@@ -189,19 +181,13 @@ ALTER TABLE `tecnicoorden`
 --
 -- Indices de la tabla `titular`
 --
-ALTER TABLE `titular`
-  ADD PRIMARY KEY (`Dni`,`IdCliente`),
-  ADD KEY `IdCliente` (`IdCliente`);
+-- ALTER TABLE `titular`
+--   ADD PRIMARY KEY (`Dni`,`IdCliente`),
+--   ADD KEY `IdCliente` (`IdCliente`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
 --
-
---
--- AUTO_INCREMENT de la tabla `cliente`
---
-ALTER TABLE `cliente`
-  MODIFY `IdCliente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
 
 --
 -- AUTO_INCREMENT de la tabla `orden`
@@ -223,7 +209,7 @@ ALTER TABLE `material`
 -- Filtros para la tabla `orden`
 --
 ALTER TABLE `orden`
-  ADD CONSTRAINT `orden_ibfk_1` FOREIGN KEY (`IdCliente`) REFERENCES `cliente` (`IdCliente`);
+  ADD CONSTRAINT `orden_ibfk_1` FOREIGN KEY (`DniCuit`) REFERENCES `cliente` (`DniCuit`);
 
 --
 -- Filtros para la tabla `parteorden`
@@ -232,11 +218,6 @@ ALTER TABLE `parteorden`
   ADD CONSTRAINT `parteorden_ibfk_1` FOREIGN KEY (`IdOrden`) REFERENCES `orden` (`IdOrden`);
 
 --
--- Filtros para la tabla `tecnico`
---
-ALTER TABLE `tecnico`
-  ADD CONSTRAINT `tecnico_ibfk_1` FOREIGN KEY (`Dni`) REFERENCES `persona` (`Dni`);
-
 --
 -- Filtros para la tabla `tecnicoorden`
 --
@@ -245,12 +226,6 @@ ALTER TABLE `tecnicoorden`
   ADD CONSTRAINT `tecnicoorden_ibfk_2` FOREIGN KEY (`IdParte`,`IdOrden`) REFERENCES `parteorden` (`IdParte`, `IdOrden`);
 
 --
--- Filtros para la tabla `titular`
---
-ALTER TABLE `titular`
-  ADD CONSTRAINT `titular_ibfk_1` FOREIGN KEY (`Dni`) REFERENCES `persona` (`Dni`),
-  ADD CONSTRAINT `titular_ibfk_2` FOREIGN KEY (`IdCliente`) REFERENCES `cliente` (`IdCliente`);
-COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
