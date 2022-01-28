@@ -25,6 +25,10 @@ namespace CoolSoft.VISTA
             newFrm.Show();
         }
 
-        
+        private void ordenesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+
+        }
     }
 }

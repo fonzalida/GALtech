@@ -66,7 +66,7 @@ namespace CoolSoft.VISTA
             // agregarToolStripMenuItem
             // 
             this.agregarToolStripMenuItem.Name = "agregarToolStripMenuItem";
-            this.agregarToolStripMenuItem.Size = new System.Drawing.Size(180, 34);
+            this.agregarToolStripMenuItem.Size = new System.Drawing.Size(160, 34);
             this.agregarToolStripMenuItem.Text = "Agregar";
             // 
             // clientesToolStripMenuItem
@@ -84,6 +84,7 @@ namespace CoolSoft.VISTA
             this.ordenesToolStripMenuItem.Name = "ordenesToolStripMenuItem";
             this.ordenesToolStripMenuItem.Size = new System.Drawing.Size(163, 52);
             this.ordenesToolStripMenuItem.Text = "Ordenes";
+            this.ordenesToolStripMenuItem.Click += new System.EventHandler(this.ordenesToolStripMenuItem_Click);
             // 
             // FormularioPrincipal
             // 
