@@ -92,10 +92,8 @@
     <Compile Include="Modelo\ENTIDADES\Material.cs" />
     <Compile Include="Modelo\ENTIDADES\Orden.cs" />
     <Compile Include="Modelo\ENTIDADES\ParteOrden.cs" />
-    <Compile Include="Modelo\ENTIDADES\Persona.cs" />
     <Compile Include="Modelo\ENTIDADES\Tecnico.cs" />
     <Compile Include="Modelo\ENTIDADES\TecnicoOrden.cs" />
-    <Compile Include="Modelo\ENTIDADES\Titular.cs" />
     <Compile Include="Modelo\REPOSITORIO\ClienteRepository.cs" />
     <Compile Include="Modelo\REPOSITORIO\MaterialRepository.cs" />
     <Compile Include="Modelo\REPOSITORIO\OrdenRepository.cs" />

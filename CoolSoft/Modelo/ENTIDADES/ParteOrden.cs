@@ -8,18 +8,18 @@ namespace CoolSoft.DATOS.ENTIDADES
 {
     public class ParteOrden
     {
-        public int IdParte { get; set; }
-        public int IdOrden { get; set; }
-        public DateTime FechaInicio { get; set; }
-        public DateTime FechaFin { get; set; }
+        public int idParte { get; set; }
+        public int idOrden { get; set; }
+        public DateTime fechaInicio { get; set; }
+        public DateTime fechaFin { get; set; }
         public int Completa { get; set; }
 
         public ParteOrden() { }
 
         public ParteOrden(int idP, int idO)
         {
-            IdParte = idP;
-            IdOrden = idO;
+            idParte = idP;
+            idOrden = idO;
         }
     }
 }

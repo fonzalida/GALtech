@@ -36,31 +36,6 @@ namespace CoolSoft.Vista
 
         }
 
-        private async Task<int> Cargar()
-        {
-            while (progressBar1.Value < progressBar1.Maximum)
-            {
-
-                progressBar1.Value++;
-                Thread.Sleep(10);
-                this.Refresh();
-            }
-
-            FormularioPrincipal f = new FormularioPrincipal();
-            f.Show();
-            this.Hide();
-            return 1;
-        }
-
-        private string Texto(string s)
-        {
-            return "Cargando " + s;
-        }
-
-        private void FormPresentacion_Click(object sender, EventArgs e)
-        {
-            Cargar();
-        }
 
         void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
@@ -70,7 +45,7 @@ namespace CoolSoft.Vista
                 // Report progress to 'UI' thread
                 backgroundWorker1.ReportProgress(i);
                 // Simulate long task
-                Thread.Sleep(30);
+                Thread.Sleep(15);
             }
 
           
@@ -80,6 +55,12 @@ namespace CoolSoft.Vista
         {
             // The progress percentage is a property of e
             progressBar1.Value = e.ProgressPercentage;
+            if(e.ProgressPercentage >1)
+                progressBar1.Value = e.ProgressPercentage - 1;
+
+            progressBar1.Value = e.ProgressPercentage;
+
+            //lCargando.Text = e.ProgressPercentage.ToString();
         }
 
         private void FormPresentacion_Shown(object sender, EventArgs e)

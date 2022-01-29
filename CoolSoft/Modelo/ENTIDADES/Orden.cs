@@ -10,13 +10,13 @@ namespace CoolSoft.DATOS.ENTIDADES
     {
         private object idClient;
 
-        public int IdOrden { get; set; }
-        public DateTime FechaRecepcion { get; set; } 
-        public string TareaDesarrollar { get; set; }
-        public string TareaDesarrollada { get; set; }
-        public float Precio { get; set; }
-        public int IdCliente { get; set; }
-        public bool Completada { get; set; }
+        public int idOrden { get; set; }
+        public DateTime fechaRecepcion { get; set; } 
+        public string tareaDesarrollar { get; set; }
+        public string tareaDesarrollada { get; set; }
+        public float precio { get; set; }
+        public int dniCuit { get; set; }
+        public int completada { get; set; }
 
         public Orden() { }
 

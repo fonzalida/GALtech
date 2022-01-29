@@ -23,7 +23,7 @@ namespace CoolSoft.DATOS.SERVICIO
 
         static public bool Eliminar(Orden o)
         {
-            if (OrdenRepository.BuscarUno(o.IdOrden))
+            if (OrdenRepository.BuscarUno(o.idOrden))
             {
                 OrdenRepository.eliminar(o);
                 return true;

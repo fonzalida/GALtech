@@ -21,10 +21,10 @@ namespace CoolSoft.DATOS.REPOSITORIO
                        " VALUES (@IdParte, @IdOrden, @FechaInicio, @FechaFin, @Completa)"
                        );
 
-          cmd.Parameters.AddWithValue("@IdParte", p.IdParte);
-          cmd.Parameters.AddWithValue("@IdOrden", p.IdOrden);
-          cmd.Parameters.AddWithValue("@FechaInicio", p.FechaInicio);
-          cmd.Parameters.AddWithValue("@FechaFin", p.FechaFin);
+          cmd.Parameters.AddWithValue("@IdParte", p.idParte);
+          cmd.Parameters.AddWithValue("@IdOrden", p.idOrden);
+          cmd.Parameters.AddWithValue("@FechaInicio", p.fechaInicio);
+          cmd.Parameters.AddWithValue("@FechaFin", p.fechaFin);
           cmd.Parameters.AddWithValue("@Completa", p.Completa);
 
             Conexion conexion = new Conexion();
@@ -40,8 +40,8 @@ namespace CoolSoft.DATOS.REPOSITORIO
                 "where IdParte = @IdParte and IdOrden = @IdOrden"
                 );
 
-            cmd.Parameters.AddWithValue("@IdParte", p.IdParte);
-            cmd.Parameters.AddWithValue("@IdOrden", p.IdOrden);
+            cmd.Parameters.AddWithValue("@IdParte", p.idParte);
+            cmd.Parameters.AddWithValue("@IdOrden", p.idOrden);
 
             conexion.QueryInsertDeleteUpdate(cmd);
         }
@@ -67,8 +67,8 @@ namespace CoolSoft.DATOS.REPOSITORIO
                   "where IdParte = @IdParte and IdOrden = @IdOrden");
            
  
-            cmd.Parameters.AddWithValue("@FechaInicio", p.FechaInicio);
-            cmd.Parameters.AddWithValue("@FechaFin", p.FechaFin);
+            cmd.Parameters.AddWithValue("@FechaInicio", p.fechaInicio);
+            cmd.Parameters.AddWithValue("@FechaFin", p.fechaFin);
             cmd.Parameters.AddWithValue("@Completa", p.Completa);
 
             Conexion conexion = new Conexion();

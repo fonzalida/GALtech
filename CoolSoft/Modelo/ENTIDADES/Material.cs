@@ -8,8 +8,8 @@ namespace CoolSoft.DATOS.ENTIDADES
 {
     public class Material
     {
-        public int IdMat { get; set; }
-        public int IdOrden { get; set; }
+        public int idMat { get; set; }
+        public int idOrden { get; set; }
         public string cantidad { get; set; }
         public string descripcion { get; set; }
 

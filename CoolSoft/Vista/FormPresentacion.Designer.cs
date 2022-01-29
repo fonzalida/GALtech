@@ -40,8 +40,10 @@ namespace CoolSoft.Vista
             // 
             this.progressBar1.Location = new System.Drawing.Point(16, 400);
             this.progressBar1.Margin = new System.Windows.Forms.Padding(4);
+            this.progressBar1.MarqueeAnimationSpeed = 10;
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(589, 28);
+            this.progressBar1.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.progressBar1.TabIndex = 0;
             // 
             // lCargando

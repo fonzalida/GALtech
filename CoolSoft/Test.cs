@@ -80,13 +80,13 @@ namespace connect
         private void button3_Click(object sender, EventArgs e)
         {
             Orden o = new Orden();
-            o.IdOrden = 1; //int.Parse(tbIdOrden.Text);
-            o.FechaRecepcion = DateTime.Now.Date; //DateTime.Parse(tbFechaRecepcion.Text)
-            o.TareaDesarrollar = tbTareaADesarrollar.Text;
-            o.TareaDesarrollada = tbTareaDesarrollada.Text;
-            o.Precio = float.Parse(tbPrecio.Text);
-            o.IdCliente = 1; //int.Parse(tbIdCliente.Text);
-            o.Completada = true; //bool.Parse(tbCompletado.Text);
+            o.idOrden = 1; //int.Parse(tbIdOrden.Text);
+            o.fechaRecepcion = DateTime.Now.Date; //DateTime.Parse(tbFechaRecepcion.Text)
+            o.tareaDesarrollar = tbTareaADesarrollar.Text;
+            o.tareaDesarrollada = tbTareaDesarrollada.Text;
+            o.precio = float.Parse(tbPrecio.Text);
+            o.dniCuit = 1; //int.Parse(tbIdCliente.Text);
+            o.completada = true; //bool.Parse(tbCompletado.Text);
 
             OrdenRepository.agregar(o);
         }

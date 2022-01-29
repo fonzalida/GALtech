@@ -30,11 +30,11 @@ namespace CoolSoft.DATOS.REPOSITORIO
 
             //cmd.Parameters.AddWithValue("@IdOrden",p.IdOrden);
             //cmd.Parameters.AddWithValue("@FechaRecepcion",p.FechaRecepcion);
-            cmd.Parameters.AddWithValue("@TareaDesarrollar", p.TareaDesarrollar);
-            cmd.Parameters.AddWithValue("@TareaDesarrollada", p.TareaDesarrollada);
+            cmd.Parameters.AddWithValue("@TareaDesarrollar", p.tareaDesarrollar);
+            cmd.Parameters.AddWithValue("@TareaDesarrollada", p.tareaDesarrollada);
             //cmd.Parameters.AddWithValue("@Precio",p.Precio);
-            cmd.Parameters.AddWithValue("@IdCliente",p.IdCliente);
-            cmd.Parameters.AddWithValue("@Completada",p.Completada);
+            cmd.Parameters.AddWithValue("@IdCliente",p.dniCuit);
+            cmd.Parameters.AddWithValue("@Completada",p.completada);
 
             Conexion conexion = new Conexion();
             //conexion.QueryInsertDeleteUpdate(cmd);
@@ -51,7 +51,7 @@ namespace CoolSoft.DATOS.REPOSITORIO
                 "where IdOrden = @IdOrden"
                 );
 
-            cmd.Parameters.AddWithValue("@IdOrden", p.IdOrden);
+            cmd.Parameters.AddWithValue("@IdOrden", p.idOrden);
 
             conexion.QueryInsertDeleteUpdate(cmd);
         }
@@ -78,12 +78,12 @@ namespace CoolSoft.DATOS.REPOSITORIO
                 
 
            
-            cmd.Parameters.AddWithValue("@FechaRecepcion",p.FechaRecepcion);
-            cmd.Parameters.AddWithValue("@TareaDesarrollar", p.TareaDesarrollar);
-            cmd.Parameters.AddWithValue("@TareaDesarrollada", p.TareaDesarrollada);
-            cmd.Parameters.AddWithValue("@Precio",p.Precio);
-            cmd.Parameters.AddWithValue("@IdCliente", p.IdCliente);
-            cmd.Parameters.AddWithValue("@Completada", p.Completada);
+            cmd.Parameters.AddWithValue("@FechaRecepcion",p.fechaRecepcion);
+            cmd.Parameters.AddWithValue("@TareaDesarrollar", p.tareaDesarrollar);
+            cmd.Parameters.AddWithValue("@TareaDesarrollada", p.tareaDesarrollada);
+            cmd.Parameters.AddWithValue("@Precio",p.precio);
+            cmd.Parameters.AddWithValue("@IdCliente", p.dniCuit);
+            cmd.Parameters.AddWithValue("@Completada", p.completada);
 
             Conexion conexion = new Conexion();
             //conexion.QueryId(cmd) no necesitamos retornar el id

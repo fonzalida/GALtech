@@ -21,8 +21,8 @@ namespace CoolSoft.DATOS.REPOSITORIO
                            " VALUES (@IdMat, @IdOrden, @Cantidad, @Descripcion)"
                            );
 
-            cmd.Parameters.AddWithValue("@IdMat", p.IdMat);
-            cmd.Parameters.AddWithValue("@IdOrden", p.IdOrden);
+            cmd.Parameters.AddWithValue("@IdMat", p.idMat);
+            cmd.Parameters.AddWithValue("@IdOrden", p.idOrden);
             cmd.Parameters.AddWithValue("@Cantidad", p.cantidad);
             cmd.Parameters.AddWithValue("@descripcion", p.descripcion);
 
@@ -39,8 +39,8 @@ namespace CoolSoft.DATOS.REPOSITORIO
                 "where IdMat = @IdMat and IdOrden=@IdOrden"
                 );
 
-            cmd.Parameters.AddWithValue("@IdMat", p.IdMat);
-            cmd.Parameters.AddWithValue("@IdOrden", p.IdOrden);
+            cmd.Parameters.AddWithValue("@IdMat", p.idMat);
+            cmd.Parameters.AddWithValue("@IdOrden", p.idOrden);
 
             conexion.QueryInsertDeleteUpdate(cmd);
         }
@@ -66,8 +66,8 @@ namespace CoolSoft.DATOS.REPOSITORIO
                   "where IdMat = @IdMat and IdOrden = @IdOrden ");
 
 
-            cmd.Parameters.AddWithValue("@IdMat", p.IdMat);
-            cmd.Parameters.AddWithValue("@IdOrden", p.IdOrden);
+            cmd.Parameters.AddWithValue("@IdMat", p.idMat);
+            cmd.Parameters.AddWithValue("@IdOrden", p.idOrden);
             cmd.Parameters.AddWithValue("@Cantidad", pn.cantidad);
             cmd.Parameters.AddWithValue("@Descripcion", pn.descripcion);
 
