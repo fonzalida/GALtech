@@ -40,6 +40,7 @@ namespace CoolSoft.Vista.Herencia
             this.bAgregar.TabIndex = 0;
             this.bAgregar.Text = "Agregar";
             this.bAgregar.UseVisualStyleBackColor = true;
+            this.bAgregar.Click += new System.EventHandler(this.bAgregar_Click);
             // 
             // Agregar
             // 
@@ -56,6 +57,6 @@ namespace CoolSoft.Vista.Herencia
 
         #endregion
 
-        private System.Windows.Forms.Button bAgregar;
+        public System.Windows.Forms.Button bAgregar;
     }
 }

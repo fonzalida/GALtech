@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace CoolSoft.Vista.Herencia
 {
-    public partial class Historico : Form
+    public partial class Historico : Base
     {
         public Historico()
         {
@@ -31,6 +31,11 @@ namespace CoolSoft.Vista.Herencia
         private void bVer_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Historico_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }

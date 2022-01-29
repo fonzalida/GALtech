@@ -1,4 +1,5 @@
 ﻿using connect;
+using CoolSoft.Vista.Herencia;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,9 +21,10 @@ namespace CoolSoft.VISTA
 
         private void FormularioPadre_Load(object sender, EventArgs e)
         {
-            Test newFrm = new Test();
-            newFrm.MdiParent = this;
-            newFrm.Show();
+            //Test newFrm = new Test();
+            Historico form = new Historico();
+            form.MdiParent = this;
+            form.Show();
         }
 
         private void ordenesToolStripMenuItem_Click(object sender, EventArgs e)

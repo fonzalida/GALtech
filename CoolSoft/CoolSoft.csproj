@@ -121,6 +121,12 @@
     <Compile Include="Vista\Cliente\ClienteAgregar.Designer.cs">
       <DependentUpon>ClienteAgregar.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\FormPresentacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FormPresentacion.Designer.cs">
+      <DependentUpon>FormPresentacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\FormularioPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,6 +138,12 @@
     </Compile>
     <Compile Include="Vista\Herencia\Agregar.Designer.cs">
       <DependentUpon>Agregar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Herencia\Base.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Herencia\Base.Designer.cs">
+      <DependentUpon>Base.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\Herencia\Historico.cs">
       <SubType>Form</SubType>
@@ -155,11 +167,17 @@
     <EmbeddedResource Include="Vista\Cliente\ClienteAgregar.resx">
       <DependentUpon>ClienteAgregar.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vista\FormPresentacion.resx">
+      <DependentUpon>FormPresentacion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\FormularioPrincipal.resx">
       <DependentUpon>FormularioPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\Herencia\Agregar.resx">
       <DependentUpon>Agregar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Herencia\Base.resx">
+      <DependentUpon>Base.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\Herencia\Historico.resx">
       <DependentUpon>Historico.cs</DependentUpon>
@@ -184,6 +202,7 @@
     <Folder Include="Vista\Tecnico\" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\check.png" />
     <None Include="Resources\LOGO COOLSOFT.png" />
   </ItemGroup>
   <ItemGroup>
@@ -218,6 +237,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\outline_person_black_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGO-COOLSOFT-original.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -31,6 +31,10 @@ namespace CoolSoft.Vista.Cliente
         {
             this.SuspendLayout();
             // 
+            // bAgregar
+            // 
+            this.bAgregar.Location = new System.Drawing.Point(357, 39);
+            // 
             // ClienteAgregar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);

@@ -8,20 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CoolSoft.Vista.Cliente
+namespace CoolSoft.Vista.Herencia
 {
-    public partial class ClienteAgregar : Herencia.Agregar
+    public partial class Base : Form
     {
-        public ClienteAgregar()
+        public Base()
         {
             InitializeComponent();
         }
-
-        private void ClienteAgregar_Load(object sender, EventArgs e)
-        {
-
-        }
-
-
     }
 }
