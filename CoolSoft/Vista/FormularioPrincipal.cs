@@ -32,5 +32,10 @@ namespace CoolSoft.VISTA
 
 
         }
+
+        private void FormularioPrincipal_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Environment.Exit(0);
+        }
     }
 }

@@ -44,13 +44,14 @@ namespace CoolSoft.VISTA
             this.menuStripPrincipal.BackColor = System.Drawing.Color.DodgerBlue;
             this.menuStripPrincipal.Dock = System.Windows.Forms.DockStyle.Left;
             this.menuStripPrincipal.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuStripPrincipal.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStripPrincipal.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tecnicosToolStripMenuItem,
             this.clientesToolStripMenuItem,
             this.ordenesToolStripMenuItem});
             this.menuStripPrincipal.Location = new System.Drawing.Point(0, 0);
             this.menuStripPrincipal.Name = "menuStripPrincipal";
-            this.menuStripPrincipal.Size = new System.Drawing.Size(170, 473);
+            this.menuStripPrincipal.Size = new System.Drawing.Size(227, 582);
             this.menuStripPrincipal.TabIndex = 1;
             this.menuStripPrincipal.Text = "menuStrip1";
             // 
@@ -61,13 +62,13 @@ namespace CoolSoft.VISTA
             this.tecnicosToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.tecnicosToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tecnicosToolStripMenuItem.Name = "tecnicosToolStripMenuItem";
-            this.tecnicosToolStripMenuItem.Size = new System.Drawing.Size(163, 34);
+            this.tecnicosToolStripMenuItem.Size = new System.Drawing.Size(218, 41);
             this.tecnicosToolStripMenuItem.Text = "Tecnicos";
             // 
             // agregarToolStripMenuItem
             // 
             this.agregarToolStripMenuItem.Name = "agregarToolStripMenuItem";
-            this.agregarToolStripMenuItem.Size = new System.Drawing.Size(180, 34);
+            this.agregarToolStripMenuItem.Size = new System.Drawing.Size(203, 42);
             this.agregarToolStripMenuItem.Text = "Agregar";
             // 
             // clientesToolStripMenuItem
@@ -75,7 +76,7 @@ namespace CoolSoft.VISTA
             this.clientesToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.clientesToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(163, 34);
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(218, 41);
             this.clientesToolStripMenuItem.Text = "Clientes";
             // 
             // ordenesToolStripMenuItem
@@ -83,25 +84,26 @@ namespace CoolSoft.VISTA
             this.ordenesToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.ordenesToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.ordenesToolStripMenuItem.Name = "ordenesToolStripMenuItem";
-            this.ordenesToolStripMenuItem.Size = new System.Drawing.Size(163, 34);
+            this.ordenesToolStripMenuItem.Size = new System.Drawing.Size(218, 41);
             this.ordenesToolStripMenuItem.Text = "Ordenes";
             this.ordenesToolStripMenuItem.Click += new System.EventHandler(this.ordenesToolStripMenuItem_Click);
             // 
             // FormularioPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.BackgroundImage = global::CoolSoft.Properties.Resources.LOGO_CHIQUITO;
-            this.ClientSize = new System.Drawing.Size(872, 473);
+            this.ClientSize = new System.Drawing.Size(1163, 582);
             this.Controls.Add(this.menuStripPrincipal);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStripPrincipal;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormularioPrincipal";
             this.Text = "CoolSoft Sistema de Gestión";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormularioPrincipal_FormClosed);
             this.Load += new System.EventHandler(this.FormularioPadre_Load);
             this.menuStripPrincipal.ResumeLayout(false);
             this.menuStripPrincipal.PerformLayout();
