@@ -8,6 +8,7 @@ namespace CoolSoft.DATOS.ENTIDADES
 {
     public class Cliente
     {
+        public int idCliente { get; set; }
         public int dniCuil { get; set; }
         public string nombre { get; set; }
         public string domicilio { get; set; }

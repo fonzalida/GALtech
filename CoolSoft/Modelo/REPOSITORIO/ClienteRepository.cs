@@ -11,19 +11,23 @@ namespace CoolSoft.DATOS.REPOSITORIO
 {
     static class ClienteRepository
     {
-        static public int Agregar(Cliente p)
+        static public int Agregar(Cliente c)
         {
-           
+
             MySqlCommand cmd = new MySqlCommand(
                "INSERT INTO CLIENTE" +
-               "(nombre, domicilio, telefono)" +
-               " VALUES (@nombre, @domicilio, @telefono); " +
+               "(DniCuit, Nombre, Domicilio, Localidad, Provincia, Telefono1, Telefono2)" +
+               " VALUES (@DniCuit, @Nombre, @Domicilio, @Localidad, @Provincia, @Telefono1, @Telefono2); " +
                "SELECT LAST_INSERT_ID();"
                );
 
-            cmd.Parameters.AddWithValue("@nombre", p.nombre);
-            cmd.Parameters.AddWithValue("@domicilio", p.domicilio);
-            cmd.Parameters.AddWithValue("@telefono", p.telefono);
+            cmd.Parameters.AddWithValue("@DniCuit", c.dniCuil);
+            cmd.Parameters.AddWithValue("@Nombre", c.nombre);
+            cmd.Parameters.AddWithValue("@Domicilio", c.domicilio);
+            cmd.Parameters.AddWithValue("@Localidad", c.localidad);
+            cmd.Parameters.AddWithValue("@Provincia", c.provincia);
+            cmd.Parameters.AddWithValue("@Telefono1", c.telefono1);
+            cmd.Parameters.AddWithValue("@Telefono2", c.telefono2);
 
             Conexion conexion = new Conexion();
 
@@ -56,7 +60,7 @@ namespace CoolSoft.DATOS.REPOSITORIO
                "where IdCliente = @IdCliente"
                );
 
-            cmd.Parameters.AddWithValue("@IdCliente", p.dniCuil);
+            cmd.Parameters.AddWithValue("@IdCliente", p.idCliente);
 
             conexion.QueryInsertDeleteUpdate(cmd);
         }
@@ -78,13 +82,18 @@ namespace CoolSoft.DATOS.REPOSITORIO
 
             MySqlCommand cmd = new MySqlCommand(
                 "UPDATE CLIENTE" +
-                 "SET Nombre = @nombre2, Domicilio = @domicilio2 ,Telefono = @telefono2 " +
+                 "SET DniCuit = @DniCuit2, Nombre = @Nombre2, Domicilio = @Domicilio2, Localidad = @Localidad2, Provincia = @Provincia2, Telefono1 = @Telefono12, Telefono2 = @Telefono22 " +
                   "where IdCliente = @idCliente  ");
 
-            cmd.Parameters.AddWithValue("@idCliente", p.dniCuil);
-            cmd.Parameters.AddWithValue("@nombre2", pn.nombre);
-            cmd.Parameters.AddWithValue("@domicilio2", pn.domicilio);
-            cmd.Parameters.AddWithValue("@telefono2", pn.telefono);
+            cmd.Parameters.AddWithValue("@idCliente", p.idCliente);
+
+            cmd.Parameters.AddWithValue("@DniCuit2", pn.dniCuil);
+            cmd.Parameters.AddWithValue("@Nombre2", pn.nombre);
+            cmd.Parameters.AddWithValue("@Domicilio2", pn.domicilio);
+            cmd.Parameters.AddWithValue("@Localidad2", pn.localidad);
+            cmd.Parameters.AddWithValue("@Provincia2", pn.provincia);
+            cmd.Parameters.AddWithValue("@Telefono12", pn.telefono1);
+            cmd.Parameters.AddWithValue("@Telefono22", pn.telefono2);
 
             Conexion conexion = new Conexion();
 

@@ -28,6 +28,8 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `cliente` (
+
+  `IdCliente` int(11) NOT NULL,
   `DniCuit` int(20) NOT NULL,
   `Nombre` varchar(50) COLLATE utf8_spanish_ci DEFAULT NULL,
   `Domicilio` varchar(256) COLLATE utf8_spanish_ci DEFAULT NULL,
@@ -61,7 +63,7 @@ CREATE TABLE `orden` (
   `TareaDesarrollar` varchar(256) COLLATE utf8_spanish_ci DEFAULT NULL,
   `TareaDesarrollada` varchar(256) COLLATE utf8_spanish_ci DEFAULT NULL,
   `Precio` float DEFAULT NULL,
-  `DniCuit` int(20) NOT NULL,
+  `IdCliente` int(20) NOT NULL,
   `Completada` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
@@ -136,7 +138,7 @@ CREATE TABLE `tecnicoorden` (
 -- Indices de la tabla `cliente`
 --
 ALTER TABLE `cliente`
-  ADD PRIMARY KEY (`DniCuit`);
+  ADD PRIMARY KEY (`IdCliente`);
 
 --
 -- Indices de la tabla `material`
@@ -150,7 +152,7 @@ ALTER TABLE `material`
 --
 ALTER TABLE `orden`
   ADD PRIMARY KEY (`IdOrden`),
-  ADD KEY `DniCuit` (`DniCuit`);
+  ADD KEY `IdCliente` (`IdCliente`);
 
 --
 -- Indices de la tabla `parteorden`
@@ -179,15 +181,13 @@ ALTER TABLE `tecnicoorden`
   ADD KEY `IdParte` (`IdParte`,`IdOrden`);
 
 --
--- Indices de la tabla `titular`
---
--- ALTER TABLE `titular`
---   ADD PRIMARY KEY (`Dni`,`IdCliente`),
---   ADD KEY `IdCliente` (`IdCliente`);
-
---
 -- AUTO_INCREMENT de las tablas volcadas
 --
+
+-- AUTO_INCREMENT de la tabla `cliente`
+--
+ALTER TABLE `cliente`
+  MODIFY `IdCliente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
 
 --
 -- AUTO_INCREMENT de la tabla `orden`
@@ -209,7 +209,7 @@ ALTER TABLE `material`
 -- Filtros para la tabla `orden`
 --
 ALTER TABLE `orden`
-  ADD CONSTRAINT `orden_ibfk_1` FOREIGN KEY (`DniCuit`) REFERENCES `cliente` (`DniCuit`);
+  ADD CONSTRAINT `orden_ibfk_1` FOREIGN KEY (`IdCliente`) REFERENCES `cliente` (`IdCliente`);
 
 --
 -- Filtros para la tabla `parteorden`
