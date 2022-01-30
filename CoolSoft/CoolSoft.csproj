@@ -98,10 +98,8 @@
     <Compile Include="Modelo\REPOSITORIO\MaterialRepository.cs" />
     <Compile Include="Modelo\REPOSITORIO\OrdenRepository.cs" />
     <Compile Include="Modelo\REPOSITORIO\ParteOrdenRepository.cs" />
-    <Compile Include="Modelo\REPOSITORIO\PersonaRepository.cs" />
     <Compile Include="Modelo\REPOSITORIO\TecnicoOrdenRepository.cs" />
     <Compile Include="Modelo\REPOSITORIO\TecnicoRepository.cs" />
-    <Compile Include="Modelo\REPOSITORIO\TitularRepository.cs" />
     <Compile Include="Modelo\SERVICIO\ClienteService.cs" />
     <Compile Include="Modelo\SERVICIO\OrdenService.cs" />
     <Compile Include="Modelo\SERVICIO\TecnicoService.cs" />
@@ -118,6 +116,12 @@
     </Compile>
     <Compile Include="Vista\Cliente\ClienteAgregar.Designer.cs">
       <DependentUpon>ClienteAgregar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Cliente\ClienteVer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Cliente\ClienteVer.Designer.cs">
+      <DependentUpon>ClienteVer.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\FormPresentacion.cs">
       <SubType>Form</SubType>
@@ -149,6 +153,18 @@
     <Compile Include="Vista\Herencia\Historico.Designer.cs">
       <DependentUpon>Historico.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\Orden\OrdenesVer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Orden\OrdenesVer.Designer.cs">
+      <DependentUpon>OrdenesVer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Tecnico\TecnicosVer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Tecnico\TecnicosVer.Designer.cs">
+      <DependentUpon>TecnicosVer.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Test.resx">
       <DependentUpon>Test.cs</DependentUpon>
     </EmbeddedResource>
@@ -165,6 +181,9 @@
     <EmbeddedResource Include="Vista\Cliente\ClienteAgregar.resx">
       <DependentUpon>ClienteAgregar.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Cliente\ClienteVer.resx">
+      <DependentUpon>ClienteVer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\FormPresentacion.resx">
       <DependentUpon>FormPresentacion.cs</DependentUpon>
     </EmbeddedResource>
@@ -179,6 +198,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\Herencia\Historico.resx">
       <DependentUpon>Historico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Orden\OrdenesVer.resx">
+      <DependentUpon>OrdenesVer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Tecnico\TecnicosVer.resx">
+      <DependentUpon>TecnicosVer.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -196,8 +221,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="CONTROLADOR\" />
-    <Folder Include="Vista\Orden\" />
-    <Folder Include="Vista\Tecnico\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\check.png" />
@@ -228,15 +251,6 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\outline_engineering_black_24dp.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\outline_content_paste_black_24dp.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\outline_person_black_24dp.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\add.png" />
   </ItemGroup>
   <ItemGroup>
@@ -253,6 +267,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\LOGO-COOLSOFT-original.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cliente.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\orden.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tecnico.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

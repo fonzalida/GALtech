@@ -32,23 +32,22 @@ namespace CoolSoft.VISTA
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormularioPrincipal));
             this.menuStripPrincipal = new System.Windows.Forms.MenuStrip();
             this.tecnicosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.agregarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ordenesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStripPrincipal.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStripPrincipal
             // 
             this.menuStripPrincipal.AutoSize = false;
-            this.menuStripPrincipal.BackColor = System.Drawing.Color.DodgerBlue;
+            this.menuStripPrincipal.BackColor = System.Drawing.Color.Navy;
             this.menuStripPrincipal.Dock = System.Windows.Forms.DockStyle.Left;
             this.menuStripPrincipal.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStripPrincipal.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStripPrincipal.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tecnicosToolStripMenuItem,
-            this.clientesToolStripMenuItem,
-            this.ordenesToolStripMenuItem});
+            this.ordenesToolStripMenuItem,
+            this.clientesToolStripMenuItem});
             this.menuStripPrincipal.Location = new System.Drawing.Point(0, 0);
             this.menuStripPrincipal.Name = "menuStripPrincipal";
             this.menuStripPrincipal.Size = new System.Drawing.Size(227, 582);
@@ -57,36 +56,39 @@ namespace CoolSoft.VISTA
             // 
             // tecnicosToolStripMenuItem
             // 
-            this.tecnicosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.agregarToolStripMenuItem});
+            this.tecnicosToolStripMenuItem.AutoSize = false;
             this.tecnicosToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.tecnicosToolStripMenuItem.Image = global::CoolSoft.Properties.Resources.tecnico;
             this.tecnicosToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tecnicosToolStripMenuItem.Name = "tecnicosToolStripMenuItem";
-            this.tecnicosToolStripMenuItem.Size = new System.Drawing.Size(218, 41);
+            this.tecnicosToolStripMenuItem.Size = new System.Drawing.Size(218, 80);
             this.tecnicosToolStripMenuItem.Text = "Tecnicos";
-            // 
-            // agregarToolStripMenuItem
-            // 
-            this.agregarToolStripMenuItem.Name = "agregarToolStripMenuItem";
-            this.agregarToolStripMenuItem.Size = new System.Drawing.Size(203, 42);
-            this.agregarToolStripMenuItem.Text = "Agregar";
-            // 
-            // clientesToolStripMenuItem
-            // 
-            this.clientesToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.clientesToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(218, 41);
-            this.clientesToolStripMenuItem.Text = "Clientes";
+            this.tecnicosToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.tecnicosToolStripMenuItem.Click += new System.EventHandler(this.tecnicosToolStripMenuItem_Click);
             // 
             // ordenesToolStripMenuItem
             // 
+            this.ordenesToolStripMenuItem.AutoSize = false;
             this.ordenesToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.ordenesToolStripMenuItem.Image = global::CoolSoft.Properties.Resources.orden;
             this.ordenesToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.ordenesToolStripMenuItem.Name = "ordenesToolStripMenuItem";
-            this.ordenesToolStripMenuItem.Size = new System.Drawing.Size(218, 41);
+            this.ordenesToolStripMenuItem.Size = new System.Drawing.Size(218, 80);
             this.ordenesToolStripMenuItem.Text = "Ordenes";
+            this.ordenesToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.ordenesToolStripMenuItem.Click += new System.EventHandler(this.ordenesToolStripMenuItem_Click);
+            // 
+            // clientesToolStripMenuItem
+            // 
+            this.clientesToolStripMenuItem.AutoSize = false;
+            this.clientesToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.clientesToolStripMenuItem.Image = global::CoolSoft.Properties.Resources.cliente;
+            this.clientesToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(218, 80);
+            this.clientesToolStripMenuItem.Text = "Clientes";
+            this.clientesToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.clientesToolStripMenuItem.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click);
             // 
             // FormularioPrincipal
             // 
@@ -115,7 +117,6 @@ namespace CoolSoft.VISTA
 
         private System.Windows.Forms.MenuStrip menuStripPrincipal;
         private System.Windows.Forms.ToolStripMenuItem tecnicosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem agregarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ordenesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem;
     }

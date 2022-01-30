@@ -35,7 +35,19 @@ namespace CoolSoft.Vista.Herencia
 
         private void Historico_Load(object sender, EventArgs e)
         {
-            
+            //this.Text = pMenu.Size.ToString();
+            this.Size = new Size(941, 627);
+            dateTimeInicial.Value = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1);
+            dateTimeFinal.Value = DateTime.Now;
+           pMenu.Size = new Size(pMenu.Size.Width,107);
+        }
+
+        private void checkBoxTodos_CheckedChanged(object sender, EventArgs e)
+        {
+
+            dateTimeInicial.Enabled = !checkBoxTodos.Checked;
+            dateTimeFinal.Enabled = !checkBoxTodos.Checked;
+
         }
     }
 }

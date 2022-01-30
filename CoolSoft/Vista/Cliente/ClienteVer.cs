@@ -1,4 +1,5 @@
 ﻿using CoolSoft.Properties;
+using CoolSoft.Vista.Herencia;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,19 +10,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CoolSoft.Vista.Herencia
+namespace CoolSoft.Vista.Cliente
 {
-    public partial class Base : Form
+    public partial class ClienteVer : Historico
     {
-        public Base()
+        public ClienteVer()
         {
             InitializeComponent();
+            lTitulo.Text = "Clientes";
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
-        private void Base_Load(object sender, EventArgs e)
+        private void ClienteVer_Load(object sender, EventArgs e)
         {
-            this.Text = "";
-            this.Icon = Resources.ICONO_COOLSOFT;
+            
+            
         }
     }
 }

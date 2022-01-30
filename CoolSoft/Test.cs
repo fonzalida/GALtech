@@ -12,7 +12,7 @@ namespace connect
     {
 
 
-        List<Persona> listPersona;
+        
         public Test()
         {
             InitializeComponent();
@@ -55,40 +55,24 @@ namespace connect
 
         private void Test_Load(object sender, EventArgs e)
         {
-            listPersona = new List<Persona>();
-            dgvPersona.DataSource = listPersona;
+            
 
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = PersonaRepository.ListarTodos();
-            dataGridView1.Refresh();
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Persona p = new Persona();
-            p.dni = int.Parse(tbDni.Text);
-            p.nombre = tbNombre.Text;
-            p.apellido = tbApellido.Text;
-
-            PersonaRepository.Agregar(p);
+           
 
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Orden o = new Orden();
-            o.idOrden = 1; //int.Parse(tbIdOrden.Text);
-            o.fechaRecepcion = DateTime.Now.Date; //DateTime.Parse(tbFechaRecepcion.Text)
-            o.tareaDesarrollar = tbTareaADesarrollar.Text;
-            o.tareaDesarrollada = tbTareaDesarrollada.Text;
-            o.precio = float.Parse(tbPrecio.Text);
-            o.dniCuit = 1; //int.Parse(tbIdCliente.Text);
-            o.completada = true; //bool.Parse(tbCompletado.Text);
-
-            OrdenRepository.agregar(o);
+            
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -121,12 +105,8 @@ namespace connect
             //t.dni = int.Parse(tbpDni.Text);
             //TitularRepository.agregar(t);
 
-            Cliente c = new Cliente();
-            c.nombre = tbcNombre.Text;
-            c.domicilio = tbcDomicilio.Text;
-            c.telefono = int.Parse(tbcTelefono.Text);
+            
 
-            ClienteService.Agregar(c, listPersona);
 
         }
 
@@ -134,18 +114,6 @@ namespace connect
 
         private void AgregarPersona_Click(object sender, EventArgs e)
         {
-            Persona p = new Persona();
-            p.dni = int.Parse(textBoxDni.Text);
-            p.nombre = textBoxNombre.Text;
-            p.apellido = textBoxApellido.Text;
-
-            listPersona.Add(p);
-            textBoxDni.Text = "";
-            textBoxNombre.Text = "";
-            textBoxApellido.Text = "";
-
-            dgvPersona.DataSource = null;
-            dgvPersona.DataSource = listPersona;
 
         }
 
