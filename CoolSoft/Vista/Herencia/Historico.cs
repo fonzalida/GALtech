@@ -37,6 +37,14 @@ namespace CoolSoft.Vista.Herencia
         {
             //this.Text = pMenu.Size.ToString();
             this.Size = new Size(941, 627);
+
+            Random random = new Random();
+            int x = random.Next(-60, 60);
+            int y = random.Next(-60, 60);
+
+            this.Location = new Point(((this.MdiParent.ClientSize.Width / 2) - (this.Width / 2))+x,
+                ((this.MdiParent.ClientSize.Height / 2) - (this.Height / 2))+y);
+
             dateTimeInicial.Value = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1);
             dateTimeFinal.Value = DateTime.Now;
            pMenu.Size = new Size(pMenu.Size.Width,107);
@@ -47,6 +55,11 @@ namespace CoolSoft.Vista.Herencia
 
             dateTimeInicial.Enabled = !checkBoxTodos.Checked;
             dateTimeFinal.Enabled = !checkBoxTodos.Checked;
+
+        }
+
+        private void bModificar_Click(object sender, EventArgs e)
+        {
 
         }
     }
