@@ -50,9 +50,11 @@ namespace CoolSoft.VISTA
             this.clientesToolStripMenuItem});
             this.menuStripPrincipal.Location = new System.Drawing.Point(0, 0);
             this.menuStripPrincipal.Name = "menuStripPrincipal";
-            this.menuStripPrincipal.Size = new System.Drawing.Size(227, 582);
+            this.menuStripPrincipal.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuStripPrincipal.Size = new System.Drawing.Size(150, 473);
             this.menuStripPrincipal.TabIndex = 1;
             this.menuStripPrincipal.Text = "menuStrip1";
+            this.menuStripPrincipal.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStripPrincipal_ItemClicked);
             // 
             // tecnicosToolStripMenuItem
             // 
@@ -61,7 +63,7 @@ namespace CoolSoft.VISTA
             this.tecnicosToolStripMenuItem.Image = global::CoolSoft.Properties.Resources.tecnico;
             this.tecnicosToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tecnicosToolStripMenuItem.Name = "tecnicosToolStripMenuItem";
-            this.tecnicosToolStripMenuItem.Size = new System.Drawing.Size(218, 80);
+            this.tecnicosToolStripMenuItem.Size = new System.Drawing.Size(150, 80);
             this.tecnicosToolStripMenuItem.Text = "Tecnicos";
             this.tecnicosToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.tecnicosToolStripMenuItem.Click += new System.EventHandler(this.tecnicosToolStripMenuItem_Click);
@@ -73,7 +75,7 @@ namespace CoolSoft.VISTA
             this.ordenesToolStripMenuItem.Image = global::CoolSoft.Properties.Resources.orden;
             this.ordenesToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.ordenesToolStripMenuItem.Name = "ordenesToolStripMenuItem";
-            this.ordenesToolStripMenuItem.Size = new System.Drawing.Size(218, 80);
+            this.ordenesToolStripMenuItem.Size = new System.Drawing.Size(150, 80);
             this.ordenesToolStripMenuItem.Text = "Ordenes";
             this.ordenesToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.ordenesToolStripMenuItem.Click += new System.EventHandler(this.ordenesToolStripMenuItem_Click);
@@ -85,23 +87,23 @@ namespace CoolSoft.VISTA
             this.clientesToolStripMenuItem.Image = global::CoolSoft.Properties.Resources.cliente;
             this.clientesToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(218, 80);
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(150, 80);
             this.clientesToolStripMenuItem.Text = "Clientes";
             this.clientesToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.clientesToolStripMenuItem.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click);
             // 
             // FormularioPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.BackgroundImage = global::CoolSoft.Properties.Resources.LOGO_CHIQUITO;
-            this.ClientSize = new System.Drawing.Size(1163, 582);
+            this.ClientSize = new System.Drawing.Size(872, 473);
             this.Controls.Add(this.menuStripPrincipal);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStripPrincipal;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormularioPrincipal";
             this.Text = "CoolSoft Sistema de Gestión";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
