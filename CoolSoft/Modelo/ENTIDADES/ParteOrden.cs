@@ -12,7 +12,7 @@ namespace CoolSoft.DATOS.ENTIDADES
         public int idOrden { get; set; }
         public DateTime fechaInicio { get; set; }
         public DateTime fechaFin { get; set; }
-        public int Completa { get; set; }
+        public int completa { get; set; }
 
         public ParteOrden() { }
 

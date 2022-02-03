@@ -37,7 +37,7 @@ namespace CoolSoft.DATOS
 
                
                 dt.Load(reader);
-
+                
 
                 //while (reader.Read())
                 //{

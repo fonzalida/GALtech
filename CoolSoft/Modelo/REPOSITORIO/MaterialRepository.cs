@@ -36,7 +36,7 @@ namespace CoolSoft.DATOS.REPOSITORIO
 
             MySqlCommand cmd = new MySqlCommand(
                 "DELETE FROM MATERIAL " +
-                "where IdMat = @IdMat and IdOrden=@IdOrden"
+                "where IdMat = @IdMat and IdOrden = @IdOrden"
                 );
 
             cmd.Parameters.AddWithValue("@IdMat", p.idMat);
@@ -62,21 +62,21 @@ namespace CoolSoft.DATOS.REPOSITORIO
 
             MySqlCommand cmd = new MySqlCommand(
                 "UPDATE MATERIAL" +
-                 "SET Cantidad = @Cantidad, Descripcion = @Descripcion " +
+                 "SET Cantidad = @Cantidad2, Descripcion = @Descripcion2 " +
                   "where IdMat = @IdMat and IdOrden = @IdOrden ");
 
 
             cmd.Parameters.AddWithValue("@IdMat", p.idMat);
             cmd.Parameters.AddWithValue("@IdOrden", p.idOrden);
-            cmd.Parameters.AddWithValue("@Cantidad", pn.cantidad);
-            cmd.Parameters.AddWithValue("@Descripcion", pn.descripcion);
+            cmd.Parameters.AddWithValue("@Cantidad2", pn.cantidad);
+            cmd.Parameters.AddWithValue("@Descripcion2", pn.descripcion);
 
             Conexion conexion = new Conexion();
 
             conexion.QueryInsertDeleteUpdate(cmd);
         }
 
-        public static DataTable/*List<Material>*/ ListarTodos()
+        public static DataTable ListarTodos()
         {
             String query = "SELECT * FROM MATERIAL";
 

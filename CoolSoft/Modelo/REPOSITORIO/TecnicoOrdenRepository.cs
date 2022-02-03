@@ -78,7 +78,7 @@ namespace CoolSoft.DATOS.REPOSITORIO
 
         }
 
-        public static DataTable/*List<Tecnico_Orden>*/ ListarTodos()
+        public static DataTable ListarTodos()
         {
             String query = "SELECT * FROM TECNICOORDEN";
 

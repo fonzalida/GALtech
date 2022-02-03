@@ -13,23 +13,16 @@ namespace CoolSoft.DATOS.REPOSITORIO
     {
         public static int agregar(Orden p)
         {
-            //String query = "Insert into orden ( Fecha_Recepcion, Tarea_Desarrollar, Tarea_Desarrollada, Precio, IdCliente, Completada) values (" + p.IdOrden + "," + p.FechaRecepcion + "," + p.TareaDesarrollar + "," + p.TareaDesarrollada + "," + p.Precio + "," + p.IdCliente + "," + p.Completada + ")";
-
-            //MySqlCommand cmd = new MySqlCommand(
-            //    "INSERT INTO ORDEN"+
-            //    "(FechaRecepcion, TareaDesarrollar, TareaDesarrollada, IdCliente, Completada)"+
-            //    " VALUES (@FechaRecepcion, @TareaDesarrollar, @TareaDesarrollada, @IdCliente, @Completada)" +
-            //   "SELECT LAST_INSERT_ID();"
-            //    );
+            
             MySqlCommand cmd = new MySqlCommand(
                 "INSERT INTO ORDEN" +
-                "(TareaDesarrollar, TareaDesarrollada, IdCliente, Completada)" +
-                " VALUES (@TareaDesarrollar, @TareaDesarrollada, @IdCliente, @Completada)" +
+                "(FechaRecepcion ,TareaDesarrollar, TareaDesarrollada, IdCliente, Completada)" +
+                " VALUES (@FechaRecepcion, @TareaDesarrollar, @TareaDesarrollada, @IdCliente, @Completada)" +
                "SELECT LAST_INSERT_ID();"
                 );
 
             //cmd.Parameters.AddWithValue("@IdOrden",p.IdOrden);
-            //cmd.Parameters.AddWithValue("@FechaRecepcion",p.FechaRecepcion);
+            cmd.Parameters.AddWithValue("@FechaRecepcion",p.fechaRecepcion);
             cmd.Parameters.AddWithValue("@TareaDesarrollar", p.tareaDesarrollar);
             cmd.Parameters.AddWithValue("@TareaDesarrollada", p.tareaDesarrollada);
             //cmd.Parameters.AddWithValue("@Precio",p.Precio);
@@ -68,22 +61,22 @@ namespace CoolSoft.DATOS.REPOSITORIO
 
         }
 
-        public static void modificar(Orden p)
+        public static void modificar(Orden p, Orden pn)
         {
 
             MySqlCommand cmd = new MySqlCommand(
                 "UPDATE Orden" +
-                 "SET FechaRecepcion = @FechaRecepcion, TareaDesarrollar = @TareaDesarrollar, TareaDesarrollada = @TareaDesarrollada, Precio = @Precio ,IdCliente = @IdCliente, Completada = @Completada" +
+                 "SET FechaRecepcion = @FechaRecepcion2, TareaDesarrollar = @TareaDesarrollar2, TareaDesarrollada = @TareaDesarrollada2, Precio = @Precio2 ,IdCliente = @IdCliente2, Completada = @Completada2" +
                   "WHERE IdOrden = @IdOrden ");
-                
 
-           
-            cmd.Parameters.AddWithValue("@FechaRecepcion",p.fechaRecepcion);
-            cmd.Parameters.AddWithValue("@TareaDesarrollar", p.tareaDesarrollar);
-            cmd.Parameters.AddWithValue("@TareaDesarrollada", p.tareaDesarrollada);
-            cmd.Parameters.AddWithValue("@Precio",p.precio);
-            cmd.Parameters.AddWithValue("@IdCliente", p.dniCuit);
-            cmd.Parameters.AddWithValue("@Completada", p.completada);
+            cmd.Parameters.AddWithValue("@IdOrden", p.fechaRecepcion);
+
+            cmd.Parameters.AddWithValue("@FechaRecepcion2", pn.fechaRecepcion);
+            cmd.Parameters.AddWithValue("@TareaDesarrollar2", pn.tareaDesarrollar);
+            cmd.Parameters.AddWithValue("@TareaDesarrollada2", pn.tareaDesarrollada);
+            cmd.Parameters.AddWithValue("@Precio2",pn.precio);
+            cmd.Parameters.AddWithValue("@IdCliente2", pn.dniCuit);
+            cmd.Parameters.AddWithValue("@Completada2", pn.completada);
 
             Conexion conexion = new Conexion();
             //conexion.QueryId(cmd) no necesitamos retornar el id
@@ -91,7 +84,7 @@ namespace CoolSoft.DATOS.REPOSITORIO
             
         }
 
-        public static DataTable/*List<Orden>*/ ListarTodos()
+        public static DataTable ListarTodos()
         {
             String query = "SELECT * FROM ORDEN";
 

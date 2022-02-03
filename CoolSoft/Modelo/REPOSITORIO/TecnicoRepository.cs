@@ -23,8 +23,8 @@ namespace CoolSoft.DATOS.REPOSITORIO
                );
 
             cmd.Parameters.AddWithValue("@dni", p.dni);
-            cmd.Parameters.AddWithValue("@dni", p.nombre);
-            cmd.Parameters.AddWithValue("@dni", p.telefono);
+            cmd.Parameters.AddWithValue("@nombre", p.nombre);
+            cmd.Parameters.AddWithValue("@telefono", p.telefono);
 
             Conexion conexion = new Conexion();
             return int.Parse(conexion.QueryInsertDeleteUpdate(cmd));
@@ -75,7 +75,7 @@ namespace CoolSoft.DATOS.REPOSITORIO
 
         }
 
-        public static DataTable/*List<Persona>*/ ListarTodos()
+        public static DataTable ListarTodos()
         {
             String query = "SELECT * FROM TECNICO";
 
