@@ -45,16 +45,18 @@ namespace CoolSoft.Vista.Herencia
             this.labelFInicial = new System.Windows.Forms.Label();
             this.pBuscar = new System.Windows.Forms.Panel();
             this.bBuscar = new System.Windows.Forms.Button();
+            this.pCostado = new System.Windows.Forms.Panel();
             this.pTitulo.SuspendLayout();
             this.pMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridHistorico)).BeginInit();
             this.pFecha.SuspendLayout();
             this.pBuscar.SuspendLayout();
+            this.pCostado.SuspendLayout();
             this.SuspendLayout();
             // 
             // pTitulo
             // 
-            this.pTitulo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pTitulo.Margin = new System.Windows.Forms.Padding(2);
             this.pTitulo.Size = new System.Drawing.Size(921, 50);
             // 
             // pMenu
@@ -78,7 +80,7 @@ namespace CoolSoft.Vista.Herencia
             // 
             this.bAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bAgregar.Image = global::CoolSoft.Properties.Resources.add;
-            this.bAgregar.Location = new System.Drawing.Point(798, 162);
+            this.bAgregar.Location = new System.Drawing.Point(6, 3);
             this.bAgregar.Name = "bAgregar";
             this.bAgregar.Size = new System.Drawing.Size(105, 65);
             this.bAgregar.TabIndex = 3;
@@ -90,7 +92,7 @@ namespace CoolSoft.Vista.Herencia
             // 
             this.bModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bModificar.Image = global::CoolSoft.Properties.Resources.edit;
-            this.bModificar.Location = new System.Drawing.Point(798, 236);
+            this.bModificar.Location = new System.Drawing.Point(6, 77);
             this.bModificar.Name = "bModificar";
             this.bModificar.Size = new System.Drawing.Size(105, 65);
             this.bModificar.TabIndex = 4;
@@ -103,7 +105,7 @@ namespace CoolSoft.Vista.Herencia
             // 
             this.bEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bEliminar.Image = global::CoolSoft.Properties.Resources.delete;
-            this.bEliminar.Location = new System.Drawing.Point(798, 310);
+            this.bEliminar.Location = new System.Drawing.Point(6, 151);
             this.bEliminar.Name = "bEliminar";
             this.bEliminar.Size = new System.Drawing.Size(105, 65);
             this.bEliminar.TabIndex = 5;
@@ -133,6 +135,7 @@ namespace CoolSoft.Vista.Herencia
             this.bVer.Text = "Ver";
             this.bVer.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.bVer.UseVisualStyleBackColor = false;
+            this.bVer.Click += new System.EventHandler(this.bVer_Click_1);
             // 
             // bCancelar
             // 
@@ -146,6 +149,7 @@ namespace CoolSoft.Vista.Herencia
             this.bCancelar.Text = "Cancelar";
             this.bCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.bCancelar.UseVisualStyleBackColor = false;
+            this.bCancelar.Click += new System.EventHandler(this.bCancelar_Click_1);
             // 
             // pFecha
             // 
@@ -167,7 +171,7 @@ namespace CoolSoft.Vista.Herencia
             this.checkBoxTodos.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.checkBoxTodos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBoxTodos.Location = new System.Drawing.Point(7, 41);
-            this.checkBoxTodos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkBoxTodos.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxTodos.Name = "checkBoxTodos";
             this.checkBoxTodos.Size = new System.Drawing.Size(161, 24);
             this.checkBoxTodos.TabIndex = 4;
@@ -239,26 +243,32 @@ namespace CoolSoft.Vista.Herencia
             this.bBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.bBuscar.UseVisualStyleBackColor = true;
             // 
+            // pCostado
+            // 
+            this.pCostado.Controls.Add(this.bAgregar);
+            this.pCostado.Controls.Add(this.bModificar);
+            this.pCostado.Controls.Add(this.bEliminar);
+            this.pCostado.Location = new System.Drawing.Point(798, 162);
+            this.pCostado.Name = "pCostado";
+            this.pCostado.Size = new System.Drawing.Size(123, 385);
+            this.pCostado.TabIndex = 17;
+            // 
             // Historico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(921, 584);
+            this.Controls.Add(this.pCostado);
             this.Controls.Add(this.ssEstado);
-            this.Controls.Add(this.bEliminar);
-            this.Controls.Add(this.bModificar);
-            this.Controls.Add(this.bAgregar);
             this.Controls.Add(this.dataGridHistorico);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Historico";
             this.Text = " ";
             this.Load += new System.EventHandler(this.Historico_Load);
             this.Controls.SetChildIndex(this.dataGridHistorico, 0);
-            this.Controls.SetChildIndex(this.bAgregar, 0);
-            this.Controls.SetChildIndex(this.bModificar, 0);
-            this.Controls.SetChildIndex(this.bEliminar, 0);
             this.Controls.SetChildIndex(this.ssEstado, 0);
+            this.Controls.SetChildIndex(this.pCostado, 0);
             this.Controls.SetChildIndex(this.pTitulo, 0);
             this.Controls.SetChildIndex(this.pMenu, 0);
             this.pTitulo.ResumeLayout(false);
@@ -268,6 +278,7 @@ namespace CoolSoft.Vista.Herencia
             this.pFecha.ResumeLayout(false);
             this.pFecha.PerformLayout();
             this.pBuscar.ResumeLayout(false);
+            this.pCostado.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -289,5 +300,6 @@ namespace CoolSoft.Vista.Herencia
         public System.Windows.Forms.Panel pBuscar;
         private System.Windows.Forms.Button bBuscar;
         private System.Windows.Forms.CheckBox checkBoxTodos;
+        private System.Windows.Forms.Panel pCostado;
     }
 }

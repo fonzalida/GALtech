@@ -48,6 +48,11 @@ namespace CoolSoft.Vista.Herencia
             dateTimeInicial.Value = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1);
             dateTimeFinal.Value = DateTime.Now;
            pMenu.Size = new Size(pMenu.Size.Width,107);
+
+
+            ControlEnableSwap(false);
+
+
         }
 
         private void checkBoxTodos_CheckedChanged(object sender, EventArgs e)
@@ -61,6 +66,25 @@ namespace CoolSoft.Vista.Herencia
         private void bModificar_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void ControlEnableSwap(bool b)
+        {
+
+            pFecha.Enabled = !b;
+            pBuscar.Enabled = b;
+            pCostado.Enabled = b;
+
+        }
+
+        private void bVer_Click_1(object sender, EventArgs e)
+        {
+            ControlEnableSwap(true);
+        }
+
+        private void bCancelar_Click_1(object sender, EventArgs e)
+        {
+            ControlEnableSwap(false);
         }
     }
 }

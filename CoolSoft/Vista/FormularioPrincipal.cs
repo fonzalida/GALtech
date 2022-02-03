@@ -2,6 +2,7 @@
 using CoolSoft.Vista.Orden;
 using CoolSoft.Vista.Tecnico;
 using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace CoolSoft.VISTA
@@ -13,12 +14,19 @@ namespace CoolSoft.VISTA
             InitializeComponent();
         }
 
-        private void FormularioPadre_Load(object sender, EventArgs e)
+        private void FormularioPrincipal_Load(object sender, EventArgs e)
         {
             //Test newFrm = new Test();
             //Historico form = new Historico();
             //form.MdiParent = this;
             //form.Show();
+
+            foreach(ToolStripMenuItem i in menuStripPrincipal.Items)
+            {
+                i.MouseEnter += ToolStripMenuItem_MouseEnter;
+                i.MouseLeave += ToolStripMenuItem_MouseLeave;
+            }
+
         }
 
         private void ordenesToolStripMenuItem_Click(object sender, EventArgs e)
@@ -54,6 +62,26 @@ namespace CoolSoft.VISTA
         private void menuStripPrincipal_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
+        }
+
+        private void ToolStripMenuItem_MouseEnter(object sender, EventArgs e)
+        {
+            var button = sender as ToolStripMenuItem;
+            if (button != null)
+            {
+                button.ForeColor = Color.Black;
+            }
+        }
+
+        private void ToolStripMenuItem_MouseLeave(object sender, EventArgs e)
+        {
+            var button = sender as ToolStripMenuItem;
+            if (button != null)
+            {
+                button.ForeColor = SystemColors.ButtonFace;
+            }
+
+            
         }
     }
 }
