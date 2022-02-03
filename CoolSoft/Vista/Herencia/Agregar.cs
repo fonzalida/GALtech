@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace CoolSoft.Vista.Herencia
 {
-    public partial class Agregar : Form
+    public partial class Agregar : Base
     {
         public Agregar()
         {
@@ -25,6 +25,20 @@ namespace CoolSoft.Vista.Herencia
         private void bAgregar_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Hola mundo");
+        }
+
+        private void bCancelar_Click(object sender, EventArgs e)
+        {
+            LimpiarTextBox();
+        }
+
+
+        private void LimpiarTextBox()
+        {
+            foreach (TextBox tb in this.Controls.OfType<TextBox>())
+            {
+                tb.Text = "";
+            }
         }
     }
 }

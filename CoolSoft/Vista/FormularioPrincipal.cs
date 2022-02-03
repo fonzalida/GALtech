@@ -1,4 +1,5 @@
 ﻿using CoolSoft.Vista.Cliente;
+using CoolSoft.Vista.Herencia;
 using CoolSoft.Vista.Orden;
 using CoolSoft.Vista.Tecnico;
 using System;
@@ -18,10 +19,12 @@ namespace CoolSoft.VISTA
         {
             //Test newFrm = new Test();
             //Historico form = new Historico();
-            //form.MdiParent = this;
-            //form.Show();
+            Agregar form = new Agregar();
 
-            foreach(ToolStripMenuItem i in menuStripPrincipal.Items)
+            form.MdiParent = this;
+            form.Show();
+
+            foreach (ToolStripMenuItem i in menuStripPrincipal.Items)
             {
                 i.MouseEnter += ToolStripMenuItem_MouseEnter;
                 i.MouseLeave += ToolStripMenuItem_MouseLeave;

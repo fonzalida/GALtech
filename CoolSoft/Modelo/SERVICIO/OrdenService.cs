@@ -44,9 +44,9 @@ namespace CoolSoft.DATOS.SERVICIO
             // bool parte si modifico o no la parte 
             // bool tecnico si modifico el tecnico
             if (orden)
-                OrdenRepository.modificar(o);
+                OrdenRepository.modificar(o, o);
             if (parte)
-                ParteOrdenRepository.modificar(p);
+                ParteOrdenRepository.modificar(p, p);
             if (tecnico)
                 TecnicoOrdenRepository.modificar(t2, t1);
 
