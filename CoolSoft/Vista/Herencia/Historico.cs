@@ -45,8 +45,10 @@ namespace CoolSoft.Vista.Herencia
             this.Location = new Point(((this.MdiParent.ClientSize.Width / 2) - (this.Width / 2))+x,
                 ((this.MdiParent.ClientSize.Height / 2) - (this.Height / 2))+y);
 
-            dateTimeInicial.Value = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1);
-            dateTimeFinal.Value = DateTime.Now;
+            mtbInicial.Text = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1).Date.ToString("dd/MM/yyyy");
+            mtbFinal.Text = DateTime.Now.Date.ToString("dd/MM/yyyy");
+
+
            pMenu.Size = new Size(pMenu.Size.Width,107);
 
 
@@ -58,8 +60,8 @@ namespace CoolSoft.Vista.Herencia
         private void checkBoxTodos_CheckedChanged(object sender, EventArgs e)
         {
 
-            dateTimeInicial.Enabled = !checkBoxTodos.Checked;
-            dateTimeFinal.Enabled = !checkBoxTodos.Checked;
+            mtbInicial.Enabled = !checkBoxTodos.Checked;
+            mtbFinal.Enabled = !checkBoxTodos.Checked;
 
         }
 
@@ -85,6 +87,11 @@ namespace CoolSoft.Vista.Herencia
         private void bCancelar_Click_1(object sender, EventArgs e)
         {
             ControlEnableSwap(false);
+        }
+
+        private void dateTime_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
         }
     }
 }

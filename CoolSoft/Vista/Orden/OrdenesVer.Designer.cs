@@ -37,11 +37,11 @@ namespace CoolSoft.Vista.Orden
             // 
             // dateTimeFinal
             // 
-            this.dateTimeFinal.Value = new System.DateTime(2022, 1, 30, 15, 29, 22, 858);
-            // 
-            // dateTimeInicial
-            // 
-            this.dateTimeInicial.Value = new System.DateTime(2022, 1, 1, 0, 0, 0, 0);
+            //this.dateTimeFinal.Value = new System.DateTime(2022, 1, 30, 15, 29, 22, 858);
+            //// 
+            //// dateTimeInicial
+            //// 
+            //this.dateTimeInicial.Value = new System.DateTime(2022, 1, 1, 0, 0, 0, 0);
             // 
             // pTitulo
             // 

@@ -35,13 +35,7 @@ namespace CoolSoft.Vista.Tecnico
             this.pMenu.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dateTimeFinal
-            // 
-            this.dateTimeFinal.Value = new System.DateTime(2022, 1, 30, 15, 35, 31, 157);
-            // 
-            // dateTimeInicial
-            // 
-            this.dateTimeInicial.Value = new System.DateTime(2022, 1, 1, 0, 0, 0, 0);
+            
             // 
             // pTitulo
             // 

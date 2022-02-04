@@ -39,13 +39,13 @@ namespace CoolSoft.Vista.Herencia
             this.bCancelar = new System.Windows.Forms.Button();
             this.pFecha = new System.Windows.Forms.Panel();
             this.checkBoxTodos = new System.Windows.Forms.CheckBox();
-            this.dateTimeFinal = new System.Windows.Forms.DateTimePicker();
-            this.dateTimeInicial = new System.Windows.Forms.DateTimePicker();
             this.lFFinal = new System.Windows.Forms.Label();
             this.labelFInicial = new System.Windows.Forms.Label();
             this.pBuscar = new System.Windows.Forms.Panel();
             this.bBuscar = new System.Windows.Forms.Button();
             this.pCostado = new System.Windows.Forms.Panel();
+            this.mtbInicial = new System.Windows.Forms.MaskedTextBox();
+            this.mtbFinal = new System.Windows.Forms.MaskedTextBox();
             this.pTitulo.SuspendLayout();
             this.pMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridHistorico)).BeginInit();
@@ -155,9 +155,9 @@ namespace CoolSoft.Vista.Herencia
             // 
             this.pFecha.BackColor = System.Drawing.Color.LightGray;
             this.pFecha.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pFecha.Controls.Add(this.mtbFinal);
+            this.pFecha.Controls.Add(this.mtbInicial);
             this.pFecha.Controls.Add(this.checkBoxTodos);
-            this.pFecha.Controls.Add(this.dateTimeFinal);
-            this.pFecha.Controls.Add(this.dateTimeInicial);
             this.pFecha.Controls.Add(this.lFFinal);
             this.pFecha.Controls.Add(this.labelFInicial);
             this.pFecha.Location = new System.Drawing.Point(9, 8);
@@ -178,27 +178,6 @@ namespace CoolSoft.Vista.Herencia
             this.checkBoxTodos.Text = "Todos los registros";
             this.checkBoxTodos.UseVisualStyleBackColor = true;
             this.checkBoxTodos.CheckedChanged += new System.EventHandler(this.checkBoxTodos_CheckedChanged);
-            // 
-            // dateTimeFinal
-            // 
-            this.dateTimeFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimeFinal.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimeFinal.Location = new System.Drawing.Point(260, 3);
-            this.dateTimeFinal.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
-            this.dateTimeFinal.Name = "dateTimeFinal";
-            this.dateTimeFinal.Size = new System.Drawing.Size(122, 26);
-            this.dateTimeFinal.TabIndex = 3;
-            // 
-            // dateTimeInicial
-            // 
-            this.dateTimeInicial.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimeInicial.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimeInicial.Location = new System.Drawing.Point(61, 3);
-            this.dateTimeInicial.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
-            this.dateTimeInicial.Name = "dateTimeInicial";
-            this.dateTimeInicial.Size = new System.Drawing.Size(122, 26);
-            this.dateTimeInicial.TabIndex = 1;
-            this.dateTimeInicial.Value = new System.DateTime(2022, 1, 28, 0, 0, 0, 0);
             // 
             // lFFinal
             // 
@@ -253,6 +232,26 @@ namespace CoolSoft.Vista.Herencia
             this.pCostado.Size = new System.Drawing.Size(123, 385);
             this.pCostado.TabIndex = 17;
             // 
+            // mtbInicial
+            // 
+            this.mtbInicial.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtbInicial.Location = new System.Drawing.Point(65, 5);
+            this.mtbInicial.Mask = "00/00/0000";
+            this.mtbInicial.Name = "mtbInicial";
+            this.mtbInicial.Size = new System.Drawing.Size(100, 26);
+            this.mtbInicial.TabIndex = 5;
+            this.mtbInicial.ValidatingType = typeof(System.DateTime);
+            // 
+            // mtbFinal
+            // 
+            this.mtbFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtbFinal.Location = new System.Drawing.Point(264, 5);
+            this.mtbFinal.Mask = "00/00/0000";
+            this.mtbFinal.Name = "mtbFinal";
+            this.mtbFinal.Size = new System.Drawing.Size(100, 26);
+            this.mtbFinal.TabIndex = 6;
+            this.mtbFinal.ValidatingType = typeof(System.DateTime);
+            // 
             // Historico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -293,13 +292,13 @@ namespace CoolSoft.Vista.Herencia
         public System.Windows.Forms.Button bVer;
         public System.Windows.Forms.Button bCancelar;
         public System.Windows.Forms.Panel pFecha;
-        public System.Windows.Forms.DateTimePicker dateTimeFinal;
-        public System.Windows.Forms.DateTimePicker dateTimeInicial;
         public System.Windows.Forms.Label lFFinal;
         public System.Windows.Forms.Label labelFInicial;
         public System.Windows.Forms.Panel pBuscar;
         private System.Windows.Forms.Button bBuscar;
         private System.Windows.Forms.CheckBox checkBoxTodos;
         private System.Windows.Forms.Panel pCostado;
+        public System.Windows.Forms.MaskedTextBox mtbFinal;
+        public System.Windows.Forms.MaskedTextBox mtbInicial;
     }
 }
