@@ -38,14 +38,14 @@ namespace CoolSoft.Vista.Herencia
             this.bVer = new System.Windows.Forms.Button();
             this.bCancelar = new System.Windows.Forms.Button();
             this.pFecha = new System.Windows.Forms.Panel();
+            this.mtbFinal = new System.Windows.Forms.MaskedTextBox();
+            this.mtbInicial = new System.Windows.Forms.MaskedTextBox();
             this.checkBoxTodos = new System.Windows.Forms.CheckBox();
             this.lFFinal = new System.Windows.Forms.Label();
             this.labelFInicial = new System.Windows.Forms.Label();
             this.pBuscar = new System.Windows.Forms.Panel();
             this.bBuscar = new System.Windows.Forms.Button();
             this.pCostado = new System.Windows.Forms.Panel();
-            this.mtbInicial = new System.Windows.Forms.MaskedTextBox();
-            this.mtbFinal = new System.Windows.Forms.MaskedTextBox();
             this.pTitulo.SuspendLayout();
             this.pMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridHistorico)).BeginInit();
@@ -142,7 +142,7 @@ namespace CoolSoft.Vista.Herencia
             this.bCancelar.BackColor = System.Drawing.SystemColors.Control;
             this.bCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bCancelar.Image = ((System.Drawing.Image)(resources.GetObject("bCancelar.Image")));
-            this.bCancelar.Location = new System.Drawing.Point(495, 16);
+            this.bCancelar.Location = new System.Drawing.Point(495, 17);
             this.bCancelar.Name = "bCancelar";
             this.bCancelar.Size = new System.Drawing.Size(89, 65);
             this.bCancelar.TabIndex = 17;
@@ -165,6 +165,28 @@ namespace CoolSoft.Vista.Herencia
             this.pFecha.Size = new System.Drawing.Size(385, 78);
             this.pFecha.TabIndex = 15;
             // 
+            // mtbFinal
+            // 
+            this.mtbFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtbFinal.Location = new System.Drawing.Point(264, 5);
+            this.mtbFinal.Mask = "00/00/0000";
+            this.mtbFinal.Name = "mtbFinal";
+            this.mtbFinal.Size = new System.Drawing.Size(100, 30);
+            this.mtbFinal.TabIndex = 6;
+            this.mtbFinal.ValidatingType = typeof(System.DateTime);
+            this.mtbFinal.Enter += new System.EventHandler(this.SelectAll_OnTextBoxEnter);
+            // 
+            // mtbInicial
+            // 
+            this.mtbInicial.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtbInicial.Location = new System.Drawing.Point(65, 5);
+            this.mtbInicial.Mask = "00/00/0000";
+            this.mtbInicial.Name = "mtbInicial";
+            this.mtbInicial.Size = new System.Drawing.Size(100, 30);
+            this.mtbInicial.TabIndex = 5;
+            this.mtbInicial.ValidatingType = typeof(System.DateTime);
+            this.mtbInicial.Enter += new System.EventHandler(this.SelectAll_OnTextBoxEnter);
+            // 
             // checkBoxTodos
             // 
             this.checkBoxTodos.AutoSize = true;
@@ -173,7 +195,7 @@ namespace CoolSoft.Vista.Herencia
             this.checkBoxTodos.Location = new System.Drawing.Point(7, 41);
             this.checkBoxTodos.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxTodos.Name = "checkBoxTodos";
-            this.checkBoxTodos.Size = new System.Drawing.Size(161, 24);
+            this.checkBoxTodos.Size = new System.Drawing.Size(199, 29);
             this.checkBoxTodos.TabIndex = 4;
             this.checkBoxTodos.Text = "Todos los registros";
             this.checkBoxTodos.UseVisualStyleBackColor = true;
@@ -185,7 +207,7 @@ namespace CoolSoft.Vista.Herencia
             this.lFFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lFFinal.Location = new System.Drawing.Point(206, 3);
             this.lFFinal.Name = "lFFinal";
-            this.lFFinal.Size = new System.Drawing.Size(52, 20);
+            this.lFFinal.Size = new System.Drawing.Size(63, 25);
             this.lFFinal.TabIndex = 2;
             this.lFFinal.Text = "Hasta";
             // 
@@ -195,7 +217,7 @@ namespace CoolSoft.Vista.Herencia
             this.labelFInicial.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelFInicial.Location = new System.Drawing.Point(3, 3);
             this.labelFInicial.Name = "labelFInicial";
-            this.labelFInicial.Size = new System.Drawing.Size(56, 20);
+            this.labelFInicial.Size = new System.Drawing.Size(69, 25);
             this.labelFInicial.TabIndex = 0;
             this.labelFInicial.Text = "Desde";
             // 
@@ -231,26 +253,6 @@ namespace CoolSoft.Vista.Herencia
             this.pCostado.Name = "pCostado";
             this.pCostado.Size = new System.Drawing.Size(123, 385);
             this.pCostado.TabIndex = 17;
-            // 
-            // mtbInicial
-            // 
-            this.mtbInicial.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtbInicial.Location = new System.Drawing.Point(65, 5);
-            this.mtbInicial.Mask = "00/00/0000";
-            this.mtbInicial.Name = "mtbInicial";
-            this.mtbInicial.Size = new System.Drawing.Size(100, 26);
-            this.mtbInicial.TabIndex = 5;
-            this.mtbInicial.ValidatingType = typeof(System.DateTime);
-            // 
-            // mtbFinal
-            // 
-            this.mtbFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtbFinal.Location = new System.Drawing.Point(264, 5);
-            this.mtbFinal.Mask = "00/00/0000";
-            this.mtbFinal.Name = "mtbFinal";
-            this.mtbFinal.Size = new System.Drawing.Size(100, 26);
-            this.mtbFinal.TabIndex = 6;
-            this.mtbFinal.ValidatingType = typeof(System.DateTime);
             // 
             // Historico
             // 

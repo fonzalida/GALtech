@@ -18,11 +18,6 @@ namespace CoolSoft.Vista.Herencia
             InitializeComponent();
         }
 
-        private void dateTimeFinal_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void bCancelar_Click(object sender, EventArgs e)
         {
 
@@ -92,6 +87,12 @@ namespace CoolSoft.Vista.Herencia
         private void dateTime_KeyPress(object sender, KeyPressEventArgs e)
         {
 
+        }
+
+        private void SelectAll_OnTextBoxEnter(object sender, EventArgs e)
+        {
+            var textBox = sender as MaskedTextBox;
+            textBox.BeginInvoke(new Action(textBox.SelectAll));
         }
     }
 }

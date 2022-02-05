@@ -24,7 +24,7 @@ namespace CoolSoft.Vista.Herencia
 
         private void bAgregar_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Hola mundo");
+           // MessageBox.Show("Hola mundo");
         }
 
         private void bCancelar_Click(object sender, EventArgs e)
