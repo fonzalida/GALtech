@@ -29,14 +29,23 @@ namespace CoolSoft.Vista.Cliente
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClienteVer));
             this.pFecha.SuspendLayout();
             this.pTitulo.SuspendLayout();
             this.pMenu.SuspendLayout();
             this.SuspendLayout();
             // 
-            // pTitulo
+            // bAgregar
             // 
-            this.pTitulo.Size = new System.Drawing.Size(1228, 62);
+            this.bAgregar.Click += new System.EventHandler(this.bAgregar_Click);
+            // 
+            // mtbFinal
+            // 
+            this.mtbFinal.Text = "06022022";
+            // 
+            // mtbInicial
+            // 
+            this.mtbInicial.Text = "01022022";
             // 
             // pMenu
             // 
@@ -47,6 +56,7 @@ namespace CoolSoft.Vista.Cliente
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1228, 719);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ClienteVer";
             this.Text = "ClienteVer";
             this.Load += new System.EventHandler(this.ClienteVer_Load);

@@ -44,7 +44,7 @@ namespace CoolSoft.DATOS.REPOSITORIO
             conexion.QueryInsertDeleteUpdate(cmd);
         }
 
-        public static void modificar(Tecnico t, Tecnico tn)
+        public static void modificar(Tecnico viejo, Tecnico nuevo)
         {
 
             MySqlCommand cmd = new MySqlCommand(
@@ -52,11 +52,11 @@ namespace CoolSoft.DATOS.REPOSITORIO
                  "SET dni = @dni2, nombre = @nombre2, telefono = @telefono2" +
                   "where dni = @dni  ");
 
-            cmd.Parameters.AddWithValue("@dni", t.dni);
+            cmd.Parameters.AddWithValue("@dni", viejo.dni);
 
-            cmd.Parameters.AddWithValue("@dni2", tn.dni);
-            cmd.Parameters.AddWithValue("@nombre2", tn.nombre);
-            cmd.Parameters.AddWithValue("@telefono2", tn.telefono);
+            cmd.Parameters.AddWithValue("@dni2", nuevo.dni);
+            cmd.Parameters.AddWithValue("@nombre2", nuevo.nombre);
+            cmd.Parameters.AddWithValue("@telefono2", nuevo.telefono);
 
             Conexion conexion = new Conexion();
 

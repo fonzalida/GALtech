@@ -17,12 +17,21 @@ namespace CoolSoft.VISTA
 
         private void FormularioPrincipal_Load(object sender, EventArgs e)
         {
+            //TESTEOS       ------------------------------------
+
             //Test newFrm = new Test();
             //Historico form = new Historico();
-            Agregar form = new Agregar();
+            //Agregar form = new Agregar();
+            //form.MdiParent = this;
+            //form.Show();
 
-            form.MdiParent = this;
-            form.Show();
+            //FIN TESTEOS   ------------------------------------
+
+
+
+
+
+
 
             foreach (ToolStripMenuItem i in menuStripPrincipal.Items)
             {

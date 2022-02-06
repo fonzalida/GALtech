@@ -33,12 +33,7 @@ namespace CoolSoft.Vista.Herencia
             //this.Text = pMenu.Size.ToString();
             this.Size = new Size(941, 627);
 
-            Random random = new Random();
-            int x = random.Next(-60, 60);
-            int y = random.Next(-60, 60);
-
-            this.Location = new Point(((this.MdiParent.ClientSize.Width / 2) - (this.Width / 2))+x,
-                ((this.MdiParent.ClientSize.Height / 2) - (this.Height / 2))+y);
+            
 
             mtbInicial.Text = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1).Date.ToString("dd/MM/yyyy");
             mtbFinal.Text = DateTime.Now.Date.ToString("dd/MM/yyyy");
@@ -50,6 +45,16 @@ namespace CoolSoft.Vista.Herencia
             ControlEnableSwap(false);
 
 
+        }
+
+        public void PosicionForm()
+        {
+            Random random = new Random();
+            int x = random.Next(-60, 60);
+            int y = random.Next(-60, 60);
+
+            this.Location = new Point(((this.MdiParent.ClientSize.Width / 2) - (this.Width / 2)) + x,
+                ((this.MdiParent.ClientSize.Height / 2) - (this.Height / 2)) + y);
         }
 
         private void checkBoxTodos_CheckedChanged(object sender, EventArgs e)

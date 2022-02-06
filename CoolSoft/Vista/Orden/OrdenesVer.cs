@@ -17,5 +17,10 @@ namespace CoolSoft.Vista.Orden
         {
             
         }
+
+        private void bAgregar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

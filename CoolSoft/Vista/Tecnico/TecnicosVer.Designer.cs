@@ -35,21 +35,27 @@ namespace CoolSoft.Vista.Tecnico
             this.pMenu.SuspendLayout();
             this.SuspendLayout();
             // 
-            
+            // mtbFinal
+            // 
+            this.mtbFinal.Text = "06022022";
+            // 
+            // mtbInicial
+            // 
+            this.mtbInicial.Text = "01022022";
             // 
             // pTitulo
             // 
-            this.pTitulo.Size = new System.Drawing.Size(800, 62);
+            this.pTitulo.Size = new System.Drawing.Size(1085, 62);
             // 
             // pMenu
             // 
-            this.pMenu.Size = new System.Drawing.Size(800, 80);
+            this.pMenu.Size = new System.Drawing.Size(1085, 80);
             // 
             // TecnicosVer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1085, 659);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TecnicosVer";
             this.Text = "TecnicosVer";

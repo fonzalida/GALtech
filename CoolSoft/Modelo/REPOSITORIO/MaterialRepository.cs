@@ -57,7 +57,7 @@ namespace CoolSoft.DATOS.REPOSITORIO
 
         }
 
-        public static void modificar(Material p, Material pn)
+        public static void modificar(Material viejo, Material nuevo)
         {
 
             MySqlCommand cmd = new MySqlCommand(
@@ -65,11 +65,11 @@ namespace CoolSoft.DATOS.REPOSITORIO
                  "SET Cantidad = @Cantidad2, Descripcion = @Descripcion2 " +
                   "where IdMat = @IdMat and IdOrden = @IdOrden ");
 
+            cmd.Parameters.AddWithValue("@IdMat", viejo.idMat);
+            cmd.Parameters.AddWithValue("@IdOrden", viejo.idOrden);
 
-            cmd.Parameters.AddWithValue("@IdMat", p.idMat);
-            cmd.Parameters.AddWithValue("@IdOrden", p.idOrden);
-            cmd.Parameters.AddWithValue("@Cantidad2", pn.cantidad);
-            cmd.Parameters.AddWithValue("@Descripcion2", pn.descripcion);
+            cmd.Parameters.AddWithValue("@Cantidad2", nuevo.cantidad);
+            cmd.Parameters.AddWithValue("@Descripcion2", nuevo.descripcion);
 
             Conexion conexion = new Conexion();
 

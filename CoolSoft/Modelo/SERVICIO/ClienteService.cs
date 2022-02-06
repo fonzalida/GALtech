@@ -13,22 +13,28 @@ namespace CoolSoft.DATOS.SERVICIO
     {
         static public int Agregar(Cliente c)
         {
+            if (!ClienteRepository.BuscarUno(c.dniCuil))
+            {
+                return ClienteRepository.Agregar(c); //retornar la id de cliente
+            }
+            else
+            {
+                MessageBox.Show("El dni/cuit del cliente ya se encuentra cargado");
+                
+            }
+            return -1;
 
-            
-            return ClienteRepository.Agregar(c); //retornar la id de cliente
 
         }
 
-        static public bool Eliminar(Cliente c)
+        //static public bool Eliminar(Cliente c)
+        //{
+        //    return true;
+        //}
+
+        static public void modificarCliente(Cliente modificado)
         {
-
-            return true;
-        }
-
-        static public void modificarCliente(Cliente c)
-        {
-               ClienteRepository.modificar(c,c);
-
+               ClienteRepository.modificar(modificado,modificado);
         }
 
     }

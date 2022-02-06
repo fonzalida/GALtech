@@ -65,9 +65,9 @@ namespace CoolSoft.DATOS.REPOSITORIO
             conexion.QueryInsertDeleteUpdate(cmd);
         }
 
-        public static bool BuscarUno(int IdCliente)
+        public static bool BuscarUno(int DniCuit)
         {
-            String query = "SELECT * FROM CLIENTE WHERE IdCliente = \"" + IdCliente + "\"";
+            String query = "SELECT * FROM CLIENTE WHERE DniCuit = \"" + DniCuit + "\"";
 
             Conexion conexion = new Conexion();
             if (conexion.QuerySelect(query).Rows.Count == 1)

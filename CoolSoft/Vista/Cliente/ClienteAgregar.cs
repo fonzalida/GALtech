@@ -13,14 +13,28 @@ namespace CoolSoft.Vista.Cliente
 {
     public partial class ClienteAgregar : Agregar
     {
-        public ClienteAgregar()
+        ClienteVer ver;
+        public ClienteAgregar(ClienteVer v)
         {
             InitializeComponent();
+            ver = v;
         }
 
         private void ClienteAgregar_Load(object sender, EventArgs e)
         {
             lTitulo.Text = "Agregar Cliente";
+
+            InicializarTextos();
+        }
+
+        private void ClienteAgregar_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            ver.Enabled = true;
+        }
+
+        private void bCancelar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

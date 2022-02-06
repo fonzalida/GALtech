@@ -19,8 +19,10 @@ namespace connect
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new Form1());
-            //Application.Run(new FormularioPrincipal());
-            Application.Run(new FormPresentacion());
+            //Application.Run(new Test());
+            Application.Run(new FormularioPrincipal());
+
+            //Application.Run(new FormPresentacion());
         }
     }
 }

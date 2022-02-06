@@ -19,7 +19,7 @@ namespace CoolSoft.Vista.Herencia
 
         private void Agregar_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void bAgregar_Click(object sender, EventArgs e)
@@ -29,16 +29,40 @@ namespace CoolSoft.Vista.Herencia
 
         private void bCancelar_Click(object sender, EventArgs e)
         {
-            LimpiarTextBox();
+            this.Close();
         }
 
 
-        private void LimpiarTextBox()
+        
+        public void InicializarTextos()
+        {
+            foreach (TextBox tb in this.Controls.OfType<TextBox>())
+            {
+                tb.Enter += new EventHandler(SeleccionarTodoTexto);
+
+            }
+            foreach (MaskedTextBox mt in this.Controls.OfType<MaskedTextBox>())
+            {
+                mt.Enter += new EventHandler(SeleccionarTodoTexto);
+                MascaraNumerica11(mt);
+            }
+
+        }
+        public void LimpiarTextBox()
         {
             foreach (TextBox tb in this.Controls.OfType<TextBox>())
             {
                 tb.Text = "";
             }
+            foreach (MaskedTextBox mt in this.Controls.OfType<MaskedTextBox>())
+            {
+                mt.Text = "";
+            }
+        }
+
+        private void Limpiar_Click(object sender, EventArgs e)
+        {
+            LimpiarTextBox();
         }
     }
 }

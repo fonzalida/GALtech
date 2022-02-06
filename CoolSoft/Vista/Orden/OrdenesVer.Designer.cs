@@ -35,13 +35,17 @@ namespace CoolSoft.Vista.Orden
             this.pMenu.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dateTimeFinal
+            // bAgregar
             // 
-            //this.dateTimeFinal.Value = new System.DateTime(2022, 1, 30, 15, 29, 22, 858);
-            //// 
-            //// dateTimeInicial
-            //// 
-            //this.dateTimeInicial.Value = new System.DateTime(2022, 1, 1, 0, 0, 0, 0);
+            this.bAgregar.Click += new System.EventHandler(this.bAgregar_Click);
+            // 
+            // mtbFinal
+            // 
+            this.mtbFinal.Text = "06022022";
+            // 
+            // mtbInicial
+            // 
+            this.mtbInicial.Text = "01022022";
             // 
             // pTitulo
             // 

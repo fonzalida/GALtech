@@ -23,5 +23,27 @@ namespace CoolSoft.Vista.Herencia
             this.Text = "";
             this.Icon = Resources.ICONO_COOLSOFT;
         }
+
+        public void SeleccionarTodoTexto(object sender, EventArgs e)
+        {
+            if (sender is MaskedTextBox)
+            {
+                var masked = sender as MaskedTextBox;
+                masked.BeginInvoke(new Action(masked.SelectAll));
+            }
+            else if (sender is TextBox)
+            {
+                var text = sender as TextBox;
+                text.BeginInvoke(new Action(text.SelectAll));
+            }
+        }
+
+        public void MascaraNumerica11(MaskedTextBox m)
+        {
+            m.Mask = "99999999999";
+            m.PromptChar = ' ';
+        }
+
+
     }
 }

@@ -11,27 +11,31 @@ namespace CoolSoft.DATOS.SERVICIO
 {
     static class TecnicoService
     {
-        static public bool Agregar(Tecnico t)
+        static public int Agregar(Tecnico t)
         {
-
-            TecnicoRepository.agregar(t);
-            return true;
-        }
-
-        static public bool Eliminar(Tecnico t)
-        {
-            if (TecnicoRepository.BuscarUno(t.dni))
+            if (!TecnicoRepository.BuscarUno(t.dni))
             {
-                TecnicoRepository.eliminar(t);
-                return true;
+                TecnicoRepository.agregar(t);
             }
             else
             {
-                MessageBox.Show("El tecnico no existe");
-                return false;
+                MessageBox.Show("El técnico ya se encuentra cargado");
+                
             }
 
+            return t.dni;
+
             
+        }
+
+        static public void Modificar(Tecnico viejo, Tecnico nuevo)
+        {
+            TecnicoRepository.modificar(viejo, nuevo);
+        }
+
+        static public void Eliminar(Tecnico t)
+        {
+                TecnicoRepository.eliminar(t);     
         }
 
 

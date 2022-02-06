@@ -58,7 +58,7 @@ namespace CoolSoft.DATOS.REPOSITORIO
         }
 
 
-        public static void modificar( Tecnico tecnicoNuevo, TecnicoOrden p)
+        public static void modificar(TecnicoOrden viejo, Tecnico nuevo)
         {
 
             MySqlCommand cmd = new MySqlCommand(
@@ -67,10 +67,10 @@ namespace CoolSoft.DATOS.REPOSITORIO
                   "where Dni = @Dni and IdParte = @IdParte and IdOrden = @IdOrden");
 
 
-            cmd.Parameters.AddWithValue("@Dni", p.dni);
-            cmd.Parameters.AddWithValue("@Dni2", tecnicoNuevo.dni);
-            cmd.Parameters.AddWithValue("@IdParte", p.idParte);
-            cmd.Parameters.AddWithValue("@IdOrden", p.idOrden);
+            cmd.Parameters.AddWithValue("@Dni", viejo.dni);
+            cmd.Parameters.AddWithValue("@Dni2", nuevo.dni);
+            cmd.Parameters.AddWithValue("@IdParte", viejo.idParte);
+            cmd.Parameters.AddWithValue("@IdOrden", viejo.idOrden);
 
             Conexion conexion = new Conexion();
 
@@ -84,6 +84,23 @@ namespace CoolSoft.DATOS.REPOSITORIO
 
             Conexion conexion = new Conexion();
             return conexion.QuerySelect(query);
+
+        }
+
+        public static bool BuscarUno(TecnicoOrden t)
+        {
+            String query =
+                "SELECT * FROM CLIENTE " +
+                "where Dni = \"" + t.dni + "\" and " +
+                "IdParte = \"" + t.idParte + "\" and " +
+                "IdOrden = \"" + t.idOrden + "\"";
+
+
+            Conexion conexion = new Conexion();
+            if (conexion.QuerySelect(query).Rows.Count == 1)
+                return true;
+            else
+                return false;
 
         }
     }

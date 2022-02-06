@@ -14,17 +14,33 @@ namespace CoolSoft.Vista.Cliente
 {
     public partial class ClienteVer : Historico
     {
+
+        ClienteAgregar fAgregar;
+
         public ClienteVer()
         {
             InitializeComponent();
             lTitulo.Text = "Clientes";
             this.StartPosition = FormStartPosition.CenterScreen;
+
         }
 
         private void ClienteVer_Load(object sender, EventArgs e)
         {
             
-            
+        }
+
+        private void bAgregar_Click(object sender, EventArgs e)
+        {
+            fAgregar = new ClienteAgregar(this);
+            fAgregar.StartPosition = FormStartPosition.CenterScreen;
+
+            this.Enabled = false;
+
+            fAgregar.MdiParent = this.MdiParent;
+
+            fAgregar.FormBorderStyle = FormBorderStyle.None;
+            fAgregar.Show();
         }
     }
 }
