@@ -13,6 +13,8 @@ namespace CoolSoft.Vista.Tecnico
 {
     public partial class TecnicosVer : Historico
     {
+
+        TecnicoAgregar fAgregar;
         public TecnicosVer()
         {
             InitializeComponent();
@@ -24,6 +26,19 @@ namespace CoolSoft.Vista.Tecnico
         private void TecnicosVer_Load(object sender, EventArgs e)
         {
             
+        }
+
+        private void bAgregar_Click(object sender, EventArgs e)
+        {
+            fAgregar = new TecnicoAgregar(this);
+            fAgregar.StartPosition = FormStartPosition.CenterScreen;
+
+            this.Enabled = false;
+
+            fAgregar.MdiParent = this.MdiParent;
+
+            fAgregar.FormBorderStyle = FormBorderStyle.None;
+            fAgregar.Show();
         }
     }
 }

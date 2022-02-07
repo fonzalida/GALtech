@@ -35,28 +35,35 @@ namespace CoolSoft.Vista.Tecnico
             this.pMenu.SuspendLayout();
             this.SuspendLayout();
             // 
+            // bAgregar
+            // 
+            this.bAgregar.Click += new System.EventHandler(this.bAgregar_Click);
+            // 
             // mtbFinal
             // 
+            this.mtbFinal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.mtbFinal.Text = "06022022";
             // 
             // mtbInicial
             // 
+            this.mtbInicial.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.mtbInicial.Text = "01022022";
             // 
             // pTitulo
             // 
-            this.pTitulo.Size = new System.Drawing.Size(1085, 62);
+            this.pTitulo.Size = new System.Drawing.Size(945, 50);
             // 
             // pMenu
             // 
-            this.pMenu.Size = new System.Drawing.Size(1085, 80);
+            this.pMenu.Size = new System.Drawing.Size(945, 65);
             // 
             // TecnicosVer
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1085, 659);
+            this.ClientSize = new System.Drawing.Size(945, 535);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.Name = "TecnicosVer";
             this.Text = "TecnicosVer";
             this.Load += new System.EventHandler(this.TecnicosVer_Load);
