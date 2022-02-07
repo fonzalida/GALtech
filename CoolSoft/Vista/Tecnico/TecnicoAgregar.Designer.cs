@@ -30,7 +30,7 @@ namespace CoolSoft.Vista.Tecnico
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TecnicoAgregar));
-            this.mtDniCuit = new System.Windows.Forms.MaskedTextBox();
+            this.mtDni = new System.Windows.Forms.MaskedTextBox();
             this.tbNombre = new System.Windows.Forms.TextBox();
             this.mtTelefono = new System.Windows.Forms.MaskedTextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -43,56 +43,56 @@ namespace CoolSoft.Vista.Tecnico
             // bAgregar
             // 
             this.bAgregar.Location = new System.Drawing.Point(245, 3);
-            this.bAgregar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bAgregar.Margin = new System.Windows.Forms.Padding(2);
             this.bAgregar.Click += new System.EventHandler(this.bAgregar_Click);
             // 
             // bCancelar
             // 
             this.bCancelar.Location = new System.Drawing.Point(436, 3);
-            this.bCancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bCancelar.Margin = new System.Windows.Forms.Padding(2);
             this.bCancelar.Click += new System.EventHandler(this.bCancelar_Click);
             // 
             // Limpiar
             // 
             this.Limpiar.Location = new System.Drawing.Point(340, 3);
-            this.Limpiar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Limpiar.Margin = new System.Windows.Forms.Padding(2);
             // 
             // pTitulo
             // 
-            this.pTitulo.Margin = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.pTitulo.Margin = new System.Windows.Forms.Padding(3);
             this.pTitulo.Size = new System.Drawing.Size(558, 50);
             // 
             // pMenu
             // 
-            this.pMenu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pMenu.Margin = new System.Windows.Forms.Padding(2);
             this.pMenu.Size = new System.Drawing.Size(558, 80);
             // 
-            // mtDniCuit
+            // mtDni
             // 
-            this.mtDniCuit.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtDniCuit.Location = new System.Drawing.Point(117, 150);
-            this.mtDniCuit.Mask = "99999999999";
-            this.mtDniCuit.Name = "mtDniCuit";
-            this.mtDniCuit.PromptChar = ' ';
-            this.mtDniCuit.Size = new System.Drawing.Size(100, 28);
-            this.mtDniCuit.TabIndex = 17;
-            this.mtDniCuit.ValidatingType = typeof(int);
+            this.mtDni.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtDni.Location = new System.Drawing.Point(117, 150);
+            this.mtDni.Mask = "99999999999";
+            this.mtDni.Name = "mtDni";
+            this.mtDni.PromptChar = ' ';
+            this.mtDni.Size = new System.Drawing.Size(100, 28);
+            this.mtDni.TabIndex = 17;
+            this.mtDni.ValidatingType = typeof(int);
             // 
             // tbNombre
             // 
             this.tbNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbNombre.Location = new System.Drawing.Point(117, 185);
-            this.tbNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbNombre.Margin = new System.Windows.Forms.Padding(2);
             this.tbNombre.Name = "tbNombre";
             this.tbNombre.Size = new System.Drawing.Size(260, 28);
             this.tbNombre.TabIndex = 18;
             // 
-            // mtTelefono1
+            // mtTelefono
             // 
             this.mtTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mtTelefono.Location = new System.Drawing.Point(117, 226);
-            this.mtTelefono.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.mtTelefono.Name = "mtTelefono1";
+            this.mtTelefono.Margin = new System.Windows.Forms.Padding(2);
+            this.mtTelefono.Name = "mtTelefono";
             this.mtTelefono.Size = new System.Drawing.Size(151, 28);
             this.mtTelefono.TabIndex = 22;
             // 
@@ -103,9 +103,9 @@ namespace CoolSoft.Vista.Tecnico
             this.label1.Location = new System.Drawing.Point(13, 152);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(88, 24);
+            this.label1.Size = new System.Drawing.Size(41, 24);
             this.label1.TabIndex = 24;
-            this.label1.Text = "DNI/CUIT";
+            this.label1.Text = "DNI";
             // 
             // label2
             // 
@@ -140,14 +140,14 @@ namespace CoolSoft.Vista.Tecnico
             this.Controls.Add(this.label1);
             this.Controls.Add(this.mtTelefono);
             this.Controls.Add(this.tbNombre);
-            this.Controls.Add(this.mtDniCuit);
+            this.Controls.Add(this.mtDni);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "TecnicoAgregar";
             this.Text = "TecnicoAgregar";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.TecnicoAgregar_FormClosed);
             this.Load += new System.EventHandler(this.TecnicoAgregar_Load);
-            this.Controls.SetChildIndex(this.mtDniCuit, 0);
+            this.Controls.SetChildIndex(this.mtDni, 0);
             this.Controls.SetChildIndex(this.tbNombre, 0);
             this.Controls.SetChildIndex(this.mtTelefono, 0);
             this.Controls.SetChildIndex(this.label1, 0);
@@ -165,7 +165,7 @@ namespace CoolSoft.Vista.Tecnico
 
         #endregion
 
-        private System.Windows.Forms.MaskedTextBox mtDniCuit;
+        private System.Windows.Forms.MaskedTextBox mtDni;
         private System.Windows.Forms.TextBox tbNombre;
         private System.Windows.Forms.MaskedTextBox mtTelefono;
         private System.Windows.Forms.Label label1;
