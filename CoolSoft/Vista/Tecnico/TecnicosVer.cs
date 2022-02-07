@@ -25,7 +25,8 @@ namespace CoolSoft.Vista.Tecnico
 
         private void TecnicosVer_Load(object sender, EventArgs e)
         {
-            
+            this.Name = "Tecnicos";
+            InitBotonesMinClose();
         }
 
         private void bAgregar_Click(object sender, EventArgs e)

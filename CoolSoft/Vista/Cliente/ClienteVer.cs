@@ -27,7 +27,9 @@ namespace CoolSoft.Vista.Cliente
 
         private void ClienteVer_Load(object sender, EventArgs e)
         {
-            
+            this.Name = "Clientes";
+            InitBotonesMinClose();
+
         }
 
         private void bAgregar_Click(object sender, EventArgs e)

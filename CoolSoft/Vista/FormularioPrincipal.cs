@@ -45,6 +45,7 @@ namespace CoolSoft.VISTA
         {
 
             OrdenesVer form = new OrdenesVer();
+            form.FormBorderStyle = FormBorderStyle.None;
             form.TopLevel = false;
             form.MdiParent = this;
             form.Show();
@@ -58,6 +59,7 @@ namespace CoolSoft.VISTA
         private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ClienteVer form = new ClienteVer();
+            form.FormBorderStyle = FormBorderStyle.None;
             form.TopLevel = false;
             form.MdiParent = this;
             form.Show();
@@ -66,6 +68,7 @@ namespace CoolSoft.VISTA
         private void tecnicosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             TecnicosVer form = new TecnicosVer();
+            form.FormBorderStyle = FormBorderStyle.None;
             form.TopLevel = false;
             form.MdiParent = this;
             form.Show();

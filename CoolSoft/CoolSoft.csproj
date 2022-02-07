@@ -153,6 +153,12 @@
     <Compile Include="Vista\Herencia\Historico.Designer.cs">
       <DependentUpon>Historico.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\Orden\OrdenesAgregar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Orden\OrdenesAgregar.Designer.cs">
+      <DependentUpon>OrdenesAgregar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\Orden\OrdenesVer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -204,6 +210,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\Herencia\Historico.resx">
       <DependentUpon>Historico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Orden\OrdenesAgregar.resx">
+      <DependentUpon>OrdenesAgregar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\Orden\OrdenesVer.resx">
       <DependentUpon>OrdenesVer.cs</DependentUpon>
@@ -288,6 +297,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\clear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimize.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

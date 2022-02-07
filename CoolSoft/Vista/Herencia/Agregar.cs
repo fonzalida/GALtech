@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -12,6 +13,11 @@ namespace CoolSoft.Vista.Herencia
 {
     public partial class Agregar : Base
     {
+
+        
+
+
+        
         public Agregar()
         {
             InitializeComponent();
@@ -64,5 +70,7 @@ namespace CoolSoft.Vista.Herencia
         {
             LimpiarTextBox();
         }
+
+        
     }
 }

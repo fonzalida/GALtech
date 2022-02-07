@@ -33,7 +33,7 @@ namespace CoolSoft.Vista.Herencia
             //this.Text = pMenu.Size.ToString();
             this.Size = new Size(941, 627);
 
-            
+            InitBotonesMinClose();
 
             mtbInicial.Text = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1).Date.ToString("dd/MM/yyyy");
             mtbFinal.Text = DateTime.Now.Date.ToString("dd/MM/yyyy");
@@ -45,6 +45,13 @@ namespace CoolSoft.Vista.Herencia
             ControlEnableSwap(false);
 
 
+        }
+
+
+        public void InitBotonesMinClose()
+        {
+            bCerrar.Location = new Point(this.Size.Width -35 , 10);
+            bMinimizar.Location = new Point( bCerrar.Location.X-30 , bCerrar.Location.Y );
         }
 
         public void PosicionForm()
@@ -98,6 +105,18 @@ namespace CoolSoft.Vista.Herencia
         {
             var textBox = sender as MaskedTextBox;
             textBox.BeginInvoke(new Action(textBox.SelectAll));
+        }
+
+        private void bCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void bMinimizar_Click(object sender, EventArgs e)
+        {
+            
+            this.WindowState = FormWindowState.Minimized;
+
         }
     }
 }

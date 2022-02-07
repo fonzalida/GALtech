@@ -1,7 +1,7 @@
 ﻿
 namespace CoolSoft.Vista.Orden
 {
-    partial class OrdenesVer
+    partial class OrdenesAgregar
     {
         /// <summary>
         /// Required designer variable.
@@ -29,58 +29,47 @@ namespace CoolSoft.Vista.Orden
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OrdenesVer));
-            this.pFecha.SuspendLayout();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OrdenesAgregar));
             this.pTitulo.SuspendLayout();
             this.pMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // bAgregar
             // 
-            this.bAgregar.Click += new System.EventHandler(this.bAgregar_Click);
+            this.bAgregar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.bAgregar.Location = new System.Drawing.Point(466, 4);
             // 
-            // mtbFinal
+            // bCancelar
             // 
-            this.mtbFinal.Text = "06022022";
+            this.bCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.bCancelar.Location = new System.Drawing.Point(720, 4);
             // 
-            // mtbInicial
+            // Limpiar
             // 
-            this.mtbInicial.Text = "01022022";
-            // 
-            // bMinimizar
-            // 
-            this.bMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)));
-            this.bMinimizar.Location = new System.Drawing.Point(880, 10);
-            // 
-            // bCerrar
-            // 
-            this.bCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)));
-            this.bCerrar.Location = new System.Drawing.Point(910, 10);
+            this.Limpiar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Limpiar.Location = new System.Drawing.Point(593, 4);
             // 
             // pTitulo
             // 
-            this.pTitulo.Size = new System.Drawing.Size(1241, 62);
+            this.pTitulo.Size = new System.Drawing.Size(882, 62);
             // 
             // pMenu
             // 
-            this.pMenu.Size = new System.Drawing.Size(1241, 131);
+            this.pMenu.Size = new System.Drawing.Size(882, 98);
             // 
-            // OrdenesVer
+            // OrdenesAgregar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1241, 667);
+            this.ClientSize = new System.Drawing.Size(882, 678);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "OrdenesVer";
-            this.Text = "OrdenesVer";
-            this.Load += new System.EventHandler(this.OrdenesVer_Load);
-            this.pFecha.ResumeLayout(false);
-            this.pFecha.PerformLayout();
+            this.Name = "OrdenesAgregar";
+            this.Text = "OrdenesAgregar";
+            this.Load += new System.EventHandler(this.OrdenesAgregar_Load);
             this.pTitulo.ResumeLayout(false);
             this.pTitulo.PerformLayout();
             this.pMenu.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

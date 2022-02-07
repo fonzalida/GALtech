@@ -37,9 +37,14 @@ namespace CoolSoft.Vista.Herencia
             this.pMenu.SuspendLayout();
             this.SuspendLayout();
             // 
+            // lTitulo
+            // 
+            this.lTitulo.BackColor = System.Drawing.Color.Transparent;
+            // 
             // pTitulo
             // 
-            this.pTitulo.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.pTitulo.BackColor = System.Drawing.Color.Green;
+            this.pTitulo.Margin = new System.Windows.Forms.Padding(5);
             this.pTitulo.Size = new System.Drawing.Size(619, 62);
             // 
             // pMenu
@@ -47,7 +52,7 @@ namespace CoolSoft.Vista.Herencia
             this.pMenu.Controls.Add(this.Limpiar);
             this.pMenu.Controls.Add(this.bCancelar);
             this.pMenu.Controls.Add(this.bAgregar);
-            this.pMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pMenu.Margin = new System.Windows.Forms.Padding(4);
             this.pMenu.Size = new System.Drawing.Size(619, 98);
             // 
             // bAgregar
@@ -55,7 +60,7 @@ namespace CoolSoft.Vista.Herencia
             this.bAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.bAgregar.Image = global::CoolSoft.Properties.Resources.add;
             this.bAgregar.Location = new System.Drawing.Point(239, 4);
-            this.bAgregar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bAgregar.Margin = new System.Windows.Forms.Padding(4);
             this.bAgregar.Name = "bAgregar";
             this.bAgregar.Size = new System.Drawing.Size(119, 79);
             this.bAgregar.TabIndex = 0;
@@ -69,7 +74,7 @@ namespace CoolSoft.Vista.Herencia
             this.bCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.bCancelar.Image = global::CoolSoft.Properties.Resources.clear;
             this.bCancelar.Location = new System.Drawing.Point(493, 4);
-            this.bCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bCancelar.Margin = new System.Windows.Forms.Padding(4);
             this.bCancelar.Name = "bCancelar";
             this.bCancelar.Size = new System.Drawing.Size(119, 79);
             this.bCancelar.TabIndex = 1;
@@ -98,7 +103,7 @@ namespace CoolSoft.Vista.Herencia
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(619, 475);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "Agregar";
             this.Text = "Agregar";
             this.Load += new System.EventHandler(this.Agregar_Load);

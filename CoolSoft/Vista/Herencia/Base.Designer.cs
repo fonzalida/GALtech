@@ -47,6 +47,7 @@ namespace CoolSoft.Vista.Herencia
             this.lTitulo.Size = new System.Drawing.Size(107, 39);
             this.lTitulo.TabIndex = 11;
             this.lTitulo.Text = "Titulo";
+            this.lTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pTitulo_MouseDown);
             // 
             // pTitulo
             // 
@@ -58,6 +59,7 @@ namespace CoolSoft.Vista.Herencia
             this.pTitulo.Name = "pTitulo";
             this.pTitulo.Size = new System.Drawing.Size(965, 62);
             this.pTitulo.TabIndex = 13;
+            this.pTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pTitulo_MouseDown);
             // 
             // pMenu
             // 

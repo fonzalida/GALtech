@@ -15,7 +15,8 @@ namespace CoolSoft.Vista.Orden
 
         private void OrdenesVer_Load(object sender, EventArgs e)
         {
-            
+            this.Name = "Ordenes";
+            InitBotonesMinClose();
         }
 
         private void bAgregar_Click(object sender, EventArgs e)

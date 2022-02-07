@@ -46,6 +46,8 @@ namespace CoolSoft.Vista.Herencia
             this.pBuscar = new System.Windows.Forms.Panel();
             this.bBuscar = new System.Windows.Forms.Button();
             this.pCostado = new System.Windows.Forms.Panel();
+            this.bCerrar = new System.Windows.Forms.Button();
+            this.bMinimizar = new System.Windows.Forms.Button();
             this.pTitulo.SuspendLayout();
             this.pMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridHistorico)).BeginInit();
@@ -56,8 +58,13 @@ namespace CoolSoft.Vista.Herencia
             // 
             // pTitulo
             // 
-            this.pTitulo.Margin = new System.Windows.Forms.Padding(2);
-            this.pTitulo.Size = new System.Drawing.Size(921, 50);
+            this.pTitulo.Controls.Add(this.bMinimizar);
+            this.pTitulo.Controls.Add(this.bCerrar);
+            this.pTitulo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pTitulo.Size = new System.Drawing.Size(1228, 62);
+            this.pTitulo.Controls.SetChildIndex(this.bCerrar, 0);
+            this.pTitulo.Controls.SetChildIndex(this.bMinimizar, 0);
+            this.pTitulo.Controls.SetChildIndex(this.lTitulo, 0);
             // 
             // pMenu
             // 
@@ -65,24 +72,27 @@ namespace CoolSoft.Vista.Herencia
             this.pMenu.Controls.Add(this.bVer);
             this.pMenu.Controls.Add(this.pBuscar);
             this.pMenu.Controls.Add(this.pFecha);
-            this.pMenu.Size = new System.Drawing.Size(921, 107);
+            this.pMenu.Margin = new System.Windows.Forms.Padding(4);
+            this.pMenu.Size = new System.Drawing.Size(1228, 131);
             // 
             // dataGridHistorico
             // 
             this.dataGridHistorico.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridHistorico.Location = new System.Drawing.Point(10, 162);
+            this.dataGridHistorico.Location = new System.Drawing.Point(13, 199);
+            this.dataGridHistorico.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridHistorico.Name = "dataGridHistorico";
             this.dataGridHistorico.RowHeadersWidth = 51;
-            this.dataGridHistorico.Size = new System.Drawing.Size(782, 385);
+            this.dataGridHistorico.Size = new System.Drawing.Size(1043, 474);
             this.dataGridHistorico.TabIndex = 9;
             // 
             // bAgregar
             // 
             this.bAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bAgregar.Image = global::CoolSoft.Properties.Resources.add;
-            this.bAgregar.Location = new System.Drawing.Point(6, 3);
+            this.bAgregar.Location = new System.Drawing.Point(8, 4);
+            this.bAgregar.Margin = new System.Windows.Forms.Padding(4);
             this.bAgregar.Name = "bAgregar";
-            this.bAgregar.Size = new System.Drawing.Size(105, 65);
+            this.bAgregar.Size = new System.Drawing.Size(140, 80);
             this.bAgregar.TabIndex = 3;
             this.bAgregar.Text = "Agregar";
             this.bAgregar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -92,9 +102,10 @@ namespace CoolSoft.Vista.Herencia
             // 
             this.bModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bModificar.Image = global::CoolSoft.Properties.Resources.edit;
-            this.bModificar.Location = new System.Drawing.Point(6, 77);
+            this.bModificar.Location = new System.Drawing.Point(8, 95);
+            this.bModificar.Margin = new System.Windows.Forms.Padding(4);
             this.bModificar.Name = "bModificar";
-            this.bModificar.Size = new System.Drawing.Size(105, 65);
+            this.bModificar.Size = new System.Drawing.Size(140, 80);
             this.bModificar.TabIndex = 4;
             this.bModificar.Text = "Detalles";
             this.bModificar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -105,9 +116,10 @@ namespace CoolSoft.Vista.Herencia
             // 
             this.bEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bEliminar.Image = global::CoolSoft.Properties.Resources.delete;
-            this.bEliminar.Location = new System.Drawing.Point(6, 151);
+            this.bEliminar.Location = new System.Drawing.Point(8, 186);
+            this.bEliminar.Margin = new System.Windows.Forms.Padding(4);
             this.bEliminar.Name = "bEliminar";
-            this.bEliminar.Size = new System.Drawing.Size(105, 65);
+            this.bEliminar.Size = new System.Drawing.Size(140, 80);
             this.bEliminar.TabIndex = 5;
             this.bEliminar.Text = "Eliminar";
             this.bEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -116,9 +128,10 @@ namespace CoolSoft.Vista.Herencia
             // ssEstado
             // 
             this.ssEstado.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.ssEstado.Location = new System.Drawing.Point(0, 562);
+            this.ssEstado.Location = new System.Drawing.Point(0, 697);
             this.ssEstado.Name = "ssEstado";
-            this.ssEstado.Size = new System.Drawing.Size(921, 22);
+            this.ssEstado.Padding = new System.Windows.Forms.Padding(1, 0, 19, 0);
+            this.ssEstado.Size = new System.Drawing.Size(1228, 22);
             this.ssEstado.TabIndex = 14;
             this.ssEstado.Text = "statusStrip1";
             // 
@@ -128,9 +141,10 @@ namespace CoolSoft.Vista.Herencia
             this.bVer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.bVer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bVer.Image = ((System.Drawing.Image)(resources.GetObject("bVer.Image")));
-            this.bVer.Location = new System.Drawing.Point(400, 17);
+            this.bVer.Location = new System.Drawing.Point(533, 21);
+            this.bVer.Margin = new System.Windows.Forms.Padding(4);
             this.bVer.Name = "bVer";
-            this.bVer.Size = new System.Drawing.Size(89, 64);
+            this.bVer.Size = new System.Drawing.Size(119, 79);
             this.bVer.TabIndex = 16;
             this.bVer.Text = "Ver";
             this.bVer.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -142,9 +156,10 @@ namespace CoolSoft.Vista.Herencia
             this.bCancelar.BackColor = System.Drawing.SystemColors.Control;
             this.bCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bCancelar.Image = ((System.Drawing.Image)(resources.GetObject("bCancelar.Image")));
-            this.bCancelar.Location = new System.Drawing.Point(495, 17);
+            this.bCancelar.Location = new System.Drawing.Point(660, 21);
+            this.bCancelar.Margin = new System.Windows.Forms.Padding(4);
             this.bCancelar.Name = "bCancelar";
-            this.bCancelar.Size = new System.Drawing.Size(89, 65);
+            this.bCancelar.Size = new System.Drawing.Size(119, 80);
             this.bCancelar.TabIndex = 17;
             this.bCancelar.Text = "Cancelar";
             this.bCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -160,18 +175,20 @@ namespace CoolSoft.Vista.Herencia
             this.pFecha.Controls.Add(this.checkBoxTodos);
             this.pFecha.Controls.Add(this.lFFinal);
             this.pFecha.Controls.Add(this.labelFInicial);
-            this.pFecha.Location = new System.Drawing.Point(9, 8);
+            this.pFecha.Location = new System.Drawing.Point(12, 10);
+            this.pFecha.Margin = new System.Windows.Forms.Padding(4);
             this.pFecha.Name = "pFecha";
-            this.pFecha.Size = new System.Drawing.Size(385, 78);
+            this.pFecha.Size = new System.Drawing.Size(513, 96);
             this.pFecha.TabIndex = 15;
             // 
             // mtbFinal
             // 
             this.mtbFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtbFinal.Location = new System.Drawing.Point(264, 5);
+            this.mtbFinal.Location = new System.Drawing.Point(352, 6);
+            this.mtbFinal.Margin = new System.Windows.Forms.Padding(4);
             this.mtbFinal.Mask = "00/00/0000";
             this.mtbFinal.Name = "mtbFinal";
-            this.mtbFinal.Size = new System.Drawing.Size(100, 30);
+            this.mtbFinal.Size = new System.Drawing.Size(132, 30);
             this.mtbFinal.TabIndex = 6;
             this.mtbFinal.ValidatingType = typeof(System.DateTime);
             this.mtbFinal.Enter += new System.EventHandler(this.SelectAll_OnTextBoxEnter);
@@ -179,10 +196,11 @@ namespace CoolSoft.Vista.Herencia
             // mtbInicial
             // 
             this.mtbInicial.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtbInicial.Location = new System.Drawing.Point(65, 5);
+            this.mtbInicial.Location = new System.Drawing.Point(87, 6);
+            this.mtbInicial.Margin = new System.Windows.Forms.Padding(4);
             this.mtbInicial.Mask = "00/00/0000";
             this.mtbInicial.Name = "mtbInicial";
-            this.mtbInicial.Size = new System.Drawing.Size(100, 30);
+            this.mtbInicial.Size = new System.Drawing.Size(132, 30);
             this.mtbInicial.TabIndex = 5;
             this.mtbInicial.ValidatingType = typeof(System.DateTime);
             this.mtbInicial.Enter += new System.EventHandler(this.SelectAll_OnTextBoxEnter);
@@ -192,8 +210,8 @@ namespace CoolSoft.Vista.Herencia
             this.checkBoxTodos.AutoSize = true;
             this.checkBoxTodos.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.checkBoxTodos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxTodos.Location = new System.Drawing.Point(7, 41);
-            this.checkBoxTodos.Margin = new System.Windows.Forms.Padding(2);
+            this.checkBoxTodos.Location = new System.Drawing.Point(9, 50);
+            this.checkBoxTodos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkBoxTodos.Name = "checkBoxTodos";
             this.checkBoxTodos.Size = new System.Drawing.Size(199, 29);
             this.checkBoxTodos.TabIndex = 4;
@@ -205,7 +223,8 @@ namespace CoolSoft.Vista.Herencia
             // 
             this.lFFinal.AutoSize = true;
             this.lFFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lFFinal.Location = new System.Drawing.Point(206, 3);
+            this.lFFinal.Location = new System.Drawing.Point(275, 4);
+            this.lFFinal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lFFinal.Name = "lFFinal";
             this.lFFinal.Size = new System.Drawing.Size(63, 25);
             this.lFFinal.TabIndex = 2;
@@ -215,7 +234,8 @@ namespace CoolSoft.Vista.Herencia
             // 
             this.labelFInicial.AutoSize = true;
             this.labelFInicial.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelFInicial.Location = new System.Drawing.Point(3, 3);
+            this.labelFInicial.Location = new System.Drawing.Point(4, 4);
+            this.labelFInicial.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelFInicial.Name = "labelFInicial";
             this.labelFInicial.Size = new System.Drawing.Size(69, 25);
             this.labelFInicial.TabIndex = 0;
@@ -226,9 +246,10 @@ namespace CoolSoft.Vista.Herencia
             this.pBuscar.BackColor = System.Drawing.Color.LightGray;
             this.pBuscar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pBuscar.Controls.Add(this.bBuscar);
-            this.pBuscar.Location = new System.Drawing.Point(590, 11);
+            this.pBuscar.Location = new System.Drawing.Point(787, 14);
+            this.pBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.pBuscar.Name = "pBuscar";
-            this.pBuscar.Size = new System.Drawing.Size(318, 74);
+            this.pBuscar.Size = new System.Drawing.Size(423, 91);
             this.pBuscar.TabIndex = 18;
             // 
             // bBuscar
@@ -236,9 +257,10 @@ namespace CoolSoft.Vista.Herencia
             this.bBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bBuscar.Image = global::CoolSoft.Properties.Resources.search;
-            this.bBuscar.Location = new System.Drawing.Point(206, 3);
+            this.bBuscar.Location = new System.Drawing.Point(275, 4);
+            this.bBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.bBuscar.Name = "bBuscar";
-            this.bBuscar.Size = new System.Drawing.Size(107, 66);
+            this.bBuscar.Size = new System.Drawing.Size(143, 81);
             this.bBuscar.TabIndex = 0;
             this.bBuscar.Text = "Buscar";
             this.bBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -249,21 +271,44 @@ namespace CoolSoft.Vista.Herencia
             this.pCostado.Controls.Add(this.bAgregar);
             this.pCostado.Controls.Add(this.bModificar);
             this.pCostado.Controls.Add(this.bEliminar);
-            this.pCostado.Location = new System.Drawing.Point(798, 162);
+            this.pCostado.Location = new System.Drawing.Point(1064, 199);
+            this.pCostado.Margin = new System.Windows.Forms.Padding(4);
             this.pCostado.Name = "pCostado";
-            this.pCostado.Size = new System.Drawing.Size(123, 385);
+            this.pCostado.Size = new System.Drawing.Size(164, 474);
             this.pCostado.TabIndex = 17;
+            // 
+            // bCerrar
+            // 
+            this.bCerrar.BackColor = System.Drawing.Color.Navy;
+            this.bCerrar.Image = global::CoolSoft.Properties.Resources.close;
+            this.bCerrar.Location = new System.Drawing.Point(1167, 10);
+            this.bCerrar.Name = "bCerrar";
+            this.bCerrar.Size = new System.Drawing.Size(40, 40);
+            this.bCerrar.TabIndex = 12;
+            this.bCerrar.UseVisualStyleBackColor = false;
+            this.bCerrar.Click += new System.EventHandler(this.bCerrar_Click);
+            // 
+            // bMinimizar
+            // 
+            this.bMinimizar.BackColor = System.Drawing.Color.Navy;
+            this.bMinimizar.Image = global::CoolSoft.Properties.Resources.minimize;
+            this.bMinimizar.Location = new System.Drawing.Point(1121, 10);
+            this.bMinimizar.Name = "bMinimizar";
+            this.bMinimizar.Size = new System.Drawing.Size(40, 40);
+            this.bMinimizar.TabIndex = 13;
+            this.bMinimizar.UseVisualStyleBackColor = false;
+            this.bMinimizar.Click += new System.EventHandler(this.bMinimizar_Click);
             // 
             // Historico
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(921, 584);
+            this.ClientSize = new System.Drawing.Size(1228, 719);
             this.Controls.Add(this.pCostado);
             this.Controls.Add(this.ssEstado);
             this.Controls.Add(this.dataGridHistorico);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "Historico";
             this.Text = " ";
             this.Load += new System.EventHandler(this.Historico_Load);
@@ -302,5 +347,7 @@ namespace CoolSoft.Vista.Herencia
         private System.Windows.Forms.Panel pCostado;
         public System.Windows.Forms.MaskedTextBox mtbFinal;
         public System.Windows.Forms.MaskedTextBox mtbInicial;
+        public System.Windows.Forms.Button bMinimizar;
+        public System.Windows.Forms.Button bCerrar;
     }
 }

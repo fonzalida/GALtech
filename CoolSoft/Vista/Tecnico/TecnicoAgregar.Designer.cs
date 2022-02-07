@@ -42,68 +42,68 @@ namespace CoolSoft.Vista.Tecnico
             // 
             // bAgregar
             // 
-            this.bAgregar.Location = new System.Drawing.Point(245, 3);
-            this.bAgregar.Margin = new System.Windows.Forms.Padding(2);
+            this.bAgregar.Location = new System.Drawing.Point(327, 4);
+            this.bAgregar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bAgregar.Click += new System.EventHandler(this.bAgregar_Click);
             // 
             // bCancelar
             // 
-            this.bCancelar.Location = new System.Drawing.Point(436, 3);
-            this.bCancelar.Margin = new System.Windows.Forms.Padding(2);
+            this.bCancelar.Location = new System.Drawing.Point(581, 4);
+            this.bCancelar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bCancelar.Click += new System.EventHandler(this.bCancelar_Click);
             // 
             // Limpiar
             // 
-            this.Limpiar.Location = new System.Drawing.Point(340, 3);
-            this.Limpiar.Margin = new System.Windows.Forms.Padding(2);
+            this.Limpiar.Location = new System.Drawing.Point(453, 4);
+            this.Limpiar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             // 
             // pTitulo
             // 
-            this.pTitulo.Margin = new System.Windows.Forms.Padding(3);
-            this.pTitulo.Size = new System.Drawing.Size(558, 50);
+            this.pTitulo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pTitulo.Size = new System.Drawing.Size(744, 62);
             // 
             // pMenu
             // 
-            this.pMenu.Margin = new System.Windows.Forms.Padding(2);
-            this.pMenu.Size = new System.Drawing.Size(558, 80);
+            this.pMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pMenu.Size = new System.Drawing.Size(744, 98);
             // 
             // mtDni
             // 
             this.mtDni.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtDni.Location = new System.Drawing.Point(117, 150);
+            this.mtDni.Location = new System.Drawing.Point(156, 185);
+            this.mtDni.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.mtDni.Mask = "99999999999";
             this.mtDni.Name = "mtDni";
             this.mtDni.PromptChar = ' ';
-            this.mtDni.Size = new System.Drawing.Size(100, 28);
+            this.mtDni.Size = new System.Drawing.Size(200, 34);
             this.mtDni.TabIndex = 17;
             this.mtDni.ValidatingType = typeof(int);
             // 
             // tbNombre
             // 
             this.tbNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbNombre.Location = new System.Drawing.Point(117, 185);
-            this.tbNombre.Margin = new System.Windows.Forms.Padding(2);
+            this.tbNombre.Location = new System.Drawing.Point(156, 228);
+            this.tbNombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbNombre.Name = "tbNombre";
-            this.tbNombre.Size = new System.Drawing.Size(260, 28);
+            this.tbNombre.Size = new System.Drawing.Size(345, 34);
             this.tbNombre.TabIndex = 18;
             // 
             // mtTelefono
             // 
             this.mtTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtTelefono.Location = new System.Drawing.Point(117, 226);
-            this.mtTelefono.Margin = new System.Windows.Forms.Padding(2);
+            this.mtTelefono.Location = new System.Drawing.Point(156, 278);
+            this.mtTelefono.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.mtTelefono.Name = "mtTelefono";
-            this.mtTelefono.Size = new System.Drawing.Size(151, 28);
+            this.mtTelefono.Size = new System.Drawing.Size(200, 34);
             this.mtTelefono.TabIndex = 22;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(13, 152);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(17, 187);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(41, 24);
+            this.label1.Size = new System.Drawing.Size(54, 29);
             this.label1.TabIndex = 24;
             this.label1.Text = "DNI";
             // 
@@ -111,10 +111,9 @@ namespace CoolSoft.Vista.Tecnico
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(13, 185);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(17, 228);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 24);
+            this.label2.Size = new System.Drawing.Size(101, 29);
             this.label2.TabIndex = 25;
             this.label2.Text = "Nombre";
             // 
@@ -122,19 +121,18 @@ namespace CoolSoft.Vista.Tecnico
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(13, 226);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(17, 278);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(85, 24);
+            this.label6.Size = new System.Drawing.Size(110, 29);
             this.label6.TabIndex = 29;
             this.label6.Text = "Teléfono";
             // 
             // TecnicoAgregar
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(558, 418);
+            this.ClientSize = new System.Drawing.Size(744, 514);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -142,7 +140,7 @@ namespace CoolSoft.Vista.Tecnico
             this.Controls.Add(this.tbNombre);
             this.Controls.Add(this.mtDni);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(5);
+            this.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.Name = "TecnicoAgregar";
             this.Text = "TecnicoAgregar";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.TecnicoAgregar_FormClosed);
