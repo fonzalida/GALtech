@@ -48,14 +48,14 @@ namespace CoolSoft.Vista.Tecnico
             // 
             // bCancelar
             // 
-            this.bCancelar.Location = new System.Drawing.Point(581, 4);
-            this.bCancelar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.bCancelar.Click += new System.EventHandler(this.bCancelar_Click);
+            this.bCerrar.Location = new System.Drawing.Point(581, 4);
+            this.bCerrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.bCerrar.Click += new System.EventHandler(this.bCancelar_Click);
             // 
             // Limpiar
             // 
-            this.bLimpiar.Location = new System.Drawing.Point(453, 4);
-            this.bLimpiar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.bCancelar.Location = new System.Drawing.Point(453, 4);
+            this.bCancelar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             // 
             // pTitulo
             // 

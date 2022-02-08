@@ -50,24 +50,21 @@ namespace CoolSoft.Vista.Cliente
             // 
             // bAgregar
             // 
-            this.bAgregar.Location = new System.Drawing.Point(327, 4);
+            this.bAgregar.Location = new System.Drawing.Point(357, 4);
             // 
             // bCancelar
             // 
-            this.bCancelar.Location = new System.Drawing.Point(581, 4);
-            this.bCancelar.Click += new System.EventHandler(this.bCancelar_Click);
+            this.bCerrar.Location = new System.Drawing.Point(611, 4);
+            this.bCerrar.Click += new System.EventHandler(this.bCancelar_Click);
             // 
-            // Limpiar
+            // bLimpiar
             // 
-            this.bLimpiar.Location = new System.Drawing.Point(454, 4);
+            this.bCancelar.Location = new System.Drawing.Point(484, 4);
             // 
-            // pTitulo
+            // lTitulo
             // 
-            this.pTitulo.Size = new System.Drawing.Size(744, 62);
-            // 
-            // pMenu
-            // 
-            this.pMenu.Size = new System.Drawing.Size(744, 98);
+            this.lTitulo.Size = new System.Drawing.Size(269, 39);
+            this.lTitulo.Text = "Agregar Cliente";
             // 
             // mtDniCuit
             // 

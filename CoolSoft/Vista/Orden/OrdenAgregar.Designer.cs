@@ -48,13 +48,13 @@ namespace CoolSoft.Vista.Orden
             // 
             // bCancelar
             // 
-            this.bCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.bCancelar.Location = new System.Drawing.Point(611, 8);
+            this.bCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.bCerrar.Location = new System.Drawing.Point(611, 8);
             // 
             // bLimpiar
             // 
-            this.bLimpiar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.bLimpiar.Location = new System.Drawing.Point(484, 8);
+            this.bCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.bCancelar.Location = new System.Drawing.Point(484, 8);
             // 
             // pTitulo
             // 
@@ -66,8 +66,8 @@ namespace CoolSoft.Vista.Orden
             this.pMenu.Size = new System.Drawing.Size(744, 98);
             this.pMenu.Controls.SetChildIndex(this.bSeleccionarCliente, 0);
             this.pMenu.Controls.SetChildIndex(this.bAgregar, 0);
+            this.pMenu.Controls.SetChildIndex(this.bCerrar, 0);
             this.pMenu.Controls.SetChildIndex(this.bCancelar, 0);
-            this.pMenu.Controls.SetChildIndex(this.bLimpiar, 0);
             // 
             // mtFechaRecepcion
             // 

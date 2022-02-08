@@ -147,6 +147,12 @@
     <Compile Include="Vista\Herencia\Base.Designer.cs">
       <DependentUpon>Base.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\Herencia\Detalles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Herencia\Detalles.Designer.cs">
+      <DependentUpon>Detalles.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\Herencia\Historico.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -219,6 +225,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\Herencia\Base.resx">
       <DependentUpon>Base.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Herencia\Detalles.resx">
+      <DependentUpon>Detalles.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\Herencia\Historico.resx">
       <DependentUpon>Historico.cs</DependentUpon>
