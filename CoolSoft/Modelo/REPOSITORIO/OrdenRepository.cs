@@ -26,7 +26,7 @@ namespace CoolSoft.DATOS.REPOSITORIO
             cmd.Parameters.AddWithValue("@TareaDesarrollar", p.tareaDesarrollar);
             cmd.Parameters.AddWithValue("@TareaDesarrollada", p.tareaDesarrollada);
             //cmd.Parameters.AddWithValue("@Precio",p.Precio);
-            cmd.Parameters.AddWithValue("@IdCliente",p.dniCuit);
+            cmd.Parameters.AddWithValue("@IdCliente",p.idCliente);
             cmd.Parameters.AddWithValue("@Completada",p.completada);
 
             Conexion conexion = new Conexion();
@@ -75,7 +75,7 @@ namespace CoolSoft.DATOS.REPOSITORIO
             cmd.Parameters.AddWithValue("@TareaDesarrollar2", pn.tareaDesarrollar);
             cmd.Parameters.AddWithValue("@TareaDesarrollada2", pn.tareaDesarrollada);
             cmd.Parameters.AddWithValue("@Precio2",pn.precio);
-            cmd.Parameters.AddWithValue("@IdCliente2", pn.dniCuit);
+            cmd.Parameters.AddWithValue("@IdCliente2", pn.idCliente);
             cmd.Parameters.AddWithValue("@Completada2", pn.completada);
 
             Conexion conexion = new Conexion();
