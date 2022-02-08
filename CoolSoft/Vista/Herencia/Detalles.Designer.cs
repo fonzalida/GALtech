@@ -55,7 +55,7 @@ namespace CoolSoft.Vista.Herencia
             // 
             this.bCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.bCancelar.Image = global::CoolSoft.Properties.Resources.delete;
-            this.bCancelar.Location = new System.Drawing.Point(492, 7);
+            this.bCancelar.Location = new System.Drawing.Point(139, 7);
             this.bCancelar.Margin = new System.Windows.Forms.Padding(4);
             this.bCancelar.Name = "bCancelar";
             this.bCancelar.Size = new System.Drawing.Size(119, 79);
@@ -80,26 +80,26 @@ namespace CoolSoft.Vista.Herencia
             // bAgregar
             // 
             this.bAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.bAgregar.Image = global::CoolSoft.Properties.Resources.add;
-            this.bAgregar.Location = new System.Drawing.Point(238, 7);
+            this.bAgregar.Image = global::CoolSoft.Properties.Resources.ok;
+            this.bAgregar.Location = new System.Drawing.Point(12, 7);
             this.bAgregar.Margin = new System.Windows.Forms.Padding(4);
             this.bAgregar.Name = "bAgregar";
             this.bAgregar.Size = new System.Drawing.Size(119, 79);
             this.bAgregar.TabIndex = 3;
-            this.bAgregar.Text = "Agregar";
+            this.bAgregar.Text = "Modificar";
             this.bAgregar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.bAgregar.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.button1.Image = global::CoolSoft.Properties.Resources.add;
-            this.button1.Location = new System.Drawing.Point(365, 7);
+            this.button1.Image = global::CoolSoft.Properties.Resources.edit;
+            this.button1.Location = new System.Drawing.Point(492, 7);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(119, 79);
             this.button1.TabIndex = 6;
-            this.button1.Text = "Agregar";
+            this.button1.Text = "Editar";
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.button1.UseVisualStyleBackColor = true;
             // 

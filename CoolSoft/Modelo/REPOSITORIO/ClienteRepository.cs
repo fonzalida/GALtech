@@ -65,7 +65,7 @@ namespace CoolSoft.DATOS.REPOSITORIO
             conexion.QueryInsertDeleteUpdate(cmd);
         }
 
-        public static bool BuscarUno(int DniCuit)
+        public static bool BuscarUno(long DniCuit)
         {
             String query = "SELECT * FROM CLIENTE WHERE DniCuit = \"" + DniCuit + "\"";
 
