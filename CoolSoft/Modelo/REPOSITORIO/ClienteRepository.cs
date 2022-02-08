@@ -77,7 +77,7 @@ namespace CoolSoft.DATOS.REPOSITORIO
 
         }
 
-        public static void modificar(Cliente p, Cliente pn)
+        public static void modificar(Cliente viejo, Cliente nuevo)
         {
 
             MySqlCommand cmd = new MySqlCommand(
@@ -85,15 +85,15 @@ namespace CoolSoft.DATOS.REPOSITORIO
                  "SET DniCuit = @DniCuit2, Nombre = @Nombre2, Domicilio = @Domicilio2, Localidad = @Localidad2, Provincia = @Provincia2, Telefono1 = @Telefono12, Telefono2 = @Telefono22 " +
                   "where IdCliente = @idCliente  ");
 
-            cmd.Parameters.AddWithValue("@idCliente", p.idCliente);
+            cmd.Parameters.AddWithValue("@idCliente", viejo.idCliente);
 
-            cmd.Parameters.AddWithValue("@DniCuit2", pn.dniCuil);
-            cmd.Parameters.AddWithValue("@Nombre2", pn.nombre);
-            cmd.Parameters.AddWithValue("@Domicilio2", pn.domicilio);
-            cmd.Parameters.AddWithValue("@Localidad2", pn.localidad);
-            cmd.Parameters.AddWithValue("@Provincia2", pn.provincia);
-            cmd.Parameters.AddWithValue("@Telefono12", pn.telefono1);
-            cmd.Parameters.AddWithValue("@Telefono22", pn.telefono2);
+            cmd.Parameters.AddWithValue("@DniCuit2", nuevo.dniCuil);
+            cmd.Parameters.AddWithValue("@Nombre2", nuevo.nombre);
+            cmd.Parameters.AddWithValue("@Domicilio2", nuevo.domicilio);
+            cmd.Parameters.AddWithValue("@Localidad2", nuevo.localidad);
+            cmd.Parameters.AddWithValue("@Provincia2", nuevo.provincia);
+            cmd.Parameters.AddWithValue("@Telefono12", nuevo.telefono1);
+            cmd.Parameters.AddWithValue("@Telefono22", nuevo.telefono2);
 
             Conexion conexion = new Conexion();
 

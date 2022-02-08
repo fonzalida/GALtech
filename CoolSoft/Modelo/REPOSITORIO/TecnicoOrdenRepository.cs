@@ -17,13 +17,12 @@ namespace CoolSoft.DATOS.REPOSITORIO
 
             MySqlCommand cmd = new MySqlCommand(
                             "INSERT INTO TECNICOORDEN" +
-                             "(Dni, IdParte, IdOrden)" +
-                             " VALUES (@Dni, @IdParte, @IdOrden)"
+                             "(Dni, IdParte)" +
+                             " VALUES (@Dni, @IdParte)"
                              );
 
             cmd.Parameters.AddWithValue("@Dni", p.dni);
             cmd.Parameters.AddWithValue("@IdParte", p.idParte);
-            cmd.Parameters.AddWithValue("@IdOrden", p.idOrden);
 
             Conexion conexion = new Conexion();
             conexion.QueryInsertDeleteUpdate(cmd);
@@ -35,26 +34,13 @@ namespace CoolSoft.DATOS.REPOSITORIO
 
             MySqlCommand cmd = new MySqlCommand(
                 "DELETE FROM TECNICOORDEN " +
-                "where Dni = @Dni and IdParte = @IdParte and IdOrden = @IdOrden"
+                "where Dni = @Dni and IdParte = @IdParte"
                 );
 
             cmd.Parameters.AddWithValue("@Dni", p.dni);
             cmd.Parameters.AddWithValue("@IdParte", p.idParte);
-            cmd.Parameters.AddWithValue("@IdOrden", p.idOrden);
 
             conexion.QueryInsertDeleteUpdate(cmd);
-        }
-
-        public static bool BuscarUno(int dni, int IdParte, int IdOrden)
-        {
-            String query = "SELECT * FROM TECNICOORDEN WHERE dni = \"" + dni + "\" and IdParte = \"" + IdParte + "\" and IdOrden = \"" + IdOrden + "\"";
-
-            Conexion conexion = new Conexion();
-            if (conexion.QuerySelect(query).Rows.Count == 1)
-                return true;
-            else
-                return false;
-
         }
 
 
@@ -64,13 +50,14 @@ namespace CoolSoft.DATOS.REPOSITORIO
             MySqlCommand cmd = new MySqlCommand(
                 "UPDATE PARTEORDEN" +
                  "SET Dni = @Dni2 " +
-                  "where Dni = @Dni and IdParte = @IdParte and IdOrden = @IdOrden");
+                  "where Dni = @Dni and IdParte = @IdParte");
 
 
             cmd.Parameters.AddWithValue("@Dni", viejo.dni);
-            cmd.Parameters.AddWithValue("@Dni2", nuevo.dni);
             cmd.Parameters.AddWithValue("@IdParte", viejo.idParte);
-            cmd.Parameters.AddWithValue("@IdOrden", viejo.idOrden);
+
+            cmd.Parameters.AddWithValue("@Dni2", nuevo.dni);
+
 
             Conexion conexion = new Conexion();
 
@@ -92,8 +79,7 @@ namespace CoolSoft.DATOS.REPOSITORIO
             String query =
                 "SELECT * FROM CLIENTE " +
                 "where Dni = \"" + t.dni + "\" and " +
-                "IdParte = \"" + t.idParte + "\" and " +
-                "IdOrden = \"" + t.idOrden + "\"";
+                "IdParte = \"" + t.idParte + "\"";
 
 
             Conexion conexion = new Conexion();

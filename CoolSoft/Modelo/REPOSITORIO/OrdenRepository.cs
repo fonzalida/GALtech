@@ -13,18 +13,20 @@ namespace CoolSoft.DATOS.REPOSITORIO
     {
         public static int agregar(Orden p)
         {
-            
+            p.completada = 0;
+
+
             MySqlCommand cmd = new MySqlCommand(
                 "INSERT INTO ORDEN" +
-                "(FechaRecepcion ,TareaDesarrollar, TareaDesarrollada, IdCliente, Completada)" +
-                " VALUES (@FechaRecepcion, @TareaDesarrollar, @TareaDesarrollada, @IdCliente, @Completada)" +
+                "(FechaRecepcion ,TareaDesarrollar, IdCliente, Completada)" +
+                " VALUES (@FechaRecepcion, @TareaDesarrollar, @IdCliente, @Completada)" +
                "SELECT LAST_INSERT_ID();"
                 );
 
             //cmd.Parameters.AddWithValue("@IdOrden",p.IdOrden);
             cmd.Parameters.AddWithValue("@FechaRecepcion",p.fechaRecepcion);
             cmd.Parameters.AddWithValue("@TareaDesarrollar", p.tareaDesarrollar);
-            cmd.Parameters.AddWithValue("@TareaDesarrollada", p.tareaDesarrollada);
+            //cmd.Parameters.AddWithValue("@TareaDesarrollada", p.tareaDesarrollada);
             //cmd.Parameters.AddWithValue("@Precio",p.Precio);
             cmd.Parameters.AddWithValue("@IdCliente",p.idCliente);
             cmd.Parameters.AddWithValue("@Completada",p.completada);
@@ -38,7 +40,6 @@ namespace CoolSoft.DATOS.REPOSITORIO
         {
             
             Conexion conexion = new Conexion();
-
             MySqlCommand cmd = new MySqlCommand(
                 "Delete from orden "+ 
                 "where IdOrden = @IdOrden"

@@ -37,18 +37,17 @@ namespace CoolSoft.DATOS.REPOSITORIO
 
             MySqlCommand cmd = new MySqlCommand(
                 "DELETE FROM PARTEORDEN " +
-                "where IdParte = @IdParte and IdOrden = @IdOrden"
+                "where IdParte = @IdParte"
                 );
 
             cmd.Parameters.AddWithValue("@IdParte", p.idParte);
-            cmd.Parameters.AddWithValue("@IdOrden", p.idOrden);
 
             conexion.QueryInsertDeleteUpdate(cmd);
         }
 
-        public static bool BuscarUno(int IdParte, int IdOrden)
+        public static bool BuscarUno(long IdParte)
         {
-            String query = "SELECT * FROM PARTEORDEN WHERE IdParte = \"" + IdParte + "\" and IdOrden = \"" + IdOrden + "\"";
+            String query = "SELECT * FROM PARTEORDEN WHERE IdParte = \"" + IdParte + "\"";
 
             Conexion conexion = new Conexion();
             if (conexion.QuerySelect(query).Rows.Count == 1)
@@ -64,12 +63,11 @@ namespace CoolSoft.DATOS.REPOSITORIO
             MySqlCommand cmd = new MySqlCommand(
                 "UPDATE PARTEORDEN" +
                  "SET FechaInicio = @FechaInicio2, FechaFin = @FechaFin2, Completa = @Completa2" +
-                  "where IdParte = @IdParte and IdOrden = @IdOrden");
+                  "where IdParte = @IdParte");
 
           
 
             cmd.Parameters.AddWithValue("@IdParte", pn.idParte);
-            cmd.Parameters.AddWithValue("@IdOrden", pn.idOrden);
 
             cmd.Parameters.AddWithValue("@FechaInicio2", pn.fechaInicio);
             cmd.Parameters.AddWithValue("@FechaFin2", pn.fechaFin);
