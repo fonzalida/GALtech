@@ -249,7 +249,7 @@ namespace CoolSoft.Vista.Herencia
             this.pBuscar.Location = new System.Drawing.Point(787, 14);
             this.pBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.pBuscar.Name = "pBuscar";
-            this.pBuscar.Size = new System.Drawing.Size(423, 91);
+            this.pBuscar.Size = new System.Drawing.Size(427, 91);
             this.pBuscar.TabIndex = 18;
             // 
             // bBuscar
@@ -257,7 +257,7 @@ namespace CoolSoft.Vista.Herencia
             this.bBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bBuscar.Image = global::CoolSoft.Properties.Resources.search;
-            this.bBuscar.Location = new System.Drawing.Point(275, 4);
+            this.bBuscar.Location = new System.Drawing.Point(279, 4);
             this.bBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.bBuscar.Name = "bBuscar";
             this.bBuscar.Size = new System.Drawing.Size(143, 81);

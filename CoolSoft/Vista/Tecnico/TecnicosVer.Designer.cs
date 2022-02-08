@@ -41,29 +41,44 @@ namespace CoolSoft.Vista.Tecnico
             // 
             // mtbFinal
             // 
-            this.mtbFinal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.mtbFinal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.mtbFinal.Text = "06022022";
             // 
             // mtbInicial
             // 
-            this.mtbInicial.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.mtbInicial.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.mtbInicial.Text = "01022022";
+            // 
+            // bMinimizar
+            // 
+            this.bMinimizar.Location = new System.Drawing.Point(1168, 12);
+            this.bMinimizar.Margin = new System.Windows.Forms.Padding(4);
+            // 
+            // bCerrar
+            // 
+            this.bCerrar.Location = new System.Drawing.Point(1208, 12);
+            this.bCerrar.Margin = new System.Windows.Forms.Padding(4);
+            // 
+            // lTitulo
+            // 
+            this.lTitulo.Size = new System.Drawing.Size(162, 39);
+            this.lTitulo.Text = "Tecnicos";
             // 
             // pTitulo
             // 
-            this.pTitulo.Size = new System.Drawing.Size(945, 50);
+            this.pTitulo.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             // 
             // pMenu
             // 
-            this.pMenu.Size = new System.Drawing.Size(945, 65);
+            this.pMenu.Margin = new System.Windows.Forms.Padding(5);
             // 
             // TecnicosVer
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(945, 535);
+            this.ClientSize = new System.Drawing.Size(1228, 719);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "TecnicosVer";
             this.Text = "TecnicosVer";
             this.Load += new System.EventHandler(this.TecnicosVer_Load);

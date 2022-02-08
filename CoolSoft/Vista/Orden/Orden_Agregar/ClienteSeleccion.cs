@@ -36,5 +36,10 @@ namespace CoolSoft.Vista.Orden.Orden_Agregar
         {
             this.Close();
         }
+
+        private void text_Enter(object sender, EventArgs e)
+        {
+            LimpiarBusqueda(mtId, mtNombre);
+        }
     }
 }

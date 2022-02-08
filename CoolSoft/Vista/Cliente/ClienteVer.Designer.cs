@@ -47,9 +47,18 @@ namespace CoolSoft.Vista.Cliente
             // 
             this.mtbInicial.Text = "01022022";
             // 
-            // pMenu
+            // bMinimizar
             // 
-            this.pMenu.Size = new System.Drawing.Size(1228, 80);
+            this.bMinimizar.Location = new System.Drawing.Point(876, 10);
+            // 
+            // bCerrar
+            // 
+            this.bCerrar.Location = new System.Drawing.Point(906, 10);
+            // 
+            // lTitulo
+            // 
+            this.lTitulo.Size = new System.Drawing.Size(154, 39);
+            this.lTitulo.Text = "Ordenes";
             // 
             // ClienteVer
             // 

@@ -34,7 +34,7 @@ namespace CoolSoft.Vista.Herencia
             this.bBuscarCliente = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.bSeleccionarCliente = new System.Windows.Forms.Button();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.mtId = new System.Windows.Forms.MaskedTextBox();
             this.lId = new System.Windows.Forms.Label();
             this.pSeleccion = new System.Windows.Forms.Panel();
             this.pTitulo.SuspendLayout();
@@ -46,22 +46,22 @@ namespace CoolSoft.Vista.Herencia
             // pTitulo
             // 
             this.pTitulo.BackColor = System.Drawing.Color.Goldenrod;
-            this.pTitulo.Size = new System.Drawing.Size(778, 62);
+            this.pTitulo.Size = new System.Drawing.Size(800, 62);
             // 
             // pMenu
             // 
             this.pMenu.Controls.Add(this.bBuscarCliente);
-            this.pMenu.Controls.Add(this.maskedTextBox1);
+            this.pMenu.Controls.Add(this.mtId);
             this.pMenu.Controls.Add(this.bCancelar);
             this.pMenu.Controls.Add(this.lId);
-            this.pMenu.Size = new System.Drawing.Size(778, 98);
+            this.pMenu.Size = new System.Drawing.Size(800, 98);
             // 
             // bCancelar
             // 
             this.bCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.bCancelar.Image = global::CoolSoft.Properties.Resources.clear;
-            this.bCancelar.Location = new System.Drawing.Point(645, 7);
+            this.bCancelar.Location = new System.Drawing.Point(667, 7);
             this.bCancelar.Margin = new System.Windows.Forms.Padding(4);
             this.bCancelar.Name = "bCancelar";
             this.bCancelar.Size = new System.Drawing.Size(119, 79);
@@ -75,7 +75,7 @@ namespace CoolSoft.Vista.Herencia
             this.bBuscarCliente.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bBuscarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bBuscarCliente.Image = global::CoolSoft.Properties.Resources.search;
-            this.bBuscarCliente.Location = new System.Drawing.Point(519, 7);
+            this.bBuscarCliente.Location = new System.Drawing.Point(541, 7);
             this.bBuscarCliente.Name = "bBuscarCliente";
             this.bBuscarCliente.Size = new System.Drawing.Size(119, 79);
             this.bBuscarCliente.TabIndex = 21;
@@ -90,14 +90,15 @@ namespace CoolSoft.Vista.Herencia
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(442, 234);
+            this.dataGridView1.Size = new System.Drawing.Size(483, 234);
             this.dataGridView1.TabIndex = 23;
             // 
             // bSeleccionarCliente
             // 
+            this.bSeleccionarCliente.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bSeleccionarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bSeleccionarCliente.Image = global::CoolSoft.Properties.Resources.ok;
-            this.bSeleccionarCliente.Location = new System.Drawing.Point(571, 41);
+            this.bSeleccionarCliente.Location = new System.Drawing.Point(594, 6);
             this.bSeleccionarCliente.Name = "bSeleccionarCliente";
             this.bSeleccionarCliente.Size = new System.Drawing.Size(194, 59);
             this.bSeleccionarCliente.TabIndex = 24;
@@ -105,16 +106,16 @@ namespace CoolSoft.Vista.Herencia
             this.bSeleccionarCliente.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.bSeleccionarCliente.UseVisualStyleBackColor = true;
             // 
-            // maskedTextBox1
+            // mtId
             // 
-            this.maskedTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox1.Location = new System.Drawing.Point(16, 39);
-            this.maskedTextBox1.Mask = "99999999999";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.PromptChar = ' ';
-            this.maskedTextBox1.Size = new System.Drawing.Size(180, 34);
-            this.maskedTextBox1.TabIndex = 25;
-            this.maskedTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.mtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtId.Location = new System.Drawing.Point(16, 39);
+            this.mtId.Mask = "99999999999";
+            this.mtId.Name = "mtId";
+            this.mtId.PromptChar = ' ';
+            this.mtId.Size = new System.Drawing.Size(180, 34);
+            this.mtId.TabIndex = 25;
+            this.mtId.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // lId
             // 
@@ -134,7 +135,7 @@ namespace CoolSoft.Vista.Herencia
             this.pSeleccion.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pSeleccion.Location = new System.Drawing.Point(0, 160);
             this.pSeleccion.Name = "pSeleccion";
-            this.pSeleccion.Size = new System.Drawing.Size(778, 252);
+            this.pSeleccion.Size = new System.Drawing.Size(800, 303);
             this.pSeleccion.TabIndex = 28;
             // 
             // Seleccion
@@ -142,7 +143,7 @@ namespace CoolSoft.Vista.Herencia
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(778, 412);
+            this.ClientSize = new System.Drawing.Size(800, 463);
             this.Controls.Add(this.pSeleccion);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Seleccion";
@@ -166,7 +167,7 @@ namespace CoolSoft.Vista.Herencia
         public System.Windows.Forms.Button bCancelar;
         public System.Windows.Forms.DataGridView dataGridView1;
         public System.Windows.Forms.Button bSeleccionarCliente;
-        public System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        public System.Windows.Forms.MaskedTextBox mtId;
         public System.Windows.Forms.Label lId;
         public System.Windows.Forms.Panel pSeleccion;
         public System.Windows.Forms.Button bBuscarCliente;

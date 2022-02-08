@@ -49,27 +49,22 @@ namespace CoolSoft.Vista.Orden
             // 
             // bMinimizar
             // 
-            this.bMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)));
             this.bMinimizar.Location = new System.Drawing.Point(880, 10);
             // 
             // bCerrar
             // 
-            this.bCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)));
             this.bCerrar.Location = new System.Drawing.Point(910, 10);
             // 
-            // pTitulo
+            // lTitulo
             // 
-            this.pTitulo.Size = new System.Drawing.Size(1241, 62);
-            // 
-            // pMenu
-            // 
-            this.pMenu.Size = new System.Drawing.Size(1241, 131);
+            this.lTitulo.Size = new System.Drawing.Size(154, 39);
+            this.lTitulo.Text = "Ordenes";
             // 
             // OrdenesVer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1241, 667);
+            this.ClientSize = new System.Drawing.Size(1228, 719);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "OrdenesVer";
             this.Text = "OrdenesVer";

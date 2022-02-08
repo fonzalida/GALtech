@@ -41,49 +41,7 @@ namespace CoolSoft.Vista.Herencia
         }
 
 
-        public void IniciarTextBox()
-        {
-            foreach (TextBox tb in this.Controls.OfType<TextBox>())
-            {
-                tb.Enter += new EventHandler(SeleccionarTodoTexto);
-
-            }
-        }
-
-        public void IniciarMaskNumerico()
-        {
-            foreach (MaskedTextBox mt in this.Controls.OfType<MaskedTextBox>())
-            {
-                mt.Enter += new EventHandler(SeleccionarTodoTexto);
-                MascaraNumerica11(mt);
-            }
-        }
-
-        public void IniciarMaskNumericoIndividual_11(MaskedTextBox m)
-        {
-            m.Enter += new EventHandler(SeleccionarTodoTexto);
-            m.Mask = "99999999999";
-            m.PromptChar = ' ';
-        }
-        public void IniciarMaskFechasIndividual(MaskedTextBox m)
-        {
-            m.Enter += new EventHandler(SeleccionarTodoTexto);
-            m.Mask = "00/00/0000";
-            m.PromptChar = '0';
-        }
-
-
-        public void LimpiarTextBox()
-        {
-            foreach (TextBox tb in this.Controls.OfType<TextBox>())
-            {
-                tb.Text = "";
-            }
-            foreach (MaskedTextBox mt in this.Controls.OfType<MaskedTextBox>())
-            {
-                mt.Text = "";
-            }
-        }
+        
 
         public void Limpiar_Click(object sender, EventArgs e)
         {
