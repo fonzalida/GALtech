@@ -60,6 +60,8 @@ namespace CoolSoft.Vista.Herencia
             m.PromptChar = ' ';
         }
 
+
+
         private void pTitulo_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
@@ -68,5 +70,11 @@ namespace CoolSoft.Vista.Herencia
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
             }
         }
+
+        
+
+
+
+
     }
 }

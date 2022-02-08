@@ -54,8 +54,8 @@ namespace CoolSoft.Vista.Tecnico
             // 
             // Limpiar
             // 
-            this.Limpiar.Location = new System.Drawing.Point(453, 4);
-            this.Limpiar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.bLimpiar.Location = new System.Drawing.Point(453, 4);
+            this.bLimpiar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             // 
             // pTitulo
             // 

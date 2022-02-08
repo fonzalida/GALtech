@@ -24,7 +24,8 @@ namespace CoolSoft.Vista.Cliente
         {
             lTitulo.Text = "Agregar Cliente";
 
-            InicializarTextos();
+            IniciarTextBox();
+            IniciarMaskNumerico();
         }
 
         private void ClienteAgregar_FormClosed(object sender, FormClosedEventArgs e)

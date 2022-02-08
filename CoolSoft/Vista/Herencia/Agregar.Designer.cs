@@ -32,14 +32,10 @@ namespace CoolSoft.Vista.Herencia
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Agregar));
             this.bAgregar = new System.Windows.Forms.Button();
             this.bCancelar = new System.Windows.Forms.Button();
-            this.Limpiar = new System.Windows.Forms.Button();
+            this.bLimpiar = new System.Windows.Forms.Button();
             this.pTitulo.SuspendLayout();
             this.pMenu.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // lTitulo
-            // 
-            this.lTitulo.BackColor = System.Drawing.Color.Transparent;
             // 
             // pTitulo
             // 
@@ -49,7 +45,7 @@ namespace CoolSoft.Vista.Herencia
             // 
             // pMenu
             // 
-            this.pMenu.Controls.Add(this.Limpiar);
+            this.pMenu.Controls.Add(this.bLimpiar);
             this.pMenu.Controls.Add(this.bCancelar);
             this.pMenu.Controls.Add(this.bAgregar);
             this.pMenu.Margin = new System.Windows.Forms.Padding(4);
@@ -83,19 +79,19 @@ namespace CoolSoft.Vista.Herencia
             this.bCancelar.UseVisualStyleBackColor = true;
             this.bCancelar.Click += new System.EventHandler(this.bCancelar_Click);
             // 
-            // Limpiar
+            // bLimpiar
             // 
-            this.Limpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.Limpiar.Image = global::CoolSoft.Properties.Resources.delete;
-            this.Limpiar.Location = new System.Drawing.Point(366, 4);
-            this.Limpiar.Margin = new System.Windows.Forms.Padding(4);
-            this.Limpiar.Name = "Limpiar";
-            this.Limpiar.Size = new System.Drawing.Size(119, 79);
-            this.Limpiar.TabIndex = 2;
-            this.Limpiar.Text = "Limpiar";
-            this.Limpiar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.Limpiar.UseVisualStyleBackColor = true;
-            this.Limpiar.Click += new System.EventHandler(this.Limpiar_Click);
+            this.bLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.bLimpiar.Image = global::CoolSoft.Properties.Resources.delete;
+            this.bLimpiar.Location = new System.Drawing.Point(366, 4);
+            this.bLimpiar.Margin = new System.Windows.Forms.Padding(4);
+            this.bLimpiar.Name = "bLimpiar";
+            this.bLimpiar.Size = new System.Drawing.Size(119, 79);
+            this.bLimpiar.TabIndex = 2;
+            this.bLimpiar.Text = "Limpiar";
+            this.bLimpiar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.bLimpiar.UseVisualStyleBackColor = true;
+            this.bLimpiar.Click += new System.EventHandler(this.Limpiar_Click);
             // 
             // Agregar
             // 
@@ -118,6 +114,6 @@ namespace CoolSoft.Vista.Herencia
 
         public System.Windows.Forms.Button bAgregar;
         public System.Windows.Forms.Button bCancelar;
-        public System.Windows.Forms.Button Limpiar;
+        public System.Windows.Forms.Button bLimpiar;
     }
 }

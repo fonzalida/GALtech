@@ -153,17 +153,29 @@
     <Compile Include="Vista\Herencia\Historico.Designer.cs">
       <DependentUpon>Historico.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\Orden\OrdenesAgregar.cs">
+    <Compile Include="Vista\Herencia\Seleccion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vista\Orden\OrdenesAgregar.Designer.cs">
-      <DependentUpon>OrdenesAgregar.cs</DependentUpon>
+    <Compile Include="Vista\Herencia\Seleccion.Designer.cs">
+      <DependentUpon>Seleccion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Orden\OrdenAgregar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Orden\OrdenAgregar.Designer.cs">
+      <DependentUpon>OrdenAgregar.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\Orden\OrdenesVer.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Vista\Orden\OrdenesVer.Designer.cs">
       <DependentUpon>OrdenesVer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Orden\Orden_Agregar\ClienteSeleccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Orden\Orden_Agregar\ClienteSeleccion.Designer.cs">
+      <DependentUpon>ClienteSeleccion.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\Tecnico\TecnicoAgregar.cs">
       <SubType>Form</SubType>
@@ -211,11 +223,17 @@
     <EmbeddedResource Include="Vista\Herencia\Historico.resx">
       <DependentUpon>Historico.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vista\Orden\OrdenesAgregar.resx">
-      <DependentUpon>OrdenesAgregar.cs</DependentUpon>
+    <EmbeddedResource Include="Vista\Herencia\Seleccion.resx">
+      <DependentUpon>Seleccion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Orden\OrdenAgregar.resx">
+      <DependentUpon>OrdenAgregar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\Orden\OrdenesVer.resx">
       <DependentUpon>OrdenesVer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Orden\Orden_Agregar\ClienteSeleccion.resx">
+      <DependentUpon>ClienteSeleccion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\Tecnico\TecnicoAgregar.resx">
       <DependentUpon>TecnicoAgregar.cs</DependentUpon>
@@ -303,6 +321,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\minimize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ok.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

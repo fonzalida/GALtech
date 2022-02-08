@@ -59,7 +59,7 @@ namespace CoolSoft.Vista.Cliente
             // 
             // Limpiar
             // 
-            this.Limpiar.Location = new System.Drawing.Point(454, 4);
+            this.bLimpiar.Location = new System.Drawing.Point(454, 4);
             // 
             // pTitulo
             // 

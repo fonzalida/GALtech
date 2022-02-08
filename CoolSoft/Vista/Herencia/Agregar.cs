@@ -25,6 +25,8 @@ namespace CoolSoft.Vista.Herencia
 
         private void Agregar_Load(object sender, EventArgs e)
         {
+            //FixBotones();
+
             
         }
 
@@ -39,21 +41,38 @@ namespace CoolSoft.Vista.Herencia
         }
 
 
-        
-        public void InicializarTextos()
+        public void IniciarTextBox()
         {
             foreach (TextBox tb in this.Controls.OfType<TextBox>())
             {
                 tb.Enter += new EventHandler(SeleccionarTodoTexto);
 
             }
+        }
+
+        public void IniciarMaskNumerico()
+        {
             foreach (MaskedTextBox mt in this.Controls.OfType<MaskedTextBox>())
             {
                 mt.Enter += new EventHandler(SeleccionarTodoTexto);
                 MascaraNumerica11(mt);
             }
-
         }
+
+        public void IniciarMaskNumericoIndividual_11(MaskedTextBox m)
+        {
+            m.Enter += new EventHandler(SeleccionarTodoTexto);
+            m.Mask = "99999999999";
+            m.PromptChar = ' ';
+        }
+        public void IniciarMaskFechasIndividual(MaskedTextBox m)
+        {
+            m.Enter += new EventHandler(SeleccionarTodoTexto);
+            m.Mask = "00/00/0000";
+            m.PromptChar = '0';
+        }
+
+
         public void LimpiarTextBox()
         {
             foreach (TextBox tb in this.Controls.OfType<TextBox>())
@@ -66,11 +85,23 @@ namespace CoolSoft.Vista.Herencia
             }
         }
 
-        private void Limpiar_Click(object sender, EventArgs e)
+        public void Limpiar_Click(object sender, EventArgs e)
         {
             LimpiarTextBox();
         }
 
-        
+
+        //public void FixBotones()
+        //{
+            
+        //    int x = 90;
+            
+        //    bCancelar.Location = new Point(440, 4);
+        //    bLimpiar.Location = new Point(bCancelar.Location.X-x, 4);
+        //    bAgregar.Location = new Point(bLimpiar.Location.X -x, 4);
+
+        //    MessageBox.Show(this.Size.ToString());
+        //}
+
     }
 }

@@ -26,7 +26,8 @@ namespace CoolSoft.Vista.Tecnico
         {
             lTitulo.Text = "Agregar Tecnico";
 
-            InicializarTextos();
+            IniciarTextBox();
+            IniciarMaskNumerico();
         }
 
         private void TecnicoAgregar_FormClosed(object sender, FormClosedEventArgs e)

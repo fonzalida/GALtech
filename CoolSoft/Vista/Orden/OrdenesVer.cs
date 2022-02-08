@@ -6,6 +6,8 @@ namespace CoolSoft.Vista.Orden
 {
     public partial class OrdenesVer : Historico
     {
+
+        OrdenAgregar fAgregar;
         public OrdenesVer()
         {
             InitializeComponent();
@@ -21,7 +23,17 @@ namespace CoolSoft.Vista.Orden
 
         private void bAgregar_Click(object sender, EventArgs e)
         {
+            
+                fAgregar = new OrdenAgregar(this);
+                fAgregar.StartPosition = FormStartPosition.CenterScreen;
 
+                this.Enabled = false;
+
+                fAgregar.MdiParent = this.MdiParent;
+
+                fAgregar.FormBorderStyle = FormBorderStyle.None;
+                fAgregar.Show();
+            
         }
     }
 }

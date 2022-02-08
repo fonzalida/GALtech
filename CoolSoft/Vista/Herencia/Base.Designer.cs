@@ -38,7 +38,7 @@ namespace CoolSoft.Vista.Herencia
             // lTitulo
             // 
             this.lTitulo.AutoSize = true;
-            this.lTitulo.BackColor = System.Drawing.Color.Navy;
+            this.lTitulo.BackColor = System.Drawing.Color.Transparent;
             this.lTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lTitulo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lTitulo.Location = new System.Drawing.Point(27, 11);
