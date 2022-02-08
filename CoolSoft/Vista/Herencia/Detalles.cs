@@ -19,6 +19,30 @@ namespace CoolSoft.Vista.Herencia
 
         private void Detalles_Load(object sender, EventArgs e)
         {
+            pModificar.Enabled = false;
+        }
+
+        private void bEditar_Click(object sender, EventArgs e)
+        {
+            pModificar.Enabled = true;
+            bEditar.Enabled = false;
+
+        }
+
+        private void bModificar_Click(object sender, EventArgs e)
+        {
+            pModificar.Enabled = false;
+            bEditar.Enabled = true;
+        }
+
+        private void bCancelar_Click(object sender, EventArgs e)
+        {
+            pModificar.Enabled = false;
+            bEditar.Enabled = true;
+        }
+
+        private void bCerrar_Click(object sender, EventArgs e)
+        {
 
         }
     }

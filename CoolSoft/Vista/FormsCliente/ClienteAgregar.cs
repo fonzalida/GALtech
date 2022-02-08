@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CoolSoft.Vista.Cliente
+namespace CoolSoft.Vista.FormsCliente
 {
     public partial class ClienteAgregar : Agregar
     {

@@ -1,5 +1,5 @@
 ﻿
-namespace CoolSoft.Vista.Cliente
+namespace CoolSoft.Vista.FormsCliente
 {
     partial class ClienteAgregar
     {

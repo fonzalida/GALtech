@@ -32,10 +32,12 @@ namespace CoolSoft.Vista.Herencia
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Detalles));
             this.bCancelar = new System.Windows.Forms.Button();
             this.bCerrar = new System.Windows.Forms.Button();
-            this.bAgregar = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.bModificar = new System.Windows.Forms.Button();
+            this.bEditar = new System.Windows.Forms.Button();
+            this.pModificar = new System.Windows.Forms.Panel();
             this.pTitulo.SuspendLayout();
             this.pMenu.SuspendLayout();
+            this.pModificar.SuspendLayout();
             this.SuspendLayout();
             // 
             // pTitulo
@@ -45,17 +47,16 @@ namespace CoolSoft.Vista.Herencia
             // 
             // pMenu
             // 
-            this.pMenu.Controls.Add(this.button1);
-            this.pMenu.Controls.Add(this.bCancelar);
+            this.pMenu.Controls.Add(this.pModificar);
+            this.pMenu.Controls.Add(this.bEditar);
             this.pMenu.Controls.Add(this.bCerrar);
-            this.pMenu.Controls.Add(this.bAgregar);
             this.pMenu.Size = new System.Drawing.Size(744, 98);
             // 
             // bCancelar
             // 
             this.bCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.bCancelar.Image = global::CoolSoft.Properties.Resources.delete;
-            this.bCancelar.Location = new System.Drawing.Point(139, 7);
+            this.bCancelar.Location = new System.Drawing.Point(130, 3);
             this.bCancelar.Margin = new System.Windows.Forms.Padding(4);
             this.bCancelar.Name = "bCancelar";
             this.bCancelar.Size = new System.Drawing.Size(119, 79);
@@ -63,6 +64,7 @@ namespace CoolSoft.Vista.Herencia
             this.bCancelar.Text = "Cancelar";
             this.bCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.bCancelar.UseVisualStyleBackColor = true;
+            this.bCancelar.Click += new System.EventHandler(this.bCancelar_Click);
             // 
             // bCerrar
             // 
@@ -76,32 +78,46 @@ namespace CoolSoft.Vista.Herencia
             this.bCerrar.Text = "Cerrar";
             this.bCerrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.bCerrar.UseVisualStyleBackColor = true;
+            this.bCerrar.Click += new System.EventHandler(this.bCerrar_Click);
             // 
-            // bAgregar
+            // bModificar
             // 
-            this.bAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.bAgregar.Image = global::CoolSoft.Properties.Resources.ok;
-            this.bAgregar.Location = new System.Drawing.Point(12, 7);
-            this.bAgregar.Margin = new System.Windows.Forms.Padding(4);
-            this.bAgregar.Name = "bAgregar";
-            this.bAgregar.Size = new System.Drawing.Size(119, 79);
-            this.bAgregar.TabIndex = 3;
-            this.bAgregar.Text = "Modificar";
-            this.bAgregar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.bAgregar.UseVisualStyleBackColor = true;
+            this.bModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.bModificar.Image = global::CoolSoft.Properties.Resources.ok;
+            this.bModificar.Location = new System.Drawing.Point(3, 3);
+            this.bModificar.Margin = new System.Windows.Forms.Padding(4);
+            this.bModificar.Name = "bModificar";
+            this.bModificar.Size = new System.Drawing.Size(119, 79);
+            this.bModificar.TabIndex = 3;
+            this.bModificar.Text = "Modificar";
+            this.bModificar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.bModificar.UseVisualStyleBackColor = true;
+            this.bModificar.Click += new System.EventHandler(this.bModificar_Click);
             // 
-            // button1
+            // bEditar
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.button1.Image = global::CoolSoft.Properties.Resources.edit;
-            this.button1.Location = new System.Drawing.Point(492, 7);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(119, 79);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Editar";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button1.UseVisualStyleBackColor = true;
+            this.bEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.bEditar.Image = global::CoolSoft.Properties.Resources.edit;
+            this.bEditar.Location = new System.Drawing.Point(492, 7);
+            this.bEditar.Margin = new System.Windows.Forms.Padding(4);
+            this.bEditar.Name = "bEditar";
+            this.bEditar.Size = new System.Drawing.Size(119, 79);
+            this.bEditar.TabIndex = 6;
+            this.bEditar.Text = "Editar";
+            this.bEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.bEditar.UseVisualStyleBackColor = true;
+            this.bEditar.Click += new System.EventHandler(this.bEditar_Click);
+            // 
+            // pModificar
+            // 
+            this.pModificar.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.pModificar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pModificar.Controls.Add(this.bModificar);
+            this.pModificar.Controls.Add(this.bCancelar);
+            this.pModificar.Location = new System.Drawing.Point(11, 3);
+            this.pModificar.Name = "pModificar";
+            this.pModificar.Size = new System.Drawing.Size(255, 90);
+            this.pModificar.TabIndex = 7;
             // 
             // Detalles
             // 
@@ -115,6 +131,7 @@ namespace CoolSoft.Vista.Herencia
             this.pTitulo.ResumeLayout(false);
             this.pTitulo.PerformLayout();
             this.pMenu.ResumeLayout(false);
+            this.pModificar.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -123,7 +140,8 @@ namespace CoolSoft.Vista.Herencia
 
         public System.Windows.Forms.Button bCancelar;
         public System.Windows.Forms.Button bCerrar;
-        public System.Windows.Forms.Button bAgregar;
-        public System.Windows.Forms.Button button1;
+        public System.Windows.Forms.Button bModificar;
+        public System.Windows.Forms.Button bEditar;
+        public System.Windows.Forms.Panel pModificar;
     }
 }

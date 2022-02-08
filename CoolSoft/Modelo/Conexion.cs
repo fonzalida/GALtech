@@ -6,7 +6,7 @@ using System.Data.SqlClient;
 using System.Diagnostics;
 using System.Windows.Forms;
 
-namespace CoolSoft.DATOS
+namespace CoolSoft.Modelo
 {
     class Conexion
     {

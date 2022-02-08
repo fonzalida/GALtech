@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using CoolSoft.DATOS.ENTIDADES;
-using CoolSoft.DATOS.REPOSITORIO;
+using CoolSoft.Modelo.ENTIDADES;
+using CoolSoft.Modelo.REPOSITORIO;
 
-namespace CoolSoft.DATOS.SERVICIO
+namespace CoolSoft.Modelo.SERVICIO
 {
     static class TecnicoService
     {

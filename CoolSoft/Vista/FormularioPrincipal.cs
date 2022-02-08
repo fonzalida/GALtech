@@ -1,4 +1,4 @@
-﻿using CoolSoft.Vista.Cliente;
+﻿using CoolSoft.Vista.FormsCliente;
 using CoolSoft.Vista.Herencia;
 using CoolSoft.Vista.Orden;
 using CoolSoft.Vista.Tecnico;

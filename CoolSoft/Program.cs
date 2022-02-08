@@ -1,4 +1,5 @@
 ﻿using CoolSoft.Vista;
+using CoolSoft.Vista.Herencia;
 using CoolSoft.VISTA;
 using System;
 using System.Collections.Generic;
@@ -20,7 +21,12 @@ namespace connect
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new Form1());
             //Application.Run(new Test());
-            Application.Run(new FormularioPrincipal());
+            Application.Run(new Detalles());
+
+            //Application.Run(new FormularioPrincipal());
+
+
+
 
             //Application.Run(new FormPresentacion());
         }

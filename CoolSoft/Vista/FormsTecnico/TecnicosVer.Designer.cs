@@ -1,7 +1,7 @@
 ﻿
-namespace CoolSoft.Vista.Cliente
+namespace CoolSoft.Vista.Tecnico
 {
-    partial class ClienteVer
+    partial class TecnicosVer
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace CoolSoft.Vista.Cliente
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClienteVer));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TecnicosVer));
             this.pFecha.SuspendLayout();
             this.pTitulo.SuspendLayout();
             this.pMenu.SuspendLayout();
@@ -39,36 +39,54 @@ namespace CoolSoft.Vista.Cliente
             // 
             this.bAgregar.Click += new System.EventHandler(this.bAgregar_Click);
             // 
+            // bVer
+            // 
+            this.bVer.Click += new System.EventHandler(this.bVer_Click);
+            // 
             // mtbFinal
             // 
+            this.mtbFinal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.mtbFinal.Text = "06022022";
             // 
             // mtbInicial
             // 
+            this.mtbInicial.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.mtbInicial.Text = "01022022";
             // 
             // bMinimizar
             // 
-            this.bMinimizar.Location = new System.Drawing.Point(876, 10);
+            this.bMinimizar.Location = new System.Drawing.Point(1168, 12);
+            this.bMinimizar.Margin = new System.Windows.Forms.Padding(4);
             // 
             // bCerrar
             // 
-            this.bCerrar.Location = new System.Drawing.Point(906, 10);
+            this.bCerrar.Location = new System.Drawing.Point(1208, 12);
+            this.bCerrar.Margin = new System.Windows.Forms.Padding(4);
             // 
             // lTitulo
             // 
-            this.lTitulo.Size = new System.Drawing.Size(154, 39);
-            this.lTitulo.Text = "Ordenes";
+            this.lTitulo.Size = new System.Drawing.Size(162, 39);
+            this.lTitulo.Text = "Tecnicos";
             // 
-            // ClienteVer
+            // pTitulo
+            // 
+            this.pTitulo.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            // 
+            // pMenu
+            // 
+            this.pMenu.Margin = new System.Windows.Forms.Padding(5);
+            this.pMenu.Size = new System.Drawing.Size(1228, 107);
+            // 
+            // TecnicosVer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1228, 719);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "ClienteVer";
-            this.Text = "ClienteVer";
-            this.Load += new System.EventHandler(this.ClienteVer_Load);
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Name = "TecnicosVer";
+            this.Text = "TecnicosVer";
+            this.Load += new System.EventHandler(this.TecnicosVer_Load);
             this.pFecha.ResumeLayout(false);
             this.pFecha.PerformLayout();
             this.pTitulo.ResumeLayout(false);

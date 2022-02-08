@@ -1,5 +1,5 @@
-﻿using CoolSoft.DATOS.ENTIDADES;
-using CoolSoft.DATOS.REPOSITORIO;
+﻿using CoolSoft.Modelo.ENTIDADES;
+using CoolSoft.Modelo.REPOSITORIO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CoolSoft.DATOS.SERVICIO
+namespace CoolSoft.Modelo.SERVICIO
 {
     static public class ClienteService
     {

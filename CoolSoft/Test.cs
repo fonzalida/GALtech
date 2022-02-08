@@ -1,6 +1,6 @@
-﻿using CoolSoft.DATOS.ENTIDADES;
-using CoolSoft.DATOS.REPOSITORIO;
-using CoolSoft.DATOS.SERVICIO;
+﻿using CoolSoft.Modelo.ENTIDADES;
+using CoolSoft.Modelo.REPOSITORIO;
+using CoolSoft.Modelo.SERVICIO;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;

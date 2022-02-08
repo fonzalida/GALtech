@@ -1,5 +1,4 @@
-﻿using CoolSoft.Properties;
-using CoolSoft.Vista.Herencia;
+﻿using CoolSoft.Vista.Herencia;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,31 +9,29 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CoolSoft.Vista.Cliente
+namespace CoolSoft.Vista.Tecnico
 {
-    public partial class ClienteVer : Historico
+    public partial class TecnicosVer : Historico
     {
 
-        ClienteAgregar fAgregar;
-
-        public ClienteVer()
+        TecnicoAgregar fAgregar;
+        public TecnicosVer()
         {
             InitializeComponent();
-            lTitulo.Text = "Clientes";
+            lTitulo.Text = "Tecnicos";
             this.StartPosition = FormStartPosition.CenterScreen;
 
         }
 
-        private void ClienteVer_Load(object sender, EventArgs e)
+        private void TecnicosVer_Load(object sender, EventArgs e)
         {
-            this.Name = "Clientes";
+            this.Name = "Tecnicos";
             InitBotonesMinClose();
-
         }
 
         private void bAgregar_Click(object sender, EventArgs e)
         {
-            fAgregar = new ClienteAgregar(this);
+            fAgregar = new TecnicoAgregar(this);
             fAgregar.StartPosition = FormStartPosition.CenterScreen;
 
             this.Enabled = false;
@@ -43,6 +40,11 @@ namespace CoolSoft.Vista.Cliente
 
             fAgregar.FormBorderStyle = FormBorderStyle.None;
             fAgregar.Show();
+        }
+
+        private void bVer_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

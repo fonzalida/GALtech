@@ -4,10 +4,10 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using CoolSoft.DATOS.ENTIDADES;
+using CoolSoft.Modelo.ENTIDADES;
 using MySql.Data.MySqlClient;
 
-namespace CoolSoft.DATOS.REPOSITORIO
+namespace CoolSoft.Modelo.REPOSITORIO
 {
     public static class OrdenRepository
     {
