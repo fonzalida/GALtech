@@ -24,13 +24,13 @@ DROP TABLE IF EXISTS `cliente`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `cliente` (
   `IdCliente` int NOT NULL AUTO_INCREMENT,
-  `DniCuit` long NOT NULL,
+  `DniCuit` bigint NOT NULL,
   `Nombre` varchar(50) CHARACTER SET utf8 COLLATE utf8_spanish_ci DEFAULT NULL,
   `Domicilio` varchar(256) CHARACTER SET utf8 COLLATE utf8_spanish_ci DEFAULT NULL,
   `Localidad` varchar(256) CHARACTER SET utf8 COLLATE utf8_spanish_ci DEFAULT NULL,
   `Provincia` varchar(256) CHARACTER SET utf8 COLLATE utf8_spanish_ci DEFAULT NULL,
-  `Telefono1` long DEFAULT NULL,
-  `Telefono2` long DEFAULT NULL,
+  `Telefono1` bigint DEFAULT NULL,
+  `Telefono2` bigint DEFAULT NULL,
   PRIMARY KEY (`IdCliente`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8_spanish_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -109,7 +109,7 @@ DROP TABLE IF EXISTS `parteorden`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `parteorden` (
-  `IdParte` long NOT NULL AUTO_INCREMENT,
+  `IdParte` bigint NOT NULL AUTO_INCREMENT,
   `FechaInicio` datetime DEFAULT NULL,
   `FechaFin` datetime DEFAULT NULL,
   `IdOrden` int NOT NULL,
@@ -162,7 +162,7 @@ DROP TABLE IF EXISTS `tecnicoorden`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `tecnicoorden` (
   `Dni` int NOT NULL,
-  `IdParte` long NOT NULL,
+  `IdParte` bigint NOT NULL,
   PRIMARY KEY (`Dni`,`IdParte`),
   KEY `IdParte` (`IdParte`),
   CONSTRAINT `tecnicoorden_ibfk_1` FOREIGN KEY (`Dni`) REFERENCES `tecnico` (`Dni`) ON DELETE CASCADE ON UPDATE CASCADE,
