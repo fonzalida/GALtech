@@ -12,7 +12,7 @@ namespace CoolSoft.DATOS.ENTIDADES
 
         public string nombre { get; set; }
 
-        public string telefono { get; set; }
+        public long telefono { get; set; }
 
         public Tecnico() { }
         public Tecnico(int dni)

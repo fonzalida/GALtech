@@ -139,7 +139,7 @@ DROP TABLE IF EXISTS `tecnico`;
 CREATE TABLE `tecnico` (
   `Dni` int NOT NULL,
   `Nombre` varchar(50) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
-  `Telefono` int DEFAULT NULL,
+  `Telefono` bigint DEFAULT NULL,
   PRIMARY KEY (`Dni`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8_spanish_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
