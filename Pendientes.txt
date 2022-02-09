@@ -1,0 +1,9 @@
+OrdenService 
+
+modificar (cambiar para q los tecnicos orden se modifique como lista)
+
+TecnicoService
+
+falta modificar
+
+Modificar conexion.querys para que retornen List<Object> en vez de DataTable
