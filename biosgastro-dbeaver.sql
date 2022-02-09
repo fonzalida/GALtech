@@ -82,7 +82,6 @@ CREATE TABLE `orden` (
   `FechaRecepcion` datetime DEFAULT NULL,
   `IdOrden` int NOT NULL AUTO_INCREMENT,
   `TareaDesarrollar` varchar(256) CHARACTER SET utf8 COLLATE utf8_spanish_ci DEFAULT NULL,
-  `TareaDesarrollada` varchar(256) CHARACTER SET utf8 COLLATE utf8_spanish_ci DEFAULT NULL,
   `Precio` float DEFAULT NULL,
   `IdCliente` int NOT NULL,
   `Completada` tinyint(1) NOT NULL DEFAULT '0',
@@ -112,6 +111,7 @@ CREATE TABLE `parteorden` (
   `IdParte` bigint NOT NULL AUTO_INCREMENT,
   `FechaInicio` datetime DEFAULT NULL,
   `FechaFin` datetime DEFAULT NULL,
+  `TareaDesarrollada` varchar(256) CHARACTER SET utf8 COLLATE utf8_spanish_ci DEFAULT NULL,
   `IdOrden` int NOT NULL,
   `Completa` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`IdParte`),
@@ -178,6 +178,12 @@ LOCK TABLES `tecnicoorden` WRITE;
 /*!40000 ALTER TABLE `tecnicoorden` DISABLE KEYS */;
 /*!40000 ALTER TABLE `tecnicoorden` ENABLE KEYS */;
 UNLOCK TABLES;
+
+
+
+
+
+
 
 --
 -- Dumping routines for database 'biosgastro'
