@@ -75,34 +75,34 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
             // 
             // mtTelefono1
             // 
-            this.mtTelefono1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.mtTelefono1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.mtTelefono1.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mtTelefono1.Location = new System.Drawing.Point(43, 350);
             this.mtTelefono1.Mask = "999999999999";
             this.mtTelefono1.Name = "mtTelefono1";
             this.mtTelefono1.PromptChar = ' ';
-            this.mtTelefono1.Size = new System.Drawing.Size(200, 27);
+            this.mtTelefono1.Size = new System.Drawing.Size(200, 34);
             this.mtTelefono1.TabIndex = 60;
             // 
             // tbNombre
             // 
-            this.tbNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbNombre.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbNombre.Location = new System.Drawing.Point(43, 241);
             this.tbNombre.Name = "tbNombre";
-            this.tbNombre.Size = new System.Drawing.Size(345, 27);
+            this.tbNombre.Size = new System.Drawing.Size(345, 34);
             this.tbNombre.TabIndex = 59;
             // 
             // mtDniCuit
             // 
-            this.mtDniCuit.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.mtDniCuit.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.mtDniCuit.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mtDniCuit.Location = new System.Drawing.Point(43, 145);
             this.mtDniCuit.Margin = new System.Windows.Forms.Padding(4);
             this.mtDniCuit.Mask = "99999999999";
             this.mtDniCuit.Name = "mtDniCuit";
             this.mtDniCuit.PromptChar = ' ';
-            this.mtDniCuit.Size = new System.Drawing.Size(200, 27);
+            this.mtDniCuit.Size = new System.Drawing.Size(200, 34);
             this.mtDniCuit.TabIndex = 58;
             this.mtDniCuit.ValidatingType = typeof(int);
             // 

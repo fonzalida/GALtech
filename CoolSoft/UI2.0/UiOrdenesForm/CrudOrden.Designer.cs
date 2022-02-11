@@ -39,7 +39,6 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.label5 = new System.Windows.Forms.Label();
             this.textBoxNombre = new System.Windows.Forms.TextBox();
             this.maskedTextDni = new System.Windows.Forms.MaskedTextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panelMenu = new System.Windows.Forms.Panel();
             this.buttonCancelar = new System.Windows.Forms.Button();
@@ -86,7 +85,6 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.panelSuperior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(226)))), ((int)(((byte)(225)))));
             this.tableLayoutPanel1.SetColumnSpan(this.panelSuperior, 2);
             this.panelSuperior.Controls.Add(this.panelBuscar);
-            this.panelSuperior.Controls.Add(this.label1);
             this.panelSuperior.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelSuperior.Location = new System.Drawing.Point(3, 3);
             this.panelSuperior.Name = "panelSuperior";
@@ -102,7 +100,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.panelBuscar.Controls.Add(this.label5);
             this.panelBuscar.Controls.Add(this.textBoxNombre);
             this.panelBuscar.Controls.Add(this.maskedTextDni);
-            this.panelBuscar.Location = new System.Drawing.Point(3, 17);
+            this.panelBuscar.Location = new System.Drawing.Point(7, 14);
             this.panelBuscar.Name = "panelBuscar";
             this.panelBuscar.Size = new System.Drawing.Size(814, 57);
             this.panelBuscar.TabIndex = 9;
@@ -111,7 +109,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(492, 8);
+            this.label6.Location = new System.Drawing.Point(492, 3);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(87, 20);
             this.label6.TabIndex = 13;
@@ -126,7 +124,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             "Completas",
             "Pendientes",
             "En Curso"});
-            this.comboBox1.Location = new System.Drawing.Point(496, 26);
+            this.comboBox1.Location = new System.Drawing.Point(496, 24);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 31);
             this.comboBox1.TabIndex = 12;
@@ -136,7 +134,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(191, 8);
+            this.label4.Location = new System.Drawing.Point(184, 1);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(61, 20);
             this.label4.TabIndex = 11;
@@ -162,7 +160,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(12, 8);
+            this.label5.Location = new System.Drawing.Point(5, 1);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(95, 20);
             this.label5.TabIndex = 10;
@@ -170,36 +168,25 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             // 
             // textBoxNombre
             // 
-            this.textBoxNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxNombre.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxNombre.Location = new System.Drawing.Point(195, 31);
+            this.textBoxNombre.Location = new System.Drawing.Point(188, 24);
             this.textBoxNombre.Name = "textBoxNombre";
-            this.textBoxNombre.Size = new System.Drawing.Size(283, 23);
+            this.textBoxNombre.Size = new System.Drawing.Size(283, 30);
             this.textBoxNombre.TabIndex = 1;
             // 
             // maskedTextDni
             // 
-            this.maskedTextDni.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.maskedTextDni.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.maskedTextDni.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextDni.Location = new System.Drawing.Point(16, 31);
+            this.maskedTextDni.Location = new System.Drawing.Point(9, 24);
             this.maskedTextDni.Mask = "99999999999";
             this.maskedTextDni.Name = "maskedTextDni";
             this.maskedTextDni.PromptChar = ' ';
-            this.maskedTextDni.Size = new System.Drawing.Size(150, 23);
+            this.maskedTextDni.Size = new System.Drawing.Size(150, 30);
             this.maskedTextDni.TabIndex = 0;
             this.maskedTextDni.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.maskedTextDni.ValidatingType = typeof(int);
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(826, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(188, 38);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "ORDENES";
             // 
             // dataGridView1
             // 
@@ -387,7 +374,6 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.Text = "CrudOrden";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panelSuperior.ResumeLayout(false);
-            this.panelSuperior.PerformLayout();
             this.panelBuscar.ResumeLayout(false);
             this.panelBuscar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -403,7 +389,6 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
         public System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panelSuperior;
         public System.Windows.Forms.Button buttonBuscar;
-        public System.Windows.Forms.Label label1;
         public System.Windows.Forms.TextBox textBoxNombre;
         public System.Windows.Forms.MaskedTextBox maskedTextDni;
         public System.Windows.Forms.DataGridView dataGridView1;

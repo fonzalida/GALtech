@@ -31,8 +31,9 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panelSuperior = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.buttonBuscar = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.textBoxNombre = new System.Windows.Forms.TextBox();
             this.maskedTextDni = new System.Windows.Forms.MaskedTextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -40,8 +41,8 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
             this.buttonEliminar = new System.Windows.Forms.Button();
             this.buttonDetalles = new System.Windows.Forms.Button();
             this.buttonAgregar = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.buttonCancelar = new System.Windows.Forms.Button();
+            this.buttonVer = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.panelSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -75,7 +76,6 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
             this.panelSuperior.Controls.Add(this.label4);
             this.panelSuperior.Controls.Add(this.label5);
             this.panelSuperior.Controls.Add(this.buttonBuscar);
-            this.panelSuperior.Controls.Add(this.label1);
             this.panelSuperior.Controls.Add(this.textBoxNombre);
             this.panelSuperior.Controls.Add(this.maskedTextDni);
             this.panelSuperior.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -83,6 +83,26 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
             this.panelSuperior.Name = "panelSuperior";
             this.panelSuperior.Size = new System.Drawing.Size(1020, 74);
             this.panelSuperior.TabIndex = 0;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(192, 11);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(143, 20);
+            this.label4.TabIndex = 13;
+            this.label4.Text = "Nombre y apellido";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(19, 11);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(35, 20);
+            this.label5.TabIndex = 12;
+            this.label5.Text = "Dni";
             // 
             // buttonBuscar
             // 
@@ -92,7 +112,7 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
             this.buttonBuscar.ForeColor = System.Drawing.SystemColors.Control;
             this.buttonBuscar.Image = global::CoolSoft.Properties.Resources.search;
             this.buttonBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonBuscar.Location = new System.Drawing.Point(498, 27);
+            this.buttonBuscar.Location = new System.Drawing.Point(496, 29);
             this.buttonBuscar.Name = "buttonBuscar";
             this.buttonBuscar.Size = new System.Drawing.Size(152, 37);
             this.buttonBuscar.TabIndex = 3;
@@ -100,38 +120,25 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
             this.buttonBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonBuscar.UseVisualStyleBackColor = false;
             // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(814, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(203, 39);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "TECNICOS";
-            // 
             // textBoxNombre
             // 
-            this.textBoxNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxNombre.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxNombre.Location = new System.Drawing.Point(196, 34);
             this.textBoxNombre.Name = "textBoxNombre";
-            this.textBoxNombre.Size = new System.Drawing.Size(283, 23);
+            this.textBoxNombre.Size = new System.Drawing.Size(283, 30);
             this.textBoxNombre.TabIndex = 1;
-            this.textBoxNombre.Text = "LEANDRO ILLANES";
             // 
             // maskedTextDni
             // 
-            this.maskedTextDni.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.maskedTextDni.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.maskedTextDni.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.maskedTextDni.Location = new System.Drawing.Point(23, 34);
             this.maskedTextDni.Mask = "99999999999";
             this.maskedTextDni.Name = "maskedTextDni";
             this.maskedTextDni.PromptChar = ' ';
-            this.maskedTextDni.Size = new System.Drawing.Size(150, 23);
+            this.maskedTextDni.Size = new System.Drawing.Size(150, 30);
             this.maskedTextDni.TabIndex = 0;
-            this.maskedTextDni.Text = "00000000000";
             this.maskedTextDni.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.maskedTextDni.ValidatingType = typeof(int);
             // 
@@ -150,6 +157,8 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
             // panelMenu
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.panelMenu, 2);
+            this.panelMenu.Controls.Add(this.buttonCancelar);
+            this.panelMenu.Controls.Add(this.buttonVer);
             this.panelMenu.Controls.Add(this.buttonEliminar);
             this.panelMenu.Controls.Add(this.buttonDetalles);
             this.panelMenu.Controls.Add(this.buttonAgregar);
@@ -208,25 +217,39 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
             this.buttonAgregar.UseVisualStyleBackColor = false;
             this.buttonAgregar.Click += new System.EventHandler(this.buttonAgregar_Click);
             // 
-            // label4
+            // buttonCancelar
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(192, 11);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(143, 20);
-            this.label4.TabIndex = 13;
-            this.label4.Text = "Nombre y apellido";
+            this.buttonCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonCancelar.BackColor = System.Drawing.Color.ForestGreen;
+            this.buttonCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCancelar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCancelar.ForeColor = System.Drawing.SystemColors.Control;
+            this.buttonCancelar.Image = global::CoolSoft.Properties.Resources.cancel;
+            this.buttonCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonCancelar.Location = new System.Drawing.Point(865, 3);
+            this.buttonCancelar.Name = "buttonCancelar";
+            this.buttonCancelar.Size = new System.Drawing.Size(152, 54);
+            this.buttonCancelar.TabIndex = 17;
+            this.buttonCancelar.Text = "Cancelar";
+            this.buttonCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonCancelar.UseVisualStyleBackColor = false;
             // 
-            // label5
+            // buttonVer
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(19, 11);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(35, 20);
-            this.label5.TabIndex = 12;
-            this.label5.Text = "Dni";
+            this.buttonVer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonVer.BackColor = System.Drawing.Color.ForestGreen;
+            this.buttonVer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonVer.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonVer.ForeColor = System.Drawing.SystemColors.Control;
+            this.buttonVer.Image = global::CoolSoft.Properties.Resources.check;
+            this.buttonVer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonVer.Location = new System.Drawing.Point(707, 3);
+            this.buttonVer.Name = "buttonVer";
+            this.buttonVer.Size = new System.Drawing.Size(152, 54);
+            this.buttonVer.TabIndex = 16;
+            this.buttonVer.Text = "Ver";
+            this.buttonVer.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonVer.UseVisualStyleBackColor = false;
             // 
             // CrudTecnico
             // 
@@ -251,7 +274,6 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
         public System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panelSuperior;
         public System.Windows.Forms.Button buttonBuscar;
-        public System.Windows.Forms.Label label1;
         public System.Windows.Forms.TextBox textBoxNombre;
         public System.Windows.Forms.MaskedTextBox maskedTextDni;
         public System.Windows.Forms.DataGridView dataGridView1;
@@ -261,5 +283,7 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
         public System.Windows.Forms.Button buttonAgregar;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        public System.Windows.Forms.Button buttonCancelar;
+        public System.Windows.Forms.Button buttonVer;
     }
 }

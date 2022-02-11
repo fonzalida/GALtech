@@ -116,18 +116,18 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             // 
             // mtIdCliente
             // 
-            this.mtIdCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.mtIdCliente.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.mtIdCliente.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtIdCliente.Location = new System.Drawing.Point(448, 581);
+            this.mtIdCliente.Location = new System.Drawing.Point(462, 579);
             this.mtIdCliente.Mask = "99999999999";
             this.mtIdCliente.Name = "mtIdCliente";
             this.mtIdCliente.PromptChar = ' ';
-            this.mtIdCliente.Size = new System.Drawing.Size(162, 27);
+            this.mtIdCliente.Size = new System.Drawing.Size(162, 34);
             this.mtIdCliente.TabIndex = 25;
             // 
             // tbTareaDesarrollar
             // 
-            this.tbTareaDesarrollar.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbTareaDesarrollar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbTareaDesarrollar.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbTareaDesarrollar.Location = new System.Drawing.Point(40, 119);
             this.tbTareaDesarrollar.Multiline = true;
@@ -173,22 +173,22 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             // 
             // textBoxNombre
             // 
-            this.textBoxNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxNombre.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxNombre.Location = new System.Drawing.Point(213, 342);
             this.textBoxNombre.Name = "textBoxNombre";
-            this.textBoxNombre.Size = new System.Drawing.Size(283, 23);
+            this.textBoxNombre.Size = new System.Drawing.Size(283, 30);
             this.textBoxNombre.TabIndex = 32;
             // 
             // maskedTextDni
             // 
-            this.maskedTextDni.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.maskedTextDni.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.maskedTextDni.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.maskedTextDni.Location = new System.Drawing.Point(40, 342);
             this.maskedTextDni.Mask = "99999999999";
             this.maskedTextDni.Name = "maskedTextDni";
             this.maskedTextDni.PromptChar = ' ';
-            this.maskedTextDni.Size = new System.Drawing.Size(150, 23);
+            this.maskedTextDni.Size = new System.Drawing.Size(150, 30);
             this.maskedTextDni.TabIndex = 31;
             this.maskedTextDni.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.maskedTextDni.ValidatingType = typeof(int);

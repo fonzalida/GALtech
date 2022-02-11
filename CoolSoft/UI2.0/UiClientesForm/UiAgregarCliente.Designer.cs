@@ -123,72 +123,72 @@ namespace CoolSoft.UI2._0.UiClientesForm
             // 
             // mtTelefono2
             // 
-            this.mtTelefono2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.mtTelefono2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.mtTelefono2.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mtTelefono2.Location = new System.Drawing.Point(270, 325);
             this.mtTelefono2.Mask = "999999999999";
             this.mtTelefono2.Name = "mtTelefono2";
             this.mtTelefono2.PromptChar = ' ';
-            this.mtTelefono2.Size = new System.Drawing.Size(200, 27);
+            this.mtTelefono2.Size = new System.Drawing.Size(200, 34);
             this.mtTelefono2.TabIndex = 51;
             // 
             // mtTelefono1
             // 
-            this.mtTelefono1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.mtTelefono1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.mtTelefono1.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mtTelefono1.Location = new System.Drawing.Point(40, 325);
             this.mtTelefono1.Mask = "999999999999";
             this.mtTelefono1.Name = "mtTelefono1";
             this.mtTelefono1.PromptChar = ' ';
-            this.mtTelefono1.Size = new System.Drawing.Size(200, 27);
+            this.mtTelefono1.Size = new System.Drawing.Size(200, 34);
             this.mtTelefono1.TabIndex = 50;
             // 
             // tbProvincia
             // 
-            this.tbProvincia.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbProvincia.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbProvincia.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbProvincia.Location = new System.Drawing.Point(40, 251);
             this.tbProvincia.Name = "tbProvincia";
-            this.tbProvincia.Size = new System.Drawing.Size(200, 27);
+            this.tbProvincia.Size = new System.Drawing.Size(200, 34);
             this.tbProvincia.TabIndex = 49;
             // 
             // tbLocalidad
             // 
-            this.tbLocalidad.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbLocalidad.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbLocalidad.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbLocalidad.Location = new System.Drawing.Point(40, 175);
             this.tbLocalidad.Name = "tbLocalidad";
-            this.tbLocalidad.Size = new System.Drawing.Size(200, 27);
+            this.tbLocalidad.Size = new System.Drawing.Size(200, 34);
             this.tbLocalidad.TabIndex = 48;
             // 
             // tbDomicilio
             // 
-            this.tbDomicilio.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbDomicilio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbDomicilio.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbDomicilio.Location = new System.Drawing.Point(270, 175);
             this.tbDomicilio.Name = "tbDomicilio";
-            this.tbDomicilio.Size = new System.Drawing.Size(345, 27);
+            this.tbDomicilio.Size = new System.Drawing.Size(345, 34);
             this.tbDomicilio.TabIndex = 47;
             // 
             // tbNombre
             // 
-            this.tbNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbNombre.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbNombre.Location = new System.Drawing.Point(270, 100);
             this.tbNombre.Name = "tbNombre";
-            this.tbNombre.Size = new System.Drawing.Size(345, 27);
+            this.tbNombre.Size = new System.Drawing.Size(345, 34);
             this.tbNombre.TabIndex = 46;
             // 
             // mtDniCuit
             // 
-            this.mtDniCuit.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.mtDniCuit.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.mtDniCuit.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mtDniCuit.Location = new System.Drawing.Point(40, 100);
             this.mtDniCuit.Margin = new System.Windows.Forms.Padding(4);
             this.mtDniCuit.Mask = "99999999999";
             this.mtDniCuit.Name = "mtDniCuit";
             this.mtDniCuit.PromptChar = ' ';
-            this.mtDniCuit.Size = new System.Drawing.Size(200, 27);
+            this.mtDniCuit.Size = new System.Drawing.Size(200, 34);
             this.mtDniCuit.TabIndex = 45;
             this.mtDniCuit.ValidatingType = typeof(int);
             // 

@@ -138,10 +138,10 @@ namespace CoolSoft.UI2._0
 
         private void buttonOrdenes_Click(object sender, EventArgs e)
         {
-            if (formActivo != 1)
+            if (formActivo != 3)
             {
                 labelTitulo.Text = "ORDENES";
-                formActivo = 1;
+                formActivo = 3;
 
                 if (this.panelContenedor.Controls.Count > 0)
                     this.panelContenedor.Controls.RemoveAt(0);
