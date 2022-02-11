@@ -1,4 +1,5 @@
-﻿using CoolSoft.Vista;
+﻿using CoolSoft.UI2._0;
+using CoolSoft.Vista;
 using CoolSoft.Vista.Herencia;
 using CoolSoft.VISTA;
 using System;
@@ -23,8 +24,9 @@ namespace connect
             //Application.Run(new Test());
             //Application.Run(new Detalles());
 
-            Application.Run(new FormularioPrincipal());
+            //Application.Run(new FormularioPrincipal());
 
+            Application.Run(new UiPrincipal());
 
 
 

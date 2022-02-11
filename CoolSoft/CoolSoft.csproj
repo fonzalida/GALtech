@@ -111,6 +111,60 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI2.0\Genericos\UiAgregar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI2.0\Genericos\UiAgregar.Designer.cs">
+      <DependentUpon>UiAgregar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI2.0\Genericos\UiBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI2.0\Genericos\UiBase.Designer.cs">
+      <DependentUpon>UiBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI2.0\UiClientesForm\CrudCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI2.0\UiClientesForm\CrudCliente.Designer.cs">
+      <DependentUpon>CrudCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI2.0\UiClientesForm\UiAgregarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI2.0\UiClientesForm\UiAgregarCliente.Designer.cs">
+      <DependentUpon>UiAgregarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI2.0\UiOrdenesForm\CrudOrden.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI2.0\UiOrdenesForm\CrudOrden.Designer.cs">
+      <DependentUpon>CrudOrden.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI2.0\UiOrdenesForm\UiAgregarOrden.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI2.0\UiOrdenesForm\UiAgregarOrden.Designer.cs">
+      <DependentUpon>UiAgregarOrden.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI2.0\UiPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI2.0\UiPrincipal.Designer.cs">
+      <DependentUpon>UiPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI2.0\UiTecnicosForm\CrudTecnico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI2.0\UiTecnicosForm\CrudTecnico.Designer.cs">
+      <DependentUpon>CrudTecnico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI2.0\UiTecnicosForm\UiAgregarTecnico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI2.0\UiTecnicosForm\UiAgregarTecnico.Designer.cs">
+      <DependentUpon>UiAgregarTecnico.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\FormsCliente\ClienteAgregar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -214,6 +268,33 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UI2.0\Genericos\UiAgregar.resx">
+      <DependentUpon>UiAgregar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI2.0\Genericos\UiBase.resx">
+      <DependentUpon>UiBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI2.0\UiClientesForm\CrudCliente.resx">
+      <DependentUpon>CrudCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI2.0\UiClientesForm\UiAgregarCliente.resx">
+      <DependentUpon>UiAgregarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI2.0\UiOrdenesForm\CrudOrden.resx">
+      <DependentUpon>CrudOrden.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI2.0\UiOrdenesForm\UiAgregarOrden.resx">
+      <DependentUpon>UiAgregarOrden.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI2.0\UiPrincipal.resx">
+      <DependentUpon>UiPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI2.0\UiTecnicosForm\CrudTecnico.resx">
+      <DependentUpon>CrudTecnico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI2.0\UiTecnicosForm\UiAgregarTecnico.resx">
+      <DependentUpon>UiAgregarTecnico.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\FormsCliente\ClienteAgregar.resx">
       <DependentUpon>ClienteAgregar.cs</DependentUpon>
     </EmbeddedResource>
@@ -342,6 +423,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ok.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fullscreenExitForm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\closeForm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fullscreenEnterForm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimizeForm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cliente1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\orden1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tecnico1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
