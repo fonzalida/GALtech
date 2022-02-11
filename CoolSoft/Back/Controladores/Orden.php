@@ -20,6 +20,11 @@
         echo json_encode($datos);
       break;
 
+      case 'UpdateOrden':
+        $datos=$orden->update_parte_orden($body["FechaInicio"],$body["FechaFin"],$body["TareaDesarrollada"],$body["IdParte"],$body["Completada"],$body["IdOrden"]);
+        echo "Correcto";
+      break;
+
       default:
         // code...
         break;
