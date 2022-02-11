@@ -38,8 +38,8 @@ namespace CoolSoft.Vista.Herencia
             this.bVer = new System.Windows.Forms.Button();
             this.bCancelar = new System.Windows.Forms.Button();
             this.pFecha = new System.Windows.Forms.Panel();
-            this.mtbFinal = new System.Windows.Forms.MaskedTextBox();
-            this.mtbInicial = new System.Windows.Forms.MaskedTextBox();
+            this.dtFinal = new System.Windows.Forms.DateTimePicker();
+            this.dtInicial = new System.Windows.Forms.DateTimePicker();
             this.checkBoxTodos = new System.Windows.Forms.CheckBox();
             this.lFFinal = new System.Windows.Forms.Label();
             this.labelFInicial = new System.Windows.Forms.Label();
@@ -73,7 +73,7 @@ namespace CoolSoft.Vista.Herencia
             this.pMenu.Controls.Add(this.pBuscar);
             this.pMenu.Controls.Add(this.pFecha);
             this.pMenu.Margin = new System.Windows.Forms.Padding(4);
-            this.pMenu.Size = new System.Drawing.Size(1228, 131);
+            this.pMenu.Size = new System.Drawing.Size(1228, 107);
             // 
             // dataGridHistorico
             // 
@@ -82,7 +82,7 @@ namespace CoolSoft.Vista.Herencia
             this.dataGridHistorico.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridHistorico.Name = "dataGridHistorico";
             this.dataGridHistorico.RowHeadersWidth = 51;
-            this.dataGridHistorico.Size = new System.Drawing.Size(1043, 474);
+            this.dataGridHistorico.Size = new System.Drawing.Size(1043, 444);
             this.dataGridHistorico.TabIndex = 9;
             // 
             // bAgregar
@@ -128,7 +128,7 @@ namespace CoolSoft.Vista.Herencia
             // ssEstado
             // 
             this.ssEstado.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.ssEstado.Location = new System.Drawing.Point(0, 697);
+            this.ssEstado.Location = new System.Drawing.Point(0, 647);
             this.ssEstado.Name = "ssEstado";
             this.ssEstado.Padding = new System.Windows.Forms.Padding(1, 0, 19, 0);
             this.ssEstado.Size = new System.Drawing.Size(1228, 22);
@@ -141,7 +141,7 @@ namespace CoolSoft.Vista.Herencia
             this.bVer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.bVer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bVer.Image = ((System.Drawing.Image)(resources.GetObject("bVer.Image")));
-            this.bVer.Location = new System.Drawing.Point(533, 21);
+            this.bVer.Location = new System.Drawing.Point(485, 10);
             this.bVer.Margin = new System.Windows.Forms.Padding(4);
             this.bVer.Name = "bVer";
             this.bVer.Size = new System.Drawing.Size(119, 79);
@@ -156,7 +156,7 @@ namespace CoolSoft.Vista.Herencia
             this.bCancelar.BackColor = System.Drawing.SystemColors.Control;
             this.bCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bCancelar.Image = ((System.Drawing.Image)(resources.GetObject("bCancelar.Image")));
-            this.bCancelar.Location = new System.Drawing.Point(660, 21);
+            this.bCancelar.Location = new System.Drawing.Point(612, 10);
             this.bCancelar.Margin = new System.Windows.Forms.Padding(4);
             this.bCancelar.Name = "bCancelar";
             this.bCancelar.Size = new System.Drawing.Size(119, 80);
@@ -170,47 +170,42 @@ namespace CoolSoft.Vista.Herencia
             // 
             this.pFecha.BackColor = System.Drawing.Color.LightGray;
             this.pFecha.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pFecha.Controls.Add(this.mtbFinal);
-            this.pFecha.Controls.Add(this.mtbInicial);
+            this.pFecha.Controls.Add(this.dtFinal);
+            this.pFecha.Controls.Add(this.dtInicial);
             this.pFecha.Controls.Add(this.checkBoxTodos);
             this.pFecha.Controls.Add(this.lFFinal);
             this.pFecha.Controls.Add(this.labelFInicial);
             this.pFecha.Location = new System.Drawing.Point(12, 10);
             this.pFecha.Margin = new System.Windows.Forms.Padding(4);
             this.pFecha.Name = "pFecha";
-            this.pFecha.Size = new System.Drawing.Size(513, 96);
+            this.pFecha.Size = new System.Drawing.Size(465, 80);
             this.pFecha.TabIndex = 15;
             // 
-            // mtbFinal
+            // dtFinal
             // 
-            this.mtbFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtbFinal.Location = new System.Drawing.Point(352, 6);
-            this.mtbFinal.Margin = new System.Windows.Forms.Padding(4);
-            this.mtbFinal.Mask = "00/00/0000";
-            this.mtbFinal.Name = "mtbFinal";
-            this.mtbFinal.Size = new System.Drawing.Size(132, 30);
-            this.mtbFinal.TabIndex = 6;
-            this.mtbFinal.ValidatingType = typeof(System.DateTime);
-            this.mtbFinal.Enter += new System.EventHandler(this.SelectAll_OnTextBoxEnter);
+            this.dtFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtFinal.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtFinal.Location = new System.Drawing.Point(86, 45);
+            this.dtFinal.Name = "dtFinal";
+            this.dtFinal.Size = new System.Drawing.Size(132, 30);
+            this.dtFinal.TabIndex = 8;
             // 
-            // mtbInicial
+            // dtInicial
             // 
-            this.mtbInicial.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtbInicial.Location = new System.Drawing.Point(87, 6);
-            this.mtbInicial.Margin = new System.Windows.Forms.Padding(4);
-            this.mtbInicial.Mask = "00/00/0000";
-            this.mtbInicial.Name = "mtbInicial";
-            this.mtbInicial.Size = new System.Drawing.Size(132, 30);
-            this.mtbInicial.TabIndex = 5;
-            this.mtbInicial.ValidatingType = typeof(System.DateTime);
-            this.mtbInicial.Enter += new System.EventHandler(this.SelectAll_OnTextBoxEnter);
+            this.dtInicial.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtInicial.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtInicial.Location = new System.Drawing.Point(86, 6);
+            this.dtInicial.MinDate = new System.DateTime(2010, 1, 1, 0, 0, 0, 0);
+            this.dtInicial.Name = "dtInicial";
+            this.dtInicial.Size = new System.Drawing.Size(132, 30);
+            this.dtInicial.TabIndex = 7;
             // 
             // checkBoxTodos
             // 
             this.checkBoxTodos.AutoSize = true;
             this.checkBoxTodos.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.checkBoxTodos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxTodos.Location = new System.Drawing.Point(9, 50);
+            this.checkBoxTodos.Location = new System.Drawing.Point(237, 25);
             this.checkBoxTodos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkBoxTodos.Name = "checkBoxTodos";
             this.checkBoxTodos.Size = new System.Drawing.Size(199, 29);
@@ -223,7 +218,7 @@ namespace CoolSoft.Vista.Herencia
             // 
             this.lFFinal.AutoSize = true;
             this.lFFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lFFinal.Location = new System.Drawing.Point(275, 4);
+            this.lFFinal.Location = new System.Drawing.Point(10, 45);
             this.lFFinal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lFFinal.Name = "lFFinal";
             this.lFFinal.Size = new System.Drawing.Size(63, 25);
@@ -234,7 +229,7 @@ namespace CoolSoft.Vista.Herencia
             // 
             this.labelFInicial.AutoSize = true;
             this.labelFInicial.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelFInicial.Location = new System.Drawing.Point(4, 4);
+            this.labelFInicial.Location = new System.Drawing.Point(4, 6);
             this.labelFInicial.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelFInicial.Name = "labelFInicial";
             this.labelFInicial.Size = new System.Drawing.Size(69, 25);
@@ -246,10 +241,10 @@ namespace CoolSoft.Vista.Herencia
             this.pBuscar.BackColor = System.Drawing.Color.LightGray;
             this.pBuscar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pBuscar.Controls.Add(this.bBuscar);
-            this.pBuscar.Location = new System.Drawing.Point(787, 14);
+            this.pBuscar.Location = new System.Drawing.Point(739, 14);
             this.pBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.pBuscar.Name = "pBuscar";
-            this.pBuscar.Size = new System.Drawing.Size(427, 91);
+            this.pBuscar.Size = new System.Drawing.Size(475, 76);
             this.pBuscar.TabIndex = 18;
             // 
             // bBuscar
@@ -257,7 +252,7 @@ namespace CoolSoft.Vista.Herencia
             this.bBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bBuscar.Image = global::CoolSoft.Properties.Resources.search;
-            this.bBuscar.Location = new System.Drawing.Point(279, 4);
+            this.bBuscar.Location = new System.Drawing.Point(328, -1);
             this.bBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.bBuscar.Name = "bBuscar";
             this.bBuscar.Size = new System.Drawing.Size(143, 81);
@@ -274,7 +269,7 @@ namespace CoolSoft.Vista.Herencia
             this.pCostado.Location = new System.Drawing.Point(1064, 199);
             this.pCostado.Margin = new System.Windows.Forms.Padding(4);
             this.pCostado.Name = "pCostado";
-            this.pCostado.Size = new System.Drawing.Size(164, 474);
+            this.pCostado.Size = new System.Drawing.Size(164, 444);
             this.pCostado.TabIndex = 17;
             // 
             // bCerrar
@@ -303,7 +298,7 @@ namespace CoolSoft.Vista.Herencia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1228, 719);
+            this.ClientSize = new System.Drawing.Size(1228, 669);
             this.Controls.Add(this.pCostado);
             this.Controls.Add(this.ssEstado);
             this.Controls.Add(this.dataGridHistorico);
@@ -345,9 +340,9 @@ namespace CoolSoft.Vista.Herencia
         private System.Windows.Forms.Button bBuscar;
         private System.Windows.Forms.CheckBox checkBoxTodos;
         private System.Windows.Forms.Panel pCostado;
-        public System.Windows.Forms.MaskedTextBox mtbFinal;
-        public System.Windows.Forms.MaskedTextBox mtbInicial;
         public System.Windows.Forms.Button bMinimizar;
         public System.Windows.Forms.Button bCerrar;
+        public System.Windows.Forms.DateTimePicker dtInicial;
+        public System.Windows.Forms.DateTimePicker dtFinal;
     }
 }

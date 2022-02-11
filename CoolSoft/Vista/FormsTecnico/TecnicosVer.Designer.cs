@@ -43,16 +43,6 @@ namespace CoolSoft.Vista.Tecnico
             // 
             this.bVer.Click += new System.EventHandler(this.bVer_Click);
             // 
-            // mtbFinal
-            // 
-            this.mtbFinal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.mtbFinal.Text = "06022022";
-            // 
-            // mtbInicial
-            // 
-            this.mtbInicial.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.mtbInicial.Text = "01022022";
-            // 
             // bMinimizar
             // 
             this.bMinimizar.Location = new System.Drawing.Point(1168, 12);
@@ -62,6 +52,14 @@ namespace CoolSoft.Vista.Tecnico
             // 
             this.bCerrar.Location = new System.Drawing.Point(1208, 12);
             this.bCerrar.Margin = new System.Windows.Forms.Padding(4);
+            // 
+            // dtInicial
+            // 
+            this.dtInicial.Value = new System.DateTime(2022, 2, 1, 0, 0, 0, 0);
+            // 
+            // dtFinal
+            // 
+            this.dtFinal.Value = new System.DateTime(2022, 2, 10, 0, 0, 0, 0);
             // 
             // lTitulo
             // 
@@ -75,13 +73,12 @@ namespace CoolSoft.Vista.Tecnico
             // pMenu
             // 
             this.pMenu.Margin = new System.Windows.Forms.Padding(5);
-            this.pMenu.Size = new System.Drawing.Size(1228, 107);
             // 
             // TecnicosVer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1228, 719);
+            this.ClientSize = new System.Drawing.Size(1228, 669);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "TecnicosVer";

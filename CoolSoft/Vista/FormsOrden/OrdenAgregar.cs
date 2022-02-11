@@ -26,7 +26,7 @@ namespace CoolSoft.Vista.Orden
         private void OrdenesAgregar_Load(object sender, EventArgs e)
         {
             lTitulo.Text = "Agregar Orden";
-            IniciarMaskFechasIndividual(mtFechaRecepcion);
+            
             IniciarMaskNumericoIndividual_11(mtIdCliente);
         }
 
@@ -45,6 +45,16 @@ namespace CoolSoft.Vista.Orden
             fCSeleccion.MdiParent = this.MdiParent;
 
             fCSeleccion.Show();
+        }
+
+        private void bCancelar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bAgregar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

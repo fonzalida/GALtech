@@ -30,13 +30,13 @@ namespace CoolSoft.Vista.Orden
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OrdenAgregar));
-            this.mtFechaRecepcion = new System.Windows.Forms.MaskedTextBox();
             this.tbTareaDesarrollar = new System.Windows.Forms.TextBox();
             this.mtIdCliente = new System.Windows.Forms.MaskedTextBox();
             this.bSeleccionarCliente = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.dtFechaRecepcion = new System.Windows.Forms.DateTimePicker();
             this.pTitulo.SuspendLayout();
             this.pMenu.SuspendLayout();
             this.SuspendLayout();
@@ -45,39 +45,26 @@ namespace CoolSoft.Vista.Orden
             // 
             this.bAgregar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bAgregar.Location = new System.Drawing.Point(357, 8);
+            this.bAgregar.Click += new System.EventHandler(this.bAgregar_Click);
             // 
-            // bCancelar
+            // bCerrar
             // 
             this.bCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bCerrar.Location = new System.Drawing.Point(611, 8);
             // 
-            // bLimpiar
+            // bCancelar
             // 
             this.bCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bCancelar.Location = new System.Drawing.Point(484, 8);
-            // 
-            // pTitulo
-            // 
-            this.pTitulo.Size = new System.Drawing.Size(744, 62);
+            this.bCancelar.Click += new System.EventHandler(this.bCancelar_Click);
             // 
             // pMenu
             // 
             this.pMenu.Controls.Add(this.bSeleccionarCliente);
-            this.pMenu.Size = new System.Drawing.Size(744, 98);
             this.pMenu.Controls.SetChildIndex(this.bSeleccionarCliente, 0);
             this.pMenu.Controls.SetChildIndex(this.bAgregar, 0);
             this.pMenu.Controls.SetChildIndex(this.bCerrar, 0);
             this.pMenu.Controls.SetChildIndex(this.bCancelar, 0);
-            // 
-            // mtFechaRecepcion
-            // 
-            this.mtFechaRecepcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtFechaRecepcion.Location = new System.Drawing.Point(275, 169);
-            this.mtFechaRecepcion.Mask = "00/00/0000";
-            this.mtFechaRecepcion.Name = "mtFechaRecepcion";
-            this.mtFechaRecepcion.Size = new System.Drawing.Size(162, 34);
-            this.mtFechaRecepcion.TabIndex = 1;
-            this.mtFechaRecepcion.ValidatingType = typeof(System.DateTime);
             // 
             // tbTareaDesarrollar
             // 
@@ -139,17 +126,26 @@ namespace CoolSoft.Vista.Orden
             this.label3.TabIndex = 23;
             this.label3.Text = "Num Cliente";
             // 
+            // dtFechaRecepcion
+            // 
+            this.dtFechaRecepcion.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtFechaRecepcion.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtFechaRecepcion.Location = new System.Drawing.Point(275, 168);
+            this.dtFechaRecepcion.Name = "dtFechaRecepcion";
+            this.dtFechaRecepcion.Size = new System.Drawing.Size(162, 34);
+            this.dtFechaRecepcion.TabIndex = 24;
+            // 
             // OrdenAgregar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(744, 514);
+            this.Controls.Add(this.dtFechaRecepcion);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.mtIdCliente);
             this.Controls.Add(this.tbTareaDesarrollar);
-            this.Controls.Add(this.mtFechaRecepcion);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "OrdenAgregar";
             this.Text = "OrdenesAgregar";
@@ -157,12 +153,12 @@ namespace CoolSoft.Vista.Orden
             this.Load += new System.EventHandler(this.OrdenesAgregar_Load);
             this.Controls.SetChildIndex(this.pTitulo, 0);
             this.Controls.SetChildIndex(this.pMenu, 0);
-            this.Controls.SetChildIndex(this.mtFechaRecepcion, 0);
             this.Controls.SetChildIndex(this.tbTareaDesarrollar, 0);
             this.Controls.SetChildIndex(this.mtIdCliente, 0);
             this.Controls.SetChildIndex(this.label1, 0);
             this.Controls.SetChildIndex(this.label2, 0);
             this.Controls.SetChildIndex(this.label3, 0);
+            this.Controls.SetChildIndex(this.dtFechaRecepcion, 0);
             this.pTitulo.ResumeLayout(false);
             this.pTitulo.PerformLayout();
             this.pMenu.ResumeLayout(false);
@@ -172,13 +168,12 @@ namespace CoolSoft.Vista.Orden
         }
 
         #endregion
-
-        private System.Windows.Forms.MaskedTextBox mtFechaRecepcion;
         private System.Windows.Forms.TextBox tbTareaDesarrollar;
         private System.Windows.Forms.MaskedTextBox mtIdCliente;
         private System.Windows.Forms.Button bSeleccionarCliente;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DateTimePicker dtFechaRecepcion;
     }
 }

@@ -39,14 +39,6 @@ namespace CoolSoft.Vista.Orden
             // 
             this.bAgregar.Click += new System.EventHandler(this.bAgregar_Click);
             // 
-            // mtbFinal
-            // 
-            this.mtbFinal.Text = "06022022";
-            // 
-            // mtbInicial
-            // 
-            this.mtbInicial.Text = "01022022";
-            // 
             // bMinimizar
             // 
             this.bMinimizar.Location = new System.Drawing.Point(880, 10);
@@ -54,6 +46,14 @@ namespace CoolSoft.Vista.Orden
             // bCerrar
             // 
             this.bCerrar.Location = new System.Drawing.Point(910, 10);
+            // 
+            // dtInicial
+            // 
+            this.dtInicial.Value = new System.DateTime(2022, 2, 1, 0, 0, 0, 0);
+            // 
+            // dtFinal
+            // 
+            this.dtFinal.Value = new System.DateTime(2022, 2, 10, 0, 0, 0, 0);
             // 
             // lTitulo
             // 
@@ -64,7 +64,7 @@ namespace CoolSoft.Vista.Orden
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1228, 719);
+            this.ClientSize = new System.Drawing.Size(1228, 669);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "OrdenesVer";
             this.Text = "OrdenesVer";

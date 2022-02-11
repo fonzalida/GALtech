@@ -129,7 +129,7 @@ namespace CoolSoft.Vista.Herencia
             // 
             // pSeleccion
             // 
-            this.pSeleccion.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.pSeleccion.BackColor = System.Drawing.Color.PeachPuff;
             this.pSeleccion.Controls.Add(this.dataGridView1);
             this.pSeleccion.Controls.Add(this.bSeleccionarCliente);
             this.pSeleccion.Dock = System.Windows.Forms.DockStyle.Fill;

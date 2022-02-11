@@ -35,8 +35,8 @@ namespace CoolSoft.Vista.Herencia
 
             InitBotonesMinClose();
 
-            mtbInicial.Text = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1).Date.ToString("dd/MM/yyyy");
-            mtbFinal.Text = DateTime.Now.Date.ToString("dd/MM/yyyy");
+            dtInicial.Value = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1);
+            dtFinal.Value = DateTime.Now.Date;
 
 
            pMenu.Size = new Size(pMenu.Size.Width,107);
@@ -67,8 +67,8 @@ namespace CoolSoft.Vista.Herencia
         private void checkBoxTodos_CheckedChanged(object sender, EventArgs e)
         {
 
-            mtbInicial.Enabled = !checkBoxTodos.Checked;
-            mtbFinal.Enabled = !checkBoxTodos.Checked;
+            dtInicial.Enabled = !checkBoxTodos.Checked;
+            dtFinal.Enabled = !checkBoxTodos.Checked;
 
         }
 

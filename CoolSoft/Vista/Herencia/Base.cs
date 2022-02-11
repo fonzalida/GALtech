@@ -91,6 +91,8 @@ namespace CoolSoft.Vista.Herencia
 
         public void LimpiarTextBox()
         {
+
+
             foreach (TextBox tb in this.Controls.OfType<TextBox>())
             {
                 tb.Text = "";
