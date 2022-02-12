@@ -21,7 +21,7 @@ namespace CoolSoft.Modelo.REPOSITORIO
                "SELECT LAST_INSERT_ID();"
                );
 
-            cmd.Parameters.AddWithValue("@DniCuit", c.dniCuil);
+            cmd.Parameters.AddWithValue("@DniCuit", c.dniCuit);
             cmd.Parameters.AddWithValue("@Nombre", c.nombre);
             cmd.Parameters.AddWithValue("@Domicilio", c.domicilio);
             cmd.Parameters.AddWithValue("@Localidad", c.localidad);
@@ -87,7 +87,7 @@ namespace CoolSoft.Modelo.REPOSITORIO
 
             cmd.Parameters.AddWithValue("@idCliente", viejo.idCliente);
 
-            cmd.Parameters.AddWithValue("@DniCuit2", nuevo.dniCuil);
+            cmd.Parameters.AddWithValue("@DniCuit2", nuevo.dniCuit);
             cmd.Parameters.AddWithValue("@Nombre2", nuevo.nombre);
             cmd.Parameters.AddWithValue("@Domicilio2", nuevo.domicilio);
             cmd.Parameters.AddWithValue("@Localidad2", nuevo.localidad);

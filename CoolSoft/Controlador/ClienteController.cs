@@ -27,7 +27,7 @@ namespace CoolSoft.Controlador
 
             Cliente cliente = new Cliente();
 
-            cliente.dniCuil = long.Parse(DniCuit);
+            cliente.dniCuit = long.Parse(DniCuit);
             cliente.nombre = CG.EsNullOString(Nombre);
             cliente.domicilio = CG.EsNullOString(Domicilio);
             cliente.localidad = CG.EsNullOString(Localidad);

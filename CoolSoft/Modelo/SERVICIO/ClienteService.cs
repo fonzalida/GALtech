@@ -13,7 +13,7 @@ namespace CoolSoft.Modelo.SERVICIO
     {
         static public int Agregar(Cliente c)
         {
-            if (!ClienteRepository.BuscarUno(c.dniCuil))
+            if (!ClienteRepository.BuscarUno(c.dniCuit))
             {
                 return ClienteRepository.Agregar(c); //retornar la id de cliente
             }

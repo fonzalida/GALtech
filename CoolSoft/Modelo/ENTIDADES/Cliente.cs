@@ -9,7 +9,7 @@ namespace CoolSoft.Modelo.ENTIDADES
     public class Cliente
     {
         public int idCliente { get; set; }
-        public long dniCuil { get; set; }
+        public long dniCuit { get; set; }
         public string nombre { get; set; }
         public string domicilio { get; set; }
         public string localidad { get; set; }
