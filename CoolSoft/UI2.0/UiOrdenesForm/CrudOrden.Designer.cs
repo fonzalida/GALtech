@@ -39,7 +39,6 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.label5 = new System.Windows.Forms.Label();
             this.textBoxNombre = new System.Windows.Forms.TextBox();
             this.maskedTextDni = new System.Windows.Forms.MaskedTextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panelMenu = new System.Windows.Forms.Panel();
             this.buttonCancelar = new System.Windows.Forms.Button();
             this.panelFechas = new System.Windows.Forms.Panel();
@@ -52,12 +51,13 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.buttonVer = new System.Windows.Forms.Button();
             this.buttonDetalles = new System.Windows.Forms.Button();
             this.buttonAgregar = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel1.SuspendLayout();
             this.panelSuperior.SuspendLayout();
             this.panelBuscar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panelMenu.SuspendLayout();
             this.panelFechas.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -187,18 +187,6 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.maskedTextDni.TabIndex = 0;
             this.maskedTextDni.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.maskedTextDni.ValidatingType = typeof(int);
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tableLayoutPanel1.SetColumnSpan(this.dataGridView1, 2);
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 83);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1020, 425);
-            this.dataGridView1.TabIndex = 1;
             // 
             // panelMenu
             // 
@@ -363,6 +351,18 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.buttonAgregar.UseVisualStyleBackColor = false;
             this.buttonAgregar.Click += new System.EventHandler(this.buttonAgregar_Click);
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tableLayoutPanel1.SetColumnSpan(this.dataGridView1, 2);
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(3, 83);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(1020, 425);
+            this.dataGridView1.TabIndex = 1;
+            // 
             // CrudOrden
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -376,10 +376,10 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.panelSuperior.ResumeLayout(false);
             this.panelBuscar.ResumeLayout(false);
             this.panelBuscar.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panelMenu.ResumeLayout(false);
             this.panelFechas.ResumeLayout(false);
             this.panelFechas.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -391,7 +391,6 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
         public System.Windows.Forms.Button buttonBuscar;
         public System.Windows.Forms.TextBox textBoxNombre;
         public System.Windows.Forms.MaskedTextBox maskedTextDni;
-        public System.Windows.Forms.DataGridView dataGridView1;
         public System.Windows.Forms.Panel panelMenu;
         public System.Windows.Forms.Button buttonEliminar;
         public System.Windows.Forms.Button buttonDetalles;
@@ -409,5 +408,6 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.Label label3;
+        public System.Windows.Forms.DataGridView dataGridView1;
     }
 }
