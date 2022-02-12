@@ -89,6 +89,7 @@
   <ItemGroup>
     <Compile Include="Controlador\ClienteController.cs" />
     <Compile Include="Controlador\CG.cs" />
+    <Compile Include="Controlador\OrdenController.cs" />
     <Compile Include="Controlador\TecnicoController.cs" />
     <Compile Include="Modelo\Conexion.cs" />
     <Compile Include="Modelo\ENTIDADES\Cliente.cs" />
@@ -145,6 +146,12 @@
     <Compile Include="UI2.0\UiClientesForm\UiAgregarCliente.Designer.cs">
       <DependentUpon>UiAgregarCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI2.0\UiClientesForm\UiModificarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI2.0\UiClientesForm\UiModificarCliente.Designer.cs">
+      <DependentUpon>UiModificarCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI2.0\UiOrdenesForm\CrudOrden.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -156,6 +163,12 @@
     </Compile>
     <Compile Include="UI2.0\UiOrdenesForm\UiAgregarOrden.Designer.cs">
       <DependentUpon>UiAgregarOrden.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI2.0\UiOrdenesForm\UiModificarOrden.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI2.0\UiOrdenesForm\UiModificarOrden.Designer.cs">
+      <DependentUpon>UiModificarOrden.cs</DependentUpon>
     </Compile>
     <Compile Include="UI2.0\UiPrincipal.cs">
       <SubType>Form</SubType>
@@ -174,6 +187,12 @@
     </Compile>
     <Compile Include="UI2.0\UiTecnicosForm\UiAgregarTecnico.Designer.cs">
       <DependentUpon>UiAgregarTecnico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI2.0\UiTecnicosForm\UiModificarTecnico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI2.0\UiTecnicosForm\UiModificarTecnico.Designer.cs">
+      <DependentUpon>UiModificarTecnico.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\FormsCliente\ClienteAgregar.cs">
       <SubType>Form</SubType>
@@ -293,11 +312,17 @@
     <EmbeddedResource Include="UI2.0\UiClientesForm\UiAgregarCliente.resx">
       <DependentUpon>UiAgregarCliente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI2.0\UiClientesForm\UiModificarCliente.resx">
+      <DependentUpon>UiModificarCliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI2.0\UiOrdenesForm\CrudOrden.resx">
       <DependentUpon>CrudOrden.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI2.0\UiOrdenesForm\UiAgregarOrden.resx">
       <DependentUpon>UiAgregarOrden.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI2.0\UiOrdenesForm\UiModificarOrden.resx">
+      <DependentUpon>UiModificarOrden.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI2.0\UiPrincipal.resx">
       <DependentUpon>UiPrincipal.cs</DependentUpon>
@@ -307,6 +332,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI2.0\UiTecnicosForm\UiAgregarTecnico.resx">
       <DependentUpon>UiAgregarTecnico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI2.0\UiTecnicosForm\UiModificarTecnico.resx">
+      <DependentUpon>UiModificarTecnico.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\FormsCliente\ClienteAgregar.resx">
       <DependentUpon>ClienteAgregar.cs</DependentUpon>

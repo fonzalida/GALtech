@@ -27,10 +27,10 @@ namespace CoolSoft.Modelo.SERVICIO
 
         }
 
-        //static public bool Eliminar(Cliente c)
-        //{
-        //    return true;
-        //}
+       /* static public bool Eliminar(Cliente c)
+        {
+            return true;
+        }*/
 
         static public void modificarCliente(Cliente modificado)
         {

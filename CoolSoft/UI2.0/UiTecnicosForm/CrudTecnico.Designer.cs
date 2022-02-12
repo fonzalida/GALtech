@@ -38,11 +38,11 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
             this.maskedTextDni = new System.Windows.Forms.MaskedTextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.buttonAgregar = new System.Windows.Forms.Button();
             this.buttonCancelar = new System.Windows.Forms.Button();
             this.buttonVer = new System.Windows.Forms.Button();
             this.buttonEliminar = new System.Windows.Forms.Button();
             this.buttonDetalles = new System.Windows.Forms.Button();
-            this.buttonAgregar = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.panelSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -151,6 +151,7 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tableLayoutPanel1.SetColumnSpan(this.dataGridView1, 2);
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -161,21 +162,40 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(766, 403);
             this.dataGridView1.TabIndex = 1;
+            //this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // panelMenu
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.panelMenu, 2);
+            this.panelMenu.Controls.Add(this.buttonAgregar);
             this.panelMenu.Controls.Add(this.buttonCancelar);
             this.panelMenu.Controls.Add(this.buttonVer);
             this.panelMenu.Controls.Add(this.buttonEliminar);
             this.panelMenu.Controls.Add(this.buttonDetalles);
-            this.panelMenu.Controls.Add(this.buttonAgregar);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMenu.Location = new System.Drawing.Point(2, 474);
             this.panelMenu.Margin = new System.Windows.Forms.Padding(2);
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(766, 61);
             this.panelMenu.TabIndex = 2;
+            // 
+            // buttonAgregar
+            // 
+            this.buttonAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(71)))), ((int)(((byte)(135)))));
+            this.buttonAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonAgregar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAgregar.ForeColor = System.Drawing.SystemColors.Control;
+            this.buttonAgregar.Image = global::CoolSoft.Properties.Resources.add;
+            this.buttonAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonAgregar.Location = new System.Drawing.Point(17, 2);
+            this.buttonAgregar.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonAgregar.Name = "buttonAgregar";
+            this.buttonAgregar.Size = new System.Drawing.Size(114, 44);
+            this.buttonAgregar.TabIndex = 0;
+            this.buttonAgregar.Text = "Agregar";
+            this.buttonAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonAgregar.UseVisualStyleBackColor = false;
+            this.buttonAgregar.Click += new System.EventHandler(this.buttonAgregar_Click);
             // 
             // buttonCancelar
             // 
@@ -249,24 +269,7 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
             this.buttonDetalles.Text = "Detalles";
             this.buttonDetalles.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonDetalles.UseVisualStyleBackColor = false;
-            // 
-            // buttonAgregar
-            // 
-            this.buttonAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(71)))), ((int)(((byte)(135)))));
-            this.buttonAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonAgregar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAgregar.ForeColor = System.Drawing.SystemColors.Control;
-            this.buttonAgregar.Image = global::CoolSoft.Properties.Resources.add;
-            this.buttonAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonAgregar.Location = new System.Drawing.Point(17, 2);
-            this.buttonAgregar.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonAgregar.Name = "buttonAgregar";
-            this.buttonAgregar.Size = new System.Drawing.Size(114, 44);
-            this.buttonAgregar.TabIndex = 0;
-            this.buttonAgregar.Text = "Agregar";
-            this.buttonAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonAgregar.UseVisualStyleBackColor = false;
-            this.buttonAgregar.Click += new System.EventHandler(this.buttonAgregar_Click);
+            this.buttonDetalles.Click += new System.EventHandler(this.buttonDetalles_Click);
             // 
             // CrudTecnico
             // 

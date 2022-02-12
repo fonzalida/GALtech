@@ -27,6 +27,21 @@ namespace CoolSoft.Controlador
             TecnicoService.Agregar(tecnico);
         }
 
+
+
+        public static void Modificar(
+            string Dni,
+            string Nombre,
+            string Telefono
+            )
+        {
+            Tecnico tecnicoActual = new Tecnico(Dni,Nombre,Telefono);
+            Tecnico tecnico = new Tecnico();
+
+
+            TecnicoService.Modificar(tecnicoActual,tecnico);
+        }
+
         public static void Eliminar(
             string Dni
             )

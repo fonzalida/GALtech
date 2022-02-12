@@ -16,6 +16,7 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
     public partial class CrudTecnico : Form
     {
         UiAgregarTecnico fagregar;
+        UiModificarTecnico modificarTecnico;
         public CrudTecnico()
         {
             fagregar = null;
@@ -78,8 +79,33 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
 
         private void buttonEliminar_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(dataGridView1.SelectedCells[0].Value.ToString());
+            //MessageBox.Show(dataGridView1.SelectedCells[0].Value.ToString());
             TecnicoController.Eliminar(dataGridView1.SelectedCells[0].Value.ToString()); 
         }
+
+        private void buttonDetalles_Click(object sender, EventArgs e)
+        {
+            if (modificarTecnico != null)
+            {
+                if (modificarTecnico.IsDisposed)
+                {
+                    modificarTecnico = new UiModificarTecnico();
+                    modificarTecnico.StartPosition = FormStartPosition.CenterScreen;
+                    modificarTecnico.Show();
+                }
+                else
+                {
+                    modificarTecnico.BringToFront();
+                }
+            }
+            else
+            {
+                modificarTecnico = new UiModificarTecnico();
+                modificarTecnico.StartPosition = FormStartPosition.CenterScreen;
+                modificarTecnico.Show();
+            }
+
+        }
+
     }
 }

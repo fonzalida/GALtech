@@ -38,5 +38,23 @@ namespace CoolSoft.Controlador
             ClienteService.Agregar(cliente);
 
         }
+
+        public static void Modificar(
+            )
+        {
+
+        }
+
+       /* public static void Eliminar(
+            string DniCuit
+            )
+        {
+            Cliente cliente = new Cliente();
+
+            cliente.dniCuit = long.Parse(DniCuit);
+
+            ClienteService.Eliminar(cliente);
+
+        }*/
     }
 }

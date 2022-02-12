@@ -8,6 +8,8 @@ namespace CoolSoft.Modelo.ENTIDADES
 {
     public class Tecnico
     {
+        private string dni1;
+
         public int dni { get; set; }
 
         public string nombre { get; set; }
@@ -22,6 +24,11 @@ namespace CoolSoft.Modelo.ENTIDADES
             this.dni = dni;
         }
 
-       
+        public Tecnico(string dni1, string nombre, string telefono)
+        {
+            this.dni1 = dni1;
+            this.nombre = nombre;
+            this.telefono = telefono;
+        }
     }
 }

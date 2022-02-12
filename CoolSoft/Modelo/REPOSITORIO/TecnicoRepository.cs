@@ -17,9 +17,9 @@ namespace CoolSoft.Modelo.REPOSITORIO
 
             MySqlCommand cmd = new MySqlCommand(
                "INSERT INTO TECNICO" +
-               "(dni, nombre, telefono)" +
-               " VALUES (@dni, @nombre, @telefono)"+
-               "SELECT LAST_INSERT_ID();"
+                "(dni, nombre, telefono)" +
+                 " VALUES (@dni, @nombre, @telefono); " +
+                  " SELECT LAST_INSERT_ID();"
                );
 
             cmd.Parameters.AddWithValue("@dni", p.dni);
@@ -28,7 +28,7 @@ namespace CoolSoft.Modelo.REPOSITORIO
 
 
             Conexion conexion = new Conexion();
-            return int.Parse(conexion.QueryInsertDeleteUpdate(cmd));
+            return conexion.QueryId(cmd);
         }
 
         static public void eliminar(Tecnico p)

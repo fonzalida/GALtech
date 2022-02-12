@@ -16,10 +16,12 @@ namespace CoolSoft.UI2._0.UiClientesForm
     public partial class CrudCliente : Form
     {
         UiAgregarCliente fagregar;
+        UiModificarCliente modificarCliente;
 
         public CrudCliente()
         {
             fagregar = null;
+
             InitializeComponent();
         }
 
@@ -69,6 +71,30 @@ namespace CoolSoft.UI2._0.UiClientesForm
         private void buttonCancelar_Click(object sender, EventArgs e)
         {
             dataGridView1.DataSource = null;
+        }
+
+        private void buttonDetalles_Click(object sender, EventArgs e)
+        {
+            if (modificarCliente != null)
+            {
+                if (modificarCliente.IsDisposed)
+                {
+                    modificarCliente = new UiModificarCliente();
+                    modificarCliente.StartPosition = FormStartPosition.CenterScreen;
+                    modificarCliente.Show();
+                }
+                else
+                {
+                    modificarCliente.BringToFront();
+                }
+            }
+            else
+            {
+                modificarCliente = new UiModificarCliente();
+                modificarCliente.StartPosition = FormStartPosition.CenterScreen;
+                modificarCliente.Show();
+            }
+
         }
     }
 }
