@@ -57,6 +57,7 @@ namespace CoolSoft.UI2._0.Genericos
             this.labelTitulo.Size = new System.Drawing.Size(65, 24);
             this.labelTitulo.TabIndex = 0;
             this.labelTitulo.Text = "label1";
+            this.labelTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelBorde_MouseDown);
             // 
             // buttonCancelar
             // 
