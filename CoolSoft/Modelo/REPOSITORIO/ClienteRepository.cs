@@ -81,7 +81,7 @@ namespace CoolSoft.Modelo.REPOSITORIO
         {
 
             MySqlCommand cmd = new MySqlCommand(
-                "UPDATE CLIENTE" +
+                "UPDATE CLIENTE " +
                  "SET DniCuit = @DniCuit2, Nombre = @Nombre2, Domicilio = @Domicilio2, Localidad = @Localidad2, Provincia = @Provincia2, Telefono1 = @Telefono12, Telefono2 = @Telefono22 " +
                   "where IdCliente = @idCliente  ");
 

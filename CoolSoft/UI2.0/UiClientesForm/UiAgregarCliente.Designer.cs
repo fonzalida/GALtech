@@ -244,19 +244,19 @@ namespace CoolSoft.UI2._0.UiClientesForm
 
         #endregion
 
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.MaskedTextBox mtTelefono2;
-        private System.Windows.Forms.MaskedTextBox mtTelefono1;
-        private System.Windows.Forms.TextBox tbProvincia;
-        private System.Windows.Forms.TextBox tbLocalidad;
-        private System.Windows.Forms.TextBox tbDomicilio;
-        private System.Windows.Forms.TextBox tbNombre;
-        private System.Windows.Forms.MaskedTextBox mtDniCuit;
+        public System.Windows.Forms.Label label7;
+        public System.Windows.Forms.Label label6;
+        public System.Windows.Forms.Label label5;
+        public System.Windows.Forms.Label label4;
+        public System.Windows.Forms.Label label3;
+        public System.Windows.Forms.Label label2;
+        public System.Windows.Forms.Label label1;
+        public System.Windows.Forms.MaskedTextBox mtTelefono2;
+        public System.Windows.Forms.MaskedTextBox mtTelefono1;
+        public System.Windows.Forms.TextBox tbProvincia;
+        public System.Windows.Forms.TextBox tbLocalidad;
+        public System.Windows.Forms.TextBox tbDomicilio;
+        public System.Windows.Forms.TextBox tbNombre;
+        public System.Windows.Forms.MaskedTextBox mtDniCuit;
     }
 }
