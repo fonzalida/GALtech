@@ -29,6 +29,9 @@ namespace CoolSoft.UI2._0.UiClientesForm
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panelSuperior = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
@@ -38,11 +41,11 @@ namespace CoolSoft.UI2._0.UiClientesForm
             this.maskedTextDni = new System.Windows.Forms.MaskedTextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.buttonCancelar = new System.Windows.Forms.Button();
+            this.buttonVer = new System.Windows.Forms.Button();
             this.buttonEliminar = new System.Windows.Forms.Button();
             this.buttonDetalles = new System.Windows.Forms.Button();
             this.buttonAgregar = new System.Windows.Forms.Button();
-            this.buttonCancelar = new System.Windows.Forms.Button();
-            this.buttonVer = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.panelSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -144,8 +147,28 @@ namespace CoolSoft.UI2._0.UiClientesForm
             // 
             // dataGridView1
             // 
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(84)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tableLayoutPanel1.SetColumnSpan(this.dataGridView1, 2);
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(3, 83);
             this.dataGridView1.Name = "dataGridView1";
@@ -167,6 +190,41 @@ namespace CoolSoft.UI2._0.UiClientesForm
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(1020, 74);
             this.panelMenu.TabIndex = 2;
+            // 
+            // buttonCancelar
+            // 
+            this.buttonCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonCancelar.BackColor = System.Drawing.Color.ForestGreen;
+            this.buttonCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCancelar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCancelar.ForeColor = System.Drawing.SystemColors.Control;
+            this.buttonCancelar.Image = global::CoolSoft.Properties.Resources.cancel;
+            this.buttonCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonCancelar.Location = new System.Drawing.Point(865, 3);
+            this.buttonCancelar.Name = "buttonCancelar";
+            this.buttonCancelar.Size = new System.Drawing.Size(152, 54);
+            this.buttonCancelar.TabIndex = 19;
+            this.buttonCancelar.Text = "Cancelar";
+            this.buttonCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonCancelar.UseVisualStyleBackColor = false;
+            // 
+            // buttonVer
+            // 
+            this.buttonVer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonVer.BackColor = System.Drawing.Color.ForestGreen;
+            this.buttonVer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonVer.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonVer.ForeColor = System.Drawing.SystemColors.Control;
+            this.buttonVer.Image = global::CoolSoft.Properties.Resources.check;
+            this.buttonVer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonVer.Location = new System.Drawing.Point(707, 3);
+            this.buttonVer.Name = "buttonVer";
+            this.buttonVer.Size = new System.Drawing.Size(152, 54);
+            this.buttonVer.TabIndex = 18;
+            this.buttonVer.Text = "Ver";
+            this.buttonVer.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonVer.UseVisualStyleBackColor = false;
+            this.buttonVer.Click += new System.EventHandler(this.buttonVer_Click);
             // 
             // buttonEliminar
             // 
@@ -216,40 +274,6 @@ namespace CoolSoft.UI2._0.UiClientesForm
             this.buttonAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonAgregar.UseVisualStyleBackColor = false;
             this.buttonAgregar.Click += new System.EventHandler(this.buttonAgregar_Click);
-            // 
-            // buttonCancelar
-            // 
-            this.buttonCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonCancelar.BackColor = System.Drawing.Color.ForestGreen;
-            this.buttonCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCancelar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCancelar.ForeColor = System.Drawing.SystemColors.Control;
-            this.buttonCancelar.Image = global::CoolSoft.Properties.Resources.cancel;
-            this.buttonCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonCancelar.Location = new System.Drawing.Point(865, 3);
-            this.buttonCancelar.Name = "buttonCancelar";
-            this.buttonCancelar.Size = new System.Drawing.Size(152, 54);
-            this.buttonCancelar.TabIndex = 19;
-            this.buttonCancelar.Text = "Cancelar";
-            this.buttonCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonCancelar.UseVisualStyleBackColor = false;
-            // 
-            // buttonVer
-            // 
-            this.buttonVer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonVer.BackColor = System.Drawing.Color.ForestGreen;
-            this.buttonVer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonVer.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonVer.ForeColor = System.Drawing.SystemColors.Control;
-            this.buttonVer.Image = global::CoolSoft.Properties.Resources.check;
-            this.buttonVer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonVer.Location = new System.Drawing.Point(707, 3);
-            this.buttonVer.Name = "buttonVer";
-            this.buttonVer.Size = new System.Drawing.Size(152, 54);
-            this.buttonVer.TabIndex = 18;
-            this.buttonVer.Text = "Ver";
-            this.buttonVer.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonVer.UseVisualStyleBackColor = false;
             // 
             // CrudCliente
             // 

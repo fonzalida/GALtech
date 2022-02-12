@@ -1,4 +1,5 @@
-﻿using CoolSoft.UI2._0.Genericos;
+﻿using CoolSoft.Controlador;
+using CoolSoft.UI2._0.Genericos;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,6 +22,18 @@ namespace CoolSoft.UI2._0.UiClientesForm
         private void UiAgregarCliente_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void buttonCargar_Click(object sender, EventArgs e)
+        {
+            ClienteController.Cargar(
+                mtDniCuit.Text,
+                tbNombre.Text,
+                tbDomicilio.Text,
+                tbLocalidad.Text,
+                tbProvincia.Text,
+                mtTelefono1.Text,
+                mtTelefono2.Text);
         }
     }
 }

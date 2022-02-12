@@ -51,6 +51,10 @@ namespace CoolSoft.UI2._0.UiClientesForm
             this.labelTitulo.Size = new System.Drawing.Size(199, 24);
             this.labelTitulo.Text = "AGREGAR CLIENTE";
             // 
+            // buttonCargar
+            // 
+            this.buttonCargar.Click += new System.EventHandler(this.buttonCargar_Click);
+            // 
             // label7
             // 
             this.label7.AutoSize = true;

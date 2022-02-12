@@ -1,4 +1,7 @@
-﻿using System;
+﻿using CoolSoft.Modelo.REPOSITORIO;
+using CoolSoft.Modelo.SERVICIO;
+using CoolSoft.UI2._0.Genericos;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -41,6 +44,15 @@ namespace CoolSoft.UI2._0.UiClientesForm
                 fagregar.StartPosition = FormStartPosition.CenterScreen;
                 fagregar.Show();
             }
+        }
+
+        private void buttonVer_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = ClienteRepository.ListarTodos();
+
+            Format.DataGridView(dataGridView1);
+            dataGridView1.Columns[0].HeaderText = "ID";
+            dataGridView1.Columns[1].HeaderText = "DNI / CUIT";
         }
     }
 }

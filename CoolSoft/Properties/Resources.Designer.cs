@@ -193,6 +193,16 @@ namespace CoolSoft.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap inicio {
+            get {
+                object obj = ResourceManager.GetObject("inicio", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap LOGO_CHIQUITO {
             get {
                 object obj = ResourceManager.GetObject("LOGO_CHIQUITO", resourceCulture);
@@ -256,6 +266,16 @@ namespace CoolSoft.Properties {
         internal static System.Drawing.Bitmap orden1 {
             get {
                 object obj = ResourceManager.GetObject("orden1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap outline_menu_black_24dp {
+            get {
+                object obj = ResourceManager.GetObject("outline_menu_black_24dp", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

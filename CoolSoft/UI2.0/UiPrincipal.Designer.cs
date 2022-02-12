@@ -31,27 +31,33 @@ namespace CoolSoft.UI2._0
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UiPrincipal));
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.buttonInicio = new System.Windows.Forms.Button();
             this.buttonOrdenes = new System.Windows.Forms.Button();
             this.buttonTecnicos = new System.Windows.Forms.Button();
             this.buttonClientes = new System.Windows.Forms.Button();
             this.panelBorde = new System.Windows.Forms.Panel();
+            this.buttonMenu = new System.Windows.Forms.Button();
             this.labelTitulo = new System.Windows.Forms.Label();
             this.pictureMinimizarForm = new System.Windows.Forms.PictureBox();
             this.pictureNormalForm = new System.Windows.Forms.PictureBox();
             this.pictureMaximizarForm = new System.Windows.Forms.PictureBox();
             this.pictureCerrarForm = new System.Windows.Forms.PictureBox();
             this.panelContenedor = new System.Windows.Forms.Panel();
+            this.pictureBoxPresentacion = new System.Windows.Forms.PictureBox();
             this.panelMenu.SuspendLayout();
             this.panelBorde.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureMinimizarForm)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureNormalForm)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureMaximizarForm)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureCerrarForm)).BeginInit();
+            this.panelContenedor.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPresentacion)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(122)))));
+            this.panelMenu.Controls.Add(this.buttonInicio);
             this.panelMenu.Controls.Add(this.buttonOrdenes);
             this.panelMenu.Controls.Add(this.buttonTecnicos);
             this.panelMenu.Controls.Add(this.buttonClientes);
@@ -60,6 +66,23 @@ namespace CoolSoft.UI2._0
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(230, 720);
             this.panelMenu.TabIndex = 0;
+            // 
+            // buttonInicio
+            // 
+            this.buttonInicio.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonInicio.FlatAppearance.BorderSize = 0;
+            this.buttonInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonInicio.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonInicio.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.buttonInicio.Image = global::CoolSoft.Properties.Resources.inicio;
+            this.buttonInicio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonInicio.Location = new System.Drawing.Point(0, 60);
+            this.buttonInicio.Name = "buttonInicio";
+            this.buttonInicio.Size = new System.Drawing.Size(230, 50);
+            this.buttonInicio.TabIndex = 3;
+            this.buttonInicio.Text = "Inicio";
+            this.buttonInicio.UseVisualStyleBackColor = true;
+            this.buttonInicio.Click += new System.EventHandler(this.button1_Click);
             // 
             // buttonOrdenes
             // 
@@ -70,7 +93,7 @@ namespace CoolSoft.UI2._0
             this.buttonOrdenes.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.buttonOrdenes.Image = global::CoolSoft.Properties.Resources.orden1;
             this.buttonOrdenes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonOrdenes.Location = new System.Drawing.Point(0, 208);
+            this.buttonOrdenes.Location = new System.Drawing.Point(0, 228);
             this.buttonOrdenes.Name = "buttonOrdenes";
             this.buttonOrdenes.Size = new System.Drawing.Size(230, 50);
             this.buttonOrdenes.TabIndex = 2;
@@ -87,7 +110,7 @@ namespace CoolSoft.UI2._0
             this.buttonTecnicos.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.buttonTecnicos.Image = global::CoolSoft.Properties.Resources.tecnico1;
             this.buttonTecnicos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonTecnicos.Location = new System.Drawing.Point(0, 152);
+            this.buttonTecnicos.Location = new System.Drawing.Point(0, 172);
             this.buttonTecnicos.Name = "buttonTecnicos";
             this.buttonTecnicos.Size = new System.Drawing.Size(230, 50);
             this.buttonTecnicos.TabIndex = 1;
@@ -104,7 +127,7 @@ namespace CoolSoft.UI2._0
             this.buttonClientes.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.buttonClientes.Image = global::CoolSoft.Properties.Resources.cliente1;
             this.buttonClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonClientes.Location = new System.Drawing.Point(0, 96);
+            this.buttonClientes.Location = new System.Drawing.Point(0, 116);
             this.buttonClientes.Name = "buttonClientes";
             this.buttonClientes.Size = new System.Drawing.Size(230, 50);
             this.buttonClientes.TabIndex = 0;
@@ -114,7 +137,8 @@ namespace CoolSoft.UI2._0
             // 
             // panelBorde
             // 
-            this.panelBorde.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(84)))));
+            this.panelBorde.BackColor = System.Drawing.SystemColors.Control;
+            this.panelBorde.Controls.Add(this.buttonMenu);
             this.panelBorde.Controls.Add(this.labelTitulo);
             this.panelBorde.Controls.Add(this.pictureMinimizarForm);
             this.panelBorde.Controls.Add(this.pictureNormalForm);
@@ -126,21 +150,38 @@ namespace CoolSoft.UI2._0
             this.panelBorde.Size = new System.Drawing.Size(1050, 60);
             this.panelBorde.TabIndex = 1;
             this.panelBorde.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelBorde_MouseDown);
+            this.panelBorde.Resize += new System.EventHandler(this.panelBorde_Resize);
+            // 
+            // buttonMenu
+            // 
+            this.buttonMenu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonMenu.Dock = System.Windows.Forms.DockStyle.Left;
+            this.buttonMenu.FlatAppearance.BorderSize = 0;
+            this.buttonMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonMenu.Image = global::CoolSoft.Properties.Resources.outline_menu_black_24dp;
+            this.buttonMenu.Location = new System.Drawing.Point(0, 0);
+            this.buttonMenu.Name = "buttonMenu";
+            this.buttonMenu.Size = new System.Drawing.Size(60, 60);
+            this.buttonMenu.TabIndex = 5;
+            this.buttonMenu.UseVisualStyleBackColor = true;
+            this.buttonMenu.Click += new System.EventHandler(this.buttonMenu_Click);
             // 
             // labelTitulo
             // 
             this.labelTitulo.AutoSize = true;
             this.labelTitulo.Font = new System.Drawing.Font("Microsoft YaHei", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTitulo.ForeColor = System.Drawing.SystemColors.Control;
-            this.labelTitulo.Location = new System.Drawing.Point(18, 9);
+            this.labelTitulo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.labelTitulo.Location = new System.Drawing.Point(400, 5);
             this.labelTitulo.Name = "labelTitulo";
             this.labelTitulo.Size = new System.Drawing.Size(284, 52);
             this.labelTitulo.TabIndex = 4;
             this.labelTitulo.Text = "BIENVENIDO";
+            this.labelTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelBorde_MouseDown);
             // 
             // pictureMinimizarForm
             // 
             this.pictureMinimizarForm.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureMinimizarForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(84)))));
             this.pictureMinimizarForm.BackgroundImage = global::CoolSoft.Properties.Resources.minimizeForm;
             this.pictureMinimizarForm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureMinimizarForm.Location = new System.Drawing.Point(936, 12);
@@ -153,6 +194,7 @@ namespace CoolSoft.UI2._0
             // pictureNormalForm
             // 
             this.pictureNormalForm.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureNormalForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(84)))));
             this.pictureNormalForm.BackgroundImage = global::CoolSoft.Properties.Resources.fullscreenExitForm;
             this.pictureNormalForm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureNormalForm.Location = new System.Drawing.Point(972, 12);
@@ -166,6 +208,7 @@ namespace CoolSoft.UI2._0
             // pictureMaximizarForm
             // 
             this.pictureMaximizarForm.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureMaximizarForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(84)))));
             this.pictureMaximizarForm.BackgroundImage = global::CoolSoft.Properties.Resources.fullscreenEnterForm;
             this.pictureMaximizarForm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureMaximizarForm.Location = new System.Drawing.Point(972, 12);
@@ -178,6 +221,7 @@ namespace CoolSoft.UI2._0
             // pictureCerrarForm
             // 
             this.pictureCerrarForm.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureCerrarForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(84)))));
             this.pictureCerrarForm.BackgroundImage = global::CoolSoft.Properties.Resources.closeForm;
             this.pictureCerrarForm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureCerrarForm.Location = new System.Drawing.Point(1008, 12);
@@ -189,11 +233,26 @@ namespace CoolSoft.UI2._0
             // 
             // panelContenedor
             // 
+            this.panelContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(84)))));
+            this.panelContenedor.Controls.Add(this.pictureBoxPresentacion);
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContenedor.Location = new System.Drawing.Point(230, 60);
             this.panelContenedor.Name = "panelContenedor";
             this.panelContenedor.Size = new System.Drawing.Size(1050, 660);
             this.panelContenedor.TabIndex = 2;
+            // 
+            // pictureBoxPresentacion
+            // 
+            this.pictureBoxPresentacion.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxPresentacion.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBoxPresentacion.Image = global::CoolSoft.Properties.Resources.LOGO_COOLSOFT_original;
+            this.pictureBoxPresentacion.Location = new System.Drawing.Point(0, 0);
+            this.pictureBoxPresentacion.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBoxPresentacion.Name = "pictureBoxPresentacion";
+            this.pictureBoxPresentacion.Size = new System.Drawing.Size(1050, 660);
+            this.pictureBoxPresentacion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxPresentacion.TabIndex = 3;
+            this.pictureBoxPresentacion.TabStop = false;
             // 
             // UiPrincipal
             // 
@@ -215,6 +274,8 @@ namespace CoolSoft.UI2._0
             ((System.ComponentModel.ISupportInitialize)(this.pictureNormalForm)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureMaximizarForm)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureCerrarForm)).EndInit();
+            this.panelContenedor.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPresentacion)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -230,7 +291,10 @@ namespace CoolSoft.UI2._0
         private System.Windows.Forms.PictureBox pictureMaximizarForm;
         private System.Windows.Forms.Button buttonOrdenes;
         private System.Windows.Forms.Button buttonTecnicos;
-        private System.Windows.Forms.Button buttonClientes;
         private System.Windows.Forms.Label labelTitulo;
+        private System.Windows.Forms.Button buttonInicio;
+        private System.Windows.Forms.Button buttonClientes;
+        private System.Windows.Forms.Button buttonMenu;
+        private System.Windows.Forms.PictureBox pictureBoxPresentacion;
     }
 }

@@ -12,6 +12,7 @@ namespace CoolSoft.UI2._0
     {
 
         int formActivo = 0;
+
       
 
         /*************MOVER MOUSE**************/
@@ -99,6 +100,19 @@ namespace CoolSoft.UI2._0
             
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (formActivo != 0)
+            {
+                formActivo = 0;
+                labelTitulo.Text = "BIENVENIDO";
+
+                if (this.panelContenedor.Controls.Count > 0)
+                    this.panelContenedor.Controls.RemoveAt(0);
+                this.panelContenedor.Controls.Add(pictureBoxPresentacion);
+            }
+        }
+
         private void buttonClientes_Click(object sender, EventArgs e)
         {
             if(formActivo != 1)
@@ -151,6 +165,36 @@ namespace CoolSoft.UI2._0
                 this.panelContenedor.Controls.Add(fh);
                 this.panelContenedor.Tag = fh;
                 fh.Show();
+            }
+        }
+
+        private void panelBorde_Resize(object sender, EventArgs e)
+        {
+            int x = panelBorde.Width / 2;
+            int y = panelBorde.Height / 2;
+
+            labelTitulo.Location = new Point(x-(labelTitulo.Size.Width / 2), y - (labelTitulo.Size.Height / 2));
+        }
+
+        
+
+        private void buttonMenu_Click(object sender, EventArgs e)
+        {
+            if (panelMenu.Width == 230)
+            {
+                while (panelMenu.Width > 65)
+                {
+                    panelMenu.Width = panelMenu.Width - 5;
+                    Application.DoEvents();
+                }
+            }
+            else
+            {
+                while (panelMenu.Width < 230)
+                {
+                    panelMenu.Width = panelMenu.Width + 5;
+                    Application.DoEvents();
+                }
             }
         }
     }
