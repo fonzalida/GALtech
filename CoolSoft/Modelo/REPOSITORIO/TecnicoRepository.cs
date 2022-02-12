@@ -36,7 +36,7 @@ namespace CoolSoft.Modelo.REPOSITORIO
             Conexion conexion = new Conexion();
 
             MySqlCommand cmd = new MySqlCommand(
-               "UPDATE TECNICO" +
+               "UPDATE TECNICO " +
                  "SET activo = 0 " +
                   "where dni = @dni  ");
            
@@ -51,8 +51,8 @@ namespace CoolSoft.Modelo.REPOSITORIO
         {
 
             MySqlCommand cmd = new MySqlCommand(
-                "UPDATE TECNICO" +
-                 "SET dni = @dni2, nombre = @nombre2, telefono = @telefono2" +
+                "UPDATE TECNICO " +
+                 "SET dni = @dni2, nombre = @nombre2, telefono = @telefono2 " +
                   "where dni = @dni  ");
 
             cmd.Parameters.AddWithValue("@dni", viejo.dni);
