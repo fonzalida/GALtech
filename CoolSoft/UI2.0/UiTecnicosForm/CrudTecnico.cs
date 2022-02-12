@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CoolSoft.Modelo.REPOSITORIO;
+using CoolSoft.UI2._0.Genericos;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -40,6 +42,37 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
                 fagregar.StartPosition = FormStartPosition.CenterScreen;
                 fagregar.Show();
             }
+        }
+
+        private void buttonVer_Click(object sender, EventArgs e)
+        {
+
+            dataGridView1.DataSource = TecnicoRepository.ListarTodos();
+           // Format.DataGridView(dataGridView1);
+
+            FormateatDataGrid();
+
+        }
+
+        private void FormateatDataGrid()
+        {
+            Format.DataGridView(dataGridView1);
+
+            dataGridView1.Columns[3].Visible = false;
+
+            /*dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+           
+                       
+            /*dataGridView1.Columns[0].HeaderText = "ID";
+
+            dataGridView1.Columns[1].HeaderText = "DNI / CUIT";
+
+            dataGridView1.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;*/
+        }
+
+        private void buttonCancelar_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = null;
         }
     }
 }

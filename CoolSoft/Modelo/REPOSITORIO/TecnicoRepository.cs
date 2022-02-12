@@ -26,6 +26,7 @@ namespace CoolSoft.Modelo.REPOSITORIO
             cmd.Parameters.AddWithValue("@nombre", p.nombre);
             cmd.Parameters.AddWithValue("@telefono", p.telefono);
 
+
             Conexion conexion = new Conexion();
             return int.Parse(conexion.QueryInsertDeleteUpdate(cmd));
         }
@@ -35,11 +36,12 @@ namespace CoolSoft.Modelo.REPOSITORIO
             Conexion conexion = new Conexion();
 
             MySqlCommand cmd = new MySqlCommand(
-                "DELETE FROM TECNICO" +
-                "where dni = @dni"
-                );
+               "UPDATE TECNICO" +
+                 "SET activo = @activo" +
+                  "where dni = @dni  ");
 
             cmd.Parameters.AddWithValue("@dni", p.dni);
+            cmd.Parameters.AddWithValue("@activo", 0);
 
             conexion.QueryInsertDeleteUpdate(cmd);
         }

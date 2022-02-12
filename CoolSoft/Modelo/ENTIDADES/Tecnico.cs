@@ -14,6 +14,8 @@ namespace CoolSoft.Modelo.ENTIDADES
 
         public long telefono { get; set; }
 
+        public int activo { get; set; }
+
         public Tecnico() { }
         public Tecnico(int dni)
         {

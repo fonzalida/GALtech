@@ -49,10 +49,26 @@ namespace CoolSoft.UI2._0.UiClientesForm
         private void buttonVer_Click(object sender, EventArgs e)
         {
             dataGridView1.DataSource = ClienteRepository.ListarTodos();
+            FormatearDataGrid();
 
+        }
+
+        private void FormatearDataGrid()
+        {
             Format.DataGridView(dataGridView1);
+           
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             dataGridView1.Columns[0].HeaderText = "ID";
+          
             dataGridView1.Columns[1].HeaderText = "DNI / CUIT";
+            
+            dataGridView1.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+
+        }
+
+        private void buttonCancelar_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = null;
         }
     }
 }
