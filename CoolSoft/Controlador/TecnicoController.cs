@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace CoolSoft.Controlador
 {
@@ -35,11 +36,36 @@ namespace CoolSoft.Controlador
             string Telefono
             )
         {
-            Tecnico tecnicoActual = new Tecnico(Dni,Nombre,Telefono);
+            
             Tecnico tecnico = new Tecnico();
 
+            tecnico.dni = int.Parse(Dni);
+            tecnico.nombre = CG.EsNullOString(Nombre);
+            tecnico.telefono = CG.EsNullOString(Telefono);
 
-            TecnicoService.Modificar(tecnicoActual,tecnico);
+            TecnicoService.Modificar(tecnico);
+        }
+
+
+        public static Tecnico DataGridViewToTecnico(DataGridViewCellCollection dr)
+        {
+
+            //foreach (DataGridViewCell cell in dr)
+            //{
+            //    Debug.WriteLine(cell.Value.ToString());
+            //}
+
+
+            Tecnico tecnico = new Tecnico();
+
+            tecnico.dni = int.Parse(dr[0].Value.ToString());
+            tecnico.nombre = dr[1].Value.ToString();
+            tecnico.telefono = dr[2].Value.ToString();
+            
+
+            return tecnico;
+
+
         }
 
         public static void Eliminar(

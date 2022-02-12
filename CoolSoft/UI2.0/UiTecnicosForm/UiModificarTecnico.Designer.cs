@@ -34,13 +34,13 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
             // 
             // panelBorde
             // 
-            this.panelBorde.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.panelBorde.Size = new System.Drawing.Size(699, 50);
+            this.panelBorde.Margin = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.panelBorde.Size = new System.Drawing.Size(524, 41);
             // 
             // labelTitulo
             // 
-            this.labelTitulo.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.labelTitulo.Size = new System.Drawing.Size(215, 24);
+            this.labelTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelTitulo.Size = new System.Drawing.Size(176, 19);
             this.labelTitulo.Text = "MODIFICAR TÉCNICO";
             // 
             // buttonCargar
@@ -49,12 +49,13 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
             // 
             // UiModificarTecnico
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(699, 624);
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.ClientSize = new System.Drawing.Size(524, 507);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "UiModificarTecnico";
             this.Text = "UiModificarTecnico";
+            this.Load += new System.EventHandler(this.UiModificarTecnico_Load);
             this.panelBorde.ResumeLayout(false);
             this.panelBorde.PerformLayout();
             this.ResumeLayout(false);

@@ -1,4 +1,5 @@
 ﻿using CoolSoft.Controlador;
+using CoolSoft.Modelo.ENTIDADES;
 using CoolSoft.Modelo.REPOSITORIO;
 using CoolSoft.UI2._0.Genericos;
 using System;
@@ -17,6 +18,7 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
     {
         UiAgregarTecnico fagregar;
         UiModificarTecnico modificarTecnico;
+        Tecnico viejo;
         public CrudTecnico()
         {
             fagregar = null;
@@ -86,11 +88,14 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
 
         private void buttonDetalles_Click(object sender, EventArgs e)
         {
+
+            viejo = TecnicoController.DataGridViewToTecnico(dataGridView1.SelectedRows[0].Cells);
+
             if (modificarTecnico != null)
             {
                 if (modificarTecnico.IsDisposed)
                 {
-                    modificarTecnico = new UiModificarTecnico();
+                    modificarTecnico = new UiModificarTecnico(viejo);
                     modificarTecnico.StartPosition = FormStartPosition.CenterScreen;
                     modificarTecnico.Show();
                 }
@@ -101,7 +106,7 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
             }
             else
             {
-                modificarTecnico = new UiModificarTecnico();
+                modificarTecnico = new UiModificarTecnico(viejo);
                 modificarTecnico.StartPosition = FormStartPosition.CenterScreen;
                 modificarTecnico.Show();
             }

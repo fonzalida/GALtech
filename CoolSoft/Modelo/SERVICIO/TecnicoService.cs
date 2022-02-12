@@ -28,9 +28,10 @@ namespace CoolSoft.Modelo.SERVICIO
             
         }
 
-        static public void Modificar(Tecnico viejo, Tecnico nuevo)
+        static public void Modificar(Tecnico modificado)
+            
         {
-            TecnicoRepository.modificar(viejo, nuevo);
+            TecnicoRepository.modificar(modificado, modificado);
         }
 
         static public void Eliminar(Tecnico t)
