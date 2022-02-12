@@ -12,7 +12,7 @@ namespace CoolSoft.Modelo.ENTIDADES
 
         public string nombre { get; set; }
 
-        public long telefono { get; set; }
+        public string telefono { get; set; }
 
         public int activo { get; set; }
 

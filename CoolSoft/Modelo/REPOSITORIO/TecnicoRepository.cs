@@ -37,11 +37,12 @@ namespace CoolSoft.Modelo.REPOSITORIO
 
             MySqlCommand cmd = new MySqlCommand(
                "UPDATE TECNICO" +
-                 "SET activo = @activo" +
+                 "SET activo = 0 " +
                   "where dni = @dni  ");
+           
 
             cmd.Parameters.AddWithValue("@dni", p.dni);
-            cmd.Parameters.AddWithValue("@activo", 0);
+            //cmd.Parameters.AddWithValue("@activo", /*p.activo.ToString()*/);
 
             conexion.QueryInsertDeleteUpdate(cmd);
         }
@@ -79,7 +80,7 @@ namespace CoolSoft.Modelo.REPOSITORIO
 
         public static DataTable ListarTodos()
         {
-            String query = "SELECT * FROM TECNICO";
+            String query = "SELECT * FROM TECNICO WHERE Activo = 1";
 
             Conexion conexion = new Conexion();
             return conexion.QuerySelect(query);

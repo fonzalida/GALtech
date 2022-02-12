@@ -89,6 +89,7 @@
   <ItemGroup>
     <Compile Include="Controlador\ClienteController.cs" />
     <Compile Include="Controlador\CG.cs" />
+    <Compile Include="Controlador\TecnicoController.cs" />
     <Compile Include="Modelo\Conexion.cs" />
     <Compile Include="Modelo\ENTIDADES\Cliente.cs" />
     <Compile Include="Modelo\ENTIDADES\Material.cs" />

@@ -1,4 +1,5 @@
-﻿using CoolSoft.Modelo.REPOSITORIO;
+﻿using CoolSoft.Controlador;
+using CoolSoft.Modelo.REPOSITORIO;
 using CoolSoft.UI2._0.Genericos;
 using System;
 using System.Collections.Generic;
@@ -73,6 +74,12 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
         private void buttonCancelar_Click(object sender, EventArgs e)
         {
             dataGridView1.DataSource = null;
+        }
+
+        private void buttonEliminar_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(dataGridView1.SelectedCells[0].Value.ToString());
+            TecnicoController.Eliminar(dataGridView1.SelectedCells[0].Value.ToString()); 
         }
     }
 }
