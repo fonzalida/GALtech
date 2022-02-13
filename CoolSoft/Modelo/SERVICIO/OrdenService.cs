@@ -16,7 +16,7 @@ namespace CoolSoft.Modelo.SERVICIO
             if (objeto is Orden)
             {
                 int idOrden = OrdenRepository.agregar(objeto as Orden);
-                ParteOrdenRepository.agregar(new ParteOrden(1, idOrden));
+                ParteOrdenRepository.agregar(new ParteOrden(idOrden));
 
                 return idOrden;
             }
@@ -25,7 +25,6 @@ namespace CoolSoft.Modelo.SERVICIO
             else if (objeto is ParteOrden)
             {
                 ParteOrdenRepository.agregar(objeto as ParteOrden);
-                
             }
 
 

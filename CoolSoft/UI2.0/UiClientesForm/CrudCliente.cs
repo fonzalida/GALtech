@@ -21,6 +21,11 @@ namespace CoolSoft.UI2._0.UiClientesForm
             InitializeComponent();
         }
 
+        private void CrudCliente_Load(object sender, EventArgs e)
+        {
+            Format.DataGridView(dataGridView1);
+        }
+
         private void buttonAgregar_Click(object sender, EventArgs e)
         {
             if (fagregar != null)
@@ -53,13 +58,10 @@ namespace CoolSoft.UI2._0.UiClientesForm
 
         private void FormatearDataGrid()
         {
-            Format.DataGridView(dataGridView1);
-           
+            
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             dataGridView1.Columns[0].HeaderText = "ID";
-          
             dataGridView1.Columns[1].HeaderText = "DNI / CUIT";
-            
             dataGridView1.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
 
         }
@@ -107,6 +109,5 @@ namespace CoolSoft.UI2._0.UiClientesForm
 
         }
 
-        
     }
 }

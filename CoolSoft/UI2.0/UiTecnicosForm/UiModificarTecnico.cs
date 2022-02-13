@@ -23,12 +23,12 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
 
         private void buttonCargar_Click(object sender, EventArgs e)
         {
-            /*TecnicoController.Modificar(
+            TecnicoController.Modificar(
                 mtDniCuit.Text,
                 tbNombre.Text,
-                mtTelefono1.Text
-                viejo.DniCuit
-                );*/
+                mtTelefono1.Text,
+                viejo
+                );
         }
 
         private void UiModificarTecnico_Load(object sender, EventArgs e)

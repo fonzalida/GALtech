@@ -116,5 +116,27 @@ namespace CoolSoft.Modelo.REPOSITORIO
         //    Conexion conexion = new Conexion();
         //    return conexion.QuerySelect(query).Rows[0].Field<int>(0);
         //}
+
+
+        public static DataTable Buscar(long DniCuit)
+        {
+            //String query = "SELECT * FROM CLIENTE WHERE DNICUIT = \"" + DniCuit + "\"";
+            String query = "SELECT idcliente as Numero, DniCuit as 'Dni/Cuit', Nombre FROM CLIENTE ";
+            string query2 = "WHERE CAST(DNICUIT as CHAR) LIKE '%" + DniCuit + "%'";
+
+            Conexion conexion = new Conexion();
+
+            if(DniCuit != -1)
+            {
+                query = query + query2;
+            }
+
+            var resultado = conexion.QuerySelect(query);
+
+            
+            return resultado;
+
+
+        }
     }
 }

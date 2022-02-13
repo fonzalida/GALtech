@@ -34,6 +34,8 @@ namespace CoolSoft.UI2._0.UiClientesForm
                 tbProvincia.Text,
                 mtTelefono1.Text,
                 mtTelefono2.Text);
+
+            this.Close();
         }
     }
 }

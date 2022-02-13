@@ -33,7 +33,8 @@ namespace CoolSoft.Controlador
         public static void Modificar(
             string Dni,
             string Nombre,
-            string Telefono
+            string Telefono,
+            Tecnico viejo
             )
         {
             
@@ -43,7 +44,7 @@ namespace CoolSoft.Controlador
             tecnico.nombre = CG.EsNullOString(Nombre);
             tecnico.telefono = CG.EsNullOString(Telefono);
 
-            TecnicoService.Modificar(tecnico);
+            TecnicoService.Modificar(viejo, tecnico);
         }
 
 

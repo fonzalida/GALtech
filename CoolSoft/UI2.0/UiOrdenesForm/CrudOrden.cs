@@ -24,6 +24,11 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             InitializeComponent();
         }
 
+        private void CrudOrden_Load(object sender, EventArgs e)
+        {
+            Format.DataGridView(dataGridView1);
+        }
+
         private void buttonAgregar_Click(object sender, EventArgs e)
         {
             if (fagregar != null)
@@ -50,26 +55,27 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
         private void buttonVer_Click(object sender, EventArgs e)
         {
             dataGridView1.DataSource = OrdenRepository.ListarTodos();
-            Format.DataGridView(dataGridView1);
-
-          //  FormateatDataGrid();
-
+            FormateatDataGrid();
+            dataGridView1.ClearSelection();
         }
 
         private void FormateatDataGrid()
         {
             
+            foreach(DataGridViewRow dr in dataGridView1.Rows)
+            {
 
+            }
            // dataGridView1.Columns[3].Visible = false;
+            //dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;           
+            // dataGridView1.Columns["FechaRecepcion"].HeaderText = "Recibida";   // HECHO EN REPOSITORY DE ORDEN
+            dataGridView1.Columns["IdOrden"].HeaderText = "N° Orden";
 
-            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-           
-                       
-            /*dataGridView1.Columns[0].HeaderText = "ID";
+            dataGridView1.Columns["TareaDesarrollar"].HeaderText = "Tarea";
+            dataGridView1.Columns["TareaDesarrollar"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dataGridView1.Columns["IdCliente"].Visible = false;
 
-            dataGridView1.Columns[1].HeaderText = "DNI / CUIT";
-
-            dataGridView1.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;*/
+            //dataGridView1.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
         }
 
         private void buttonDetalles_Click(object sender, EventArgs e)
@@ -99,5 +105,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
         {
             dataGridView1.DataSource = null;
         }
+
+        
     }
 }

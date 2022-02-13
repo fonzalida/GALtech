@@ -16,9 +16,8 @@ namespace CoolSoft.Modelo.ENTIDADES
 
         public ParteOrden() { }
 
-        public ParteOrden(long idP, int idO)
+        public ParteOrden(int idO)
         {
-            idParte = idP;
             idOrden = idO;
         }
     }

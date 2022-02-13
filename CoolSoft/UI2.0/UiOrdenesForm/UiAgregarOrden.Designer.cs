@@ -48,7 +48,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             // 
             // panelBorde
             // 
-            this.panelBorde.Size = new System.Drawing.Size(702, 50);
+            this.panelBorde.Size = new System.Drawing.Size(1214, 50);
             // 
             // labelTitulo
             // 
@@ -58,28 +58,30 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             // buttonCancelar
             // 
             this.buttonCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonCancelar.Location = new System.Drawing.Point(538, 646);
+            this.buttonCancelar.Location = new System.Drawing.Point(1050, 493);
             // 
             // buttonCargar
             // 
             this.buttonCargar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonCargar.Location = new System.Drawing.Point(380, 646);
+            this.buttonCargar.Location = new System.Drawing.Point(892, 493);
+            this.buttonCargar.Click += new System.EventHandler(this.buttonCargar_Click);
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(40, 379);
+            this.dataGridView1.Location = new System.Drawing.Point(522, 228);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(627, 189);
             this.dataGridView1.TabIndex = 5;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // dtFechaRecepcion
             // 
             this.dtFechaRecepcion.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtFechaRecepcion.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtFechaRecepcion.Location = new System.Drawing.Point(462, 117);
+            this.dtFechaRecepcion.Location = new System.Drawing.Point(40, 126);
             this.dtFechaRecepcion.Name = "dtFechaRecepcion";
             this.dtFechaRecepcion.Size = new System.Drawing.Size(205, 34);
             this.dtFechaRecepcion.TabIndex = 30;
@@ -88,7 +90,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(77, 581);
+            this.label3.Location = new System.Drawing.Point(35, 402);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(360, 27);
             this.label3.TabIndex = 29;
@@ -98,7 +100,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(35, 87);
+            this.label2.Location = new System.Drawing.Point(35, 175);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(218, 27);
             this.label2.TabIndex = 28;
@@ -108,7 +110,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(457, 87);
+            this.label1.Location = new System.Drawing.Point(35, 96);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(224, 27);
             this.label1.TabIndex = 27;
@@ -118,7 +120,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             // 
             this.mtIdCliente.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.mtIdCliente.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtIdCliente.Location = new System.Drawing.Point(462, 579);
+            this.mtIdCliente.Location = new System.Drawing.Point(40, 432);
             this.mtIdCliente.Mask = "99999999999";
             this.mtIdCliente.Name = "mtIdCliente";
             this.mtIdCliente.PromptChar = ' ';
@@ -129,7 +131,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             // 
             this.tbTareaDesarrollar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbTareaDesarrollar.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbTareaDesarrollar.Location = new System.Drawing.Point(40, 119);
+            this.tbTareaDesarrollar.Location = new System.Drawing.Point(40, 207);
             this.tbTareaDesarrollar.Multiline = true;
             this.tbTareaDesarrollar.Name = "tbTareaDesarrollar";
             this.tbTareaDesarrollar.Size = new System.Drawing.Size(397, 113);
@@ -139,7 +141,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(207, 319);
+            this.label4.Location = new System.Drawing.Point(689, 168);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(68, 20);
             this.label4.TabIndex = 35;
@@ -149,7 +151,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(36, 319);
+            this.label5.Location = new System.Drawing.Point(518, 168);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(81, 20);
             this.label5.TabIndex = 34;
@@ -163,19 +165,20 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.buttonBuscar.ForeColor = System.Drawing.SystemColors.Control;
             this.buttonBuscar.Image = global::CoolSoft.Properties.Resources.search;
             this.buttonBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonBuscar.Location = new System.Drawing.Point(515, 335);
+            this.buttonBuscar.Location = new System.Drawing.Point(997, 184);
             this.buttonBuscar.Name = "buttonBuscar";
             this.buttonBuscar.Size = new System.Drawing.Size(152, 37);
             this.buttonBuscar.TabIndex = 33;
             this.buttonBuscar.Text = "Buscar";
             this.buttonBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonBuscar.UseVisualStyleBackColor = false;
+            this.buttonBuscar.Click += new System.EventHandler(this.buttonBuscar_Click);
             // 
             // textBoxNombre
             // 
             this.textBoxNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxNombre.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxNombre.Location = new System.Drawing.Point(213, 342);
+            this.textBoxNombre.Location = new System.Drawing.Point(695, 191);
             this.textBoxNombre.Name = "textBoxNombre";
             this.textBoxNombre.Size = new System.Drawing.Size(283, 30);
             this.textBoxNombre.TabIndex = 32;
@@ -184,7 +187,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             // 
             this.maskedTextDni.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.maskedTextDni.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextDni.Location = new System.Drawing.Point(40, 342);
+            this.maskedTextDni.Location = new System.Drawing.Point(522, 191);
             this.maskedTextDni.Mask = "99999999999";
             this.maskedTextDni.Name = "maskedTextDni";
             this.maskedTextDni.PromptChar = ' ';
@@ -197,7 +200,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(35, 281);
+            this.label6.Location = new System.Drawing.Point(517, 96);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(239, 27);
             this.label6.TabIndex = 36;
@@ -206,7 +209,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             // UiAgregarOrden
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.ClientSize = new System.Drawing.Size(702, 712);
+            this.ClientSize = new System.Drawing.Size(1214, 559);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label5);
@@ -229,15 +232,15 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.Controls.SetChildIndex(this.label2, 0);
             this.Controls.SetChildIndex(this.label3, 0);
             this.Controls.SetChildIndex(this.dtFechaRecepcion, 0);
-            this.Controls.SetChildIndex(this.panelBorde, 0);
-            this.Controls.SetChildIndex(this.buttonCargar, 0);
-            this.Controls.SetChildIndex(this.buttonCancelar, 0);
             this.Controls.SetChildIndex(this.maskedTextDni, 0);
             this.Controls.SetChildIndex(this.textBoxNombre, 0);
             this.Controls.SetChildIndex(this.buttonBuscar, 0);
             this.Controls.SetChildIndex(this.label5, 0);
             this.Controls.SetChildIndex(this.label4, 0);
             this.Controls.SetChildIndex(this.label6, 0);
+            this.Controls.SetChildIndex(this.panelBorde, 0);
+            this.Controls.SetChildIndex(this.buttonCargar, 0);
+            this.Controls.SetChildIndex(this.buttonCancelar, 0);
             this.panelBorde.ResumeLayout(false);
             this.panelBorde.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
