@@ -5,6 +5,7 @@ using System;
 using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
+using Transitions;
 
 namespace CoolSoft.UI2._0
 {
@@ -119,7 +120,6 @@ namespace CoolSoft.UI2._0
             {
                 formActivo = 1;
                 labelTitulo.Text = "CLIENTES";
-
 
                 if (this.panelContenedor.Controls.Count > 0)
                     this.panelContenedor.Controls.RemoveAt(0);

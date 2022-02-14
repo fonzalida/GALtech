@@ -88,7 +88,6 @@ namespace CoolSoft.Controlador
             //    Debug.WriteLine(cell.Value.ToString());
             //}
 
-
             Cliente cliente = new Cliente();
 
             cliente.idCliente = int.Parse(dr[0].Value.ToString());
