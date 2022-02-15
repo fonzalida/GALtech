@@ -292,10 +292,10 @@ namespace CoolSoft.UI2._0
         private System.Windows.Forms.PictureBox pictureMaximizarForm;
         private System.Windows.Forms.Button buttonOrdenes;
         private System.Windows.Forms.Button buttonTecnicos;
-        private System.Windows.Forms.Label labelTitulo;
         private System.Windows.Forms.Button buttonInicio;
         private System.Windows.Forms.Button buttonClientes;
         private System.Windows.Forms.Button buttonMenu;
         private System.Windows.Forms.PictureBox pictureBoxPresentacion;
+        private System.Windows.Forms.Label labelTitulo;
     }
 }

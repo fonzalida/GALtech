@@ -29,9 +29,9 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panelSuperior = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
@@ -41,12 +41,12 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.maskedTextDni = new System.Windows.Forms.MaskedTextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panelMenu = new System.Windows.Forms.Panel();
-            this.buttonCerrar = new System.Windows.Forms.Button();
             this.buttonCancelar = new System.Windows.Forms.Button();
             this.buttonVer = new System.Windows.Forms.Button();
             this.buttonEliminar = new System.Windows.Forms.Button();
             this.buttonDetalles = new System.Windows.Forms.Button();
             this.buttonAgregar = new System.Windows.Forms.Button();
+            this.buttonCerrar = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.panelSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -64,7 +64,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.tableLayoutPanel1.Controls.Add(this.panelSuperior, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.dataGridView1, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.panelMenu, 0, 2);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 13);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 12);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
@@ -153,28 +153,28 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             // 
             // dataGridView1
             // 
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(84)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(84)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tableLayoutPanel1.SetColumnSpan(this.dataGridView1, 2);
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(3, 82);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -200,24 +200,6 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.panelMenu.Size = new System.Drawing.Size(1021, 76);
             this.panelMenu.TabIndex = 2;
             // 
-            // buttonCerrar
-            // 
-            this.buttonCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(71)))), ((int)(((byte)(135)))));
-            this.buttonCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCerrar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCerrar.ForeColor = System.Drawing.SystemColors.Control;
-            this.buttonCerrar.Image = global::CoolSoft.Properties.Resources.clear;
-            this.buttonCerrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonCerrar.Location = new System.Drawing.Point(497, 2);
-            this.buttonCerrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.buttonCerrar.Name = "buttonCerrar";
-            this.buttonCerrar.Size = new System.Drawing.Size(152, 54);
-            this.buttonCerrar.TabIndex = 20;
-            this.buttonCerrar.Text = "Cerrar";
-            this.buttonCerrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonCerrar.UseVisualStyleBackColor = false;
-            this.buttonCerrar.Click += new System.EventHandler(this.buttonCerrar_Click);
-            // 
             // buttonCancelar
             // 
             this.buttonCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -227,7 +209,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.buttonCancelar.ForeColor = System.Drawing.SystemColors.Control;
             this.buttonCancelar.Image = global::CoolSoft.Properties.Resources.cancel;
             this.buttonCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonCancelar.Location = new System.Drawing.Point(867, 2);
+            this.buttonCancelar.Location = new System.Drawing.Point(869, 2);
             this.buttonCancelar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(152, 54);
@@ -245,7 +227,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.buttonVer.ForeColor = System.Drawing.SystemColors.Control;
             this.buttonVer.Image = global::CoolSoft.Properties.Resources.check;
             this.buttonVer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonVer.Location = new System.Drawing.Point(708, 2);
+            this.buttonVer.Location = new System.Drawing.Point(710, 2);
             this.buttonVer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonVer.Name = "buttonVer";
             this.buttonVer.Size = new System.Drawing.Size(152, 54);
@@ -262,7 +244,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.buttonEliminar.ForeColor = System.Drawing.SystemColors.Control;
             this.buttonEliminar.Image = global::CoolSoft.Properties.Resources.delete;
             this.buttonEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonEliminar.Location = new System.Drawing.Point(339, 2);
+            this.buttonEliminar.Location = new System.Drawing.Point(316, 2);
             this.buttonEliminar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonEliminar.Name = "buttonEliminar";
             this.buttonEliminar.Size = new System.Drawing.Size(152, 54);
@@ -279,7 +261,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.buttonDetalles.ForeColor = System.Drawing.SystemColors.Control;
             this.buttonDetalles.Image = global::CoolSoft.Properties.Resources.edit;
             this.buttonDetalles.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonDetalles.Location = new System.Drawing.Point(181, 2);
+            this.buttonDetalles.Location = new System.Drawing.Point(158, 2);
             this.buttonDetalles.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonDetalles.Name = "buttonDetalles";
             this.buttonDetalles.Size = new System.Drawing.Size(152, 54);
@@ -296,7 +278,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.buttonAgregar.ForeColor = System.Drawing.SystemColors.Control;
             this.buttonAgregar.Image = global::CoolSoft.Properties.Resources.add;
             this.buttonAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonAgregar.Location = new System.Drawing.Point(23, 2);
+            this.buttonAgregar.Location = new System.Drawing.Point(0, 2);
             this.buttonAgregar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonAgregar.Name = "buttonAgregar";
             this.buttonAgregar.Size = new System.Drawing.Size(152, 54);
@@ -305,15 +287,35 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.buttonAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonAgregar.UseVisualStyleBackColor = false;
             // 
+            // buttonCerrar
+            // 
+            this.buttonCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.buttonCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCerrar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCerrar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.buttonCerrar.Image = global::CoolSoft.Properties.Resources.clear;
+            this.buttonCerrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonCerrar.Location = new System.Drawing.Point(474, 2);
+            this.buttonCerrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonCerrar.MaximumSize = new System.Drawing.Size(152, 54);
+            this.buttonCerrar.Name = "buttonCerrar";
+            this.buttonCerrar.Size = new System.Drawing.Size(152, 54);
+            this.buttonCerrar.TabIndex = 21;
+            this.buttonCerrar.Text = "Cerrar";
+            this.buttonCerrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonCerrar.UseVisualStyleBackColor = false;
+            this.buttonCerrar.Click += new System.EventHandler(this.buttonCerrar_Click);
+            // 
             // CrudParteOrden
             // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(84)))));
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1051, 686);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CrudParteOrden";
             this.Text = "CrudParteOrden";
+            this.Load += new System.EventHandler(this.CrudParteOrden_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panelSuperior.ResumeLayout(false);
             this.panelSuperior.PerformLayout();

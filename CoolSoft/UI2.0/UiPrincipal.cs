@@ -120,7 +120,8 @@ namespace CoolSoft.UI2._0
             if(formActivo != 1)
             {
                 formActivo = 1;
-                labelTitulo.Text = "CLIENTES";
+                CambiarTextoTitulo("CLIENTES");
+                
 
                 if (this.panelContenedor.Controls.Count > 0)
                     this.panelContenedor.Controls.RemoveAt(0);
@@ -138,7 +139,8 @@ namespace CoolSoft.UI2._0
             if (formActivo != 2)
             {
                 formActivo = 2;
-                labelTitulo.Text = "TECNICOS";
+                CambiarTextoTitulo("TECNICOS");
+                
 
                 if (this.panelContenedor.Controls.Count > 0)
                     this.panelContenedor.Controls.RemoveAt(0);
@@ -155,12 +157,12 @@ namespace CoolSoft.UI2._0
         {
             if (formActivo != 3)
             {
-                labelTitulo.Text = "ORDENES";
                 formActivo = 3;
+                CambiarTextoTitulo("ORDENES");
 
                 if (this.panelContenedor.Controls.Count > 0)
                     this.panelContenedor.Controls.RemoveAt(0);
-                CrudOrden fh = new CrudOrden();
+                CrudOrden fh = new CrudOrden(this);
                 fh.TopLevel = false;
                 fh.Dock = DockStyle.Fill;
                 this.panelContenedor.Controls.Add(fh);
@@ -171,15 +173,17 @@ namespace CoolSoft.UI2._0
 
         private void panelBorde_Resize(object sender, EventArgs e)
         {
+            CambiarTextoTitulo(labelTitulo.Text);
+        }
+
+       public void CambiarTextoTitulo(string texto)
+        {
+            labelTitulo.Text = texto;
             int x = panelBorde.Width / 2;
             int y = panelBorde.Height / 2;
 
-            labelTitulo.Location = new Point(x-(labelTitulo.Size.Width / 2), y - (labelTitulo.Size.Height / 2));
-        }
-
-       public void CambiarText()
-        {
-
+            labelTitulo.Location = new Point(x - (labelTitulo.Size.Width / 2), y - (labelTitulo.Size.Height / 2));
+            
         }
         
 

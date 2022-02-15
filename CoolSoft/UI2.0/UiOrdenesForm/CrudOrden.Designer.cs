@@ -63,9 +63,6 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -254,7 +251,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.buttonCancelar.ForeColor = System.Drawing.SystemColors.Control;
             this.buttonCancelar.Image = global::CoolSoft.Properties.Resources.cancel;
             this.buttonCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonCancelar.Location = new System.Drawing.Point(593, 78);
+            this.buttonCancelar.Location = new System.Drawing.Point(569, 78);
             this.buttonCancelar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(152, 54);
@@ -273,7 +270,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.panelFechas.Controls.Add(this.label2);
             this.panelFechas.Controls.Add(this.dateTimePicker2);
             this.panelFechas.Controls.Add(this.label3);
-            this.panelFechas.Location = new System.Drawing.Point(751, 0);
+            this.panelFechas.Location = new System.Drawing.Point(727, 0);
             this.panelFechas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelFechas.Name = "panelFechas";
             this.panelFechas.Size = new System.Drawing.Size(273, 142);
@@ -359,7 +356,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.buttonVer.ForeColor = System.Drawing.SystemColors.Control;
             this.buttonVer.Image = global::CoolSoft.Properties.Resources.check;
             this.buttonVer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonVer.Location = new System.Drawing.Point(593, 17);
+            this.buttonVer.Location = new System.Drawing.Point(569, 17);
             this.buttonVer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonVer.Name = "buttonVer";
             this.buttonVer.Size = new System.Drawing.Size(152, 54);

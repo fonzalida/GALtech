@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Transitions;
+using CoolSoft.UI2._0.UiClientesForm;
 
 namespace CoolSoft.UI2._0.UiOrdenesForm
 {
@@ -18,9 +19,11 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
 
         UiAgregarOrden fagregar;
         UiModificarOrden modificarOrden;
-        public CrudOrden()
+        CrudParteOrden formParte;
+        UiPrincipal formPrincipal;
+        public CrudOrden(UiPrincipal p)
         {
-
+            formPrincipal = p;
             fagregar = null;
             InitializeComponent();
         }
@@ -109,13 +112,16 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
 
         private void buttonPartes_Click(object sender, EventArgs e)
         {
-            CrudParteOrden formParte = new CrudParteOrden(this);
+            formParte = new CrudParteOrden(formPrincipal,this);
             formParte.TopLevel = false;
+            formParte.Size = this.Size;
             this.Controls.Add(formParte);
             formParte.Location = new Point(0, 690); //230; 60 //   686
             formParte.Show();
 
             Transition t = new Transition(new TransitionType_EaseInEaseOut(500));
+            t.TransitionCompletedEvent += new EventHandler<Transition.Args>(OnTransitionCompleted);
+
             t.add(tableLayoutPanel1, "Top", -690);
             t.add(formParte, "Top", 0);
             t.run();
@@ -136,14 +142,11 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             //    fh.Show();
             //}
 
+        }
 
-
-
-
-
-
-
-
+        private void OnTransitionCompleted(object sender, Transition.Args e)
+        {
+            formParte.Dock = DockStyle.Fill;
         }
 
 

@@ -34,33 +34,33 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             // 
             // textBoxNombre
             // 
-            this.textBoxNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxNombre.Margin = new System.Windows.Forms.Padding(4);
             // 
             // maskedTextDni
             // 
-            this.maskedTextDni.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.maskedTextDni.Margin = new System.Windows.Forms.Padding(4);
             // 
             // panelBorde
             // 
-            this.panelBorde.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.panelBorde.Size = new System.Drawing.Size(1205, 50);
+            this.panelBorde.Margin = new System.Windows.Forms.Padding(4);
+            this.panelBorde.Size = new System.Drawing.Size(1189, 50);
             // 
             // buttonCancelar
             // 
-            this.buttonCancelar.Location = new System.Drawing.Point(1043, 478);
-            this.buttonCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonCancelar.Location = new System.Drawing.Point(1027, 478);
+            this.buttonCancelar.Margin = new System.Windows.Forms.Padding(4);
             // 
             // buttonCargar
             // 
-            this.buttonCargar.Location = new System.Drawing.Point(884, 478);
-            this.buttonCargar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonCargar.Location = new System.Drawing.Point(868, 478);
+            this.buttonCargar.Margin = new System.Windows.Forms.Padding(4);
             // 
             // UiModificarOrden
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1205, 543);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ClientSize = new System.Drawing.Size(1189, 543);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UiModificarOrden";
             this.Text = "UiModificarOrden";
             this.panelBorde.ResumeLayout(false);
