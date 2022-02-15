@@ -41,6 +41,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.maskedTextDni = new System.Windows.Forms.MaskedTextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.buttonPartes = new System.Windows.Forms.Button();
             this.buttonCancelar = new System.Windows.Forms.Button();
             this.panelFechas = new System.Windows.Forms.Panel();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -212,6 +213,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             // panelMenu
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.panelMenu, 2);
+            this.panelMenu.Controls.Add(this.buttonPartes);
             this.panelMenu.Controls.Add(this.buttonCancelar);
             this.panelMenu.Controls.Add(this.panelFechas);
             this.panelMenu.Controls.Add(this.buttonEliminar);
@@ -224,6 +226,24 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(1021, 146);
             this.panelMenu.TabIndex = 2;
+            // 
+            // buttonPartes
+            // 
+            this.buttonPartes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(71)))), ((int)(((byte)(135)))));
+            this.buttonPartes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonPartes.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonPartes.ForeColor = System.Drawing.SystemColors.Control;
+            this.buttonPartes.Image = global::CoolSoft.Properties.Resources.ver;
+            this.buttonPartes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonPartes.Location = new System.Drawing.Point(191, 78);
+            this.buttonPartes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonPartes.Name = "buttonPartes";
+            this.buttonPartes.Size = new System.Drawing.Size(152, 54);
+            this.buttonPartes.TabIndex = 16;
+            this.buttonPartes.Text = "Ver trabajos";
+            this.buttonPartes.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonPartes.UseVisualStyleBackColor = false;
+            this.buttonPartes.Click += new System.EventHandler(this.buttonPartes_Click);
             // 
             // buttonCancelar
             // 
@@ -387,8 +407,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             // 
             // CrudOrden
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1051, 686);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -433,5 +452,6 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.Label label3;
         public System.Windows.Forms.DataGridView dataGridView1;
+        public System.Windows.Forms.Button buttonPartes;
     }
 }

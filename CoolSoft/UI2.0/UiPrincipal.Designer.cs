@@ -266,6 +266,7 @@ namespace CoolSoft.UI2._0
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "UiPrincipal";
             this.Text = "UiPrincipal";
+            this.Load += new System.EventHandler(this.UiPrincipal_Load);
             this.Resize += new System.EventHandler(this.UiPrincipal_Resize);
             this.panelMenu.ResumeLayout(false);
             this.panelBorde.ResumeLayout(false);

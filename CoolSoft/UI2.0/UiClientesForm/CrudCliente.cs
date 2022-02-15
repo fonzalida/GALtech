@@ -30,7 +30,7 @@ namespace CoolSoft.UI2._0.UiClientesForm
         {
             if (fagregar != null)
             {
-                if (fagregar.IsDisposed)
+                if (!fagregar.IsDisposed)
                 {
                     fagregar = new UiAgregarCliente();
                     fagregar.StartPosition = FormStartPosition.CenterScreen;

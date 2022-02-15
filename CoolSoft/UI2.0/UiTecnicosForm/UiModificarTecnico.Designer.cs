@@ -29,33 +29,74 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
         /// </summary>
         private void InitializeComponent()
         {
+            this.buttonModificar = new System.Windows.Forms.Button();
             this.panelBorde.SuspendLayout();
             this.SuspendLayout();
             // 
+            // mtTelefono1
+            // 
+            this.mtTelefono1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            // 
+            // tbNombre
+            // 
+            this.tbNombre.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            // 
+            // mtDniCuit
+            // 
+            this.mtDniCuit.Margin = new System.Windows.Forms.Padding(5);
+            // 
             // panelBorde
             // 
-            this.panelBorde.Margin = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.panelBorde.Size = new System.Drawing.Size(524, 41);
+            this.panelBorde.Margin = new System.Windows.Forms.Padding(4);
             // 
             // labelTitulo
             // 
-            this.labelTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelTitulo.Size = new System.Drawing.Size(176, 19);
+            this.labelTitulo.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.labelTitulo.Size = new System.Drawing.Size(215, 24);
             this.labelTitulo.Text = "MODIFICAR TÉCNICO";
             // 
             // buttonCargar
             // 
+            this.buttonCargar.Location = new System.Drawing.Point(259, 70);
+            this.buttonCargar.Visible = false;
             this.buttonCargar.Click += new System.EventHandler(this.buttonCargar_Click);
+            // 
+            // buttonModificar
+            // 
+            this.buttonModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(71)))), ((int)(((byte)(135)))));
+            this.buttonModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonModificar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonModificar.ForeColor = System.Drawing.SystemColors.Control;
+            this.buttonModificar.Image = global::CoolSoft.Properties.Resources.edit;
+            this.buttonModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonModificar.Location = new System.Drawing.Point(115, 330);
+            this.buttonModificar.Name = "buttonModificar";
+            this.buttonModificar.Size = new System.Drawing.Size(152, 54);
+            this.buttonModificar.TabIndex = 64;
+            this.buttonModificar.Text = "Modificar";
+            this.buttonModificar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonModificar.UseVisualStyleBackColor = false;
+            this.buttonModificar.Click += new System.EventHandler(this.buttonModificar_Click);
             // 
             // UiModificarTecnico
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(524, 507);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.ClientSize = new System.Drawing.Size(437, 396);
+            this.Controls.Add(this.buttonModificar);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "UiModificarTecnico";
             this.Text = "UiModificarTecnico";
             this.Load += new System.EventHandler(this.UiModificarTecnico_Load);
+            this.Controls.SetChildIndex(this.panelBorde, 0);
+            this.Controls.SetChildIndex(this.buttonCargar, 0);
+            this.Controls.SetChildIndex(this.buttonCancelar, 0);
+            this.Controls.SetChildIndex(this.mtDniCuit, 0);
+            this.Controls.SetChildIndex(this.tbNombre, 0);
+            this.Controls.SetChildIndex(this.mtTelefono1, 0);
+            this.Controls.SetChildIndex(this.label1, 0);
+            this.Controls.SetChildIndex(this.label2, 0);
+            this.Controls.SetChildIndex(this.label6, 0);
+            this.Controls.SetChildIndex(this.buttonModificar, 0);
             this.panelBorde.ResumeLayout(false);
             this.panelBorde.PerformLayout();
             this.ResumeLayout(false);
@@ -64,5 +105,7 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
         }
 
         #endregion
+
+        public System.Windows.Forms.Button buttonModificar;
     }
 }

@@ -30,5 +30,10 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
                 mtTelefono1.Text
                 );
         }
+
+        private void UiAgregarTecnico_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

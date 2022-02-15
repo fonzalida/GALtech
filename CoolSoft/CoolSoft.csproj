@@ -327,6 +327,9 @@
     <EmbeddedResource Include="UI2.0\UiOrdenesForm\CrudOrden.resx">
       <DependentUpon>CrudOrden.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI2.0\UiOrdenesForm\CrudParteOrden.resx">
+      <DependentUpon>CrudParteOrden.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI2.0\UiOrdenesForm\UiAgregarOrden.resx">
       <DependentUpon>UiAgregarOrden.cs</DependentUpon>
     </EmbeddedResource>
@@ -404,7 +407,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\ver.png" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\check.png" />
     <None Include="Resources\LOGO COOLSOFT.png" />

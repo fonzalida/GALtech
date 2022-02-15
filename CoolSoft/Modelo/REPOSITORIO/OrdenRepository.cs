@@ -13,9 +13,6 @@ namespace CoolSoft.Modelo.REPOSITORIO
     {
         public static int agregar(Orden p)
         {
-            //p.completada = 0;
-
-
             MySqlCommand cmd = new MySqlCommand(
                 "INSERT INTO ORDEN" +
                 "(FechaRecepcion ,TareaDesarrollar, IdCliente) " +
@@ -23,16 +20,11 @@ namespace CoolSoft.Modelo.REPOSITORIO
                "SELECT LAST_INSERT_ID();"
                 );
 
-            //cmd.Parameters.AddWithValue("@IdOrden",p.IdOrden);
             cmd.Parameters.AddWithValue("@FechaRecepcion",p.fechaRecepcion.Date.ToString("yyyy-MM-dd"));
             cmd.Parameters.AddWithValue("@TareaDesarrollar", p.tareaDesarrollar);
-            //cmd.Parameters.AddWithValue("@TareaDesarrollada", p.tareaDesarrollada);
-            //cmd.Parameters.AddWithValue("@Precio",p.Precio);
             cmd.Parameters.AddWithValue("@IdCliente",p.idCliente);
-            //cmd.Parameters.AddWithValue("@Completada",0);
 
             Conexion conexion = new Conexion();
-            //conexion.QueryInsertDeleteUpdate(cmd);
             return conexion.QueryId(cmd);
         }
 

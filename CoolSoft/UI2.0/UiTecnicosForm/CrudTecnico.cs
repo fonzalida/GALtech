@@ -52,7 +52,7 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
         {
 
             dataGridView1.DataSource = TecnicoRepository.ListarTodos();
-           // Format.DataGridView(dataGridView1);
+           //Format.DataGridView(dataGridView1);
 
             FormateatDataGrid();
 
@@ -61,17 +61,12 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
         private void FormateatDataGrid()
         {
             Format.DataGridView(dataGridView1);
-
             dataGridView1.Columns[3].Visible = false;
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
-            /*dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-           
-                       
-            /*dataGridView1.Columns[0].HeaderText = "ID";
-
-            dataGridView1.Columns[1].HeaderText = "DNI / CUIT";
-
-            dataGridView1.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;*/
+            //dataGridView1.Columns[0].HeaderText = "ID";
+            //dataGridView1.Columns[1].HeaderText = "DNI / CUIT";
+            //dataGridView1.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
         }
 
         private void buttonCancelar_Click(object sender, EventArgs e)
@@ -81,14 +76,11 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
 
         private void buttonEliminar_Click(object sender, EventArgs e)
         {
-            //MessageBox.Show(dataGridView1.SelectedCells[0].Value.ToString());
             TecnicoController.Eliminar(dataGridView1.SelectedCells[0].Value.ToString());
-            
         }
 
         private void buttonDetalles_Click(object sender, EventArgs e)
         {
-
             viejo = TecnicoController.DataGridViewToTecnico(dataGridView1.SelectedRows[0].Cells);
 
             if (modificarTecnico != null)
@@ -113,5 +105,9 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
 
         }
 
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

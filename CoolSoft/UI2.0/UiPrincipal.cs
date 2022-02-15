@@ -13,6 +13,7 @@ namespace CoolSoft.UI2._0
     {
 
         int formActivo = 0;
+        string titulo = "Hola";
 
       
 
@@ -176,26 +177,47 @@ namespace CoolSoft.UI2._0
             labelTitulo.Location = new Point(x-(labelTitulo.Size.Width / 2), y - (labelTitulo.Size.Height / 2));
         }
 
+       public void CambiarText()
+        {
+
+        }
         
 
         private void buttonMenu_Click(object sender, EventArgs e)
         {
+            //if (panelMenu.Width == 230)
+            //{
+            //    while (panelMenu.Width > 65)
+            //    {
+            //        panelMenu.Width = panelMenu.Width - 5;
+            //        Application.DoEvents();
+            //    }
+            //}
+            //else
+            //{
+            //    while (panelMenu.Width < 230)
+            //    {
+            //        panelMenu.Width = panelMenu.Width + 5;
+            //        Application.DoEvents();
+            //    }
+            //}
+
+            int iFormWidth;
             if (panelMenu.Width == 230)
             {
-                while (panelMenu.Width > 65)
-                {
-                    panelMenu.Width = panelMenu.Width - 5;
-                    Application.DoEvents();
-                }
+                iFormWidth = 65;
             }
             else
             {
-                while (panelMenu.Width < 230)
-                {
-                    panelMenu.Width = panelMenu.Width + 5;
-                    Application.DoEvents();
-                }
+                iFormWidth = 230;
             }
+            //Transition.run(panelMenu, "Width", iFormWidth, new TransitionType_EaseInEaseOut(200));
+            Transition.run(panelMenu, "Width", iFormWidth, new TransitionType_EaseInEaseOut(300));
+        }
+
+        private void UiPrincipal_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }

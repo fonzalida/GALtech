@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Transitions;
 
 namespace CoolSoft.UI2._0.UiOrdenesForm
 {
@@ -106,6 +107,46 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             dataGridView1.DataSource = null;
         }
 
-        
+        private void buttonPartes_Click(object sender, EventArgs e)
+        {
+            CrudParteOrden formParte = new CrudParteOrden(this);
+            formParte.TopLevel = false;
+            this.Controls.Add(formParte);
+            formParte.Location = new Point(0, 690); //230; 60 //   686
+            formParte.Show();
+
+            Transition t = new Transition(new TransitionType_EaseInEaseOut(500));
+            t.add(tableLayoutPanel1, "Top", -690);
+            t.add(formParte, "Top", 0);
+            t.run();
+
+
+            //if (formActivo != 1)
+            //{
+            //    formActivo = 1;
+            //    labelTitulo.Text = "CLIENTES";
+
+            //    if (this.panelContenedor.Controls.Count > 0)
+            //        this.panelContenedor.Controls.RemoveAt(0);
+            //    CrudCliente fh = new CrudCliente();
+            //    fh.TopLevel = false;
+            //    fh.Dock = DockStyle.Fill;
+            //    this.panelContenedor.Controls.Add(fh);
+            //    this.panelContenedor.Tag = fh;
+            //    fh.Show();
+            //}
+
+
+
+
+
+
+
+
+
+        }
+
+
+
     }
 }

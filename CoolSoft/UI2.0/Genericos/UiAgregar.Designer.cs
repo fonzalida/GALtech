@@ -94,8 +94,7 @@ namespace CoolSoft.UI2._0.Genericos
             // 
             // UiAgregar
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(226)))), ((int)(((byte)(225)))));
             this.ClientSize = new System.Drawing.Size(656, 609);
             this.Controls.Add(this.buttonCancelar);
