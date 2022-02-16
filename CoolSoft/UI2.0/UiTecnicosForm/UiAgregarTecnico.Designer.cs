@@ -51,11 +51,13 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
             // buttonCancelar
             // 
             this.buttonCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.buttonCancelar.Location = new System.Drawing.Point(273, 330);
             // 
             // buttonCargar
             // 
             this.buttonCargar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonCargar.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.buttonCargar.Location = new System.Drawing.Point(115, 330);
             this.buttonCargar.Click += new System.EventHandler(this.buttonCargar_Click);
             // 
