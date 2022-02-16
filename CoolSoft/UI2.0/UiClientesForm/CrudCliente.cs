@@ -139,8 +139,10 @@ namespace CoolSoft.UI2._0.UiClientesForm
         private void maskedTextDni_KeyDown(object sender, KeyEventArgs e)
         {
             if(maskedTextDni.Text != "")
-
-            var result = from Cliente in this.tablaCliente.AsEnumerable() where Cliente.Field<string>(1).StartsWith(maskedTextDni.Text) select Cliente;
+            { 
+                var result = from Cliente in this.tablaCliente.AsEnumerable() where Cliente.Field<string>(1).StartsWith(maskedTextDni.Text) select Cliente; 
+            }
+            
 
         }
 
