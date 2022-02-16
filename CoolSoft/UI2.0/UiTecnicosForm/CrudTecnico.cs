@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -19,6 +20,8 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
         UiAgregarTecnico fagregar;
         UiModificarTecnico modificarTecnico;
         Tecnico viejo;
+
+        DataTable tablaTecnico;
         public CrudTecnico()
         {
             fagregar = null;
@@ -50,15 +53,16 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
 
         private void buttonVer_Click(object sender, EventArgs e)
         {
-
-            dataGridView1.DataSource = TecnicoRepository.ListarTodos();
+            tablaTecnico = TecnicoRepository.ListarTodos();
+            dataGridView1.DataSource = null;
+            dataGridView1.DataSource = tablaTecnico;
            //Format.DataGridView(dataGridView1);
 
-            FormateatDataGrid();
+            FormatearDataGrid();
 
         }
 
-        private void FormateatDataGrid()
+        private void FormatearDataGrid()
         {
             Format.DataGridView(dataGridView1);
             dataGridView1.Columns[3].Visible = false;
@@ -109,5 +113,68 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
         {
 
         }
+
+        private void TextBoxDni_TextChanged(object sender, EventArgs e)
+        {
+            BuscarTexto(textBoxDni, textBoxNombre, 0);
+        }
+
+       
+        private void textBoxNombre_TextChanged(object sender, EventArgs e)
+        {
+            BuscarTexto(textBoxNombre, textBoxDni, 1);
+        }
+        private void textBoxDni_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void BuscarTexto(TextBox actual, TextBox inactivo, int indice)
+        {
+            if (inactivo.Text != "")
+            {
+                inactivo.Text = "";
+            }
+            if (actual.Text != "")
+            {
+                if (tablaTecnico == null)
+                {
+                    tablaTecnico = TecnicoRepository.ListarTodos();
+                }
+
+                EnumerableRowCollection<DataRow> resultado;
+
+                if(indice == 0)
+                {
+                    resultado = from a in tablaTecnico.AsEnumerable()
+                                    where a.Field<int>(indice).ToString().Contains(actual.Text)
+                                    select a;
+                }
+                else
+                {
+                    resultado = from a in tablaTecnico.AsEnumerable()
+                                    where a.Field<string>(indice).Contains(actual.Text)
+                                    select a;
+                }
+              
+                if (resultado.Count() > 0)
+                {
+                    dataGridView1.DataSource = resultado.CopyToDataTable();
+                    FormatearDataGrid();
+                }
+                else
+                {
+                    dataGridView1.DataSource = null;
+                }
+            }
+            else
+            {
+                dataGridView1.DataSource = null;
+                dataGridView1.DataSource = tablaTecnico;
+                FormatearDataGrid();
+            }
+        }
+
+        
     }
 }
