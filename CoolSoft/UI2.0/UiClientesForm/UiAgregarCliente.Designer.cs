@@ -51,8 +51,13 @@ namespace CoolSoft.UI2._0.UiClientesForm
             this.labelTitulo.Size = new System.Drawing.Size(199, 24);
             this.labelTitulo.Text = "AGREGAR CLIENTE";
             // 
+            // buttonCancelar
+            // 
+            this.buttonCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            // 
             // buttonCargar
             // 
+            this.buttonCargar.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.buttonCargar.Click += new System.EventHandler(this.buttonCargar_Click);
             // 
             // label7

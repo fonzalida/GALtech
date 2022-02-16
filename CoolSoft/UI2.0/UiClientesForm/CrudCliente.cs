@@ -3,6 +3,7 @@ using CoolSoft.Modelo.ENTIDADES;
 using CoolSoft.Modelo.REPOSITORIO;
 using CoolSoft.UI2._0.Genericos;
 using System;
+using System.Data;
 using System.Diagnostics;
 using System.Windows.Forms;
 
@@ -13,6 +14,8 @@ namespace CoolSoft.UI2._0.UiClientesForm
         UiAgregarCliente fagregar;
         UiModificarCliente modificarCliente;
         Cliente viejo;
+
+        DataTable tablaCliente;
 
         public CrudCliente()
         {
@@ -28,30 +31,54 @@ namespace CoolSoft.UI2._0.UiClientesForm
 
         private void buttonAgregar_Click(object sender, EventArgs e)
         {
-            if (fagregar != null)
+            fagregar = new UiAgregarCliente();
+            fagregar.StartPosition = FormStartPosition.CenterScreen;
+            var result = fagregar.ShowDialog();
+            if (result == DialogResult.OK)
             {
-                if (!fagregar.IsDisposed)
-                {
-                    fagregar = new UiAgregarCliente();
-                    fagregar.StartPosition = FormStartPosition.CenterScreen;
-                    fagregar.Show();
-                }
-                else
-                {
-                    fagregar.BringToFront();
-                }
+                tablaCliente = ClienteRepository.ListarTodos();
+                dataGridView1.DataSource = null;
+                dataGridView1.DataSource = tablaCliente;
+
+                FormatearDataGrid();
             }
-            else
-            {
-                fagregar = new UiAgregarCliente();
-                fagregar.StartPosition = FormStartPosition.CenterScreen;
-                fagregar.Show();
-            }
+
+
+            //if (fagregar != null)
+            //{
+            //    if (!fagregar.IsDisposed)
+            //    {
+            //        fagregar = new UiAgregarCliente();
+            //        fagregar.StartPosition = FormStartPosition.CenterScreen;
+            //        var result = fagregar.ShowDialog();
+            //        if (result == DialogResult.OK)
+            //        {
+            //            tablaCliente = ClienteRepository.ListarTodos();
+            //            dataGridView1.DataSource = null;
+            //            dataGridView1.DataSource = tablaCliente;
+
+            //            FormatearDataGrid();
+            //        }
+            //    }
+            //    else
+            //    {
+            //        fagregar.BringToFront();
+            //    }
+            //}
+            //else
+            //{
+
+            //}
         }
+
+            
 
         private void buttonVer_Click(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = ClienteRepository.ListarTodos();
+            tablaCliente = ClienteRepository.ListarTodos();
+            dataGridView1.DataSource = null;
+            dataGridView1.DataSource = tablaCliente;
+
             FormatearDataGrid();
 
         }
@@ -108,6 +135,7 @@ namespace CoolSoft.UI2._0.UiClientesForm
             //}
 
         }
+
 
     }
 }

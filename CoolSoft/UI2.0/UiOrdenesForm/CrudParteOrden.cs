@@ -15,6 +15,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
     {
         UiPrincipal formPrincipal;
         CrudOrden formOrden;
+        DataTable tablaParte;
 
         public CrudParteOrden(UiPrincipal p, CrudOrden o)
         {
