@@ -3,8 +3,10 @@ using CoolSoft.Modelo.ENTIDADES;
 using CoolSoft.Modelo.REPOSITORIO;
 using CoolSoft.UI2._0.Genericos;
 using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Diagnostics;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace CoolSoft.UI2._0.UiClientesForm
@@ -136,19 +138,68 @@ namespace CoolSoft.UI2._0.UiClientesForm
 
         }
 
-        private void maskedTextDni_KeyDown(object sender, KeyEventArgs e)
-        {
-            if(maskedTextDni.Text != "")
-            { 
-                var result = from Cliente in this.tablaCliente.AsEnumerable() where Cliente.Field<string>(1).StartsWith(maskedTextDni.Text) select Cliente; 
-            }
-            
 
+        private void textBoxDni_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
 
-        private void textBoxNombre_KeyDown(object sender, KeyEventArgs e)
+        private void BuscarTexto(TextBox actual, TextBox inactivo, int indice)
         {
+            if (inactivo.Text != "")
+            {
+                inactivo.Text = "";
+            }
+            if (actual.Text != "")
+            {
+                if (tablaCliente == null)
+                {
+                    tablaCliente = ClienteRepository.ListarTodos();
+                }
 
+                EnumerableRowCollection<DataRow> resultado;
+
+                if (indice == 1)
+                {
+                    resultado = from a in tablaCliente.AsEnumerable()
+                                where a.Field<long>(indice).ToString().Contains(actual.Text)
+                                select a;
+                }
+                else
+                {
+                    resultado = from a in tablaCliente.AsEnumerable()
+                                where a.Field<string>(indice).Contains(actual.Text)
+                                select a;
+                }
+
+
+                //dataGridView1.DataSource = null;
+                if (resultado.Count() > 0)
+                {
+                    dataGridView1.DataSource = resultado.CopyToDataTable();
+                    FormatearDataGrid();
+                }
+                else
+                {
+                    dataGridView1.DataSource = null;
+                }
+            }
+            else
+            {
+                dataGridView1.DataSource = null;
+                dataGridView1.DataSource = tablaCliente;
+                FormatearDataGrid();
+            }
+        }
+
+        private void textBoxDni_TextChanged(object sender, EventArgs e)
+        {
+            BuscarTexto(textBoxDni, textBoxNombre, 1);
+        }
+
+        private void textBoxNombre_TextChanged(object sender, EventArgs e)
+        {
+            BuscarTexto(textBoxNombre, textBoxDni, 2);
         }
     }
 }

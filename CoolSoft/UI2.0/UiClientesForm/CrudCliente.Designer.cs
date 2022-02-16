@@ -34,11 +34,11 @@ namespace CoolSoft.UI2._0.UiClientesForm
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panelSuperior = new System.Windows.Forms.Panel();
+            this.textBoxDni = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.buttonBuscar = new System.Windows.Forms.Button();
             this.textBoxNombre = new System.Windows.Forms.TextBox();
-            this.maskedTextDni = new System.Windows.Forms.MaskedTextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panelMenu = new System.Windows.Forms.Panel();
             this.buttonCancelar = new System.Windows.Forms.Button();
@@ -76,17 +76,29 @@ namespace CoolSoft.UI2._0.UiClientesForm
             // 
             this.panelSuperior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(226)))), ((int)(((byte)(225)))));
             this.tableLayoutPanel1.SetColumnSpan(this.panelSuperior, 2);
+            this.panelSuperior.Controls.Add(this.textBoxDni);
             this.panelSuperior.Controls.Add(this.label4);
             this.panelSuperior.Controls.Add(this.label5);
             this.panelSuperior.Controls.Add(this.buttonBuscar);
             this.panelSuperior.Controls.Add(this.textBoxNombre);
-            this.panelSuperior.Controls.Add(this.maskedTextDni);
             this.panelSuperior.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelSuperior.Location = new System.Drawing.Point(2, 2);
             this.panelSuperior.Margin = new System.Windows.Forms.Padding(2);
             this.panelSuperior.Name = "panelSuperior";
             this.panelSuperior.Size = new System.Drawing.Size(766, 61);
             this.panelSuperior.TabIndex = 0;
+            // 
+            // textBoxDni
+            // 
+            this.textBoxDni.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxDni.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxDni.Location = new System.Drawing.Point(17, 28);
+            this.textBoxDni.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxDni.Name = "textBoxDni";
+            this.textBoxDni.Size = new System.Drawing.Size(110, 26);
+            this.textBoxDni.TabIndex = 16;
+            this.textBoxDni.TextChanged += new System.EventHandler(this.textBoxDni_TextChanged);
+            this.textBoxDni.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxDni_KeyPress);
             // 
             // label4
             // 
@@ -136,22 +148,7 @@ namespace CoolSoft.UI2._0.UiClientesForm
             this.textBoxNombre.Name = "textBoxNombre";
             this.textBoxNombre.Size = new System.Drawing.Size(213, 26);
             this.textBoxNombre.TabIndex = 1;
-            this.textBoxNombre.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxNombre_KeyDown);
-            // 
-            // maskedTextDni
-            // 
-            this.maskedTextDni.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.maskedTextDni.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextDni.Location = new System.Drawing.Point(17, 28);
-            this.maskedTextDni.Margin = new System.Windows.Forms.Padding(2);
-            this.maskedTextDni.Mask = "99999999999";
-            this.maskedTextDni.Name = "maskedTextDni";
-            this.maskedTextDni.PromptChar = ' ';
-            this.maskedTextDni.Size = new System.Drawing.Size(113, 26);
-            this.maskedTextDni.TabIndex = 0;
-            this.maskedTextDni.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.maskedTextDni.ValidatingType = typeof(int);
-            this.maskedTextDni.KeyDown += new System.Windows.Forms.KeyEventHandler(this.maskedTextDni_KeyDown);
+            this.textBoxNombre.TextChanged += new System.EventHandler(this.textBoxNombre_TextChanged);
             // 
             // dataGridView1
             // 
@@ -302,7 +299,6 @@ namespace CoolSoft.UI2._0.UiClientesForm
         public System.Windows.Forms.DataGridView dataGridView1;
         public System.Windows.Forms.Panel panelMenu;
         public System.Windows.Forms.TextBox textBoxNombre;
-        public System.Windows.Forms.MaskedTextBox maskedTextDni;
         public System.Windows.Forms.Button buttonAgregar;
         public System.Windows.Forms.Button buttonBuscar;
         public System.Windows.Forms.Button buttonDetalles;
@@ -310,5 +306,6 @@ namespace CoolSoft.UI2._0.UiClientesForm
         private System.Windows.Forms.Label label5;
         public System.Windows.Forms.Button buttonCancelar;
         public System.Windows.Forms.Button buttonVer;
+        public System.Windows.Forms.TextBox textBoxDni;
     }
 }
