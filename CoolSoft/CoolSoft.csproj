@@ -274,6 +274,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Back\Config\" />
+    <Folder Include="Back\Controladores\" />
+    <Folder Include="Back\Modelos\" />
     <Folder Include="CONTROLADOR\" />
   </ItemGroup>
   <ItemGroup>
