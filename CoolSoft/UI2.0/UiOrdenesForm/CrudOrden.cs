@@ -18,7 +18,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
     {
 
         UiAgregarOrden fagregar;
-        UiModificarOrden modificarOrden;
+        //UiModificarOrden modificarOrden;
         CrudParteOrden formParte;
         UiPrincipal formPrincipal;
 
