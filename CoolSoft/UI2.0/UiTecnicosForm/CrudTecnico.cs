@@ -145,14 +145,14 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
                 if(indice == 0)
                 {
                     resultado = from a in tablaTecnico.AsEnumerable()
-                                    where a.Field<int>(indice).ToString().Contains(actual.Text)
-                                    select a;
+                                    where a.Field<int>(indice).ToString().IndexOf(actual.Text, StringComparison.OrdinalIgnoreCase) >= 0
+                                select a;
                 }
                 else
                 {
                     resultado = from a in tablaTecnico.AsEnumerable()
-                                    where a.Field<string>(indice).Contains(actual.Text)
-                                    select a;
+                                    where a.Field<string>(indice).IndexOf(actual.Text, StringComparison.OrdinalIgnoreCase) >= 0
+                                select a;
                 }
               
                 if (resultado.Count() > 0)

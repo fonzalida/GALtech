@@ -29,10 +29,24 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.panelBorde.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // panelBorde
+            // 
+            this.panelBorde.Size = new System.Drawing.Size(715, 50);
+            // 
+            // UiModificarOrden
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(715, 623);
+            this.Name = "UiModificarOrden";
             this.Text = "UiModificarOrden";
+            this.panelBorde.ResumeLayout(false);
+            this.panelBorde.PerformLayout();
+            this.ResumeLayout(false);
+
         }
 
         #endregion

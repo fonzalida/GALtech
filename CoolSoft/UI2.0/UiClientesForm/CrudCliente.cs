@@ -145,6 +145,16 @@ namespace CoolSoft.UI2._0.UiClientesForm
             e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
 
+        private void textBoxDni_MouseDown(object sender, MouseEventArgs e)
+        {
+            textBoxNombre.Text = "";
+        }
+
+        private void textBoxNombre_MouseDown(object sender, MouseEventArgs e)
+        {
+            textBoxDni.Text = "";
+        }
+
         private void BuscarTexto(TextBox actual, TextBox inactivo, int indice)
         {
             if (inactivo.Text != "")

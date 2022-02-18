@@ -179,6 +179,12 @@
     <Compile Include="UI2.0\UiOrdenesForm\UiModificarOrden.Designer.cs">
       <DependentUpon>UiModificarOrden.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI2.0\UiOrdenesForm\UiSeleccionarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI2.0\UiOrdenesForm\UiSeleccionarCliente.Designer.cs">
+      <DependentUpon>UiSeleccionarCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI2.0\UiPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -332,6 +338,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI2.0\UiOrdenesForm\UiAgregarOrden.resx">
       <DependentUpon>UiAgregarOrden.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI2.0\UiOrdenesForm\UiModificarOrden.resx">
+      <DependentUpon>UiModificarOrden.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI2.0\UiOrdenesForm\UiSeleccionarCliente.resx">
+      <DependentUpon>UiSeleccionarCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI2.0\UiPrincipal.resx">
       <DependentUpon>UiPrincipal.cs</DependentUpon>
