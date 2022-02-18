@@ -63,6 +63,9 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             // 
             // tableLayoutPanel1
             // 
+            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -196,6 +199,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             // dataGridView1
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tableLayoutPanel1.SetColumnSpan(this.dataGridView1, 2);
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -232,10 +236,10 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.buttonPartes.ForeColor = System.Drawing.SystemColors.Control;
             this.buttonPartes.Image = global::CoolSoft.Properties.Resources.ver;
             this.buttonPartes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonPartes.Location = new System.Drawing.Point(191, 78);
+            this.buttonPartes.Location = new System.Drawing.Point(163, 55);
             this.buttonPartes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonPartes.Name = "buttonPartes";
-            this.buttonPartes.Size = new System.Drawing.Size(152, 54);
+            this.buttonPartes.Size = new System.Drawing.Size(150, 44);
             this.buttonPartes.TabIndex = 16;
             this.buttonPartes.Text = "Ver trabajos";
             this.buttonPartes.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -251,10 +255,10 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.buttonCancelar.ForeColor = System.Drawing.SystemColors.Control;
             this.buttonCancelar.Image = global::CoolSoft.Properties.Resources.cancel;
             this.buttonCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonCancelar.Location = new System.Drawing.Point(569, 78);
+            this.buttonCancelar.Location = new System.Drawing.Point(607, 84);
             this.buttonCancelar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonCancelar.Name = "buttonCancelar";
-            this.buttonCancelar.Size = new System.Drawing.Size(152, 54);
+            this.buttonCancelar.Size = new System.Drawing.Size(114, 44);
             this.buttonCancelar.TabIndex = 15;
             this.buttonCancelar.Text = "Cancelar";
             this.buttonCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -338,10 +342,10 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.buttonEliminar.ForeColor = System.Drawing.SystemColors.Control;
             this.buttonEliminar.Image = global::CoolSoft.Properties.Resources.delete;
             this.buttonEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonEliminar.Location = new System.Drawing.Point(191, 17);
+            this.buttonEliminar.Location = new System.Drawing.Point(163, 7);
             this.buttonEliminar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonEliminar.Name = "buttonEliminar";
-            this.buttonEliminar.Size = new System.Drawing.Size(152, 54);
+            this.buttonEliminar.Size = new System.Drawing.Size(150, 44);
             this.buttonEliminar.TabIndex = 2;
             this.buttonEliminar.Text = "Eliminar";
             this.buttonEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -356,10 +360,10 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.buttonVer.ForeColor = System.Drawing.SystemColors.Control;
             this.buttonVer.Image = global::CoolSoft.Properties.Resources.check;
             this.buttonVer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonVer.Location = new System.Drawing.Point(569, 17);
+            this.buttonVer.Location = new System.Drawing.Point(607, 17);
             this.buttonVer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonVer.Name = "buttonVer";
-            this.buttonVer.Size = new System.Drawing.Size(152, 54);
+            this.buttonVer.Size = new System.Drawing.Size(114, 44);
             this.buttonVer.TabIndex = 14;
             this.buttonVer.Text = "Ver";
             this.buttonVer.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -374,10 +378,10 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.buttonDetalles.ForeColor = System.Drawing.SystemColors.Control;
             this.buttonDetalles.Image = global::CoolSoft.Properties.Resources.edit;
             this.buttonDetalles.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonDetalles.Location = new System.Drawing.Point(33, 78);
+            this.buttonDetalles.Location = new System.Drawing.Point(7, 55);
             this.buttonDetalles.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonDetalles.Name = "buttonDetalles";
-            this.buttonDetalles.Size = new System.Drawing.Size(152, 54);
+            this.buttonDetalles.Size = new System.Drawing.Size(150, 44);
             this.buttonDetalles.TabIndex = 1;
             this.buttonDetalles.Text = "Detalles";
             this.buttonDetalles.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -392,10 +396,10 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.buttonAgregar.ForeColor = System.Drawing.SystemColors.Control;
             this.buttonAgregar.Image = global::CoolSoft.Properties.Resources.add;
             this.buttonAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonAgregar.Location = new System.Drawing.Point(33, 17);
+            this.buttonAgregar.Location = new System.Drawing.Point(7, 7);
             this.buttonAgregar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonAgregar.Name = "buttonAgregar";
-            this.buttonAgregar.Size = new System.Drawing.Size(152, 54);
+            this.buttonAgregar.Size = new System.Drawing.Size(150, 44);
             this.buttonAgregar.TabIndex = 0;
             this.buttonAgregar.Text = "Agregar";
             this.buttonAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;

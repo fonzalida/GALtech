@@ -109,8 +109,6 @@ DROP TABLE IF EXISTS `parteorden`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `parteorden` (
   `IdParte` bigint NOT NULL AUTO_INCREMENT,
-  `FechaInicio` datetime DEFAULT NULL,
-  `FechaFin` datetime DEFAULT NULL,
   `TareaDesarrollada` varchar(256) CHARACTER SET utf8 COLLATE utf8_spanish_ci DEFAULT NULL,
   `IdOrden` int NOT NULL,
   `Completa` tinyint(1) NOT NULL DEFAULT '0',
@@ -164,6 +162,8 @@ DROP TABLE IF EXISTS `tecnicoorden`;
 CREATE TABLE `tecnicoorden` (
   `Dni` int NOT NULL,
   `IdParte` bigint NOT NULL,
+  `FechaInicio` datetime DEFAULT NULL,
+  `FechaFin` datetime DEFAULT NULL,
   PRIMARY KEY (`Dni`,`IdParte`),
   KEY `IdParte` (`IdParte`),
   CONSTRAINT `tecnicoorden_ibfk_1` FOREIGN KEY (`Dni`) REFERENCES `tecnico` (`Dni`) ON DELETE CASCADE ON UPDATE CASCADE,

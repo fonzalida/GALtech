@@ -31,11 +31,16 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
 
         private void buttonCerrar_Click(object sender, EventArgs e)
         {
+            formPrincipal.CambiarTextoTitulo("ORDENES");
             this.Dock = DockStyle.None;
             Transition t = new Transition(new TransitionType_EaseInEaseOut(500));
             t.TransitionCompletedEvent += new EventHandler<Transition.Args>(OnTransitionCompleted);
-            t.add(formOrden.tableLayoutPanel1, "Top", 2);
-            t.add(this, "Top", 690);
+
+            //t.add(formOrden.tableLayoutPanel1, "Top", 12);
+            //t.add(this, "Top", 690);
+
+            t.add(formOrden.tableLayoutPanel1, "Left", 12);
+            t.add(this, "Left", 1460);
             t.run();
 
         }
@@ -43,7 +48,13 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
 
         private void OnTransitionCompleted(object sender, Transition.Args e)
         {
+            
             this.Close();
+        }
+
+        private void buttonAgregar_MouseEnter(object sender, EventArgs e)
+        {
+            Console.WriteLine(buttonAgregar.Size);
         }
     }
 }

@@ -159,16 +159,20 @@ namespace CoolSoft.UI2._0.UiClientesForm
 
                 EnumerableRowCollection<DataRow> resultado;
 
-                if (indice == 1)
+                if (indice == 1) 
                 {
+                    //resultado = from a in tablaCliente.AsEnumerable() 
+                    //            where a.Field<long>(indice).ToString().Contains(actual.Text)
+                    //            select a;
+
                     resultado = from a in tablaCliente.AsEnumerable()
-                                where a.Field<long>(indice).ToString().Contains(actual.Text)
+                                where a.Field<long>(indice).ToString().IndexOf(actual.Text, StringComparison.OrdinalIgnoreCase) >= 0
                                 select a;
                 }
                 else
                 {
                     resultado = from a in tablaCliente.AsEnumerable()
-                                where a.Field<string>(indice).Contains(actual.Text)
+                                where a.Field<string>(indice).IndexOf(actual.Text, StringComparison.OrdinalIgnoreCase) >= 0
                                 select a;
                 }
 

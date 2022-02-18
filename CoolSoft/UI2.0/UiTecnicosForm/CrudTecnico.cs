@@ -118,7 +118,6 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
         {
             BuscarTexto(textBoxDni, textBoxNombre, 0);
         }
-
        
         private void textBoxNombre_TextChanged(object sender, EventArgs e)
         {
@@ -141,7 +140,6 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
                 {
                     tablaTecnico = TecnicoRepository.ListarTodos();
                 }
-
                 EnumerableRowCollection<DataRow> resultado;
 
                 if(indice == 0)

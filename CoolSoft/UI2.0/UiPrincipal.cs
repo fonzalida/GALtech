@@ -14,7 +14,7 @@ namespace CoolSoft.UI2._0
 
         int formActivo = 0;
         string titulo = "Hola";
-
+        Form[] ListaForm = new Form[4];
       
 
         /*************MOVER MOUSE**************/
@@ -84,15 +84,6 @@ namespace CoolSoft.UI2._0
 
         }
 
-
-
-
-
-
-
-
-
-
         /****************************/
 
 
@@ -119,8 +110,19 @@ namespace CoolSoft.UI2._0
         {
             if(formActivo != 1)
             {
+                //bool arriba = false;
+                //if (formActivo > 1)
+                //    arriba = true;
+
                 formActivo = 1;
                 CambiarTextoTitulo("CLIENTES");
+                //if (ListaForm[formActivo] == null) 
+                //{
+                //    ListaForm[formActivo] = new CrudCliente();
+                //}
+
+                
+                
                 
 
                 if (this.panelContenedor.Controls.Count > 0)
@@ -223,5 +225,21 @@ namespace CoolSoft.UI2._0
         {
             
         }
+
+        //private void Transicion(Form actual, Form siguiente ,bool subir)
+        //{
+        //    Transition t = new Transition(new TransitionType_EaseInEaseOut(500));
+        //    if (subir)
+        //    {
+        //        actual.Location = new Point()
+        //        t.add(actual, "Top", 0);
+        //        t.add(siguiente, "Top", -670);
+        //    }
+        //    else
+        //    {
+        //        t.add(actual, "Top", 0);
+        //        t.add(siguiente, "Top", 670);
+        //    }
+        //}
     }
 }

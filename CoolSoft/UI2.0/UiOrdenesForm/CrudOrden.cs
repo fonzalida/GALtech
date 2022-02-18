@@ -116,14 +116,18 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             formParte.TopLevel = false;
             formParte.Size = this.Size;
             this.Controls.Add(formParte);
-            formParte.Location = new Point(0, 690); //230; 60 //   686
+            //formParte.Location = new Point(0, 690); //230; 60 //   686 1051
+            formParte.Location = new Point(1460, 0);
             formParte.Show();
 
             Transition t = new Transition(new TransitionType_EaseInEaseOut(500));
             t.TransitionCompletedEvent += new EventHandler<Transition.Args>(OnTransitionCompleted);
 
-            t.add(tableLayoutPanel1, "Top", -690);
-            t.add(formParte, "Top", 0);
+            //t.add(tableLayoutPanel1, "Top", -690);
+            //t.add(formParte, "Top", 0);
+
+            t.add(tableLayoutPanel1, "Left", -1460);
+            t.add(formParte, "Left", 0);
             t.run();
 
 
