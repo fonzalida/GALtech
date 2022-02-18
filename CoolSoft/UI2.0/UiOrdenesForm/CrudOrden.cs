@@ -106,25 +106,25 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
 
         private void buttonDetalles_Click(object sender, EventArgs e)
         {
-            if (modificarOrden != null)
-            {
-                if (modificarOrden.IsDisposed)
-                {
-                    //modificarOrden = new UiModificarOrden();
-                    modificarOrden.StartPosition = FormStartPosition.CenterScreen;
-                    modificarOrden.Show();
-                }
-                else
-                {
-                    modificarOrden.BringToFront();
-                }
-            }
-            else
-            {
-                //modificarOrden = new UiModificarOrden();
-                modificarOrden.StartPosition = FormStartPosition.CenterScreen;
-                modificarOrden.Show();
-            }
+            //if (modificarOrden != null)
+            //{
+            //    if (modificarOrden.IsDisposed)
+            //    {
+            //        //modificarOrden = new UiModificarOrden();
+            //        modificarOrden.StartPosition = FormStartPosition.CenterScreen;
+            //        modificarOrden.Show();
+            //    }
+            //    else
+            //    {
+            //        modificarOrden.BringToFront();
+            //    }
+            //}
+            //else
+            //{
+            //    //modificarOrden = new UiModificarOrden();
+            //    modificarOrden.StartPosition = FormStartPosition.CenterScreen;
+            //    modificarOrden.Show();
+            //}
         }
 
         private void buttonCancelar_Click(object sender, EventArgs e)
