@@ -21,6 +21,8 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
         UiModificarOrden modificarOrden;
         CrudParteOrden formParte;
         UiPrincipal formPrincipal;
+
+        DataTable tablaOrden;
         public CrudOrden(UiPrincipal p)
         {
             formPrincipal = p;
@@ -35,35 +37,54 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
 
         private void buttonAgregar_Click(object sender, EventArgs e)
         {
-            if (fagregar != null)
+
+            fagregar = new UiAgregarOrden();
+            fagregar.StartPosition = FormStartPosition.CenterScreen;
+            var result = fagregar.ShowDialog();
+            if (result == DialogResult.OK)
             {
-                if (fagregar.IsDisposed)
-                {
-                    fagregar = new UiAgregarOrden();
-                    fagregar.StartPosition = FormStartPosition.CenterScreen;
-                    fagregar.Show();
-                }
-                else
-                {
-                    fagregar.BringToFront();
-                }
+                tablaOrden = OrdenRepository.ListarTodos();
+                dataGridView1.DataSource = null;
+                dataGridView1.DataSource = tablaOrden;
+
+                FormatearDataGrid();
             }
-            else
-            {
-                fagregar = new UiAgregarOrden();
-                fagregar.StartPosition = FormStartPosition.CenterScreen;
-                fagregar.Show();
-            }
+
+            //if (fagregar != null)
+            //{
+            //    if (fagregar.IsDisposed)
+            //    {
+            //        fagregar = new UiAgregarOrden();
+            //        fagregar.StartPosition = FormStartPosition.CenterScreen;
+            //        fagregar.Show();
+            //    }
+            //    else
+            //    {
+            //        fagregar.BringToFront();
+            //    }
+            //}
+            //else
+            //{
+            //    fagregar = new UiAgregarOrden();
+            //    fagregar.StartPosition = FormStartPosition.CenterScreen;
+            //    fagregar.Show();
+            //}
         }
 
         private void buttonVer_Click(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = OrdenRepository.ListarTodos();
-            FormateatDataGrid();
-            dataGridView1.ClearSelection();
+
+            tablaOrden = OrdenRepository.ListarTodos();
+            dataGridView1.DataSource = null;
+            dataGridView1.DataSource = tablaOrden;
+
+            FormatearDataGrid();
+            //dataGridView1.DataSource = OrdenRepository.ListarTodos();
+            //FormatearDataGrid();
+            //dataGridView1.ClearSelection();
         }
 
-        private void FormateatDataGrid()
+        private void FormatearDataGrid()
         {
             
             foreach(DataGridViewRow dr in dataGridView1.Rows)
@@ -148,12 +169,72 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
 
         }
 
+        private void BuscarTexto(TextBox actual, TextBox inactivo, int indice)
+        {
+            if (inactivo.Text != "")
+            {
+                inactivo.Text = "";
+            }
+            if (actual.Text != "")
+            {
+                if (tablaOrden == null)
+                {
+                    tablaOrden = OrdenRepository.ListarTodos();
+                }
+
+                EnumerableRowCollection<DataRow> resultado;
+
+                if (indice == 1)
+                {
+                    resultado = from a in tablaOrden.AsEnumerable()
+                                where a.Field<int>(indice).ToString().Contains(actual.Text)
+                                select a;
+                }
+                else
+                {
+                    resultado = from a in tablaOrden.AsEnumerable()
+                                where a.Field<string>(indice).Contains(actual.Text)
+                                select a;
+                }
+
+
+                //dataGridView1.DataSource = null;
+                if (resultado.Count() > 0)
+                {
+                    dataGridView1.DataSource = resultado.CopyToDataTable();
+                    FormatearDataGrid();
+                }
+                else
+                {
+                    dataGridView1.DataSource = null;
+                }
+            }
+            else
+            {
+                dataGridView1.DataSource = null;
+                dataGridView1.DataSource = tablaOrden;
+                FormatearDataGrid();
+            }
+        }
+
         private void OnTransitionCompleted(object sender, Transition.Args e)
         {
             formParte.Dock = DockStyle.Fill;
         }
 
+        private void textBoxOrden_TextChanged(object sender, EventArgs e)
+        {
+            BuscarTexto(textBoxOrden, textBoxNombre, 1);
+        }
 
+        private void textBoxNombre_TextChanged(object sender, EventArgs e)
+        {
+            BuscarTexto(textBoxNombre, textBoxOrden, 3);
+        }
 
+        private void textBoxOrden_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
     }
 }
