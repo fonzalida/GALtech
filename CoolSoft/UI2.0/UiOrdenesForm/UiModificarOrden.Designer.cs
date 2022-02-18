@@ -29,38 +29,10 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
         /// </summary>
         private void InitializeComponent()
         {
-            this.panelBorde.SuspendLayout();
-            this.SuspendLayout();
-            // 
-            // panelBorde
-            // 
-            this.panelBorde.Size = new System.Drawing.Size(899, 50);
-            // 
-            // labelTitulo
-            // 
-            this.labelTitulo.Size = new System.Drawing.Size(162, 19);
-            this.labelTitulo.Text = "MODIFICAR ORDEN";
-            // 
-            // buttonCancelar
-            // 
-            this.buttonCancelar.Location = new System.Drawing.Point(825, 529);
-            // 
-            // buttonCargar
-            // 
-            this.buttonCargar.Location = new System.Drawing.Point(667, 529);
-            // 
-            // UiModificarOrden
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(899, 521);
-            this.Name = "UiModificarOrden";
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Text = "UiModificarOrden";
-            this.panelBorde.ResumeLayout(false);
-            this.panelBorde.PerformLayout();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
         }
 
         #endregion

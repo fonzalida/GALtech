@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CoolSoft.UI2._0.Genericos;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,7 +11,7 @@ using System.Windows.Forms;
 
 namespace CoolSoft.UI2._0.UiOrdenesForm
 {
-    public partial class UiModificarOrden : UiAgregarOrden
+    public partial class UiModificarOrden : UiAgregar
     {
         public UiModificarOrden()
         {

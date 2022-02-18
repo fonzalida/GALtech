@@ -333,9 +333,6 @@
     <EmbeddedResource Include="UI2.0\UiOrdenesForm\UiAgregarOrden.resx">
       <DependentUpon>UiAgregarOrden.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI2.0\UiOrdenesForm\UiModificarOrden.resx">
-      <DependentUpon>UiModificarOrden.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="UI2.0\UiPrincipal.resx">
       <DependentUpon>UiPrincipal.cs</DependentUpon>
     </EmbeddedResource>
