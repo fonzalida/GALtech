@@ -99,6 +99,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             dataGridView1.Columns["TareaDesarrollar"].HeaderText = "Tarea";
             dataGridView1.Columns["TareaDesarrollar"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             dataGridView1.Columns["IdCliente"].Visible = false;
+            dataGridView1.ClearSelection();
 
             //dataGridView1.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
         }
@@ -109,7 +110,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             {
                 if (modificarOrden.IsDisposed)
                 {
-                    modificarOrden = new UiModificarOrden();
+                    //modificarOrden = new UiModificarOrden();
                     modificarOrden.StartPosition = FormStartPosition.CenterScreen;
                     modificarOrden.Show();
                 }
@@ -120,7 +121,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             }
             else
             {
-                modificarOrden = new UiModificarOrden();
+                //modificarOrden = new UiModificarOrden();
                 modificarOrden.StartPosition = FormStartPosition.CenterScreen;
                 modificarOrden.Show();
             }
@@ -235,6 +236,16 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
         private void textBoxOrden_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void textBoxOrden_MouseDown(object sender, MouseEventArgs e)
+        {
+            textBoxNombre.Text = "";
+        }
+
+        private void textBoxNombre_MouseDown(object sender, MouseEventArgs e)
+        {
+            textBoxOrden.Text = "";
         }
     }
 }

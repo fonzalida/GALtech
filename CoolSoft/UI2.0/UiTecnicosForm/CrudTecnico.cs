@@ -67,7 +67,7 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
             Format.DataGridView(dataGridView1);
             dataGridView1.Columns[3].Visible = false;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-
+            dataGridView1.ClearSelection();
             //dataGridView1.Columns[0].HeaderText = "ID";
             //dataGridView1.Columns[1].HeaderText = "DNI / CUIT";
             //dataGridView1.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
@@ -173,6 +173,14 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
             }
         }
 
-        
+        private void textBoxDni_MouseDown(object sender, MouseEventArgs e)
+        {
+            textBoxNombre.Text = "";
+        }
+
+        private void textBoxNombre_MouseDown(object sender, MouseEventArgs e)
+        {
+            textBoxDni.Text = "";
+        }
     }
 }

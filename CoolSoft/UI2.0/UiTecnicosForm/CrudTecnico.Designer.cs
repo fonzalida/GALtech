@@ -97,6 +97,7 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
             this.textBoxDni.TabIndex = 14;
             this.textBoxDni.TextChanged += new System.EventHandler(this.TextBoxDni_TextChanged);
             this.textBoxDni.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxDni_KeyPress);
+            this.textBoxDni.MouseDown += new System.Windows.Forms.MouseEventHandler(this.textBoxDni_MouseDown);
             // 
             // label4
             // 
@@ -145,6 +146,7 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
             this.textBoxNombre.Size = new System.Drawing.Size(283, 30);
             this.textBoxNombre.TabIndex = 1;
             this.textBoxNombre.TextChanged += new System.EventHandler(this.textBoxNombre_TextChanged);
+            this.textBoxNombre.MouseDown += new System.Windows.Forms.MouseEventHandler(this.textBoxNombre_MouseDown);
             // 
             // dataGridView1
             // 

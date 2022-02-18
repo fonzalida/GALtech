@@ -13,6 +13,9 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
 {
     public partial class UiAgregarOrden : CoolSoft.UI2._0.Genericos.UiAgregar
     {
+
+
+        DataTable clientes;
         public UiAgregarOrden()
         {
             InitializeComponent();
@@ -20,6 +23,8 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
 
         private void UiAgregarOrden_Load(object sender, EventArgs e)
         {
+            clientes = ClienteRepository.ListarTodos();
+
             Format.DataGridView(dataGridView1);
         }
 
