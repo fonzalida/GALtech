@@ -11,14 +11,20 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Transitions;
 using CoolSoft.UI2._0.UiClientesForm;
+using CoolSoft.Modelo.ENTIDADES;
+using CoolSoft.Controlador;
 
 namespace CoolSoft.UI2._0.UiOrdenesForm
 {
     public partial class CrudOrden : Form
     {
 
+        Orden viejo;
+
         UiAgregarOrden fagregar;
-        //UiModificarOrden modificarOrden;
+
+
+        UiModificarOrden modificarOrden;
         CrudParteOrden formParte;
         UiPrincipal formPrincipal;
 
@@ -34,6 +40,38 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
         private void CrudOrden_Load(object sender, EventArgs e)
         {
             Format.DataGridView(dataGridView1);
+            EstadoInicial();
+        }
+
+        private void EstadoInicial()
+        {
+            panelSuperior.Enabled = false;
+            panelFechas.Enabled = true;
+
+            buttonAgregar.Enabled = false;
+            buttonEliminar.Enabled = false;
+            buttonDetalles.Enabled = false;
+            buttonPartes.Enabled = false;
+
+            buttonVer.Enabled = true;
+            buttonCancelar.Enabled = false;
+
+        }
+
+        private void EstadoVer()
+        {
+            panelSuperior.Enabled = true;
+            panelFechas.Enabled = false;
+
+            buttonAgregar.Enabled = true;
+            buttonEliminar.Enabled = true;
+            buttonDetalles.Enabled = true;
+            buttonPartes.Enabled = true;
+
+            buttonVer.Enabled = false;
+            buttonCancelar.Enabled = true;
+
+
         }
 
         private void buttonAgregar_Click(object sender, EventArgs e)
@@ -74,7 +112,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
 
         private void buttonVer_Click(object sender, EventArgs e)
         {
-
+            EstadoVer();
             tablaOrden = OrdenRepository.ListarTodos();
             dataGridView1.DataSource = null;
             dataGridView1.DataSource = tablaOrden;
@@ -107,6 +145,21 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
 
         private void buttonDetalles_Click(object sender, EventArgs e)
         {
+            viejo = OrdenController.DataGridViewToOrden(dataGridView1.SelectedRows[0].Cells);
+      
+            modificarOrden = new UiModificarOrden(viejo);
+            modificarOrden.StartPosition = FormStartPosition.CenterScreen;
+            var result = modificarOrden.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                tablaOrden = OrdenRepository.ListarTodos();
+                dataGridView1.DataSource = null;
+                dataGridView1.DataSource = tablaOrden;
+
+                FormatearDataGrid();
+            }
+
+
             //if (modificarOrden != null)
             //{
             //    if (modificarOrden.IsDisposed)
@@ -130,6 +183,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
 
         private void buttonCancelar_Click(object sender, EventArgs e)
         {
+            EstadoInicial();
             dataGridView1.DataSource = null;
         }
 
@@ -181,9 +235,10 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             {
                 if (tablaOrden == null)
                 {
-                    tablaActual = tablaOrden.Copy();
+                    
 
                     tablaOrden = OrdenRepository.ListarTodos();
+                    tablaActual = tablaOrden.Copy();
                 }
 
                 EnumerableRowCollection<DataRow> resultado;
@@ -191,7 +246,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
                 if (indice == 1)
                 {
                     resultado = from a in tablaOrden.AsEnumerable()
-                                where a.Field<int>(indice).ToString().IndexOf(actual.Text, StringComparison.OrdinalIgnoreCase) >= 0
+                                where a.Field<int>(indice).ToString().StartsWith(actual.Text)
                                 select a;
                 }
                 else
@@ -234,7 +289,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
 
         private void textBoxNombre_TextChanged(object sender, EventArgs e)
         {
-            BuscarTexto(textBoxNombre, textBoxOrden, 3);
+            BuscarTexto(textBoxNombre, textBoxOrden, 2);
         }
 
         private void textBoxOrden_KeyPress(object sender, KeyPressEventArgs e)
@@ -284,27 +339,42 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+
+            string rowFilter;
             switch (comboBox1.Text)
             {
+
                 case "Todas":
-                    var resultado = from a in tablaActual.AsEnumerable() select a;
-                    dataGridView1.DataSource = null;
-                    dataGridView1.DataSource = resultado.CopyToDataTable();
+
+                    rowFilter = "";
+                    (dataGridView1.DataSource as DataTable).DefaultView.RowFilter = rowFilter;
+                    //FormatearDataGrid();
+
+
+                    //var resultado = from a in tablaActual.AsEnumerable() select a;
+                    //dataGridView1.DataSource = null;
+                    //dataGridView1.DataSource = resultado.CopyToDataTable();
                     break;
                 case "Completas":
-                     resultado = from a in tablaActual.AsEnumerable()
-                                    //where a.Field<int>("Completada") = 0           arreglar query
-                                    select a;
-                    dataGridView1.DataSource = null;
-                    dataGridView1.DataSource = resultado.CopyToDataTable();
+
+                    rowFilter = string.Format("[{0}] = {1}", "Completada","True");
+                    (dataGridView1.DataSource as DataTable).DefaultView.RowFilter = rowFilter;
+                    //var resultado1 = from a in tablaActual.AsEnumerable()
+                    //                where a.Field<int>("Completada") == 0          // arreglar query
+                    //                select a;
+                    //dataGridView1.DataSource = null;
+                    //dataGridView1.DataSource = resultado1.CopyToDataTable();
                     break;
 
                 case "En Curso":
-                     resultado = from a in tablaActual.AsEnumerable()
-                                     //where a.Field<int>("Completada") = 1          arreglar query
-                                 select a;
-                    dataGridView1.DataSource = null;
-                    dataGridView1.DataSource = resultado.CopyToDataTable();
+                    rowFilter = string.Format("[{0}] = {1}", "Completada", "False");
+                    (dataGridView1.DataSource as DataTable).DefaultView.RowFilter = rowFilter;
+
+                    //var resultado2 = from a in tablaActual.AsEnumerable()
+                    //                 where a.Field<int>("Completada") == 1       //   arreglar query
+                    //             select a;
+                    //dataGridView1.DataSource = null;
+                    //dataGridView1.DataSource = resultado2.CopyToDataTable();
                     break;
 
                     /*case "Pendientes":

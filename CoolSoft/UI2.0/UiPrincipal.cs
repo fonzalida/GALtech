@@ -14,8 +14,8 @@ namespace CoolSoft.UI2._0
 
         int formActivo = 0;
         string titulo = "Hola";
-        Form[] ListaForm = new Form[4];
-      
+        Form formActual;
+        
 
         /*************MOVER MOUSE**************/
 
@@ -93,6 +93,8 @@ namespace CoolSoft.UI2._0
             
         }
 
+
+
         private void button1_Click(object sender, EventArgs e)
         {
             if (formActivo != 0)
@@ -110,16 +112,11 @@ namespace CoolSoft.UI2._0
         {
             if(formActivo != 1)
             {
-                //bool arriba = false;
-                //if (formActivo > 1)
-                //    arriba = true;
+               
 
                 formActivo = 1;
                 CambiarTextoTitulo("CLIENTES");
-                //if (ListaForm[formActivo] == null) 
-                //{
-                //    ListaForm[formActivo] = new CrudCliente();
-                //}
+                
 
                 
                 
@@ -191,23 +188,6 @@ namespace CoolSoft.UI2._0
 
         private void buttonMenu_Click(object sender, EventArgs e)
         {
-            //if (panelMenu.Width == 230)
-            //{
-            //    while (panelMenu.Width > 65)
-            //    {
-            //        panelMenu.Width = panelMenu.Width - 5;
-            //        Application.DoEvents();
-            //    }
-            //}
-            //else
-            //{
-            //    while (panelMenu.Width < 230)
-            //    {
-            //        panelMenu.Width = panelMenu.Width + 5;
-            //        Application.DoEvents();
-            //    }
-            //}
-
             int iFormWidth;
             if (panelMenu.Width == 230)
             {
@@ -226,19 +206,23 @@ namespace CoolSoft.UI2._0
             
         }
 
-        //private void Transicion(Form actual, Form siguiente ,bool subir)
+        //private void Transicion(Form actual, Form siguiente, int ac, int si)
         //{
         //    Transition t = new Transition(new TransitionType_EaseInEaseOut(500));
-        //    if (subir)
+        //    if (ac < si)
         //    {
-        //        actual.Location = new Point()
-        //        t.add(actual, "Top", 0);
-        //        t.add(siguiente, "Top", -670);
+        //        siguiente.Location = new Point(0,670);
+
+        //        t.add(siguiente, "Top", 0);
+        //        t.add(actual, "Top", -670);
+        //        t.run();
         //    }
         //    else
         //    {
-        //        t.add(actual, "Top", 0);
-        //        t.add(siguiente, "Top", 670);
+        //        siguiente.Location = new Point(0, -670);
+        //        t.add(siguiente, "Top", 0);
+        //        t.add(actual, "Top", 670);
+        //        t.run();
         //    }
         //}
     }

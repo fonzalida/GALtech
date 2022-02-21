@@ -177,7 +177,7 @@ namespace CoolSoft.UI2._0.UiClientesForm
                     //            select a;
 
                     resultado = from a in tablaCliente.AsEnumerable()
-                                where a.Field<long>(indice).ToString().IndexOf(actual.Text, StringComparison.OrdinalIgnoreCase) >= 0
+                                where a.Field<long>(indice).ToString().StartsWith(actual.Text)
                                 select a;
                 }
                 else

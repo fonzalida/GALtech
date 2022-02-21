@@ -91,8 +91,10 @@ namespace CoolSoft.Modelo.REPOSITORIO
             String query =
                 "SELECT DATE_FORMAT(DATE(FechaRecepcion), \"%d %c %Y\") AS Recepcion, " +
                 "IdOrden, TareaDesarrollar, " +
-                "Nombre AS Cliente, Precio AS Importe, " +
-                "Completada, Cliente.IdCliente " +
+                "Nombre AS Cliente, " +
+                "Precio AS Importe, " +
+                "Completada, " +
+                "Cliente.IdCliente " +
                 "FROM ORDEN " +
                 "INNER JOIN CLIENTE " +
                 "ON ORDEN.IDCLIENTE = CLIENTE.IDCLIENTE";

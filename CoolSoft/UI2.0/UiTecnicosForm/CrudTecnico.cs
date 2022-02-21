@@ -145,7 +145,7 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
                 if(indice == 0)
                 {
                     resultado = from a in tablaTecnico.AsEnumerable()
-                                    where a.Field<int>(indice).ToString().IndexOf(actual.Text, StringComparison.OrdinalIgnoreCase) >= 0
+                                    where a.Field<int>(indice).ToString().StartsWith(actual.Text)
                                 select a;
                 }
                 else

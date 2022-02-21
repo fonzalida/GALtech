@@ -1,4 +1,5 @@
-﻿using CoolSoft.UI2._0.Genericos;
+﻿using CoolSoft.Modelo.ENTIDADES;
+using CoolSoft.UI2._0.Genericos;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,9 +14,37 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
 {
     public partial class UiModificarOrden : UiAgregar
     {
-        public UiModificarOrden()
+        Orden vieja;
+
+        public UiModificarOrden(Orden v)
         {
+            vieja = v;
             InitializeComponent();
+            Console.WriteLine(vieja.idOrden);
+        }
+
+        private void textBoxImporte_KeyPress(object sender, KeyPressEventArgs e)
+        {
+             
+
+            if (
+            !char.IsControl(e.KeyChar)
+            && !char.IsDigit(e.KeyChar)
+            && (e.KeyChar != '.'))
+            {
+                // Then it is NOT a character we want allowed in the text box.
+                e.Handled = false;
+            }
+
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+
+            if ( char.IsDigit(e.KeyChar) && ((sender as TextBox).Text.IndexOf('.') > -1) &&  ((sender as TextBox).Text.IndexOf('.') == ((sender as TextBox).TextLength) -3))
+            {
+                e.Handled = true;
+            }
         }
     }
 }
