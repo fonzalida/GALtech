@@ -23,6 +23,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
         UiPrincipal formPrincipal;
 
         DataTable tablaOrden;
+        DataTable tablaActual;
         public CrudOrden(UiPrincipal p)
         {
             formPrincipal = p;
@@ -86,12 +87,12 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
 
         private void FormatearDataGrid()
         {
-            
-            foreach(DataGridViewRow dr in dataGridView1.Rows)
+
+            foreach (DataGridViewRow dr in dataGridView1.Rows)
             {
 
             }
-           // dataGridView1.Columns[3].Visible = false;
+            // dataGridView1.Columns[3].Visible = false;
             //dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;           
             // dataGridView1.Columns["FechaRecepcion"].HeaderText = "Recibida";   // HECHO EN REPOSITORY DE ORDEN
             dataGridView1.Columns["IdOrden"].HeaderText = "N° Orden";
@@ -134,7 +135,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
 
         private void buttonPartes_Click(object sender, EventArgs e)
         {
-            formParte = new CrudParteOrden(formPrincipal,this);
+            formParte = new CrudParteOrden(formPrincipal, this);
             formParte.TopLevel = false;
             formParte.Size = this.Size;
             this.Controls.Add(formParte);
@@ -180,6 +181,8 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             {
                 if (tablaOrden == null)
                 {
+                    tablaActual = tablaOrden.Copy();
+
                     tablaOrden = OrdenRepository.ListarTodos();
                 }
 
@@ -188,13 +191,13 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
                 if (indice == 1)
                 {
                     resultado = from a in tablaOrden.AsEnumerable()
-                                where a.Field<int>(indice).ToString().Contains(actual.Text)
+                                where a.Field<int>(indice).ToString().IndexOf(actual.Text, StringComparison.OrdinalIgnoreCase) >= 0
                                 select a;
                 }
                 else
                 {
                     resultado = from a in tablaOrden.AsEnumerable()
-                                where a.Field<string>(indice).Contains(actual.Text)
+                                where a.Field<string>(indice).IndexOf(actual.Text, StringComparison.OrdinalIgnoreCase) >= 0
                                 select a;
                 }
 
@@ -202,6 +205,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
                 //dataGridView1.DataSource = null;
                 if (resultado.Count() > 0)
                 {
+                    tablaActual = resultado.CopyToDataTable();
                     dataGridView1.DataSource = resultado.CopyToDataTable();
                     FormatearDataGrid();
                 }
@@ -246,6 +250,70 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
         private void textBoxNombre_MouseDown(object sender, MouseEventArgs e)
         {
             textBoxOrden.Text = "";
+        }
+
+        //private void comboBox1_SelectionChangeCommitted(object sender, EventArgs e)
+        //{
+        //    switch (comboBox1.Text)
+        //    {
+        //        case "Todas":
+        //            tablaOrden = OrdenRepository.ListarTodos();
+        //            dataGridView1.DataSource = null;
+        //            dataGridView1.DataSource = tablaOrden;
+        //            break;
+        //        case "Completas":
+        //            tablaOrden = OrdenRepository.ListarFiltros(1);
+        //            dataGridView1.DataSource = null;
+        //            dataGridView1.DataSource = tablaOrden;
+        //            break;
+
+        //        case "En Curso":
+        //            tablaOrden = OrdenRepository.ListarFiltros(0);
+        //            dataGridView1.DataSource = null;
+        //            dataGridView1.DataSource = tablaOrden;
+        //            break;
+
+        //       /*case "Pendientes":
+        //            tablaOrden = OrdenRepository.ListarFiltros(0);
+        //            dataGridView1.DataSource = null;
+        //            dataGridView1.DataSource = tablaOrden;
+        //            break;*/
+
+        //    }
+        //}
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (comboBox1.Text)
+            {
+                case "Todas":
+                    var resultado = from a in tablaActual.AsEnumerable() select a;
+                    dataGridView1.DataSource = null;
+                    dataGridView1.DataSource = resultado.CopyToDataTable();
+                    break;
+                case "Completas":
+                     resultado = from a in tablaActual.AsEnumerable()
+                                    //where a.Field<int>("Completada") = 0           arreglar query
+                                    select a;
+                    dataGridView1.DataSource = null;
+                    dataGridView1.DataSource = resultado.CopyToDataTable();
+                    break;
+
+                case "En Curso":
+                     resultado = from a in tablaActual.AsEnumerable()
+                                     //where a.Field<int>("Completada") = 1          arreglar query
+                                 select a;
+                    dataGridView1.DataSource = null;
+                    dataGridView1.DataSource = resultado.CopyToDataTable();
+                    break;
+
+                    /*case "Pendientes":
+                    tablaOrden = OrdenRepository.ListarFiltros(0);
+                    dataGridView1.DataSource = null;
+                    dataGridView1.DataSource = tablaOrden;
+                    break;*/
+
+            }
         }
     }
 }

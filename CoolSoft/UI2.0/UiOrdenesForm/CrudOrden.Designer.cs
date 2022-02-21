@@ -116,7 +116,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.textBoxOrden.Location = new System.Drawing.Point(8, 25);
             this.textBoxOrden.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxOrden.Name = "textBoxOrden";
-            this.textBoxOrden.Size = new System.Drawing.Size(174, 30);
+            this.textBoxOrden.Size = new System.Drawing.Size(174, 26);
             this.textBoxOrden.TabIndex = 14;
             this.textBoxOrden.TextChanged += new System.EventHandler(this.textBoxOrden_TextChanged);
             this.textBoxOrden.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxOrden_KeyPress);
@@ -128,7 +128,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(492, 2);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(87, 20);
+            this.label6.Size = new System.Drawing.Size(73, 17);
             this.label6.TabIndex = 13;
             this.label6.Text = "Filtrar por:";
             // 
@@ -144,9 +144,11 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.comboBox1.Location = new System.Drawing.Point(496, 25);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 31);
+            this.comboBox1.Size = new System.Drawing.Size(121, 26);
             this.comboBox1.TabIndex = 12;
             this.comboBox1.Text = "Todas";
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            //this.comboBox1.SelectionChangeCommitted += new System.EventHandler(this.comboBox1_SelectionChangeCommitted);
             // 
             // label4
             // 
@@ -154,7 +156,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(184, 1);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(61, 20);
+            this.label4.Size = new System.Drawing.Size(51, 17);
             this.label4.TabIndex = 11;
             this.label4.Text = "Cliente";
             // 
@@ -181,7 +183,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(5, 1);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(95, 20);
+            this.label5.Size = new System.Drawing.Size(81, 17);
             this.label5.TabIndex = 10;
             this.label5.Text = "Num Orden";
             // 
@@ -192,7 +194,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.textBoxNombre.Location = new System.Drawing.Point(188, 25);
             this.textBoxNombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxNombre.Name = "textBoxNombre";
-            this.textBoxNombre.Size = new System.Drawing.Size(283, 30);
+            this.textBoxNombre.Size = new System.Drawing.Size(283, 26);
             this.textBoxNombre.TabIndex = 1;
             this.textBoxNombre.TextChanged += new System.EventHandler(this.textBoxNombre_TextChanged);
             this.textBoxNombre.MouseDown += new System.Windows.Forms.MouseEventHandler(this.textBoxNombre_MouseDown);
@@ -289,7 +291,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimePicker1.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(153, 30);
+            this.dateTimePicker1.Size = new System.Drawing.Size(153, 26);
             this.dateTimePicker1.TabIndex = 4;
             // 
             // checkBox1
@@ -299,7 +301,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.checkBox1.Location = new System.Drawing.Point(179, 63);
             this.checkBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(90, 29);
+            this.checkBox1.Size = new System.Drawing.Size(72, 24);
             this.checkBox1.TabIndex = 8;
             this.checkBox1.Text = "Todos";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -310,7 +312,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(13, 7);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 20);
+            this.label2.Size = new System.Drawing.Size(49, 17);
             this.label2.TabIndex = 5;
             this.label2.Text = "Desde";
             // 
@@ -322,7 +324,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimePicker2.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(153, 30);
+            this.dateTimePicker2.Size = new System.Drawing.Size(153, 26);
             this.dateTimePicker2.TabIndex = 6;
             // 
             // label3
@@ -331,7 +333,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(13, 75);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(54, 20);
+            this.label3.Size = new System.Drawing.Size(45, 17);
             this.label3.TabIndex = 7;
             this.label3.Text = "Hasta";
             // 

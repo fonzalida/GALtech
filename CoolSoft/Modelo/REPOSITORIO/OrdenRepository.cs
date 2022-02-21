@@ -109,5 +109,31 @@ namespace CoolSoft.Modelo.REPOSITORIO
             return conexion.QuerySelect(query);
 
         }
+
+        public static DataTable ListarFiltros(int i)
+        {
+            String query =
+                "SELECT DATE_FORMAT(DATE(FechaRecepcion), \"%d %c %Y\") AS Recepcion, " +
+                "IdOrden, TareaDesarrollar, " +
+                "Nombre AS Cliente, Precio AS Importe, " +
+                "Completada, Cliente.IdCliente " +
+                "FROM ORDEN " +
+                "INNER JOIN CLIENTE " +
+                "ON ORDEN.IDCLIENTE = CLIENTE.IDCLIENTE " +
+                "WHERE Completada = \"" + i + "\"";
+
+
+            //            INNER JOIN TecnicoOrden
+            //ON ParteOrden.IdParte = TecnicoOrden.IdParte
+            //and TecnicoOrden.Dni = { dni tecnico}
+            //            and ParteOrden.Completa = 0
+            //INNER JOIN Orden
+            //ON ParteOrden.IdOrden = Orden.IdOrden
+
+            Conexion conexion = new Conexion();
+            return conexion.QuerySelect(query);
+
+        }
+
     }
 }
