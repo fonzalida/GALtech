@@ -148,7 +148,6 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.comboBox1.TabIndex = 12;
             this.comboBox1.Text = "Todas";
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            //this.comboBox1.SelectionChangeCommitted += new System.EventHandler(this.comboBox1_SelectionChangeCommitted);
             // 
             // label4
             // 
@@ -176,6 +175,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.buttonBuscar.Text = "Buscar";
             this.buttonBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonBuscar.UseVisualStyleBackColor = false;
+            this.buttonBuscar.Click += new System.EventHandler(this.buttonBuscar_Click_1);
             // 
             // label5
             // 

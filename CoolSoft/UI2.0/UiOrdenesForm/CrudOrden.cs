@@ -61,7 +61,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
         private void EstadoVer()
         {
             panelSuperior.Enabled = true;
-            panelFechas.Enabled = false;
+            panelFechas.Enabled = true;
 
             buttonAgregar.Enabled = true;
             buttonEliminar.Enabled = true;
@@ -384,6 +384,25 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
                     break;*/
 
             }
+        }
+
+        private void buttonBuscar_Click(object sender, EventArgs e)
+        {
+
+            //tablaOrden = OrdenRepository.ListarPorFecha(dateTimePicker1,dateTimePicker2);
+            //dataGridView1.DataSource = null;
+            //dataGridView1.DataSource = tablaOrden;
+
+            //FormatearDataGrid();
+        }
+
+        private void buttonBuscar_Click_1(object sender, EventArgs e)
+        {
+            tablaOrden = OrdenRepository.ListarPorFecha(dateTimePicker1.Value, dateTimePicker2.Value);
+            //dataGridView1.DataSource = null;
+            dataGridView1.DataSource = tablaOrden;
+
+            //FormatearDataGrid();
         }
     }
 }
