@@ -78,7 +78,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.dtFechaRecepcion.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtFechaRecepcion.Location = new System.Drawing.Point(17, 103);
             this.dtFechaRecepcion.Name = "dtFechaRecepcion";
-            this.dtFechaRecepcion.Size = new System.Drawing.Size(205, 34);
+            this.dtFechaRecepcion.Size = new System.Drawing.Size(205, 29);
             this.dtFechaRecepcion.TabIndex = 72;
             // 
             // label3
@@ -87,7 +87,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.label3.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(9, 319);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(155, 27);
+            this.label3.Size = new System.Drawing.Size(122, 22);
             this.label3.TabIndex = 71;
             this.label3.Text = "N° de Cliente";
             // 
@@ -97,7 +97,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.label2.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(8, 163);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(218, 27);
+            this.label2.Size = new System.Drawing.Size(171, 22);
             this.label2.TabIndex = 70;
             this.label2.Text = "Tarea a desarrollar:";
             // 
@@ -107,7 +107,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.label1.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(12, 73);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(224, 27);
+            this.label1.Size = new System.Drawing.Size(179, 22);
             this.label1.TabIndex = 69;
             this.label1.Text = "Fecha de recepción";
             // 
@@ -120,7 +120,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.mtIdCliente.Name = "mtIdCliente";
             this.mtIdCliente.PromptChar = ' ';
             this.mtIdCliente.ReadOnly = true;
-            this.mtIdCliente.Size = new System.Drawing.Size(162, 34);
+            this.mtIdCliente.Size = new System.Drawing.Size(162, 29);
             this.mtIdCliente.TabIndex = 67;
             // 
             // tbTareaDesarrollar
@@ -140,7 +140,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.checkBoxCompletada.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBoxCompletada.Location = new System.Drawing.Point(12, 477);
             this.checkBoxCompletada.Name = "checkBoxCompletada";
-            this.checkBoxCompletada.Size = new System.Drawing.Size(234, 31);
+            this.checkBoxCompletada.Size = new System.Drawing.Size(186, 26);
             this.checkBoxCompletada.TabIndex = 74;
             this.checkBoxCompletada.Text = "Orden completada";
             this.checkBoxCompletada.UseVisualStyleBackColor = true;
@@ -150,7 +150,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.textBoxNombreCliente.Location = new System.Drawing.Point(12, 349);
             this.textBoxNombreCliente.Name = "textBoxNombreCliente";
             this.textBoxNombreCliente.ReadOnly = true;
-            this.textBoxNombreCliente.Size = new System.Drawing.Size(398, 22);
+            this.textBoxNombreCliente.Size = new System.Drawing.Size(398, 20);
             this.textBoxNombreCliente.TabIndex = 75;
             this.textBoxNombreCliente.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -160,7 +160,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.label4.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(12, 541);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(93, 27);
+            this.label4.Size = new System.Drawing.Size(76, 22);
             this.label4.TabIndex = 77;
             this.label4.Text = "Importe";
             // 
@@ -169,14 +169,14 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.textBoxImporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxImporte.Location = new System.Drawing.Point(178, 536);
             this.textBoxImporte.Name = "textBoxImporte";
-            this.textBoxImporte.Size = new System.Drawing.Size(154, 34);
+            this.textBoxImporte.Size = new System.Drawing.Size(154, 28);
             this.textBoxImporte.TabIndex = 78;
             this.textBoxImporte.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.textBoxImporte.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxImporte_KeyPress);
             // 
             // UiModificarOrden
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(590, 736);
             this.Controls.Add(this.textBoxImporte);
@@ -192,6 +192,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.Controls.Add(this.tbTareaDesarrollar);
             this.Name = "UiModificarOrden";
             this.Text = "UiModificarOrden";
+            this.Load += new System.EventHandler(this.UiModificarOrden_Load);
             this.Controls.SetChildIndex(this.panelBorde, 0);
             this.Controls.SetChildIndex(this.buttonCargar, 0);
             this.Controls.SetChildIndex(this.buttonCancelar, 0);

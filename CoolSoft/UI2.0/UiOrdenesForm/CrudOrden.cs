@@ -289,7 +289,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
 
         private void textBoxNombre_TextChanged(object sender, EventArgs e)
         {
-            BuscarTexto(textBoxNombre, textBoxOrden, 2);
+            BuscarTexto(textBoxNombre, textBoxOrden, 3);
         }
 
         private void textBoxOrden_KeyPress(object sender, KeyPressEventArgs e)

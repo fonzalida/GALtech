@@ -46,5 +46,24 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
                 e.Handled = true;
             }
         }
+
+        private void UiModificarOrden_Load(object sender, EventArgs e)
+        {
+            dtFechaRecepcion.Text = vieja.fechaRecepcion.ToString();
+            tbTareaDesarrollar.Text = vieja.tareaDesarrollar;
+            mtIdCliente.Text = vieja.idCliente.ToString();
+        }
+
+        //private void buttonModificar_Click(object sender, EventArgs e)
+        //{
+        //    OrdenController.Modificar(
+        //           dtFechaRecepcion.Text,
+        //           tbTareaDesarrollar.Text,
+        //           mtIdCliente.Text,
+        //           vieja
+        //           );
+
+        //    this.Close();
+        //}
     }
 }
