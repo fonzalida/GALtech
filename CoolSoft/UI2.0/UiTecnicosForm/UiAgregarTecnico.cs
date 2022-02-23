@@ -49,7 +49,7 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
             }
             else
             {
-                buttonCargar.Enabled = false;
+                buttonCargar.Enabled = true;
             }
         }
 
