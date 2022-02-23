@@ -19,7 +19,7 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
 
         private void UiAgregarTecnico_Load(object sender, EventArgs e)
         {
-
+            buttonCargar.Enabled = false;
         }
 
         private void buttonCargar_Click(object sender, EventArgs e)
@@ -31,14 +31,26 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
                 );
         }
 
-        private void UiAgregarTecnico_Load_1(object sender, EventArgs e)
-        {
-
-        }
-
         private void textBoxNumerico_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void textBox_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void ValidadText()
+        {
+            if (textBoxDniCuit.Text == "" && tbNombre.Text == "")
+            {
+                buttonCargar.Enabled = false;
+            }
+            else
+            {
+                buttonCargar.Enabled = false;
+            }
         }
     }
 }

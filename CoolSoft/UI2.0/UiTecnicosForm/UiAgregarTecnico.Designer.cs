@@ -108,6 +108,7 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
             this.textBoxDniCuit.Name = "textBoxDniCuit";
             this.textBoxDniCuit.Size = new System.Drawing.Size(200, 34);
             this.textBoxDniCuit.TabIndex = 64;
+            this.textBoxDniCuit.TextChanged += new System.EventHandler(this.textBox_TextChanged);
             this.textBoxDniCuit.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNumerico_KeyPress);
             // 
             // textBoxTelefono
@@ -134,7 +135,7 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UiAgregarTecnico";
             this.Text = "UiAgregarTecnico";
-            this.Load += new System.EventHandler(this.UiAgregarTecnico_Load_1);
+            this.Load += new System.EventHandler(this.UiAgregarTecnico_Load);
             this.Controls.SetChildIndex(this.tbNombre, 0);
             this.Controls.SetChildIndex(this.label1, 0);
             this.Controls.SetChildIndex(this.label2, 0);

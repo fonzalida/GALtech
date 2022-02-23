@@ -230,7 +230,7 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
                 b.actual = 0;
 
                 EnumerableRowCollection<int> resultado;
-                int i = -1;
+
 
                 if (indice == 0)
                 {
@@ -252,27 +252,33 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
 
                 if (resultado.Count() > 0)
                 {
+                    b.listaIndices = resultado.ToArray();
 
-                    Console.WriteLine("Indice de la busqueda " + i);
-                    dataGridView1.Rows[i].Selected = true;
                     FormatearDataGrid();
+                    Console.WriteLine("Indice de la busqueda " + b.listaIndices[b.actual]);
+                    dataGridView1.Rows[b.listaIndices[b.actual]].Selected = true;
+                    b.actual++;
+                    b.nuevaBusqueda = false;
+
                 }
                 else
                 {
                     dataGridView1.ClearSelection();
+                    MessageBox.Show("No se encontro ningun resultado");
                 }
             }
             else
             {
-                if(b.listaIndices.Count() == b.actual)
+                if (b.listaIndices.Count() != b.actual)
                 {
                     dataGridView1.ClearSelection();
-                    dataGridView1.Rows[b.actual].Selected = true;
+                    dataGridView1.Rows[b.listaIndices[b.actual]].Selected = true;
                     b.actual++;
                 }
                 else
                 {
-
+                    dataGridView1.ClearSelection();
+                    MessageBox.Show("No hay mas elementos que buscar");
                 }
             }
 
