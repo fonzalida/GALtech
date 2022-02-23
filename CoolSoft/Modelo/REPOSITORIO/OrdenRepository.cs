@@ -4,6 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using CoolSoft.Modelo.ENTIDADES;
 using MySql.Data.MySqlClient;
 
@@ -106,6 +107,40 @@ namespace CoolSoft.Modelo.REPOSITORIO
             //            and ParteOrden.Completa = 0
             //INNER JOIN Orden
             //ON ParteOrden.IdOrden = Orden.IdOrden
+
+            Conexion conexion = new Conexion();
+            return conexion.QuerySelect(query);
+
+        }
+
+
+        public static DataTable ListarPorFecha(DateTime desde, DateTime hasta)
+        {
+            String query =
+                "SELECT DATE_FORMAT(DATE(FechaRecepcion), \"%d %c %Y\") AS Recepcion, " +
+                "IdOrden, TareaDesarrollar, " +
+                "Nombre AS Cliente, " +
+                "Precio AS Importe, " +
+                "Completada, " +
+                "Cliente.IdCliente " +
+                "FROM ORDEN " +
+                "INNER JOIN CLIENTE " +
+                "ON ORDEN.IDCLIENTE = CLIENTE.IDCLIENTE " +
+                "WHERE FechaRecepcion BETWEEN \" " + desde + "\" AND \" " + hasta + "\" ";
+
+
+            
+            
+            
+
+            //            INNER JOIN TecnicoOrden
+            //ON ParteOrden.IdParte = TecnicoOrden.IdParte
+            //and TecnicoOrden.Dni = { dni tecnico}
+            //            and ParteOrden.Completa = 0
+            //INNER JOIN Orden
+            //ON ParteOrden.IdOrden = Orden.IdOrden
+
+           
 
             Conexion conexion = new Conexion();
             return conexion.QuerySelect(query);
