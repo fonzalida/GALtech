@@ -113,14 +113,21 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
         private void buttonVer_Click(object sender, EventArgs e)
         {
             EstadoVer();
-            tablaOrden = OrdenRepository.ListarTodos();
+
+            switch (checkBoxTodos.Checked)
+            {
+                case true:
+                    tablaOrden = OrdenRepository.ListarTodos();
+                    break;
+
+                case false:
+                    tablaOrden = OrdenRepository.ListarPorFecha(dateTimePickerDesde.Value, dateTimePickerHasta.Value);
+                    break;
+            }
             dataGridView1.DataSource = null;
             dataGridView1.DataSource = tablaOrden;
 
             FormatearDataGrid();
-            //dataGridView1.DataSource = OrdenRepository.ListarTodos();
-            //FormatearDataGrid();
-            //dataGridView1.ClearSelection();
         }
 
         private void FormatearDataGrid()
@@ -341,7 +348,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
         {
 
             string rowFilter;
-            switch (comboBox1.Text)
+            switch (comboBoxFiltro.Text)
             {
 
                 case "Todas":
@@ -388,21 +395,17 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
 
         private void buttonBuscar_Click(object sender, EventArgs e)
         {
-
-            //tablaOrden = OrdenRepository.ListarPorFecha(dateTimePicker1,dateTimePicker2);
-            //dataGridView1.DataSource = null;
-            //dataGridView1.DataSource = tablaOrden;
-
-            //FormatearDataGrid();
-        }
-
-        private void buttonBuscar_Click_1(object sender, EventArgs e)
-        {
-            tablaOrden = OrdenRepository.ListarPorFecha(dateTimePicker1.Value, dateTimePicker2.Value);
+            //tablaOrden = OrdenRepository.ListarPorFecha(dateTimePicker1.Value, dateTimePicker2.Value);
             //dataGridView1.DataSource = null;
             dataGridView1.DataSource = tablaOrden;
 
             //FormatearDataGrid();
+        }
+
+        private void checkBoxTodos_CheckedChanged(object sender, EventArgs e)
+        {
+                dateTimePickerDesde.Enabled = !(sender as CheckBox).Checked;
+                dateTimePickerHasta.Enabled = !(sender as CheckBox).Checked;
         }
     }
 }

@@ -126,7 +126,7 @@ namespace CoolSoft.Modelo.REPOSITORIO
                 "FROM ORDEN " +
                 "INNER JOIN CLIENTE " +
                 "ON ORDEN.IDCLIENTE = CLIENTE.IDCLIENTE " +
-                "WHERE FechaRecepcion BETWEEN \" " + desde + "\" AND \" " + hasta + "\" ";
+                "WHERE FechaRecepcion BETWEEN \" " + desde.ToString("yyyy/MM/dd") + "\" AND \" " + hasta.ToString("yyyy/MM/dd") + "\" ";
 
 
             

@@ -34,7 +34,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.panelBuscar = new System.Windows.Forms.Panel();
             this.textBoxOrden = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBoxFiltro = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.buttonBuscar = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
@@ -44,10 +44,10 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.buttonPartes = new System.Windows.Forms.Button();
             this.buttonCancelar = new System.Windows.Forms.Button();
             this.panelFechas = new System.Windows.Forms.Panel();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.dateTimePickerDesde = new System.Windows.Forms.DateTimePicker();
+            this.checkBoxTodos = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePickerHasta = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.buttonEliminar = new System.Windows.Forms.Button();
             this.buttonVer = new System.Windows.Forms.Button();
@@ -98,7 +98,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             // 
             this.panelBuscar.Controls.Add(this.textBoxOrden);
             this.panelBuscar.Controls.Add(this.label6);
-            this.panelBuscar.Controls.Add(this.comboBox1);
+            this.panelBuscar.Controls.Add(this.comboBoxFiltro);
             this.panelBuscar.Controls.Add(this.label4);
             this.panelBuscar.Controls.Add(this.buttonBuscar);
             this.panelBuscar.Controls.Add(this.label5);
@@ -132,22 +132,21 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.label6.TabIndex = 13;
             this.label6.Text = "Filtrar por:";
             // 
-            // comboBox1
+            // comboBoxFiltro
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.comboBoxFiltro.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxFiltro.FormattingEnabled = true;
+            this.comboBoxFiltro.Items.AddRange(new object[] {
             "Todas",
             "Completas",
-            "Pendientes",
             "En Curso"});
-            this.comboBox1.Location = new System.Drawing.Point(496, 25);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 31);
-            this.comboBox1.TabIndex = 12;
-            this.comboBox1.Text = "Todas";
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.comboBoxFiltro.Location = new System.Drawing.Point(496, 25);
+            this.comboBoxFiltro.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBoxFiltro.Name = "comboBoxFiltro";
+            this.comboBoxFiltro.Size = new System.Drawing.Size(121, 31);
+            this.comboBoxFiltro.TabIndex = 12;
+            this.comboBoxFiltro.Text = "Todas";
+            this.comboBoxFiltro.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label4
             // 
@@ -175,7 +174,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.buttonBuscar.Text = "Buscar";
             this.buttonBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonBuscar.UseVisualStyleBackColor = false;
-            this.buttonBuscar.Click += new System.EventHandler(this.buttonBuscar_Click_1);
+            this.buttonBuscar.Click += new System.EventHandler(this.buttonBuscar_Click);
             // 
             // label5
             // 
@@ -270,41 +269,42 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             // 
             // panelFechas
             // 
-            this.panelFechas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panelFechas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(226)))), ((int)(((byte)(225)))));
-            this.panelFechas.Controls.Add(this.dateTimePicker1);
-            this.panelFechas.Controls.Add(this.checkBox1);
+            this.panelFechas.Controls.Add(this.dateTimePickerDesde);
+            this.panelFechas.Controls.Add(this.checkBoxTodos);
             this.panelFechas.Controls.Add(this.label2);
-            this.panelFechas.Controls.Add(this.dateTimePicker2);
+            this.panelFechas.Controls.Add(this.dateTimePickerHasta);
             this.panelFechas.Controls.Add(this.label3);
-            this.panelFechas.Location = new System.Drawing.Point(751, 2);
+            this.panelFechas.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panelFechas.Location = new System.Drawing.Point(750, 0);
             this.panelFechas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelFechas.Name = "panelFechas";
-            this.panelFechas.Size = new System.Drawing.Size(273, 116);
+            this.panelFechas.Size = new System.Drawing.Size(271, 126);
             this.panelFechas.TabIndex = 3;
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(3, 22);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dateTimePicker1.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(153, 30);
-            this.dateTimePicker1.TabIndex = 4;
+            this.dateTimePickerDesde.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePickerDesde.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePickerDesde.Location = new System.Drawing.Point(3, 22);
+            this.dateTimePickerDesde.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dateTimePickerDesde.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
+            this.dateTimePickerDesde.Name = "dateTimePicker1";
+            this.dateTimePickerDesde.Size = new System.Drawing.Size(153, 30);
+            this.dateTimePickerDesde.TabIndex = 4;
             // 
-            // checkBox1
+            // checkBoxTodos
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(180, 52);
-            this.checkBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(90, 29);
-            this.checkBox1.TabIndex = 8;
-            this.checkBox1.Text = "Todos";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBoxTodos.AutoSize = true;
+            this.checkBoxTodos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxTodos.Location = new System.Drawing.Point(180, 48);
+            this.checkBoxTodos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.checkBoxTodos.Name = "checkBoxTodos";
+            this.checkBoxTodos.Size = new System.Drawing.Size(90, 29);
+            this.checkBoxTodos.TabIndex = 8;
+            this.checkBoxTodos.Text = "Todos";
+            this.checkBoxTodos.UseVisualStyleBackColor = true;
+            this.checkBoxTodos.CheckedChanged += new System.EventHandler(this.checkBoxTodos_CheckedChanged);
             // 
             // label2
             // 
@@ -318,20 +318,20 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             // 
             // dateTimePicker2
             // 
-            this.dateTimePicker2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(3, 84);
-            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dateTimePicker2.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(153, 30);
-            this.dateTimePicker2.TabIndex = 6;
+            this.dateTimePickerHasta.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePickerHasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePickerHasta.Location = new System.Drawing.Point(3, 79);
+            this.dateTimePickerHasta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dateTimePickerHasta.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
+            this.dateTimePickerHasta.Name = "dateTimePicker2";
+            this.dateTimePickerHasta.Size = new System.Drawing.Size(153, 30);
+            this.dateTimePickerHasta.TabIndex = 6;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(-1, 61);
+            this.label3.Location = new System.Drawing.Point(-1, 57);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(54, 20);
             this.label3.TabIndex = 7;
@@ -444,16 +444,16 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
         public System.Windows.Forms.Button buttonAgregar;
         private System.Windows.Forms.Panel panelBuscar;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBoxFiltro;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panelFechas;
         public System.Windows.Forms.Button buttonCancelar;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateTimePickerDesde;
         public System.Windows.Forms.Button buttonVer;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox checkBoxTodos;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dateTimePickerHasta;
         private System.Windows.Forms.Label label3;
         public System.Windows.Forms.DataGridView dataGridView1;
         public System.Windows.Forms.Button buttonPartes;

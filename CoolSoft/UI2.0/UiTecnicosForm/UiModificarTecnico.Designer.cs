@@ -64,7 +64,7 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
             this.buttonModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonModificar.Location = new System.Drawing.Point(115, 330);
             this.buttonModificar.Name = "buttonModificar";
-            this.buttonModificar.Size = new System.Drawing.Size(152, 54);
+            this.buttonModificar.Size = new System.Drawing.Size(152, 51);
             this.buttonModificar.TabIndex = 64;
             this.buttonModificar.Text = "Modificar";
             this.buttonModificar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
