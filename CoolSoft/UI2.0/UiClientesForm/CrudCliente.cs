@@ -221,12 +221,10 @@ namespace CoolSoft.UI2._0.UiClientesForm
         {
             if (dataGridView1.SelectedRows.Count > 0)
             {
-                
                 buttonDetalles.Enabled = true;
             }
             else
             {
-                
                 buttonDetalles.Enabled = false;
             }
 

@@ -22,8 +22,19 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
         Tecnico viejo;
 
         DataTable tablaTecnico;
+
+        private struct Buscar
+        {
+            public int[] listaIndices;
+            public int actual;
+            public bool nuevaBusqueda;
+        }
+
+        Buscar b = new Buscar();
+
         public CrudTecnico()
         {
+            b.nuevaBusqueda = true;
             fModificar = null;
             InitializeComponent();
         }
@@ -179,19 +190,22 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
         {
             HabilitarBuscar();
         }
-
-        public void HabilitarBuscar()
-        {
-            if (textBoxDni.Text == "" && textBoxNombre.Text == "")
-                buttonBuscar.Enabled = false;
-            else
-                buttonBuscar.Enabled = true;
-        }
        
         private void textBoxNombre_TextChanged(object sender, EventArgs e)
         {
             HabilitarBuscar();
         }
+
+        public void HabilitarBuscar()
+        {
+            b.nuevaBusqueda = true;
+            if (textBoxDni.Text == "" && textBoxNombre.Text == "")
+                buttonBuscar.Enabled = false;
+            else
+                buttonBuscar.Enabled = true;
+        }
+
+
         private void textBoxDni_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
@@ -211,43 +225,97 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
 
         private void BuscarTexto(TextBox actual, int indice)
         {
-            if (tablaTecnico == null)
+            if (b.nuevaBusqueda)
             {
-                tablaTecnico = TecnicoRepository.ListarTodos();
-            }
-            EnumerableRowCollection<DataRow> resultado;
-            int i = -1;
+                b.actual = 0;
 
-            if(indice == 0)
-            {
-                
+                EnumerableRowCollection<int> resultado;
+                int i = -1;
 
-                resultado = from a in tablaTecnico.AsEnumerable()
+                if (indice == 0)
+                {
+
+
+                    resultado = from a in tablaTecnico.AsEnumerable()
                                 where a.Field<int>(indice).ToString().StartsWith(actual.Text)
-                            select a;
-            }
-            else
-            {
-                resultado = from a in tablaTecnico.AsEnumerable()
+                                select tablaTecnico.Rows.IndexOf(a);
+
+
+                }
+                else
+                {
+                    resultado = from a in tablaTecnico.AsEnumerable()
                                 where a.Field<string>(indice).IndexOf(actual.Text, StringComparison.OrdinalIgnoreCase) >= 0
-                            select a;
-            }
-            
-              
-            if (resultado.Count() > 0)
-            {
-                
-                Console.WriteLine("Indice de la busqueda " + i);
-                dataGridView1.Rows[i].Selected = true;
-                FormatearDataGrid();
+                                select tablaTecnico.Rows.IndexOf(a);
+                }
+
+
+                if (resultado.Count() > 0)
+                {
+
+                    Console.WriteLine("Indice de la busqueda " + i);
+                    dataGridView1.Rows[i].Selected = true;
+                    FormatearDataGrid();
+                }
+                else
+                {
+                    dataGridView1.ClearSelection();
+                }
             }
             else
             {
-                dataGridView1.ClearSelection();
+                if(b.listaIndices.Count() == b.actual)
+                {
+                    dataGridView1.ClearSelection();
+                    dataGridView1.Rows[b.actual].Selected = true;
+                    b.actual++;
+                }
+                else
+                {
+
+                }
             }
 
-                
-            
+
+
+
+            //if (tablaTecnico == null)
+            //{
+            //    tablaTecnico = TecnicoRepository.ListarTodos();
+            //}
+            //EnumerableRowCollection<DataRow> resultado;
+            //int i = -1;
+
+            //if(indice == 0)
+            //{
+
+
+            //    resultado = from a in tablaTecnico.AsEnumerable()
+            //                    where a.Field<int>(indice).ToString().StartsWith(actual.Text)
+            //                select a;
+            //}
+            //else
+            //{
+            //    resultado = from a in tablaTecnico.AsEnumerable()
+            //                    where a.Field<string>(indice).IndexOf(actual.Text, StringComparison.OrdinalIgnoreCase) >= 0
+            //                select a;
+            //}
+
+
+            //if (resultado.Count() > 0)
+            //{
+
+            //    Console.WriteLine("Indice de la busqueda " + i);
+            //    dataGridView1.Rows[i].Selected = true;
+            //    FormatearDataGrid();
+            //}
+            //else
+            //{
+            //    dataGridView1.ClearSelection();
+            //}
+
+
+
 
         }
 
