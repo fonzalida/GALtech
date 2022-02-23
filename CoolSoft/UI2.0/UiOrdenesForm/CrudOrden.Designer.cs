@@ -353,7 +353,6 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.buttonEliminar.Text = "Eliminar";
             this.buttonEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonEliminar.UseVisualStyleBackColor = false;
-            this.buttonEliminar.Click += new System.EventHandler(this.buttonEliminar_Click);
             // 
             // buttonVer
             // 
