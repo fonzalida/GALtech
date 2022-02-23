@@ -28,21 +28,21 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
 
         private void UiModificarTecnico_Load(object sender, EventArgs e)
         {
-            mtDniCuit.Text = viejo.dni.ToString();
+            textBoxDniCuit.Text = viejo.dni.ToString();
             tbNombre.Text = viejo.nombre;
-            mtTelefono1.Text = viejo.telefono;
+            textBoxTelefono.Text = viejo.telefono;
         }
 
         private void buttonModificar_Click(object sender, EventArgs e)
         {
             TecnicoController.Modificar(
-                   mtDniCuit.Text,
+                   textBoxDniCuit.Text,
                    tbNombre.Text,
-                   mtTelefono1.Text,
+                   textBoxTelefono.Text,
                    viejo
                    );
 
-            this.Close();
+            //this.Close();
         }
     }
 }

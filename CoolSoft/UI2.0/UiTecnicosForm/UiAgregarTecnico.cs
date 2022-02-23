@@ -25,15 +25,20 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
         private void buttonCargar_Click(object sender, EventArgs e)
         {
             TecnicoController.Cargar(
-                mtDniCuit.Text,
+                textBoxDniCuit.Text,
                 tbNombre.Text,
-                mtTelefono1.Text
+                textBoxTelefono.Text
                 );
         }
 
         private void UiAgregarTecnico_Load_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void textBoxNumerico_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
     }
 }

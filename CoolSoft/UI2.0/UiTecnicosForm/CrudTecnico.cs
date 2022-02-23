@@ -17,42 +17,95 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
 {
     public partial class CrudTecnico : Form
     {
-        UiAgregarTecnico fagregar;
+        UiAgregarTecnico fModificar;
         UiModificarTecnico modificarTecnico;
         Tecnico viejo;
 
         DataTable tablaTecnico;
         public CrudTecnico()
         {
-            fagregar = null;
+            fModificar = null;
             InitializeComponent();
+        }
+
+        private void CrudTecnico_Load(object sender, EventArgs e)
+        {
+            EstadoInicial();
         }
 
         private void buttonAgregar_Click(object sender, EventArgs e)
         {
-            if (fagregar != null)
+
+
+            fModificar = new UiAgregarTecnico();
+            fModificar.StartPosition = FormStartPosition.CenterScreen;
+            var result = fModificar.ShowDialog();
+            if (result == DialogResult.OK)
             {
-                if (fagregar.IsDisposed)
-                {
-                    fagregar = new UiAgregarTecnico();
-                    fagregar.StartPosition = FormStartPosition.CenterScreen;
-                    fagregar.Show();
-                }
-                else
-                {
-                    fagregar.BringToFront();
-                }
+                tablaTecnico = TecnicoRepository.ListarTodos();
+                dataGridView1.DataSource = null;
+                dataGridView1.DataSource = tablaTecnico;
+
+                FormatearDataGrid();
             }
-            else
-            {
-                fagregar = new UiAgregarTecnico();
-                fagregar.StartPosition = FormStartPosition.CenterScreen;
-                fagregar.Show();
-            }
+
+            //if (fagregar != null)
+            //{
+            //    if (fagregar.IsDisposed)
+            //    {
+            //        fagregar = new UiAgregarTecnico();
+            //        fagregar.StartPosition = FormStartPosition.CenterScreen;
+            //        fagregar.Show();
+            //    }
+            //    else
+            //    {
+            //        fagregar.BringToFront();
+            //    }
+            //}
+            //else
+            //{
+            //    fagregar = new UiAgregarTecnico();
+            //    fagregar.StartPosition = FormStartPosition.CenterScreen;
+            //    fagregar.Show();
+            //}
+        }
+
+
+        private void EstadoInicial()
+        {
+            panelSuperior.Enabled = false;
+            
+
+            buttonAgregar.Enabled = false;
+            buttonEliminar.Enabled = false;
+            buttonDetalles.Enabled = false;
+
+            buttonBuscar.Enabled = false;
+
+            buttonVer.Enabled = true;
+            buttonCancelar.Enabled = false;
+
+        }
+
+        private void EstadoVer()
+        {
+            panelSuperior.Enabled = true;
+            
+
+            buttonAgregar.Enabled = true;
+            //buttonEliminar.Enabled = true;
+            //buttonDetalles.Enabled = true;
+
+            buttonVer.Enabled = false;
+            buttonCancelar.Enabled = true;
+
+
         }
 
         private void buttonVer_Click(object sender, EventArgs e)
         {
+
+            EstadoVer();
             tablaTecnico = TecnicoRepository.ListarTodos();
             dataGridView1.DataSource = null;
             dataGridView1.DataSource = tablaTecnico;
@@ -75,37 +128,67 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
 
         private void buttonCancelar_Click(object sender, EventArgs e)
         {
+            EstadoInicial();
             dataGridView1.DataSource = null;
         }
 
         private void buttonEliminar_Click(object sender, EventArgs e)
         {
-            TecnicoController.Eliminar(dataGridView1.SelectedCells[0].Value.ToString());
+            Eliminar fEliminar = new Eliminar(dataGridView1.SelectedRows[0].Cells["Nombre"].Value.ToString());
+            fEliminar.StartPosition = FormStartPosition.CenterScreen;
+            var result = fEliminar.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+
+                TecnicoController.Eliminar(dataGridView1.SelectedRows[0].Cells);
+                tablaTecnico = TecnicoRepository.ListarTodos();
+                dataGridView1.DataSource = null;
+                dataGridView1.DataSource = tablaTecnico;
+
+                FormatearDataGrid();
+            }
+
+            
+            //TecnicoController.Eliminar(dataGridView1.SelectedCells[0].Value.ToString());
         }
 
         private void buttonDetalles_Click(object sender, EventArgs e)
         {
             viejo = TecnicoController.DataGridViewToTecnico(dataGridView1.SelectedRows[0].Cells);
 
-            if (modificarTecnico != null)
+            fModificar = new UiModificarTecnico(viejo);
+            fModificar.StartPosition = FormStartPosition.CenterScreen;
+            var result = fModificar.ShowDialog();
+            if (result == DialogResult.OK)
             {
-                if (modificarTecnico.IsDisposed)
-                {
-                    modificarTecnico = new UiModificarTecnico(viejo);
-                    modificarTecnico.StartPosition = FormStartPosition.CenterScreen;
-                    modificarTecnico.Show();
-                }
-                else
-                {
-                    modificarTecnico.BringToFront();
-                }
+                tablaTecnico = TecnicoRepository.ListarTodos();
+                dataGridView1.DataSource = null;
+                dataGridView1.DataSource = tablaTecnico;
+
+                FormatearDataGrid();
             }
-            else
-            {
-                modificarTecnico = new UiModificarTecnico(viejo);
-                modificarTecnico.StartPosition = FormStartPosition.CenterScreen;
-                modificarTecnico.Show();
-            }
+
+
+
+            //if (modificarTecnico != null)
+            //{
+            //    if (modificarTecnico.IsDisposed)
+            //    {
+            //        modificarTecnico = new UiModificarTecnico(viejo);
+            //        modificarTecnico.StartPosition = FormStartPosition.CenterScreen;
+            //        modificarTecnico.Show();
+            //    }
+            //    else
+            //    {
+            //        modificarTecnico.BringToFront();
+            //    }
+            //}
+            //else
+            //{
+            //    modificarTecnico = new UiModificarTecnico(viejo);
+            //    modificarTecnico.StartPosition = FormStartPosition.CenterScreen;
+            //    modificarTecnico.Show();
+            //}
 
         }
 
@@ -116,61 +199,78 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
 
         private void TextBoxDni_TextChanged(object sender, EventArgs e)
         {
-            BuscarTexto(textBoxDni, textBoxNombre, 0);
+            HabilitarBuscar();
+        }
+
+        public void HabilitarBuscar()
+        {
+            if (textBoxDni.Text == "" && textBoxNombre.Text == "")
+                buttonBuscar.Enabled = false;
+            else
+                buttonBuscar.Enabled = true;
         }
        
         private void textBoxNombre_TextChanged(object sender, EventArgs e)
         {
-            BuscarTexto(textBoxNombre, textBoxDni, 1);
+            HabilitarBuscar();
         }
         private void textBoxDni_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
 
-        private void BuscarTexto(TextBox actual, TextBox inactivo, int indice)
+        private void buttonBuscar_Click(object sender, EventArgs e)
         {
-            if (inactivo.Text != "")
+            if(textBoxDni.Text != "")
             {
-                inactivo.Text = "";
-            }
-            if (actual.Text != "")
-            {
-                if (tablaTecnico == null)
-                {
-                    tablaTecnico = TecnicoRepository.ListarTodos();
-                }
-                EnumerableRowCollection<DataRow> resultado;
-
-                if(indice == 0)
-                {
-                    resultado = from a in tablaTecnico.AsEnumerable()
-                                    where a.Field<int>(indice).ToString().StartsWith(actual.Text)
-                                select a;
-                }
-                else
-                {
-                    resultado = from a in tablaTecnico.AsEnumerable()
-                                    where a.Field<string>(indice).IndexOf(actual.Text, StringComparison.OrdinalIgnoreCase) >= 0
-                                select a;
-                }
-              
-                if (resultado.Count() > 0)
-                {
-                    dataGridView1.DataSource = resultado.CopyToDataTable();
-                    FormatearDataGrid();
-                }
-                else
-                {
-                    dataGridView1.DataSource = null;
-                }
+                BuscarTexto(textBoxDni, 0);
             }
             else
             {
-                dataGridView1.DataSource = null;
-                dataGridView1.DataSource = tablaTecnico;
+                BuscarTexto(textBoxNombre, 1);
+            }
+        }
+
+        private void BuscarTexto(TextBox actual, int indice)
+        {
+            if (tablaTecnico == null)
+            {
+                tablaTecnico = TecnicoRepository.ListarTodos();
+            }
+            EnumerableRowCollection<DataRow> resultado;
+            int i = -1;
+
+            if(indice == 0)
+            {
+                
+
+                resultado = from a in tablaTecnico.AsEnumerable()
+                                where a.Field<int>(indice).ToString().StartsWith(actual.Text)
+                            select a;
+            }
+            else
+            {
+                resultado = from a in tablaTecnico.AsEnumerable()
+                                where a.Field<string>(indice).IndexOf(actual.Text, StringComparison.OrdinalIgnoreCase) >= 0
+                            select a;
+            }
+            
+              
+            if (resultado.Count() > 0)
+            {
+                
+                Console.WriteLine("Indice de la busqueda " + i);
+                dataGridView1.Rows[i].Selected = true;
                 FormatearDataGrid();
             }
+            else
+            {
+                dataGridView1.ClearSelection();
+            }
+
+                
+            
+
         }
 
         private void textBoxDni_MouseDown(object sender, MouseEventArgs e)
@@ -181,6 +281,21 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
         private void textBoxNombre_MouseDown(object sender, MouseEventArgs e)
         {
             textBoxDni.Text = "";
+        }
+
+        private void dataGridView1_SelectionChanged(object sender, EventArgs e)
+        {
+            if(dataGridView1.SelectedRows.Count > 0)
+            {
+                buttonEliminar.Enabled = true;
+                buttonDetalles.Enabled = true;
+            }
+            else
+            {
+                buttonEliminar.Enabled = false;
+                buttonDetalles.Enabled = false;
+            }
+
         }
     }
 }

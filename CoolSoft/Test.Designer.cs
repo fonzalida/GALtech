@@ -529,12 +529,7 @@
         private System.Windows.Forms.TextBox tbCompletado;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.BindingSource biosgastroDataSetBindingSource;
 
-        private System.Windows.Forms.BindingSource personaBindingSource1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dniDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn apellidoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox tbcNombre;
         private System.Windows.Forms.TextBox tbcDomicilio;

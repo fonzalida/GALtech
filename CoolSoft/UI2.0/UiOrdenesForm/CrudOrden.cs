@@ -385,5 +385,10 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
 
             }
         }
+
+        private void buttonEliminar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

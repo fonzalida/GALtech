@@ -33,17 +33,9 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
             this.panelBorde.SuspendLayout();
             this.SuspendLayout();
             // 
-            // mtTelefono1
-            // 
-            this.mtTelefono1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            // 
             // tbNombre
             // 
             this.tbNombre.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            // 
-            // mtDniCuit
-            // 
-            this.mtDniCuit.Margin = new System.Windows.Forms.Padding(5);
             // 
             // panelBorde
             // 
@@ -64,6 +56,7 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
             // buttonModificar
             // 
             this.buttonModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(71)))), ((int)(((byte)(135)))));
+            this.buttonModificar.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.buttonModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonModificar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonModificar.ForeColor = System.Drawing.SystemColors.Control;
@@ -87,12 +80,12 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
             this.Name = "UiModificarTecnico";
             this.Text = "UiModificarTecnico";
             this.Load += new System.EventHandler(this.UiModificarTecnico_Load);
+            this.Controls.SetChildIndex(this.textBoxDniCuit, 0);
+            this.Controls.SetChildIndex(this.textBoxTelefono, 0);
             this.Controls.SetChildIndex(this.panelBorde, 0);
             this.Controls.SetChildIndex(this.buttonCargar, 0);
             this.Controls.SetChildIndex(this.buttonCancelar, 0);
-            this.Controls.SetChildIndex(this.mtDniCuit, 0);
             this.Controls.SetChildIndex(this.tbNombre, 0);
-            this.Controls.SetChildIndex(this.mtTelefono1, 0);
             this.Controls.SetChildIndex(this.label1, 0);
             this.Controls.SetChildIndex(this.label2, 0);
             this.Controls.SetChildIndex(this.label6, 0);

@@ -70,16 +70,28 @@ namespace CoolSoft.Controlador
         }
 
         public static void Eliminar(
-            string Dni
+            DataGridViewCellCollection dr
             )
         {
             Tecnico tecnico = new Tecnico();
 
-            tecnico.dni = int.Parse(Dni);
+            tecnico.dni = int.Parse(dr["Dni"].Value.ToString());
 
             TecnicoService.Eliminar(tecnico);
 
         }
+
+        //public static void Eliminar(
+        //    string Dni
+        //    )
+        //{
+        //    Tecnico tecnico = new Tecnico();
+
+        //    tecnico.dni = int.Parse(Dni);
+
+        //    TecnicoService.Eliminar(tecnico);
+
+        //}
 
 
     }

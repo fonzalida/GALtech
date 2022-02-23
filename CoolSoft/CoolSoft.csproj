@@ -125,6 +125,12 @@
       <DependentUpon>Eliminar.cs</DependentUpon>
     </Compile>
     <Compile Include="UI2.0\Genericos\Format.cs" />
+    <Compile Include="UI2.0\Genericos\Presentacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI2.0\Genericos\Presentacion.Designer.cs">
+      <DependentUpon>Presentacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI2.0\Genericos\UiAgregar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -314,6 +320,9 @@
     </Compile>
     <EmbeddedResource Include="UI2.0\Genericos\Eliminar.resx">
       <DependentUpon>Eliminar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI2.0\Genericos\Presentacion.resx">
+      <DependentUpon>Presentacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI2.0\Genericos\UiAgregar.resx">
       <DependentUpon>UiAgregar.cs</DependentUpon>
@@ -512,6 +521,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\inicio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_white.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

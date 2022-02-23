@@ -43,15 +43,12 @@ namespace CoolSoft.UI2._0
             this.pictureMaximizarForm = new System.Windows.Forms.PictureBox();
             this.pictureCerrarForm = new System.Windows.Forms.PictureBox();
             this.panelContenedor = new System.Windows.Forms.Panel();
-            this.pictureBoxPresentacion = new System.Windows.Forms.PictureBox();
             this.panelMenu.SuspendLayout();
             this.panelBorde.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureMinimizarForm)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureNormalForm)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureMaximizarForm)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureCerrarForm)).BeginInit();
-            this.panelContenedor.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPresentacion)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -66,6 +63,7 @@ namespace CoolSoft.UI2._0
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(230, 720);
             this.panelMenu.TabIndex = 0;
+            this.panelMenu.MouseHover += new System.EventHandler(this.Menu_MouseHover);
             // 
             // buttonInicio
             // 
@@ -82,7 +80,7 @@ namespace CoolSoft.UI2._0
             this.buttonInicio.TabIndex = 3;
             this.buttonInicio.Text = "Inicio";
             this.buttonInicio.UseVisualStyleBackColor = true;
-            this.buttonInicio.Click += new System.EventHandler(this.button1_Click);
+            this.buttonInicio.Click += new System.EventHandler(this.buttonInicio_Click);
             // 
             // buttonOrdenes
             // 
@@ -233,26 +231,12 @@ namespace CoolSoft.UI2._0
             // 
             // panelContenedor
             // 
-            this.panelContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(84)))));
-            this.panelContenedor.Controls.Add(this.pictureBoxPresentacion);
+            this.panelContenedor.BackColor = System.Drawing.Color.Silver;
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContenedor.Location = new System.Drawing.Point(230, 60);
             this.panelContenedor.Name = "panelContenedor";
             this.panelContenedor.Size = new System.Drawing.Size(1050, 660);
             this.panelContenedor.TabIndex = 2;
-            // 
-            // pictureBoxPresentacion
-            // 
-            this.pictureBoxPresentacion.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxPresentacion.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBoxPresentacion.Image = global::CoolSoft.Properties.Resources.LOGO_COOLSOFT_original;
-            this.pictureBoxPresentacion.Location = new System.Drawing.Point(0, 0);
-            this.pictureBoxPresentacion.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBoxPresentacion.Name = "pictureBoxPresentacion";
-            this.pictureBoxPresentacion.Size = new System.Drawing.Size(1050, 660);
-            this.pictureBoxPresentacion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxPresentacion.TabIndex = 3;
-            this.pictureBoxPresentacion.TabStop = false;
             // 
             // UiPrincipal
             // 
@@ -267,7 +251,6 @@ namespace CoolSoft.UI2._0
             this.Name = "UiPrincipal";
             this.Text = "UiPrincipal";
             this.Load += new System.EventHandler(this.UiPrincipal_Load);
-            this.Resize += new System.EventHandler(this.UiPrincipal_Resize);
             this.panelMenu.ResumeLayout(false);
             this.panelBorde.ResumeLayout(false);
             this.panelBorde.PerformLayout();
@@ -275,8 +258,6 @@ namespace CoolSoft.UI2._0
             ((System.ComponentModel.ISupportInitialize)(this.pictureNormalForm)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureMaximizarForm)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureCerrarForm)).EndInit();
-            this.panelContenedor.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPresentacion)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -295,7 +276,6 @@ namespace CoolSoft.UI2._0
         private System.Windows.Forms.Button buttonInicio;
         private System.Windows.Forms.Button buttonClientes;
         private System.Windows.Forms.Button buttonMenu;
-        private System.Windows.Forms.PictureBox pictureBoxPresentacion;
         private System.Windows.Forms.Label labelTitulo;
     }
 }

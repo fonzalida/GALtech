@@ -52,7 +52,7 @@ namespace CoolSoft.Modelo.REPOSITORIO
 
             MySqlCommand cmd = new MySqlCommand(
                 "UPDATE TECNICO " +
-                 "SET dni = @dni2, nombre = @nombre2, telefono = @telefono2 " +
+                 "SET dni = @dni2, nombre = @nombre2, telefono = @telefono2, Activo = 1 " +
                   "where dni = @dni  ");
 
             cmd.Parameters.AddWithValue("@dni", viejo.dni);

@@ -135,6 +135,7 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
             this.buttonBuscar.Text = "Buscar";
             this.buttonBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonBuscar.UseVisualStyleBackColor = false;
+            this.buttonBuscar.Click += new System.EventHandler(this.buttonBuscar_Click);
             // 
             // textBoxNombre
             // 
@@ -163,6 +164,7 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
             this.dataGridView1.Size = new System.Drawing.Size(1021, 497);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
             // 
             // panelMenu
             // 
@@ -281,6 +283,7 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "CrudTecnico";
             this.Text = "CrudTecnico";
+            this.Load += new System.EventHandler(this.CrudTecnico_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panelSuperior.ResumeLayout(false);
             this.panelSuperior.PerformLayout();

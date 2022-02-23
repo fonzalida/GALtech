@@ -32,9 +32,9 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
             this.label6 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.mtTelefono1 = new System.Windows.Forms.MaskedTextBox();
             this.tbNombre = new System.Windows.Forms.TextBox();
-            this.mtDniCuit = new System.Windows.Forms.MaskedTextBox();
+            this.textBoxDniCuit = new System.Windows.Forms.TextBox();
+            this.textBoxTelefono = new System.Windows.Forms.TextBox();
             this.panelBorde.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,13 +50,11 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
             // 
             // buttonCancelar
             // 
-            this.buttonCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.buttonCancelar.Location = new System.Drawing.Point(273, 330);
             // 
             // buttonCargar
             // 
-            this.buttonCargar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonCargar.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.buttonCargar.Location = new System.Drawing.Point(115, 330);
             this.buttonCargar.Click += new System.EventHandler(this.buttonCargar_Click);
@@ -91,18 +89,6 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
             this.label1.TabIndex = 61;
             this.label1.Text = "DNI";
             // 
-            // mtTelefono1
-            // 
-            this.mtTelefono1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.mtTelefono1.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtTelefono1.Location = new System.Drawing.Point(38, 258);
-            this.mtTelefono1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.mtTelefono1.Mask = "999999999999";
-            this.mtTelefono1.Name = "mtTelefono1";
-            this.mtTelefono1.PromptChar = ' ';
-            this.mtTelefono1.Size = new System.Drawing.Size(199, 34);
-            this.mtTelefono1.TabIndex = 60;
-            // 
             // tbNombre
             // 
             this.tbNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -113,42 +99,51 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
             this.tbNombre.Size = new System.Drawing.Size(345, 34);
             this.tbNombre.TabIndex = 59;
             // 
-            // mtDniCuit
+            // textBoxDniCuit
             // 
-            this.mtDniCuit.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.mtDniCuit.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtDniCuit.Location = new System.Drawing.Point(37, 101);
-            this.mtDniCuit.Margin = new System.Windows.Forms.Padding(4);
-            this.mtDniCuit.Mask = "99999999999";
-            this.mtDniCuit.Name = "mtDniCuit";
-            this.mtDniCuit.PromptChar = ' ';
-            this.mtDniCuit.Size = new System.Drawing.Size(199, 34);
-            this.mtDniCuit.TabIndex = 58;
-            this.mtDniCuit.ValidatingType = typeof(int);
+            this.textBoxDniCuit.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxDniCuit.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxDniCuit.Location = new System.Drawing.Point(36, 99);
+            this.textBoxDniCuit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBoxDniCuit.Name = "textBoxDniCuit";
+            this.textBoxDniCuit.Size = new System.Drawing.Size(200, 34);
+            this.textBoxDniCuit.TabIndex = 64;
+            this.textBoxDniCuit.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNumerico_KeyPress);
+            // 
+            // textBoxTelefono
+            // 
+            this.textBoxTelefono.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxTelefono.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxTelefono.Location = new System.Drawing.Point(36, 267);
+            this.textBoxTelefono.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBoxTelefono.Name = "textBoxTelefono";
+            this.textBoxTelefono.Size = new System.Drawing.Size(200, 34);
+            this.textBoxTelefono.TabIndex = 65;
+            this.textBoxTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNumerico_KeyPress);
             // 
             // UiAgregarTecnico
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(437, 396);
+            this.Controls.Add(this.textBoxTelefono);
+            this.Controls.Add(this.textBoxDniCuit);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.mtTelefono1);
             this.Controls.Add(this.tbNombre);
-            this.Controls.Add(this.mtDniCuit);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UiAgregarTecnico";
             this.Text = "UiAgregarTecnico";
             this.Load += new System.EventHandler(this.UiAgregarTecnico_Load_1);
-            this.Controls.SetChildIndex(this.panelBorde, 0);
-            this.Controls.SetChildIndex(this.buttonCargar, 0);
-            this.Controls.SetChildIndex(this.buttonCancelar, 0);
-            this.Controls.SetChildIndex(this.mtDniCuit, 0);
             this.Controls.SetChildIndex(this.tbNombre, 0);
-            this.Controls.SetChildIndex(this.mtTelefono1, 0);
             this.Controls.SetChildIndex(this.label1, 0);
             this.Controls.SetChildIndex(this.label2, 0);
             this.Controls.SetChildIndex(this.label6, 0);
+            this.Controls.SetChildIndex(this.panelBorde, 0);
+            this.Controls.SetChildIndex(this.buttonCargar, 0);
+            this.Controls.SetChildIndex(this.buttonCancelar, 0);
+            this.Controls.SetChildIndex(this.textBoxDniCuit, 0);
+            this.Controls.SetChildIndex(this.textBoxTelefono, 0);
             this.panelBorde.ResumeLayout(false);
             this.panelBorde.PerformLayout();
             this.ResumeLayout(false);
@@ -161,8 +156,8 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
         public System.Windows.Forms.Label label6;
         public System.Windows.Forms.Label label2;
         public System.Windows.Forms.Label label1;
-        public System.Windows.Forms.MaskedTextBox mtTelefono1;
         public System.Windows.Forms.TextBox tbNombre;
-        public System.Windows.Forms.MaskedTextBox mtDniCuit;
+        public System.Windows.Forms.TextBox textBoxDniCuit;
+        public System.Windows.Forms.TextBox textBoxTelefono;
     }
 }
