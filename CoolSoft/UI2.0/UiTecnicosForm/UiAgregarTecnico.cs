@@ -43,7 +43,7 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
 
         private void ValidarText()
         {
-            if (textBoxDniCuit.Text == "" && tbNombre.Text == "")
+            if (textBoxDniCuit.Text == "" || tbNombre.Text == "")
             {
                 buttonCargar.Enabled = false;
             }
