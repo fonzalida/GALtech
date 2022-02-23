@@ -168,28 +168,6 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
                 FormatearDataGrid();
             }
 
-
-
-            //if (modificarTecnico != null)
-            //{
-            //    if (modificarTecnico.IsDisposed)
-            //    {
-            //        modificarTecnico = new UiModificarTecnico(viejo);
-            //        modificarTecnico.StartPosition = FormStartPosition.CenterScreen;
-            //        modificarTecnico.Show();
-            //    }
-            //    else
-            //    {
-            //        modificarTecnico.BringToFront();
-            //    }
-            //}
-            //else
-            //{
-            //    modificarTecnico = new UiModificarTecnico(viejo);
-            //    modificarTecnico.StartPosition = FormStartPosition.CenterScreen;
-            //    modificarTecnico.Show();
-            //}
-
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

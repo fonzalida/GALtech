@@ -216,5 +216,20 @@ namespace CoolSoft.UI2._0.UiClientesForm
         {
             BuscarTexto(textBoxNombre, textBoxDni, 2);
         }
+
+        private void dataGridView1_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                
+                buttonDetalles.Enabled = true;
+            }
+            else
+            {
+                
+                buttonDetalles.Enabled = false;
+            }
+
+        }
     }
 }
