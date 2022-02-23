@@ -38,10 +38,10 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
 
         private void textBox_TextChanged(object sender, EventArgs e)
         {
-            
+            ValidarText();
         }
 
-        private void ValidadText()
+        private void ValidarText()
         {
             if (textBoxDniCuit.Text == "" && tbNombre.Text == "")
             {
@@ -51,6 +51,11 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
             {
                 buttonCargar.Enabled = false;
             }
+        }
+
+        private void tbNombre_TextChanged(object sender, EventArgs e)
+        {
+            ValidarText();
         }
     }
 }

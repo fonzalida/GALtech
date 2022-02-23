@@ -98,6 +98,7 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
             this.tbNombre.Name = "tbNombre";
             this.tbNombre.Size = new System.Drawing.Size(345, 34);
             this.tbNombre.TabIndex = 59;
+            this.tbNombre.TextChanged += new System.EventHandler(this.tbNombre_TextChanged);
             // 
             // textBoxDniCuit
             // 
