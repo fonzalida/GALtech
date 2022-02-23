@@ -61,7 +61,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
         private void EstadoVer()
         {
             panelSuperior.Enabled = true;
-            panelFechas.Enabled = true;
+            panelFechas.Enabled = false;
 
             buttonAgregar.Enabled = true;
             buttonEliminar.Enabled = true;
