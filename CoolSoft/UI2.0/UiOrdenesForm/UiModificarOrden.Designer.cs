@@ -37,23 +37,26 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.mtIdCliente = new System.Windows.Forms.MaskedTextBox();
             this.tbTareaDesarrollar = new System.Windows.Forms.TextBox();
             this.checkBoxCompletada = new System.Windows.Forms.CheckBox();
-            this.textBoxNombreCliente = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.textBoxImporte = new System.Windows.Forms.TextBox();
+            this.textBoxNombreCliente = new System.Windows.Forms.TextBox();
+            this.buttonModificar = new System.Windows.Forms.Button();
             this.panelBorde.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelBorde
             // 
-            this.panelBorde.Size = new System.Drawing.Size(590, 50);
+            this.panelBorde.Size = new System.Drawing.Size(427, 50);
             // 
             // buttonCancelar
             // 
-            this.buttonCancelar.Location = new System.Drawing.Point(367, 656);
+            this.buttonCancelar.Location = new System.Drawing.Point(263, 546);
             // 
             // buttonCargar
             // 
-            this.buttonCargar.Location = new System.Drawing.Point(209, 656);
+            this.buttonCargar.Location = new System.Drawing.Point(-23, 576);
+            this.buttonCargar.Size = new System.Drawing.Size(128, 50);
+            this.buttonCargar.Visible = false;
             // 
             // buttonBuscar
             // 
@@ -63,7 +66,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.buttonBuscar.ForeColor = System.Drawing.SystemColors.Control;
             this.buttonBuscar.Image = global::CoolSoft.Properties.Resources.search;
             this.buttonBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonBuscar.Location = new System.Drawing.Point(258, 379);
+            this.buttonBuscar.Location = new System.Drawing.Point(17, 343);
             this.buttonBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonBuscar.Name = "buttonBuscar";
             this.buttonBuscar.Size = new System.Drawing.Size(152, 37);
@@ -76,28 +79,29 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             // 
             this.dtFechaRecepcion.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtFechaRecepcion.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtFechaRecepcion.Location = new System.Drawing.Point(17, 103);
+            this.dtFechaRecepcion.Location = new System.Drawing.Point(243, 69);
             this.dtFechaRecepcion.Name = "dtFechaRecepcion";
-            this.dtFechaRecepcion.Size = new System.Drawing.Size(205, 29);
+            this.dtFechaRecepcion.Size = new System.Drawing.Size(175, 34);
             this.dtFechaRecepcion.TabIndex = 72;
+            this.dtFechaRecepcion.ValueChanged += new System.EventHandler(this.dtFechaRecepcion_ValueChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(9, 319);
+            this.label3.Location = new System.Drawing.Point(11, 305);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(122, 22);
+            this.label3.Size = new System.Drawing.Size(87, 27);
             this.label3.TabIndex = 71;
-            this.label3.Text = "N° de Cliente";
+            this.label3.Text = "Cliente";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(8, 163);
+            this.label2.Location = new System.Drawing.Point(11, 129);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(171, 22);
+            this.label2.Size = new System.Drawing.Size(218, 27);
             this.label2.TabIndex = 70;
             this.label2.Text = "Tarea a desarrollar:";
             // 
@@ -105,9 +109,9 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 73);
+            this.label1.Location = new System.Drawing.Point(11, 69);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(179, 22);
+            this.label1.Size = new System.Drawing.Size(224, 27);
             this.label1.TabIndex = 69;
             this.label1.Text = "Fecha de recepción";
             // 
@@ -115,73 +119,97 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             // 
             this.mtIdCliente.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.mtIdCliente.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtIdCliente.Location = new System.Drawing.Point(13, 379);
+            this.mtIdCliente.Location = new System.Drawing.Point(195, 346);
             this.mtIdCliente.Mask = "99999999999";
             this.mtIdCliente.Name = "mtIdCliente";
             this.mtIdCliente.PromptChar = ' ';
             this.mtIdCliente.ReadOnly = true;
-            this.mtIdCliente.Size = new System.Drawing.Size(162, 29);
+            this.mtIdCliente.Size = new System.Drawing.Size(219, 34);
             this.mtIdCliente.TabIndex = 67;
+            this.mtIdCliente.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.mtIdCliente.TextChanged += new System.EventHandler(this.mtIdCliente_TextChanged);
             // 
             // tbTareaDesarrollar
             // 
             this.tbTareaDesarrollar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbTareaDesarrollar.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbTareaDesarrollar.Location = new System.Drawing.Point(13, 193);
+            this.tbTareaDesarrollar.Location = new System.Drawing.Point(17, 159);
             this.tbTareaDesarrollar.Multiline = true;
             this.tbTareaDesarrollar.Name = "tbTareaDesarrollar";
             this.tbTareaDesarrollar.Size = new System.Drawing.Size(397, 113);
             this.tbTareaDesarrollar.TabIndex = 68;
+            this.tbTareaDesarrollar.TextChanged += new System.EventHandler(this.textBoxImporte_TextChanged);
             // 
             // checkBoxCompletada
             // 
-            this.checkBoxCompletada.AutoSize = true;
             this.checkBoxCompletada.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.checkBoxCompletada.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxCompletada.Location = new System.Drawing.Point(12, 477);
+            this.checkBoxCompletada.Location = new System.Drawing.Point(11, 404);
             this.checkBoxCompletada.Name = "checkBoxCompletada";
-            this.checkBoxCompletada.Size = new System.Drawing.Size(186, 26);
+            this.checkBoxCompletada.Size = new System.Drawing.Size(403, 31);
             this.checkBoxCompletada.TabIndex = 74;
             this.checkBoxCompletada.Text = "Orden completada";
             this.checkBoxCompletada.UseVisualStyleBackColor = true;
-            // 
-            // textBoxNombreCliente
-            // 
-            this.textBoxNombreCliente.Location = new System.Drawing.Point(12, 349);
-            this.textBoxNombreCliente.Name = "textBoxNombreCliente";
-            this.textBoxNombreCliente.ReadOnly = true;
-            this.textBoxNombreCliente.Size = new System.Drawing.Size(398, 20);
-            this.textBoxNombreCliente.TabIndex = 75;
-            this.textBoxNombreCliente.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.checkBoxCompletada.CheckedChanged += new System.EventHandler(this.checkBoxCompletada_CheckedChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(12, 541);
+            this.label4.Location = new System.Drawing.Point(12, 472);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(76, 22);
+            this.label4.Size = new System.Drawing.Size(93, 27);
             this.label4.TabIndex = 77;
             this.label4.Text = "Importe";
             // 
             // textBoxImporte
             // 
             this.textBoxImporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxImporte.Location = new System.Drawing.Point(178, 536);
+            this.textBoxImporte.Location = new System.Drawing.Point(260, 467);
             this.textBoxImporte.Name = "textBoxImporte";
-            this.textBoxImporte.Size = new System.Drawing.Size(154, 28);
+            this.textBoxImporte.Size = new System.Drawing.Size(154, 34);
             this.textBoxImporte.TabIndex = 78;
             this.textBoxImporte.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.textBoxImporte.TextChanged += new System.EventHandler(this.textBoxImporte_TextChanged);
             this.textBoxImporte.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxImporte_KeyPress);
+            // 
+            // textBoxNombreCliente
+            // 
+            this.textBoxNombreCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(226)))), ((int)(((byte)(225)))));
+            this.textBoxNombreCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxNombreCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxNombreCliente.Location = new System.Drawing.Point(195, 309);
+            this.textBoxNombreCliente.Name = "textBoxNombreCliente";
+            this.textBoxNombreCliente.ReadOnly = true;
+            this.textBoxNombreCliente.Size = new System.Drawing.Size(219, 23);
+            this.textBoxNombreCliente.TabIndex = 79;
+            this.textBoxNombreCliente.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // buttonModificar
+            // 
+            this.buttonModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(71)))), ((int)(((byte)(135)))));
+            this.buttonModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonModificar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonModificar.ForeColor = System.Drawing.SystemColors.Control;
+            this.buttonModificar.Image = global::CoolSoft.Properties.Resources.edit;
+            this.buttonModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonModificar.Location = new System.Drawing.Point(105, 546);
+            this.buttonModificar.Name = "buttonModificar";
+            this.buttonModificar.Size = new System.Drawing.Size(152, 54);
+            this.buttonModificar.TabIndex = 80;
+            this.buttonModificar.Text = "Modificar";
+            this.buttonModificar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonModificar.UseVisualStyleBackColor = false;
             // 
             // UiModificarOrden
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(590, 736);
+            this.ClientSize = new System.Drawing.Size(427, 612);
+            this.Controls.Add(this.buttonModificar);
+            this.Controls.Add(this.textBoxNombreCliente);
             this.Controls.Add(this.textBoxImporte);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBoxNombreCliente);
             this.Controls.Add(this.checkBoxCompletada);
             this.Controls.Add(this.buttonBuscar);
             this.Controls.Add(this.dtFechaRecepcion);
@@ -193,9 +221,6 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.Name = "UiModificarOrden";
             this.Text = "UiModificarOrden";
             this.Load += new System.EventHandler(this.UiModificarOrden_Load);
-            this.Controls.SetChildIndex(this.panelBorde, 0);
-            this.Controls.SetChildIndex(this.buttonCargar, 0);
-            this.Controls.SetChildIndex(this.buttonCancelar, 0);
             this.Controls.SetChildIndex(this.tbTareaDesarrollar, 0);
             this.Controls.SetChildIndex(this.mtIdCliente, 0);
             this.Controls.SetChildIndex(this.label1, 0);
@@ -204,9 +229,13 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.Controls.SetChildIndex(this.dtFechaRecepcion, 0);
             this.Controls.SetChildIndex(this.buttonBuscar, 0);
             this.Controls.SetChildIndex(this.checkBoxCompletada, 0);
-            this.Controls.SetChildIndex(this.textBoxNombreCliente, 0);
             this.Controls.SetChildIndex(this.label4, 0);
             this.Controls.SetChildIndex(this.textBoxImporte, 0);
+            this.Controls.SetChildIndex(this.panelBorde, 0);
+            this.Controls.SetChildIndex(this.buttonCargar, 0);
+            this.Controls.SetChildIndex(this.buttonCancelar, 0);
+            this.Controls.SetChildIndex(this.textBoxNombreCliente, 0);
+            this.Controls.SetChildIndex(this.buttonModificar, 0);
             this.panelBorde.ResumeLayout(false);
             this.panelBorde.PerformLayout();
             this.ResumeLayout(false);
@@ -224,8 +253,9 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
         private System.Windows.Forms.MaskedTextBox mtIdCliente;
         private System.Windows.Forms.TextBox tbTareaDesarrollar;
         private System.Windows.Forms.CheckBox checkBoxCompletada;
-        private System.Windows.Forms.TextBox textBoxNombreCliente;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBoxImporte;
+        public System.Windows.Forms.TextBox textBoxNombreCliente;
+        public System.Windows.Forms.Button buttonModificar;
     }
 }

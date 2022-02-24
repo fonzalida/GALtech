@@ -249,6 +249,7 @@ namespace CoolSoft.UI2._0
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "UiPrincipal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UiPrincipal";
             this.Load += new System.EventHandler(this.UiPrincipal_Load);
             this.panelMenu.ResumeLayout(false);

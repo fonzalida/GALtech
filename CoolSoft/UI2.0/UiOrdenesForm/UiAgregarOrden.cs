@@ -22,7 +22,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
 
         private void UiAgregarOrden_Load(object sender, EventArgs e)
         {
-
+            buttonCargar.Enabled = false;
             
         }
 
@@ -40,6 +40,20 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             if (result == DialogResult.OK)
             {
                 mtIdCliente.Text = idCliente.ToString();
+            }
+        }
+
+        private void mtIdCliente_TextChanged(object sender, EventArgs e)
+        {
+            if(mtIdCliente.Text == "")
+            {
+                textBoxNombreCliente.Text = "";
+                buttonCargar.Enabled = false;
+            }
+            else
+            {
+                textBoxNombreCliente.Text = ClienteRepository.BuscarNombre(int.Parse(mtIdCliente.Text));
+                buttonCargar.Enabled = true;
             }
         }
     }

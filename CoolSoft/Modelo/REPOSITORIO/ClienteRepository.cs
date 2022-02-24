@@ -77,6 +77,8 @@ namespace CoolSoft.Modelo.REPOSITORIO
 
         }
 
+        
+
         public static void modificar(Cliente viejo, Cliente nuevo)
         {
 
@@ -135,6 +137,17 @@ namespace CoolSoft.Modelo.REPOSITORIO
 
             
             return resultado;
+
+
+        }
+
+        public static string BuscarNombre(int idCliente)
+        {
+            String query = "SELECT Nombre FROM CLIENTE WHERE idCliente = " + idCliente;
+            Conexion conexion = new Conexion();
+            var resultado = conexion.QuerySelect(query);
+            Console.WriteLine(resultado.Rows.Count);
+            return resultado.Rows[0].Field<string>("Nombre");
 
 
         }

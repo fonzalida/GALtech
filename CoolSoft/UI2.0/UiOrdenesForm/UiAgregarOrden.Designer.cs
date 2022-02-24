@@ -36,6 +36,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.mtIdCliente = new System.Windows.Forms.MaskedTextBox();
             this.tbTareaDesarrollar = new System.Windows.Forms.TextBox();
             this.buttonBuscar = new System.Windows.Forms.Button();
+            this.textBoxNombreCliente = new System.Windows.Forms.TextBox();
             this.panelBorde.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,10 +51,12 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             // 
             // buttonCancelar
             // 
+            this.buttonCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.buttonCancelar.Location = new System.Drawing.Point(266, 457);
             // 
             // buttonCargar
             // 
+            this.buttonCargar.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.buttonCargar.Location = new System.Drawing.Point(108, 457);
             this.buttonCargar.Click += new System.EventHandler(this.buttonCargar_Click);
             // 
@@ -70,11 +73,11 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(12, 316);
+            this.label3.Location = new System.Drawing.Point(12, 320);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(155, 27);
+            this.label3.Size = new System.Drawing.Size(87, 27);
             this.label3.TabIndex = 29;
-            this.label3.Text = "N° de Cliente";
+            this.label3.Text = "Cliente";
             // 
             // label2
             // 
@@ -98,15 +101,16 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             // 
             // mtIdCliente
             // 
-            this.mtIdCliente.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.mtIdCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.mtIdCliente.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtIdCliente.Location = new System.Drawing.Point(20, 356);
+            this.mtIdCliente.Location = new System.Drawing.Point(199, 355);
             this.mtIdCliente.Mask = "99999999999";
             this.mtIdCliente.Name = "mtIdCliente";
             this.mtIdCliente.PromptChar = ' ';
             this.mtIdCliente.ReadOnly = true;
-            this.mtIdCliente.Size = new System.Drawing.Size(162, 34);
+            this.mtIdCliente.Size = new System.Drawing.Size(219, 27);
             this.mtIdCliente.TabIndex = 25;
+            this.mtIdCliente.TextChanged += new System.EventHandler(this.mtIdCliente_TextChanged);
             // 
             // tbTareaDesarrollar
             // 
@@ -126,19 +130,32 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.buttonBuscar.ForeColor = System.Drawing.SystemColors.Control;
             this.buttonBuscar.Image = global::CoolSoft.Properties.Resources.search;
             this.buttonBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonBuscar.Location = new System.Drawing.Point(261, 353);
+            this.buttonBuscar.Location = new System.Drawing.Point(17, 352);
             this.buttonBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonBuscar.Name = "buttonBuscar";
             this.buttonBuscar.Size = new System.Drawing.Size(152, 37);
             this.buttonBuscar.TabIndex = 66;
-            this.buttonBuscar.Text = "Buscar";
+            this.buttonBuscar.Text = "Seleccionar";
             this.buttonBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonBuscar.UseVisualStyleBackColor = false;
             this.buttonBuscar.Click += new System.EventHandler(this.buttonBuscar_Click);
             // 
+            // textBoxNombreCliente
+            // 
+            this.textBoxNombreCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(226)))), ((int)(((byte)(225)))));
+            this.textBoxNombreCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxNombreCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxNombreCliente.Location = new System.Drawing.Point(199, 321);
+            this.textBoxNombreCliente.Name = "textBoxNombreCliente";
+            this.textBoxNombreCliente.ReadOnly = true;
+            this.textBoxNombreCliente.Size = new System.Drawing.Size(219, 23);
+            this.textBoxNombreCliente.TabIndex = 76;
+            this.textBoxNombreCliente.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // UiAgregarOrden
             // 
             this.ClientSize = new System.Drawing.Size(430, 523);
+            this.Controls.Add(this.textBoxNombreCliente);
             this.Controls.Add(this.buttonBuscar);
             this.Controls.Add(this.dtFechaRecepcion);
             this.Controls.Add(this.label3);
@@ -158,6 +175,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.Controls.SetChildIndex(this.buttonCargar, 0);
             this.Controls.SetChildIndex(this.buttonCancelar, 0);
             this.Controls.SetChildIndex(this.buttonBuscar, 0);
+            this.Controls.SetChildIndex(this.textBoxNombreCliente, 0);
             this.panelBorde.ResumeLayout(false);
             this.panelBorde.PerformLayout();
             this.ResumeLayout(false);
@@ -173,5 +191,6 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
         private System.Windows.Forms.MaskedTextBox mtIdCliente;
         private System.Windows.Forms.TextBox tbTareaDesarrollar;
         public System.Windows.Forms.Button buttonBuscar;
+        public System.Windows.Forms.TextBox textBoxNombreCliente;
     }
 }

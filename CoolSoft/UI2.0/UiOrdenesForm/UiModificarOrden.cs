@@ -1,4 +1,5 @@
 ﻿using CoolSoft.Modelo.ENTIDADES;
+using CoolSoft.Modelo.REPOSITORIO;
 using CoolSoft.UI2._0.Genericos;
 using System;
 using System.Collections.Generic;
@@ -23,10 +24,19 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             Console.WriteLine(vieja.idOrden);
         }
 
+        private void UiModificarOrden_Load(object sender, EventArgs e)
+        {
+            dtFechaRecepcion.Text = vieja.fechaRecepcion.ToString();
+            tbTareaDesarrollar.Text = vieja.tareaDesarrollar;
+            mtIdCliente.Text = vieja.idCliente.ToString();
+            buttonModificar.Enabled = false;
+            textBoxNombreCliente.Text = ClienteRepository.BuscarNombre(vieja.idCliente);
+
+        }
+
         private void textBoxImporte_KeyPress(object sender, KeyPressEventArgs e)
         {
-             
-
+            
             if (
             !char.IsControl(e.KeyChar)
             && !char.IsDigit(e.KeyChar)
@@ -47,12 +57,29 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             }
         }
 
-        private void UiModificarOrden_Load(object sender, EventArgs e)
+        private void mtIdCliente_TextChanged(object sender, EventArgs e)
         {
-            dtFechaRecepcion.Text = vieja.fechaRecepcion.ToString();
-            tbTareaDesarrollar.Text = vieja.tareaDesarrollar;
-            mtIdCliente.Text = vieja.idCliente.ToString();
+            buttonModificar.Enabled = true;
+            textBoxNombreCliente.Text = ClienteRepository.BuscarNombre(vieja.idCliente);
         }
+
+        private void textBoxImporte_TextChanged(object sender, EventArgs e)
+        {
+            buttonModificar.Enabled = true;
+        }
+
+        private void dtFechaRecepcion_ValueChanged(object sender, EventArgs e)
+        {
+            buttonModificar.Enabled = true;
+        }
+
+        private void checkBoxCompletada_CheckedChanged(object sender, EventArgs e)
+        {
+            buttonModificar.Enabled = true;
+        }
+
+
+
 
         //private void buttonModificar_Click(object sender, EventArgs e)
         //{

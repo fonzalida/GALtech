@@ -33,12 +33,12 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.panelSuperior = new System.Windows.Forms.Panel();
             this.panelBuscar = new System.Windows.Forms.Panel();
             this.textBoxOrden = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.comboBoxFiltro = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.buttonBuscar = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.textBoxNombre = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.comboBoxFiltro = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panelMenu = new System.Windows.Forms.Panel();
             this.buttonPartes = new System.Windows.Forms.Button();
@@ -53,12 +53,14 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.buttonVer = new System.Windows.Forms.Button();
             this.buttonDetalles = new System.Windows.Forms.Button();
             this.buttonAgregar = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1.SuspendLayout();
             this.panelSuperior.SuspendLayout();
             this.panelBuscar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panelMenu.SuspendLayout();
             this.panelFechas.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -87,6 +89,8 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.panelSuperior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(226)))), ((int)(((byte)(225)))));
             this.tableLayoutPanel1.SetColumnSpan(this.panelSuperior, 2);
             this.panelSuperior.Controls.Add(this.panelBuscar);
+            this.panelSuperior.Controls.Add(this.label6);
+            this.panelSuperior.Controls.Add(this.comboBoxFiltro);
             this.panelSuperior.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelSuperior.Location = new System.Drawing.Point(3, 2);
             this.panelSuperior.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -97,8 +101,6 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             // panelBuscar
             // 
             this.panelBuscar.Controls.Add(this.textBoxOrden);
-            this.panelBuscar.Controls.Add(this.label6);
-            this.panelBuscar.Controls.Add(this.comboBoxFiltro);
             this.panelBuscar.Controls.Add(this.label4);
             this.panelBuscar.Controls.Add(this.buttonBuscar);
             this.panelBuscar.Controls.Add(this.label5);
@@ -122,32 +124,6 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.textBoxOrden.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxOrden_KeyPress);
             this.textBoxOrden.MouseDown += new System.Windows.Forms.MouseEventHandler(this.textBoxOrden_MouseDown);
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(492, 2);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(87, 20);
-            this.label6.TabIndex = 13;
-            this.label6.Text = "Filtrar por:";
-            // 
-            // comboBoxFiltro
-            // 
-            this.comboBoxFiltro.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxFiltro.FormattingEnabled = true;
-            this.comboBoxFiltro.Items.AddRange(new object[] {
-            "Todas",
-            "Completas",
-            "En Curso"});
-            this.comboBoxFiltro.Location = new System.Drawing.Point(496, 25);
-            this.comboBoxFiltro.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBoxFiltro.Name = "comboBoxFiltro";
-            this.comboBoxFiltro.Size = new System.Drawing.Size(121, 31);
-            this.comboBoxFiltro.TabIndex = 12;
-            this.comboBoxFiltro.Text = "Todas";
-            this.comboBoxFiltro.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -166,7 +142,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.buttonBuscar.ForeColor = System.Drawing.SystemColors.Control;
             this.buttonBuscar.Image = global::CoolSoft.Properties.Resources.search;
             this.buttonBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonBuscar.Location = new System.Drawing.Point(644, 20);
+            this.buttonBuscar.Location = new System.Drawing.Point(477, 20);
             this.buttonBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonBuscar.Name = "buttonBuscar";
             this.buttonBuscar.Size = new System.Drawing.Size(152, 37);
@@ -198,6 +174,32 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.textBoxNombre.TextChanged += new System.EventHandler(this.textBoxNombre_TextChanged);
             this.textBoxNombre.MouseDown += new System.Windows.Forms.MouseEventHandler(this.textBoxNombre_MouseDown);
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(931, 15);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(87, 20);
+            this.label6.TabIndex = 13;
+            this.label6.Text = "Filtrar por:";
+            // 
+            // comboBoxFiltro
+            // 
+            this.comboBoxFiltro.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxFiltro.FormattingEnabled = true;
+            this.comboBoxFiltro.Items.AddRange(new object[] {
+            "Todas",
+            "Completas",
+            "En Curso"});
+            this.comboBoxFiltro.Location = new System.Drawing.Point(897, 39);
+            this.comboBoxFiltro.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBoxFiltro.Name = "comboBoxFiltro";
+            this.comboBoxFiltro.Size = new System.Drawing.Size(121, 31);
+            this.comboBoxFiltro.TabIndex = 12;
+            this.comboBoxFiltro.Text = "Todas";
+            this.comboBoxFiltro.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
             // dataGridView1
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
@@ -212,15 +214,16 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(1021, 447);
             this.dataGridView1.TabIndex = 1;
+            this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
             // 
             // panelMenu
             // 
+            this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(226)))), ((int)(((byte)(225)))));
             this.tableLayoutPanel1.SetColumnSpan(this.panelMenu, 2);
+            this.panelMenu.Controls.Add(this.panel1);
             this.panelMenu.Controls.Add(this.buttonPartes);
-            this.panelMenu.Controls.Add(this.buttonCancelar);
             this.panelMenu.Controls.Add(this.panelFechas);
             this.panelMenu.Controls.Add(this.buttonEliminar);
-            this.panelMenu.Controls.Add(this.buttonVer);
             this.panelMenu.Controls.Add(this.buttonDetalles);
             this.panelMenu.Controls.Add(this.buttonAgregar);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -238,7 +241,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.buttonPartes.ForeColor = System.Drawing.SystemColors.Control;
             this.buttonPartes.Image = global::CoolSoft.Properties.Resources.ver;
             this.buttonPartes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonPartes.Location = new System.Drawing.Point(161, 63);
+            this.buttonPartes.Location = new System.Drawing.Point(158, 60);
             this.buttonPartes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonPartes.Name = "buttonPartes";
             this.buttonPartes.Size = new System.Drawing.Size(152, 54);
@@ -252,12 +255,13 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             // 
             this.buttonCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonCancelar.BackColor = System.Drawing.Color.ForestGreen;
+            this.buttonCancelar.FlatAppearance.BorderSize = 0;
             this.buttonCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCancelar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCancelar.ForeColor = System.Drawing.SystemColors.Control;
             this.buttonCancelar.Image = global::CoolSoft.Properties.Resources.cancel;
             this.buttonCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonCancelar.Location = new System.Drawing.Point(592, 63);
+            this.buttonCancelar.Location = new System.Drawing.Point(247, 5);
             this.buttonCancelar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(152, 54);
@@ -269,71 +273,76 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             // 
             // panelFechas
             // 
-            this.panelFechas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(226)))), ((int)(((byte)(225)))));
+            this.panelFechas.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelFechas.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.panelFechas.Controls.Add(this.dateTimePickerDesde);
             this.panelFechas.Controls.Add(this.checkBoxTodos);
             this.panelFechas.Controls.Add(this.label2);
             this.panelFechas.Controls.Add(this.dateTimePickerHasta);
             this.panelFechas.Controls.Add(this.label3);
-            this.panelFechas.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelFechas.Location = new System.Drawing.Point(750, 0);
+            this.panelFechas.Location = new System.Drawing.Point(545, 60);
             this.panelFechas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelFechas.Name = "panelFechas";
-            this.panelFechas.Size = new System.Drawing.Size(271, 126);
+            this.panelFechas.Size = new System.Drawing.Size(476, 64);
             this.panelFechas.TabIndex = 3;
             // 
-            // dateTimePicker1
+            // dateTimePickerDesde
             // 
             this.dateTimePickerDesde.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePickerDesde.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerDesde.Location = new System.Drawing.Point(3, 22);
+            this.dateTimePickerDesde.Location = new System.Drawing.Point(18, 24);
             this.dateTimePickerDesde.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimePickerDesde.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
-            this.dateTimePickerDesde.Name = "dateTimePicker1";
+            this.dateTimePickerDesde.Name = "dateTimePickerDesde";
             this.dateTimePickerDesde.Size = new System.Drawing.Size(153, 30);
             this.dateTimePickerDesde.TabIndex = 4;
             // 
             // checkBoxTodos
             // 
             this.checkBoxTodos.AutoSize = true;
+            this.checkBoxTodos.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.checkBoxTodos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxTodos.Location = new System.Drawing.Point(180, 48);
+            this.checkBoxTodos.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.checkBoxTodos.Location = new System.Drawing.Point(383, 25);
             this.checkBoxTodos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkBoxTodos.Name = "checkBoxTodos";
             this.checkBoxTodos.Size = new System.Drawing.Size(90, 29);
             this.checkBoxTodos.TabIndex = 8;
             this.checkBoxTodos.Text = "Todos";
-            this.checkBoxTodos.UseVisualStyleBackColor = true;
+            this.checkBoxTodos.UseVisualStyleBackColor = false;
             this.checkBoxTodos.CheckedChanged += new System.EventHandler(this.checkBoxTodos_CheckedChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(-1, 2);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label2.Location = new System.Drawing.Point(14, 4);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 20);
+            this.label2.Size = new System.Drawing.Size(69, 25);
             this.label2.TabIndex = 5;
             this.label2.Text = "Desde";
             // 
-            // dateTimePicker2
+            // dateTimePickerHasta
             // 
             this.dateTimePickerHasta.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePickerHasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerHasta.Location = new System.Drawing.Point(3, 79);
+            this.dateTimePickerHasta.Location = new System.Drawing.Point(195, 24);
             this.dateTimePickerHasta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimePickerHasta.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
-            this.dateTimePickerHasta.Name = "dateTimePicker2";
+            this.dateTimePickerHasta.Name = "dateTimePickerHasta";
             this.dateTimePickerHasta.Size = new System.Drawing.Size(153, 30);
             this.dateTimePickerHasta.TabIndex = 6;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(-1, 57);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label3.Location = new System.Drawing.Point(191, 2);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(54, 20);
+            this.label3.Size = new System.Drawing.Size(63, 25);
             this.label3.TabIndex = 7;
             this.label3.Text = "Hasta";
             // 
@@ -345,7 +354,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.buttonEliminar.ForeColor = System.Drawing.SystemColors.Control;
             this.buttonEliminar.Image = global::CoolSoft.Properties.Resources.delete;
             this.buttonEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonEliminar.Location = new System.Drawing.Point(161, 4);
+            this.buttonEliminar.Location = new System.Drawing.Point(158, 2);
             this.buttonEliminar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonEliminar.Name = "buttonEliminar";
             this.buttonEliminar.Size = new System.Drawing.Size(152, 54);
@@ -353,17 +362,19 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.buttonEliminar.Text = "Eliminar";
             this.buttonEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonEliminar.UseVisualStyleBackColor = false;
+            this.buttonEliminar.Click += new System.EventHandler(this.buttonEliminar_Click);
             // 
             // buttonVer
             // 
             this.buttonVer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonVer.BackColor = System.Drawing.Color.ForestGreen;
+            this.buttonVer.FlatAppearance.BorderSize = 0;
             this.buttonVer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonVer.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonVer.ForeColor = System.Drawing.SystemColors.Control;
             this.buttonVer.Image = global::CoolSoft.Properties.Resources.check;
             this.buttonVer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonVer.Location = new System.Drawing.Point(593, 4);
+            this.buttonVer.Location = new System.Drawing.Point(89, 5);
             this.buttonVer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonVer.Name = "buttonVer";
             this.buttonVer.Size = new System.Drawing.Size(152, 54);
@@ -381,7 +392,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.buttonDetalles.ForeColor = System.Drawing.SystemColors.Control;
             this.buttonDetalles.Image = global::CoolSoft.Properties.Resources.edit;
             this.buttonDetalles.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonDetalles.Location = new System.Drawing.Point(3, 62);
+            this.buttonDetalles.Location = new System.Drawing.Point(0, 60);
             this.buttonDetalles.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonDetalles.Name = "buttonDetalles";
             this.buttonDetalles.Size = new System.Drawing.Size(152, 54);
@@ -399,7 +410,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.buttonAgregar.ForeColor = System.Drawing.SystemColors.Control;
             this.buttonAgregar.Image = global::CoolSoft.Properties.Resources.add;
             this.buttonAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonAgregar.Location = new System.Drawing.Point(3, 4);
+            this.buttonAgregar.Location = new System.Drawing.Point(0, 2);
             this.buttonAgregar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonAgregar.Name = "buttonAgregar";
             this.buttonAgregar.Size = new System.Drawing.Size(152, 54);
@@ -408,6 +419,18 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.buttonAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonAgregar.UseVisualStyleBackColor = false;
             this.buttonAgregar.Click += new System.EventHandler(this.buttonAgregar_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.panel1.Controls.Add(this.buttonVer);
+            this.panel1.Controls.Add(this.buttonCancelar);
+            this.panel1.Location = new System.Drawing.Point(545, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(476, 61);
+            this.panel1.TabIndex = 17;
             // 
             // CrudOrden
             // 
@@ -422,12 +445,14 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.Load += new System.EventHandler(this.CrudOrden_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panelSuperior.ResumeLayout(false);
+            this.panelSuperior.PerformLayout();
             this.panelBuscar.ResumeLayout(false);
             this.panelBuscar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panelMenu.ResumeLayout(false);
             this.panelFechas.ResumeLayout(false);
             this.panelFechas.PerformLayout();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -458,5 +483,6 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
         public System.Windows.Forms.DataGridView dataGridView1;
         public System.Windows.Forms.Button buttonPartes;
         public System.Windows.Forms.TextBox textBoxOrden;
+        private System.Windows.Forms.Panel panel1;
     }
 }

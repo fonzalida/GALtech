@@ -15,6 +15,7 @@ namespace CoolSoft.UI2._0
 
         int indiceActivo = -1;
         string titulo = "Hola";
+        bool transicionActiva = false;
 
         Form[] ListaForm = new Form[4];
         
@@ -159,115 +160,117 @@ namespace CoolSoft.UI2._0
 
         private void CambiarFormulario(int indice)
         {
-
-            if (indiceActivo != indice)
+            if(!transicionActiva)
             {
-                int indiceAntiguo = indiceActivo;
-
-                indiceActivo = indice;
-
-                if (ListaForm[indiceActivo] == null)
+                if (indiceActivo != indice)
                 {
-                    Form fh = new Form();
-                    Console.WriteLine("ENCONTRO NULL");
-                    switch (indice)
+                    int indiceAntiguo = indiceActivo;
+
+                    indiceActivo = indice;
+
+                    if (ListaForm[indiceActivo] == null)
                     {
-                        case 0:
-                            CambiarTextoTitulo("INICIO");
-                            fh = new Presentacion();
-                            break;
+                        Form fh = new Form();
+                        Console.WriteLine("ENCONTRO NULL");
+                        switch (indice)
+                        {
+                            case 0:
+                                CambiarTextoTitulo("INICIO");
+                                fh = new Presentacion();
+                                break;
 
-                        case 1:
-                            CambiarTextoTitulo("CLIENTES");
-                            fh = new CrudCliente();
-                            break;
+                            case 1:
+                                CambiarTextoTitulo("CLIENTES");
+                                fh = new CrudCliente();
+                                break;
 
-                        case 2:
-                            CambiarTextoTitulo("TECNICOS");
-                            fh = new CrudTecnico();
-                            break;
+                            case 2:
+                                CambiarTextoTitulo("TECNICOS");
+                                fh = new CrudTecnico();
+                                break;
 
-                        case 3:
-                            CambiarTextoTitulo("ORDENES");
-                            fh = new CrudOrden(this);
-                            break;
+                            case 3:
+                                CambiarTextoTitulo("ORDENES");
+                                fh = new CrudOrden(this);
+                                break;
+                        }
+                        fh.Size = panelContenedor.Size;
+                        fh.TopLevel = false;
+                        //fh.Dock = DockStyle.Fill;
+                        ListaForm[indiceActivo] = fh;
+
+                        this.panelContenedor.Controls.Add(ListaForm[indiceActivo]);
                     }
-                    fh.Size = panelContenedor.Size;
-                    fh.TopLevel = false;
-                    //fh.Dock = DockStyle.Fill;
-                    ListaForm[indiceActivo] = fh;
-                    
-                    this.panelContenedor.Controls.Add(ListaForm[indiceActivo]);
-                }
-                else
-                {
-                    switch (indice)
+                    else
                     {
-                        case 0: CambiarTextoTitulo("INICIO"); break;
-                        case 1: CambiarTextoTitulo("CLIENTES"); break;
-                        case 2: CambiarTextoTitulo("TECNICOS"); break;
-                        case 3: CambiarTextoTitulo("ORDENES"); break;
+                        switch (indice)
+                        {
+                            case 0: CambiarTextoTitulo("INICIO"); break;
+                            case 1: CambiarTextoTitulo("CLIENTES"); break;
+                            case 2: CambiarTextoTitulo("TECNICOS"); break;
+                            case 3: CambiarTextoTitulo("ORDENES"); break;
+                        }
+                        this.panelContenedor.Controls.Add(ListaForm[indiceActivo]);
                     }
-                    this.panelContenedor.Controls.Add(ListaForm[indiceActivo]);
+
+                    Transicion(indiceAntiguo, indiceActivo);
+
+
+
+
+                    //if (formActivo != indice)
+                    //{
+                    //    if (this.panelContenedor.Controls.Count > 0)
+                    //        this.panelContenedor.Controls.RemoveAt(0);
+
+                    //    formActivo = indice;
+
+                    //    if (ListaForm[formActivo] == null)
+                    //    {
+                    //        Form fh = new Form();
+                    //        Console.WriteLine("ENCONTRO NULL");
+                    //        switch (indice)
+                    //        {
+                    //            case 0:
+                    //                CambiarTextoTitulo("INICIO");
+                    //                fh = new Presentacion();
+                    //                break;   
+
+                    //            case 1:
+                    //                CambiarTextoTitulo("CLIENTES");
+                    //                fh = new CrudCliente();
+                    //                break;
+
+                    //            case 2:
+                    //                CambiarTextoTitulo("TECNICOS");
+                    //                fh = new CrudTecnico();
+                    //                break;
+
+                    //            case 3:
+                    //                CambiarTextoTitulo("ORDENES");
+                    //                fh = new CrudOrden(this);
+                    //                break;
+                    //        }
+                    //        fh.Size = panelContenedor.Size;
+                    //        fh.TopLevel = false;
+                    //        //fh.Dock = DockStyle.Fill;
+                    //        ListaForm[formActivo] = fh;
+                    //        fh.Show();
+                    //        this.panelContenedor.Controls.Add(ListaForm[formActivo]);
+                    //    }
+                    //    else
+                    //    {
+                    //        switch (indice)
+                    //        {
+                    //            case 0:CambiarTextoTitulo("INICIO");break;
+                    //            case 1:CambiarTextoTitulo("CLIENTES");break;
+                    //            case 2:CambiarTextoTitulo("TECNICOS");break;
+                    //            case 3:CambiarTextoTitulo("ORDENES"); break;
+                    //        }
+                    //        this.panelContenedor.Controls.Add(ListaForm[formActivo]);
+                    //    }
+
                 }
-
-                Transicion(indiceAntiguo, indiceActivo);
-
-
-
-
-                //if (formActivo != indice)
-                //{
-                //    if (this.panelContenedor.Controls.Count > 0)
-                //        this.panelContenedor.Controls.RemoveAt(0);
-
-                //    formActivo = indice;
-
-                //    if (ListaForm[formActivo] == null)
-                //    {
-                //        Form fh = new Form();
-                //        Console.WriteLine("ENCONTRO NULL");
-                //        switch (indice)
-                //        {
-                //            case 0:
-                //                CambiarTextoTitulo("INICIO");
-                //                fh = new Presentacion();
-                //                break;   
-
-                //            case 1:
-                //                CambiarTextoTitulo("CLIENTES");
-                //                fh = new CrudCliente();
-                //                break;
-
-                //            case 2:
-                //                CambiarTextoTitulo("TECNICOS");
-                //                fh = new CrudTecnico();
-                //                break;
-
-                //            case 3:
-                //                CambiarTextoTitulo("ORDENES");
-                //                fh = new CrudOrden(this);
-                //                break;
-                //        }
-                //        fh.Size = panelContenedor.Size;
-                //        fh.TopLevel = false;
-                //        //fh.Dock = DockStyle.Fill;
-                //        ListaForm[formActivo] = fh;
-                //        fh.Show();
-                //        this.panelContenedor.Controls.Add(ListaForm[formActivo]);
-                //    }
-                //    else
-                //    {
-                //        switch (indice)
-                //        {
-                //            case 0:CambiarTextoTitulo("INICIO");break;
-                //            case 1:CambiarTextoTitulo("CLIENTES");break;
-                //            case 2:CambiarTextoTitulo("TECNICOS");break;
-                //            case 3:CambiarTextoTitulo("ORDENES"); break;
-                //        }
-                //        this.panelContenedor.Controls.Add(ListaForm[formActivo]);
-                //    }
-
             }
     }
 
@@ -305,7 +308,7 @@ namespace CoolSoft.UI2._0
 
         private void Transicion(int an, int ac)
         {
-            Transition t = new Transition(new TransitionType_EaseInEaseOut(500));
+            Transition t = new Transition(new TransitionType_EaseInEaseOut(150));
             if(an != -1)
             {
                 t.TransitionCompletedEvent += new EventHandler<Transition.Args>(OnTransitionCompleted);
@@ -326,6 +329,7 @@ namespace CoolSoft.UI2._0
 
                     t.add(this.panelContenedor.Controls[0], "Top", -panelContenedor.Height);
                     t.add(this.panelContenedor.Controls[1], "Top", 0);
+                    transicionActiva = true;
                     t.run();
                 }
                 else
@@ -336,6 +340,7 @@ namespace CoolSoft.UI2._0
 
                     t.add(this.panelContenedor.Controls[0], "Top", panelContenedor.Height);
                     t.add(this.panelContenedor.Controls[1], "Top", 0);
+                    transicionActiva = true;
                     t.run();
                 }
             }
@@ -354,6 +359,7 @@ namespace CoolSoft.UI2._0
             this.panelContenedor.Controls.RemoveAt(0);
             this.panelContenedor.Controls[0].Dock = DockStyle.Fill;
             this.panelContenedor.Controls[0].Show();
+            transicionActiva = false;
         }
 
     }

@@ -189,7 +189,7 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
             this.buttonAgregar.ForeColor = System.Drawing.SystemColors.Control;
             this.buttonAgregar.Image = global::CoolSoft.Properties.Resources.add;
             this.buttonAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonAgregar.Location = new System.Drawing.Point(23, 2);
+            this.buttonAgregar.Location = new System.Drawing.Point(0, 2);
             this.buttonAgregar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonAgregar.Name = "buttonAgregar";
             this.buttonAgregar.Size = new System.Drawing.Size(152, 54);
@@ -245,7 +245,7 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
             this.buttonEliminar.ForeColor = System.Drawing.SystemColors.Control;
             this.buttonEliminar.Image = global::CoolSoft.Properties.Resources.delete;
             this.buttonEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonEliminar.Location = new System.Drawing.Point(339, 2);
+            this.buttonEliminar.Location = new System.Drawing.Point(316, 2);
             this.buttonEliminar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonEliminar.Name = "buttonEliminar";
             this.buttonEliminar.Size = new System.Drawing.Size(152, 54);
@@ -263,7 +263,7 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
             this.buttonDetalles.ForeColor = System.Drawing.SystemColors.Control;
             this.buttonDetalles.Image = global::CoolSoft.Properties.Resources.edit;
             this.buttonDetalles.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonDetalles.Location = new System.Drawing.Point(181, 2);
+            this.buttonDetalles.Location = new System.Drawing.Point(158, 2);
             this.buttonDetalles.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonDetalles.Name = "buttonDetalles";
             this.buttonDetalles.Size = new System.Drawing.Size(152, 54);

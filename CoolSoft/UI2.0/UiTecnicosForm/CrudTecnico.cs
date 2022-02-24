@@ -281,48 +281,6 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
                     MessageBox.Show("No hay mas elementos que buscar");
                 }
             }
-
-
-
-
-            //if (tablaTecnico == null)
-            //{
-            //    tablaTecnico = TecnicoRepository.ListarTodos();
-            //}
-            //EnumerableRowCollection<DataRow> resultado;
-            //int i = -1;
-
-            //if(indice == 0)
-            //{
-
-
-            //    resultado = from a in tablaTecnico.AsEnumerable()
-            //                    where a.Field<int>(indice).ToString().StartsWith(actual.Text)
-            //                select a;
-            //}
-            //else
-            //{
-            //    resultado = from a in tablaTecnico.AsEnumerable()
-            //                    where a.Field<string>(indice).IndexOf(actual.Text, StringComparison.OrdinalIgnoreCase) >= 0
-            //                select a;
-            //}
-
-
-            //if (resultado.Count() > 0)
-            //{
-
-            //    Console.WriteLine("Indice de la busqueda " + i);
-            //    dataGridView1.Rows[i].Selected = true;
-            //    FormatearDataGrid();
-            //}
-            //else
-            //{
-            //    dataGridView1.ClearSelection();
-            //}
-
-
-
-
         }
 
         private void textBoxDni_MouseDown(object sender, MouseEventArgs e)
