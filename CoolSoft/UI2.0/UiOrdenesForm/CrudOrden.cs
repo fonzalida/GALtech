@@ -70,7 +70,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             var result = fagregar.ShowDialog();
             if (result == DialogResult.OK)
             {
-                //CargarGrid();
+                CargarGrid();
             }
 
         }
