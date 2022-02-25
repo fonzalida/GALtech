@@ -36,6 +36,11 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
             // tbNombre
             // 
             this.tbNombre.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.tbNombre.TextChanged += new System.EventHandler(this.textBox_TextChanged);
+            // 
+            // textBoxDni
+            // 
+            this.textBoxDni.TextChanged += new System.EventHandler(this.textBox_TextChanged);
             // 
             // panelBorde
             // 
@@ -46,7 +51,7 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
             // labelTitulo
             // 
             this.labelTitulo.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.labelTitulo.Size = new System.Drawing.Size(176, 19);
+            this.labelTitulo.Size = new System.Drawing.Size(215, 24);
             this.labelTitulo.Text = "MODIFICAR TÉCNICO";
             // 
             // buttonCancelar

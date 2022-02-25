@@ -48,5 +48,22 @@ namespace CoolSoft.UI2._0.UiClientesForm
                 );
 
         }
+
+        private void textBox_TextChanged(object sender, EventArgs e)
+        {
+            ValidarText();
+        }
+        private void ValidarText()
+        {
+            if ((textBoxDniCuit.Text == "" || tbNombre.Text == "") ||
+                textBoxDniCuit.Text.Length < 8)
+            {
+                buttonModificar.Enabled = false;
+            }
+            else
+            {
+                buttonModificar.Enabled = true;
+            }
+        }
     }
 }

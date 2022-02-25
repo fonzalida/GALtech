@@ -37,7 +37,22 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
                    viejo
                    );
 
-            //this.Close();
+        }
+        private void textBox_TextChanged(object sender, EventArgs e)
+        {
+            ValidarText();
+        }
+        private void ValidarText()
+        {
+            if ((textBoxDni.Text == "" || tbNombre.Text == "") ||
+                textBoxDni.Text.Length < 8)
+            {
+                buttonModificar.Enabled = false;
+            }
+            else
+            {
+                buttonModificar.Enabled = true;
+            }
         }
     }
 }

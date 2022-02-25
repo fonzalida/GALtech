@@ -78,6 +78,23 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             buttonModificar.Enabled = true;
         }
 
+        private void buttonBuscar_Click(object sender, EventArgs e)
+        {
+            UiAgregarOrden fagregar = new UiAgregarOrden();
+            UiSeleccionarCliente formSelec = new UiSeleccionarCliente(fagregar);
+            var result = formSelec.ShowDialog();
+
+            if (result == DialogResult.OK)
+            {
+                mtIdCliente.Text = fagregar.idCliente.ToString();
+            }
+        }
+
+        private void buttonCancelar_Click(object sender, EventArgs e)
+        {
+
+        }
+
 
 
 

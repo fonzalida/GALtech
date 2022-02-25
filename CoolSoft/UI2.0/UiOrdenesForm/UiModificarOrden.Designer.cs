@@ -51,13 +51,15 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             // 
             // labelTitulo
             // 
-            this.labelTitulo.Size = new System.Drawing.Size(162, 19);
+            this.labelTitulo.Size = new System.Drawing.Size(197, 24);
             this.labelTitulo.Text = "MODIFICAR ORDEN";
             // 
             // buttonCancelar
             // 
             this.buttonCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(55)))));
+            this.buttonCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.buttonCancelar.Location = new System.Drawing.Point(263, 546);
+            this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
             // 
             // buttonCargar
             // 
@@ -81,6 +83,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.buttonBuscar.Text = "Modificar";
             this.buttonBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonBuscar.UseVisualStyleBackColor = false;
+            this.buttonBuscar.Click += new System.EventHandler(this.buttonBuscar_Click);
             // 
             // dtFechaRecepcion
             // 
@@ -88,7 +91,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.dtFechaRecepcion.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtFechaRecepcion.Location = new System.Drawing.Point(243, 69);
             this.dtFechaRecepcion.Name = "dtFechaRecepcion";
-            this.dtFechaRecepcion.Size = new System.Drawing.Size(175, 29);
+            this.dtFechaRecepcion.Size = new System.Drawing.Size(175, 34);
             this.dtFechaRecepcion.TabIndex = 72;
             this.dtFechaRecepcion.ValueChanged += new System.EventHandler(this.dtFechaRecepcion_ValueChanged);
             // 
@@ -98,7 +101,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.label3.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(11, 305);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(69, 22);
+            this.label3.Size = new System.Drawing.Size(87, 27);
             this.label3.TabIndex = 71;
             this.label3.Text = "Cliente";
             // 
@@ -108,7 +111,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.label2.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(11, 129);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(171, 22);
+            this.label2.Size = new System.Drawing.Size(218, 27);
             this.label2.TabIndex = 70;
             this.label2.Text = "Tarea a desarrollar:";
             // 
@@ -118,7 +121,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.label1.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(11, 69);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(179, 22);
+            this.label1.Size = new System.Drawing.Size(224, 27);
             this.label1.TabIndex = 69;
             this.label1.Text = "Fecha de recepción";
             // 
@@ -131,7 +134,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.mtIdCliente.Name = "mtIdCliente";
             this.mtIdCliente.PromptChar = ' ';
             this.mtIdCliente.ReadOnly = true;
-            this.mtIdCliente.Size = new System.Drawing.Size(219, 29);
+            this.mtIdCliente.Size = new System.Drawing.Size(219, 34);
             this.mtIdCliente.TabIndex = 67;
             this.mtIdCliente.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.mtIdCliente.TextChanged += new System.EventHandler(this.mtIdCliente_TextChanged);
@@ -165,7 +168,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.label4.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(12, 472);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(76, 22);
+            this.label4.Size = new System.Drawing.Size(93, 27);
             this.label4.TabIndex = 77;
             this.label4.Text = "Importe";
             // 
@@ -174,7 +177,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.textBoxImporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxImporte.Location = new System.Drawing.Point(260, 467);
             this.textBoxImporte.Name = "textBoxImporte";
-            this.textBoxImporte.Size = new System.Drawing.Size(154, 28);
+            this.textBoxImporte.Size = new System.Drawing.Size(154, 34);
             this.textBoxImporte.TabIndex = 78;
             this.textBoxImporte.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.textBoxImporte.TextChanged += new System.EventHandler(this.textBoxImporte_TextChanged);
@@ -188,13 +191,14 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.textBoxNombreCliente.Location = new System.Drawing.Point(195, 309);
             this.textBoxNombreCliente.Name = "textBoxNombreCliente";
             this.textBoxNombreCliente.ReadOnly = true;
-            this.textBoxNombreCliente.Size = new System.Drawing.Size(219, 19);
+            this.textBoxNombreCliente.Size = new System.Drawing.Size(219, 23);
             this.textBoxNombreCliente.TabIndex = 79;
             this.textBoxNombreCliente.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // buttonModificar
             // 
             this.buttonModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(55)))));
+            this.buttonModificar.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.buttonModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonModificar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonModificar.ForeColor = System.Drawing.SystemColors.Control;
@@ -210,7 +214,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             // 
             // UiModificarOrden
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(205)))));
             this.ClientSize = new System.Drawing.Size(427, 612);
