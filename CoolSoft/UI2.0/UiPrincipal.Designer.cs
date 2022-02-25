@@ -171,7 +171,7 @@ namespace CoolSoft.UI2._0
             this.labelTitulo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.labelTitulo.Location = new System.Drawing.Point(400, 5);
             this.labelTitulo.Name = "labelTitulo";
-            this.labelTitulo.Size = new System.Drawing.Size(284, 52);
+            this.labelTitulo.Size = new System.Drawing.Size(226, 42);
             this.labelTitulo.TabIndex = 4;
             this.labelTitulo.Text = "BIENVENIDO";
             this.labelTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelBorde_MouseDown);
@@ -252,6 +252,7 @@ namespace CoolSoft.UI2._0
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UiPrincipal";
             this.Load += new System.EventHandler(this.UiPrincipal_Load);
+            this.SizeChanged += new System.EventHandler(this.UiPrincipal_SizeChanged);
             this.panelMenu.ResumeLayout(false);
             this.panelBorde.ResumeLayout(false);
             this.panelBorde.PerformLayout();

@@ -14,7 +14,7 @@ namespace CoolSoft.UI2._0.UiClientesForm
     public partial class CrudCliente : Form
     {
         UiAgregarCliente fagregar;
-        UiModificarCliente modificarCliente;
+        UiModificarCliente fModificar;
         Cliente viejo;
 
         DataTable tablaCliente;
@@ -38,13 +38,15 @@ namespace CoolSoft.UI2._0.UiClientesForm
         private void CrudCliente_Load(object sender, EventArgs e)
         {
             EstadoInicial();
-            //Format.DataGridView(dataGridView1);
+            Format.DataGridView(dataGridView1);
         }
 
         private void buttonAgregar_Click(object sender, EventArgs e)
         {
             fagregar = new UiAgregarCliente();
+            Format.FormularioBorde(fagregar, false);
             fagregar.StartPosition = FormStartPosition.CenterScreen;
+           
             var result = fagregar.ShowDialog();
             if (result == DialogResult.OK)
             {
@@ -54,33 +56,6 @@ namespace CoolSoft.UI2._0.UiClientesForm
 
                 FormatearDataGrid();
             }
-
-
-            //if (fagregar != null)
-            //{
-            //    if (!fagregar.IsDisposed)
-            //    {
-            //        fagregar = new UiAgregarCliente();
-            //        fagregar.StartPosition = FormStartPosition.CenterScreen;
-            //        var result = fagregar.ShowDialog();
-            //        if (result == DialogResult.OK)
-            //        {
-            //            tablaCliente = ClienteRepository.ListarTodos();
-            //            dataGridView1.DataSource = null;
-            //            dataGridView1.DataSource = tablaCliente;
-
-            //            FormatearDataGrid();
-            //        }
-            //    }
-            //    else
-            //    {
-            //        fagregar.BringToFront();
-            //    }
-            //}
-            //else
-            //{
-
-            //}
         }
 
         private void EstadoInicial()
@@ -97,16 +72,15 @@ namespace CoolSoft.UI2._0.UiClientesForm
             buttonVer.Enabled = true;
             buttonCancelar.Enabled = false;
 
+            buttonLimpiarSeleccion.Visible = false;
+
         }
 
         private void EstadoVer()
         {
             panelSuperior.Enabled = true;
 
-
             buttonAgregar.Enabled = true;
-            //buttonEliminar.Enabled = true;
-            //buttonDetalles.Enabled = true;
 
             buttonVer.Enabled = false;
             buttonCancelar.Enabled = true;
@@ -131,9 +105,9 @@ namespace CoolSoft.UI2._0.UiClientesForm
         {
             
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            dataGridView1.Columns[0].HeaderText = "ID";
-            dataGridView1.Columns[1].HeaderText = "DNI / CUIT";
-            dataGridView1.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dataGridView1.Columns["IdCliente"].HeaderText = "ID";
+            dataGridView1.Columns["DNICUIT"].HeaderText = "DNI / CUIT";
+            dataGridView1.Columns["Domicilio"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             dataGridView1.ClearSelection();
 
         }
@@ -150,9 +124,10 @@ namespace CoolSoft.UI2._0.UiClientesForm
 
             viejo = ClienteController.DataGridViewToCliente(dataGridView1.SelectedRows[0].Cells);
 
-            fagregar = new UiModificarCliente(viejo);
-            fagregar.StartPosition = FormStartPosition.CenterScreen;
-            var result = fagregar.ShowDialog();
+            fModificar = new UiModificarCliente(viejo);
+            Format.FormularioBorde(fModificar, false);
+            fModificar.StartPosition = FormStartPosition.CenterScreen;
+            var result = fModificar.ShowDialog();
             if (result == DialogResult.OK)
             {
                 tablaCliente = ClienteRepository.ListarTodos();
@@ -161,48 +136,18 @@ namespace CoolSoft.UI2._0.UiClientesForm
 
                 FormatearDataGrid();
             }
-
-            //if (modificarCliente != null)
-            //{
-            //    if (modificarCliente.IsDisposed)
-            //    {
-            //        modificarCliente = new UiModificarCliente(viejo);
-            //        modificarCliente.StartPosition = FormStartPosition.CenterScreen;
-            //        modificarCliente.Show();
-            //    }
-            //    else
-            //    {
-            //        modificarCliente.BringToFront();
-            //    }
-            //}
-            //else
-            //{
-            //    modificarCliente = new UiModificarCliente(viejo);
-
-            //    modificarCliente.StartPosition = FormStartPosition.CenterScreen;
-            //    modificarCliente.Show();
-            //}
-
-
-
-
-            //ClienteController.DataGridViewToCliente(dataGridView1.SelectedRows[0].Cells);
-            //foreach (DataGridViewCell cell in dataGridView1.SelectedRows[0].Cells)
-            //{
-            //    Debug.WriteLine(cell.Value.ToString());
-            //}
-
         }
 
-
-        private void textBoxDni_KeyPress(object sender, KeyPressEventArgs e)
+        private void textBoxDni_TextChanged(object sender, EventArgs e)
         {
-            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+            HabilitarBuscar();
         }
 
-        
+        private void textBoxNombre_TextChanged(object sender, EventArgs e)
+        {
+            HabilitarBuscar();
+        }
 
-       
 
         public void HabilitarBuscar()
         {
@@ -211,6 +156,11 @@ namespace CoolSoft.UI2._0.UiClientesForm
                 buttonBuscar.Enabled = false;
             else
                 buttonBuscar.Enabled = true;
+        }
+
+        private void textBoxDni_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
 
         private void BuscarTexto(TextBox actual, int indice)
@@ -278,10 +228,12 @@ namespace CoolSoft.UI2._0.UiClientesForm
         {
             if (dataGridView1.SelectedRows.Count > 0)
             {
+                buttonLimpiarSeleccion.Visible = true;
                 buttonDetalles.Enabled = true;
             }
             else
             {
+                buttonLimpiarSeleccion.Visible = false;
                 buttonDetalles.Enabled = false;
             }
 
@@ -299,14 +251,22 @@ namespace CoolSoft.UI2._0.UiClientesForm
             }
         }
 
-        private void textBoxDni_TextChanged(object sender, EventArgs e)
+
+        private void textBoxDni_MouseDown(object sender, MouseEventArgs e)
         {
-            HabilitarBuscar();
+            textBoxNombre.Text = "";
         }
 
-        private void textBoxNombre_TextChanged(object sender, EventArgs e)
+        private void textBoxNombre_MouseDown(object sender, MouseEventArgs e)
         {
-            HabilitarBuscar();
+            textBoxDni.Text = "";
+        }
+
+        private void buttonLimpiarSeleccion_Click(object sender, EventArgs e)
+        {
+            textBoxDni.Text = "";
+            textBoxNombre.Text = "";
+            dataGridView1.ClearSelection();
         }
     }
 }

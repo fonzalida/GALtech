@@ -24,44 +24,29 @@ namespace CoolSoft.UI2._0.UiClientesForm
 
         private void UiModificarCliente_Load(object sender, EventArgs e)
         {
-            
-            mtDniCuit.Text = viejo.dniCuit.ToString();
+            labelTitulo.Text = "MODIFICAR CLIENTE";
+            textBoxDniCuit.Text = viejo.dniCuit.ToString();
             tbNombre.Text = viejo.nombre;
             tbDomicilio.Text = viejo.domicilio;
             tbLocalidad.Text = viejo.localidad;
             tbProvincia.Text = viejo.provincia;
-            mtTelefono1.Text = viejo.telefono1;
-            mtTelefono2.Text = viejo.telefono2;
+            textBoxTelefono1.Text = viejo.telefono1;
+            textBoxTelefono2.Text = viejo.telefono2;
         }
 
-        private void buttonCargar_Click(object sender, EventArgs e)
+        private void buttonModificar_Click(object sender, EventArgs e)
         {
             ClienteController.Modificar(
-                mtDniCuit.Text,
+                textBoxDniCuit.Text,
                 tbNombre.Text,
                 tbDomicilio.Text,
                 tbLocalidad.Text,
                 tbProvincia.Text,
-                mtTelefono1.Text,
-                mtTelefono2.Text,
-                viejo.idCliente
-                );
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            ClienteController.Modificar(
-                mtDniCuit.Text,
-                tbNombre.Text,
-                tbDomicilio.Text,
-                tbLocalidad.Text,
-                tbProvincia.Text,
-                mtTelefono1.Text,
-                mtTelefono2.Text,
+                textBoxTelefono1.Text,
+                textBoxTelefono2.Text,
                 viejo.idCliente
                 );
 
-            this.Close();
         }
     }
 }

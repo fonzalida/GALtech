@@ -28,14 +28,21 @@ namespace CoolSoft.Controlador
         }
 
 
+        public static void EliminarOrden(
+            DataGridViewCellCollection dr
+            )
+        {
+            Orden orden = new Orden();
+
+            orden.idOrden = int.Parse(dr["IdOrden"].Value.ToString());
+
+            OrdenService.Eliminar(orden);
+
+        }
+
+
         public static Orden DataGridViewToOrden(DataGridViewCellCollection dr)
         {
-
-            //foreach (DataGridViewCell cell in dr)
-            //{
-            //    Debug.WriteLine(cell.Value.ToString());
-            //}
-
             float importe;
 
             Orden orden = new Orden();

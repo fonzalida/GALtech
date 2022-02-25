@@ -21,21 +21,42 @@ namespace CoolSoft.UI2._0.UiClientesForm
 
         private void UiAgregarCliente_Load(object sender, EventArgs e)
         {
-
+            buttonCargar.Enabled = false;
         }
 
         private void buttonCargar_Click(object sender, EventArgs e)
         {
             ClienteController.Cargar(
-                mtDniCuit.Text,
+                textBoxDniCuit.Text,
                 tbNombre.Text,
                 tbDomicilio.Text,
                 tbLocalidad.Text,
                 tbProvincia.Text,
-                mtTelefono1.Text,
-                mtTelefono2.Text);
+                textBoxTelefono1.Text,
+                textBoxTelefono2.Text);
+        }
 
-            this.Close();
+        private void textBoxNumerico_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void textBox_TextChanged(object sender, EventArgs e)
+        {
+            ValidarText();
+        }
+
+        private void ValidarText()
+        {
+            if (textBoxDniCuit.Text == "" || tbNombre.Text == "" ||
+                textBoxDniCuit.Text.Length < 8)
+            {
+                buttonCargar.Enabled = false;
+            }
+            else
+            {
+                buttonCargar.Enabled = true;
+            }
         }
     }
 }

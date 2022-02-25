@@ -83,13 +83,12 @@ namespace CoolSoft.Controlador
         public static Cliente DataGridViewToCliente(DataGridViewCellCollection dr)
         {
 
-            //foreach (DataGridViewCell cell in dr)
-            //{
-            //    Debug.WriteLine(cell.Value.ToString());
-            //}
+            foreach (DataGridViewCell cell in dr)
+            {
+                Debug.WriteLine(cell.Value.ToString());
+            }
 
             Cliente cliente = new Cliente();
-
             cliente.idCliente = int.Parse(dr[0].Value.ToString());
             cliente.dniCuit = long.Parse(dr[1].Value.ToString());
             cliente.nombre = dr[2].Value.ToString();

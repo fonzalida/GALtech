@@ -18,7 +18,7 @@ namespace CoolSoft.UI2._0
         bool transicionActiva = false;
 
         Form[] ListaForm = new Form[4];
-        
+
 
         /*************MOVER MOUSE**************/
 
@@ -42,6 +42,7 @@ namespace CoolSoft.UI2._0
 
         private void UiPrincipal_Load(object sender, EventArgs e)
         {
+            Format.FormularioBorde(this,false);
             CambiarFormulario(0);
             foreach(Control c in panelMenu.Controls)
             {
@@ -362,5 +363,12 @@ namespace CoolSoft.UI2._0
             transicionActiva = false;
         }
 
+        private void UiPrincipal_SizeChanged(object sender, EventArgs e)
+        {
+            if(this.WindowState == FormWindowState.Maximized)
+                Format.FormularioBorde(this, true);
+            else
+                Format.FormularioBorde(this, false);
+        }
     }
 }

@@ -46,77 +46,78 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             // 
             // labelTitulo
             // 
-            this.labelTitulo.Size = new System.Drawing.Size(186, 24);
+            this.labelTitulo.Size = new System.Drawing.Size(153, 19);
             this.labelTitulo.Text = "AGREGAR ORDEN";
             // 
             // buttonCancelar
             // 
             this.buttonCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonCancelar.Location = new System.Drawing.Point(266, 457);
+            this.buttonCancelar.Location = new System.Drawing.Point(266, 411);
             // 
             // buttonCargar
             // 
             this.buttonCargar.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.buttonCargar.Location = new System.Drawing.Point(108, 457);
+            this.buttonCargar.Location = new System.Drawing.Point(108, 411);
             this.buttonCargar.Click += new System.EventHandler(this.buttonCargar_Click);
             // 
             // dtFechaRecepcion
             // 
-            this.dtFechaRecepcion.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtFechaRecepcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtFechaRecepcion.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtFechaRecepcion.Location = new System.Drawing.Point(20, 100);
+            this.dtFechaRecepcion.Location = new System.Drawing.Point(19, 93);
             this.dtFechaRecepcion.Name = "dtFechaRecepcion";
-            this.dtFechaRecepcion.Size = new System.Drawing.Size(205, 34);
+            this.dtFechaRecepcion.Size = new System.Drawing.Size(205, 26);
             this.dtFechaRecepcion.TabIndex = 30;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(12, 320);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(12, 310);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(87, 27);
+            this.label3.Size = new System.Drawing.Size(58, 20);
             this.label3.TabIndex = 29;
             this.label3.Text = "Cliente";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(11, 160);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(12, 143);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(218, 27);
+            this.label2.Size = new System.Drawing.Size(145, 20);
             this.label2.TabIndex = 28;
             this.label2.Text = "Tarea a desarrollar:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(15, 70);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(224, 27);
+            this.label1.Size = new System.Drawing.Size(149, 20);
             this.label1.TabIndex = 27;
             this.label1.Text = "Fecha de recepción";
             // 
             // mtIdCliente
             // 
             this.mtIdCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.mtIdCliente.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtIdCliente.Location = new System.Drawing.Point(199, 355);
+            this.mtIdCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtIdCliente.Location = new System.Drawing.Point(195, 349);
             this.mtIdCliente.Mask = "99999999999";
             this.mtIdCliente.Name = "mtIdCliente";
             this.mtIdCliente.PromptChar = ' ';
             this.mtIdCliente.ReadOnly = true;
-            this.mtIdCliente.Size = new System.Drawing.Size(219, 27);
+            this.mtIdCliente.Size = new System.Drawing.Size(219, 19);
             this.mtIdCliente.TabIndex = 25;
+            this.mtIdCliente.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.mtIdCliente.TextChanged += new System.EventHandler(this.mtIdCliente_TextChanged);
             // 
             // tbTareaDesarrollar
             // 
             this.tbTareaDesarrollar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbTareaDesarrollar.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbTareaDesarrollar.Location = new System.Drawing.Point(16, 190);
+            this.tbTareaDesarrollar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbTareaDesarrollar.Location = new System.Drawing.Point(16, 166);
             this.tbTareaDesarrollar.Multiline = true;
             this.tbTareaDesarrollar.Name = "tbTareaDesarrollar";
             this.tbTareaDesarrollar.Size = new System.Drawing.Size(397, 113);
@@ -126,11 +127,11 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             // 
             this.buttonBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(111)))), ((int)(((byte)(211)))));
             this.buttonBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonBuscar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonBuscar.ForeColor = System.Drawing.SystemColors.Control;
             this.buttonBuscar.Image = global::CoolSoft.Properties.Resources.search;
             this.buttonBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonBuscar.Location = new System.Drawing.Point(17, 352);
+            this.buttonBuscar.Location = new System.Drawing.Point(16, 341);
             this.buttonBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonBuscar.Name = "buttonBuscar";
             this.buttonBuscar.Size = new System.Drawing.Size(152, 37);
@@ -142,19 +143,20 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             // 
             // textBoxNombreCliente
             // 
-            this.textBoxNombreCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(226)))), ((int)(((byte)(225)))));
+            this.textBoxNombreCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(227)))), ((int)(((byte)(254)))));
             this.textBoxNombreCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxNombreCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxNombreCliente.Location = new System.Drawing.Point(199, 321);
+            this.textBoxNombreCliente.Location = new System.Drawing.Point(195, 310);
             this.textBoxNombreCliente.Name = "textBoxNombreCliente";
             this.textBoxNombreCliente.ReadOnly = true;
-            this.textBoxNombreCliente.Size = new System.Drawing.Size(219, 23);
+            this.textBoxNombreCliente.Size = new System.Drawing.Size(219, 19);
             this.textBoxNombreCliente.TabIndex = 76;
             this.textBoxNombreCliente.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // UiAgregarOrden
             // 
-            this.ClientSize = new System.Drawing.Size(430, 523);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(227)))), ((int)(((byte)(254)))));
+            this.ClientSize = new System.Drawing.Size(430, 477);
             this.Controls.Add(this.textBoxNombreCliente);
             this.Controls.Add(this.buttonBuscar);
             this.Controls.Add(this.dtFechaRecepcion);

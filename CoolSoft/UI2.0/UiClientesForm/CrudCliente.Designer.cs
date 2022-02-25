@@ -45,6 +45,7 @@ namespace CoolSoft.UI2._0.UiClientesForm
             this.buttonVer = new System.Windows.Forms.Button();
             this.buttonDetalles = new System.Windows.Forms.Button();
             this.buttonAgregar = new System.Windows.Forms.Button();
+            this.buttonLimpiarSeleccion = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.panelSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -63,7 +64,7 @@ namespace CoolSoft.UI2._0.UiClientesForm
             this.tableLayoutPanel1.Controls.Add(this.dataGridView1, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.panelMenu, 0, 2);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(9, 10);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 65F));
@@ -76,6 +77,7 @@ namespace CoolSoft.UI2._0.UiClientesForm
             // 
             this.panelSuperior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(226)))), ((int)(((byte)(225)))));
             this.tableLayoutPanel1.SetColumnSpan(this.panelSuperior, 2);
+            this.panelSuperior.Controls.Add(this.buttonLimpiarSeleccion);
             this.panelSuperior.Controls.Add(this.textBoxDni);
             this.panelSuperior.Controls.Add(this.label4);
             this.panelSuperior.Controls.Add(this.label5);
@@ -83,7 +85,7 @@ namespace CoolSoft.UI2._0.UiClientesForm
             this.panelSuperior.Controls.Add(this.textBoxNombre);
             this.panelSuperior.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelSuperior.Location = new System.Drawing.Point(2, 2);
-            this.panelSuperior.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelSuperior.Margin = new System.Windows.Forms.Padding(2);
             this.panelSuperior.Name = "panelSuperior";
             this.panelSuperior.Size = new System.Drawing.Size(766, 61);
             this.panelSuperior.TabIndex = 0;
@@ -93,12 +95,14 @@ namespace CoolSoft.UI2._0.UiClientesForm
             this.textBoxDni.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxDni.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxDni.Location = new System.Drawing.Point(17, 28);
-            this.textBoxDni.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxDni.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxDni.MaxLength = 11;
             this.textBoxDni.Name = "textBoxDni";
             this.textBoxDni.Size = new System.Drawing.Size(110, 26);
             this.textBoxDni.TabIndex = 16;
             this.textBoxDni.TextChanged += new System.EventHandler(this.textBoxDni_TextChanged);
             this.textBoxDni.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxDni_KeyPress);
+            this.textBoxDni.MouseDown += new System.Windows.Forms.MouseEventHandler(this.textBoxDni_MouseDown);
             // 
             // label4
             // 
@@ -131,7 +135,7 @@ namespace CoolSoft.UI2._0.UiClientesForm
             this.buttonBuscar.Image = global::CoolSoft.Properties.Resources.search;
             this.buttonBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonBuscar.Location = new System.Drawing.Point(374, 24);
-            this.buttonBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonBuscar.Name = "buttonBuscar";
             this.buttonBuscar.Size = new System.Drawing.Size(114, 30);
             this.buttonBuscar.TabIndex = 3;
@@ -145,11 +149,12 @@ namespace CoolSoft.UI2._0.UiClientesForm
             this.textBoxNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxNombre.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxNombre.Location = new System.Drawing.Point(147, 28);
-            this.textBoxNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxNombre.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxNombre.Name = "textBoxNombre";
             this.textBoxNombre.Size = new System.Drawing.Size(213, 26);
             this.textBoxNombre.TabIndex = 1;
             this.textBoxNombre.TextChanged += new System.EventHandler(this.textBoxNombre_TextChanged);
+            this.textBoxNombre.MouseDown += new System.Windows.Forms.MouseEventHandler(this.textBoxNombre_MouseDown);
             // 
             // dataGridView1
             // 
@@ -177,7 +182,7 @@ namespace CoolSoft.UI2._0.UiClientesForm
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle9;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(2, 67);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
@@ -194,7 +199,7 @@ namespace CoolSoft.UI2._0.UiClientesForm
             this.panelMenu.Controls.Add(this.buttonAgregar);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMenu.Location = new System.Drawing.Point(2, 474);
-            this.panelMenu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelMenu.Margin = new System.Windows.Forms.Padding(2);
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(766, 61);
             this.panelMenu.TabIndex = 2;
@@ -209,7 +214,7 @@ namespace CoolSoft.UI2._0.UiClientesForm
             this.buttonCancelar.Image = global::CoolSoft.Properties.Resources.cancel;
             this.buttonCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonCancelar.Location = new System.Drawing.Point(652, 2);
-            this.buttonCancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonCancelar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(114, 44);
             this.buttonCancelar.TabIndex = 19;
@@ -228,7 +233,7 @@ namespace CoolSoft.UI2._0.UiClientesForm
             this.buttonVer.Image = global::CoolSoft.Properties.Resources.check;
             this.buttonVer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonVer.Location = new System.Drawing.Point(532, 2);
-            this.buttonVer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonVer.Margin = new System.Windows.Forms.Padding(2);
             this.buttonVer.Name = "buttonVer";
             this.buttonVer.Size = new System.Drawing.Size(114, 44);
             this.buttonVer.TabIndex = 18;
@@ -246,7 +251,7 @@ namespace CoolSoft.UI2._0.UiClientesForm
             this.buttonDetalles.Image = global::CoolSoft.Properties.Resources.edit;
             this.buttonDetalles.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonDetalles.Location = new System.Drawing.Point(118, 2);
-            this.buttonDetalles.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonDetalles.Margin = new System.Windows.Forms.Padding(2);
             this.buttonDetalles.Name = "buttonDetalles";
             this.buttonDetalles.Size = new System.Drawing.Size(114, 44);
             this.buttonDetalles.TabIndex = 1;
@@ -264,7 +269,7 @@ namespace CoolSoft.UI2._0.UiClientesForm
             this.buttonAgregar.Image = global::CoolSoft.Properties.Resources.add;
             this.buttonAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonAgregar.Location = new System.Drawing.Point(0, 2);
-            this.buttonAgregar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonAgregar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonAgregar.Name = "buttonAgregar";
             this.buttonAgregar.Size = new System.Drawing.Size(114, 44);
             this.buttonAgregar.TabIndex = 0;
@@ -272,6 +277,24 @@ namespace CoolSoft.UI2._0.UiClientesForm
             this.buttonAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonAgregar.UseVisualStyleBackColor = false;
             this.buttonAgregar.Click += new System.EventHandler(this.buttonAgregar_Click);
+            // 
+            // buttonLimpiarSeleccion
+            // 
+            this.buttonLimpiarSeleccion.BackColor = System.Drawing.Color.Pink;
+            this.buttonLimpiarSeleccion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonLimpiarSeleccion.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonLimpiarSeleccion.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.buttonLimpiarSeleccion.Image = global::CoolSoft.Properties.Resources.limpiar;
+            this.buttonLimpiarSeleccion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonLimpiarSeleccion.Location = new System.Drawing.Point(492, 24);
+            this.buttonLimpiarSeleccion.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonLimpiarSeleccion.Name = "buttonLimpiarSeleccion";
+            this.buttonLimpiarSeleccion.Size = new System.Drawing.Size(185, 30);
+            this.buttonLimpiarSeleccion.TabIndex = 17;
+            this.buttonLimpiarSeleccion.Text = "Limpiar Selección";
+            this.buttonLimpiarSeleccion.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonLimpiarSeleccion.UseVisualStyleBackColor = false;
+            this.buttonLimpiarSeleccion.Click += new System.EventHandler(this.buttonLimpiarSeleccion_Click);
             // 
             // CrudCliente
             // 
@@ -281,7 +304,7 @@ namespace CoolSoft.UI2._0.UiClientesForm
             this.ClientSize = new System.Drawing.Size(788, 557);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "CrudCliente";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.CrudCliente_Load);
@@ -309,5 +332,6 @@ namespace CoolSoft.UI2._0.UiClientesForm
         public System.Windows.Forms.Button buttonCancelar;
         public System.Windows.Forms.Button buttonVer;
         public System.Windows.Forms.TextBox textBoxDni;
+        private System.Windows.Forms.Button buttonLimpiarSeleccion;
     }
 }

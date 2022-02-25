@@ -1,4 +1,5 @@
 ﻿using CoolSoft.Modelo.ENTIDADES;
+using CoolSoft.Modelo.REPOSITORIO;
 using CoolSoft.Modelo.SERVICIO;
 using System;
 using System.Collections.Generic;
@@ -19,13 +20,20 @@ namespace CoolSoft.Controlador
             )
 
         {
-            Tecnico tecnico = new Tecnico();
+            if ( TecnicoRepository.BuscarUno(int.Parse(Dni)) )
+            {
+                TecnicoRepository.Alta(int.Parse(Dni));
+            }
+            else
+            {
+                Tecnico tecnico = new Tecnico();
 
-            tecnico.dni = int.Parse(Dni);
-            tecnico.nombre = CG.EsNullOString(Nombre);
-            tecnico.telefono = CG.EsNullOString(Telefono);
+                tecnico.dni = int.Parse(Dni);
+                tecnico.nombre = CG.EsNullOString(Nombre);
+                tecnico.telefono = CG.EsNullOString(Telefono);
 
-            TecnicoService.Agregar(tecnico);
+                TecnicoService.Agregar(tecnico);
+            }
         }
 
 

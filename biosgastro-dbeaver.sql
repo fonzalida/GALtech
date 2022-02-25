@@ -85,6 +85,7 @@ CREATE TABLE `orden` (
   `Precio` float DEFAULT NULL,
   `IdCliente` int NOT NULL,
   `Completada` tinyint(1) NOT NULL DEFAULT '0',
+  `Eliminada` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`IdOrden`),
   KEY `IdCliente` (`IdCliente`),
   CONSTRAINT `orden_ibfk_1` FOREIGN KEY (`IdCliente`) REFERENCES `cliente` (`IdCliente`)

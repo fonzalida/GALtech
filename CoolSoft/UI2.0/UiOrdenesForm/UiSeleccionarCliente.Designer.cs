@@ -47,17 +47,19 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             // 
             // labelTitulo
             // 
-            this.labelTitulo.Size = new System.Drawing.Size(241, 24);
+            this.labelTitulo.Size = new System.Drawing.Size(201, 19);
             this.labelTitulo.Text = "SELECCIONAR CLIENTE";
             // 
             // buttonCancelar
             // 
+            this.buttonCancelar.BackColor = System.Drawing.Color.DarkGoldenrod;
             this.buttonCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.buttonCancelar.Location = new System.Drawing.Point(303, 492);
             this.buttonCancelar.Size = new System.Drawing.Size(150, 44);
             // 
             // buttonCargar
             // 
+            this.buttonCargar.BackColor = System.Drawing.Color.DarkGoldenrod;
             this.buttonCargar.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.buttonCargar.Location = new System.Drawing.Point(145, 492);
             this.buttonCargar.Size = new System.Drawing.Size(150, 44);
@@ -81,7 +83,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.textBoxDni.Location = new System.Drawing.Point(3, 22);
             this.textBoxDni.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxDni.Name = "textBoxDni";
-            this.textBoxDni.Size = new System.Drawing.Size(146, 30);
+            this.textBoxDni.Size = new System.Drawing.Size(146, 26);
             this.textBoxDni.TabIndex = 36;
             this.textBoxDni.TextChanged += new System.EventHandler(this.textBoxDni_TextChanged);
             this.textBoxDni.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxDni_KeyPress);
@@ -93,7 +95,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.textBoxNombre.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxNombre.Location = new System.Drawing.Point(176, 22);
             this.textBoxNombre.Name = "textBoxNombre";
-            this.textBoxNombre.Size = new System.Drawing.Size(253, 30);
+            this.textBoxNombre.Size = new System.Drawing.Size(253, 26);
             this.textBoxNombre.TabIndex = 32;
             this.textBoxNombre.TextChanged += new System.EventHandler(this.textBoxNombre_TextChanged);
             this.textBoxNombre.MouseDown += new System.Windows.Forms.MouseEventHandler(this.textBoxNombre_MouseDown);
@@ -104,7 +106,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(-1, -1);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(81, 20);
+            this.label5.Size = new System.Drawing.Size(66, 17);
             this.label5.TabIndex = 34;
             this.label5.Text = "Dni - Cuit";
             // 
@@ -114,7 +116,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(170, -1);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(68, 20);
+            this.label4.Size = new System.Drawing.Size(58, 17);
             this.label4.TabIndex = 35;
             this.label4.Text = "Nombre";
             // 
@@ -131,6 +133,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             // 
             // UiSeleccionarCliente
             // 
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(232)))), ((int)(((byte)(187)))));
             this.ClientSize = new System.Drawing.Size(467, 558);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGridView1);

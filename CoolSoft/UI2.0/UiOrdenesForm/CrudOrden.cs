@@ -23,13 +23,11 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
 
         UiAgregarOrden fagregar;
 
-
-        UiModificarOrden modificarOrden;
+        UiModificarOrden fModificar;
         CrudParteOrden formParte;
         UiPrincipal formPrincipal;
 
         DataTable tablaOrden;
-        DataTable tablaActual;
 
         private struct Buscar
         {
@@ -43,7 +41,10 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
 
         public CrudOrden(UiPrincipal p)
         {
+           
             formPrincipal = p;
+
+            b.nuevaBusqueda = true;
             fagregar = null;
             InitializeComponent();
         }
@@ -52,10 +53,26 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
 
         private void CrudOrden_Load(object sender, EventArgs e)
         {
-            Format.DataGridView(dataGridView1);
             EstadoInicial();
+            Format.DataGridView(dataGridView1);
+
             checkBoxTodos.Checked = true;
             dateTimePickerDesde.Value = new DateTime(DateTime.Now.Date.Year, DateTime.Now.Date.Month, 01);
+            dateTimePickerDesde.Value = DateTime.Now.Date;
+        }
+
+        private void buttonAgregar_Click(object sender, EventArgs e)
+        {
+
+            fagregar = new UiAgregarOrden();
+            Format.FormularioBorde(fagregar, false);
+            fagregar.StartPosition = FormStartPosition.CenterScreen;
+            var result = fagregar.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                //CargarGrid();
+            }
+
         }
 
         private void EstadoInicial()
@@ -70,6 +87,8 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             buttonPartes.Enabled = false;
             buttonPartes.Visible = false;
 
+            buttonLimpiarSeleccion.Visible = false;
+
             buttonVer.Enabled = true;
             buttonCancelar.Enabled = false;
 
@@ -81,9 +100,6 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             panelFechas.Enabled = false;
 
             buttonAgregar.Enabled = true;
-            //buttonEliminar.Enabled = true;
-            //buttonDetalles.Enabled = true;
-            //buttonPartes.Enabled = true;
 
             buttonVer.Enabled = false;
             buttonCancelar.Enabled = true;
@@ -91,18 +107,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
 
         }
 
-        private void buttonAgregar_Click(object sender, EventArgs e)
-        {
-
-            fagregar = new UiAgregarOrden();
-            fagregar.StartPosition = FormStartPosition.CenterScreen;
-            var result = fagregar.ShowDialog();
-            if (result == DialogResult.OK)
-            {
-                CargarGrid();
-            }
-
-        }
+        
 
         private void buttonVer_Click(object sender, EventArgs e)
         {
@@ -132,35 +137,14 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
         private void FormatearDataGrid()
         {
 
-            foreach (DataGridViewRow dr in dataGridView1.Rows)
-            {
-
-            }
-            // dataGridView1.Columns[3].Visible = false;
-            //dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;           
-            // dataGridView1.Columns["FechaRecepcion"].HeaderText = "Recibida";   // HECHO EN REPOSITORY DE ORDEN
             dataGridView1.Columns["IdOrden"].HeaderText = "N° Orden";
 
             dataGridView1.Columns["TareaDesarrollar"].HeaderText = "Tarea";
             dataGridView1.Columns["TareaDesarrollar"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            
             dataGridView1.Columns["IdCliente"].Visible = false;
+            dataGridView1.Columns["Completada"].Visible = false;
             dataGridView1.ClearSelection();
-
-            //dataGridView1.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-        }
-
-        private void buttonDetalles_Click(object sender, EventArgs e)
-        {
-            viejo = OrdenController.DataGridViewToOrden(dataGridView1.SelectedRows[0].Cells);
-      
-            modificarOrden = new UiModificarOrden(viejo);
-            modificarOrden.StartPosition = FormStartPosition.CenterScreen;
-            var result = modificarOrden.ShowDialog();
-            if (result == DialogResult.OK)
-            {
-                CargarGrid();
-            }
-
         }
 
         private void buttonCancelar_Click(object sender, EventArgs e)
@@ -168,6 +152,40 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             EstadoInicial();
             dataGridView1.DataSource = null;
         }
+
+        private void buttonDetalles_Click(object sender, EventArgs e)
+        {
+            viejo = OrdenController.DataGridViewToOrden(dataGridView1.SelectedRows[0].Cells);
+            
+
+            fModificar = new UiModificarOrden(viejo);
+            Format.FormularioBorde(fModificar, false);
+            fModificar.StartPosition = FormStartPosition.CenterScreen;
+            var result = fModificar.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                CargarGrid();
+            }
+
+        }
+
+        private void buttonEliminar_Click(object sender, EventArgs e)
+        {
+
+            string texto = "Örden N° " + dataGridView1.SelectedRows[0].Cells["IdOrden"].Value.ToString();
+            Eliminar fEliminar = new Eliminar(texto);
+            Format.FormularioBorde(fEliminar, false);
+            fEliminar.StartPosition = FormStartPosition.CenterScreen;
+            var result = fEliminar.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+
+                OrdenController.EliminarOrden(dataGridView1.SelectedRows[0].Cells);
+                CargarGrid();
+            }
+        }
+
+
 
         private void buttonPartes_Click(object sender, EventArgs e)
         {
@@ -182,28 +200,9 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             Transition t = new Transition(new TransitionType_EaseInEaseOut(500));
             t.TransitionCompletedEvent += new EventHandler<Transition.Args>(OnTransitionCompleted);
 
-            //t.add(tableLayoutPanel1, "Top", -690);
-            //t.add(formParte, "Top", 0);
-
             t.add(tableLayoutPanel1, "Left", -1460);
             t.add(formParte, "Left", 0);
             t.run();
-
-
-            //if (formActivo != 1)
-            //{
-            //    formActivo = 1;
-            //    labelTitulo.Text = "CLIENTES";
-
-            //    if (this.panelContenedor.Controls.Count > 0)
-            //        this.panelContenedor.Controls.RemoveAt(0);
-            //    CrudCliente fh = new CrudCliente();
-            //    fh.TopLevel = false;
-            //    fh.Dock = DockStyle.Fill;
-            //    this.panelContenedor.Controls.Add(fh);
-            //    this.panelContenedor.Tag = fh;
-            //    fh.Show();
-            //}
 
         }
 
@@ -236,60 +235,6 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
 
-        private void textBoxOrden_MouseDown(object sender, MouseEventArgs e)
-        {
-            textBoxNombre.Text = "";
-        }
-
-        private void textBoxNombre_MouseDown(object sender, MouseEventArgs e)
-        {
-            textBoxOrden.Text = "";
-        }
-
-        private void dataGridView1_SelectionChanged(object sender, EventArgs e)
-        {
-            if (dataGridView1.SelectedRows.Count > 0)
-            {
-                buttonEliminar.Enabled = true;
-                buttonDetalles.Enabled = true;
-            }
-            else
-            {
-                buttonEliminar.Enabled = false;
-                buttonDetalles.Enabled = false;
-            }
-        }
-
-        
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            FiltrarGrid();
-        }
-
-        private void FiltrarGrid()
-        {
-            string rowFilter;
-            switch (comboBoxFiltro.Text)
-            {
-
-                case "Todas":
-                    rowFilter = "";
-                    (dataGridView1.DataSource as DataTable).DefaultView.RowFilter = rowFilter;
-                    break;
-
-                case "Completas":
-                    rowFilter = string.Format("[{0}] = {1}", "Completada", "True");
-                    (dataGridView1.DataSource as DataTable).DefaultView.RowFilter = rowFilter;
-                    break;
-
-                case "En Curso":
-                    rowFilter = string.Format("[{0}] = {1}", "Completada", "False");
-                    (dataGridView1.DataSource as DataTable).DefaultView.RowFilter = rowFilter;
-                    break;
-
-            }
-        }
 
         private void buttonBuscar_Click(object sender, EventArgs e)
         {
@@ -302,6 +247,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
                 BuscarTexto(textBoxNombre, 3);
             }
         }
+
 
 
         private void BuscarTexto(TextBox actual, int indice)
@@ -361,15 +307,99 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             }
         }
 
+        private void textBoxOrden_MouseDown(object sender, MouseEventArgs e)
+        {
+            textBoxNombre.Text = "";
+        }
+
+        private void textBoxNombre_MouseDown(object sender, MouseEventArgs e)
+        {
+            textBoxOrden.Text = "";
+        }
+
+        private void dataGridView1_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                buttonLimpiarSeleccion.Visible = true;
+                buttonEliminar.Enabled = true;
+                buttonDetalles.Enabled = true;
+            }
+            else
+            {
+                buttonLimpiarSeleccion.Visible = false;
+                buttonEliminar.Enabled = false;
+                buttonDetalles.Enabled = false;
+            }
+        }
+
+        
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            FiltrarGrid();
+        }
+
+        private void FiltrarGrid()
+        {
+            string rowFilter;
+            switch (comboBoxFiltro.Text)
+            {
+
+                case "Todas":
+                    rowFilter = "";
+                    (dataGridView1.DataSource as DataTable).DefaultView.RowFilter = rowFilter;
+                    break;
+
+                case "Completas":
+                    rowFilter = string.Format("[{0}] = {1}", "Completada", "True");
+                    (dataGridView1.DataSource as DataTable).DefaultView.RowFilter = rowFilter;
+                    break;
+
+                case "En Curso":
+                    rowFilter = string.Format("[{0}] = {1}", "Completada", "False");
+                    (dataGridView1.DataSource as DataTable).DefaultView.RowFilter = rowFilter;
+                    break;
+
+            }
+
+            dataGridView1.ClearSelection();
+        }
+
         private void checkBoxTodos_CheckedChanged(object sender, EventArgs e)
         {
                 dateTimePickerDesde.Enabled = !(sender as CheckBox).Checked;
                 dateTimePickerHasta.Enabled = !(sender as CheckBox).Checked;
         }
 
-        private void buttonEliminar_Click(object sender, EventArgs e)
+        private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
+            int index = e.RowIndex;
 
+            try
+            {
+                if (dataGridView1.Rows[index].Cells["Completada"].Value.ToString() == "False")
+                {
+                    dataGridView1.Rows[index].DefaultCellStyle.BackColor = Color.PeachPuff;
+                    dataGridView1.Rows[index].DefaultCellStyle.ForeColor = Color.Black;
+                }
+                else
+                {
+                    dataGridView1.Rows[index].DefaultCellStyle.BackColor = Color.PaleGreen;
+                    dataGridView1.Rows[index].DefaultCellStyle.ForeColor = Color.Black;
+                }
+            }
+            catch
+            {
+
+            }
+        }
+
+        private void buttonLimpiarSeleccion_Click(object sender, EventArgs e)
+        {
+            textBoxOrden.Text = "";
+            textBoxNombre.Text = "";
+            dataGridView1.ClearSelection();
         }
     }
 }

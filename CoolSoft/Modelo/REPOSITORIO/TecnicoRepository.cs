@@ -11,7 +11,7 @@ namespace CoolSoft.Modelo.REPOSITORIO
 {
     static class TecnicoRepository
     {
-        static public int agregar(Tecnico p)
+        static public int Agregar(Tecnico p)
         {
             // String query = "Insert into Tecnico (dni) values (" + p.dni +")";
 
@@ -31,7 +31,18 @@ namespace CoolSoft.Modelo.REPOSITORIO
             return conexion.QueryId(cmd);
         }
 
-        static public void eliminar(Tecnico p)
+        static public void Alta(int dni)
+        {
+            Conexion conexion = new Conexion();
+            MySqlCommand cmd = new MySqlCommand(
+               "UPDATE TECNICO " +
+                 "SET activo = 1 " +
+                  "where dni = @dni  ");
+            cmd.Parameters.AddWithValue("@dni", dni);
+            conexion.QueryInsertDeleteUpdate(cmd);
+        }
+
+        static public void Eliminar(Tecnico p)
         {
             Conexion conexion = new Conexion();
 

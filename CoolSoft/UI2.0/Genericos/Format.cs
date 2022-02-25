@@ -5,11 +5,47 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing;
+using System.Runtime.InteropServices;
 
 namespace CoolSoft.UI2._0.Genericos
 {
     static class Format
     {
+
+
+        /************BORDES DEL FORM ************/
+
+        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+        private static extern IntPtr CreateRoundRectRgn
+        (
+            int nLeftRect,     // x-coordinate of upper-left corner
+            int nTopRect,      // y-coordinate of upper-left corner
+            int nRightRect,    // x-coordinate of lower-right corner
+            int nBottomRect,   // y-coordinate of lower-right corner
+            int nWidthEllipse, // width of ellipse
+            int nHeightEllipse // height of ellipse
+        );
+
+        /********* FIN BORDES DEL FORM *********/
+
+
+        static public void FormularioBorde(Form form, bool max)
+        {
+            if (max)
+            {
+                form.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, form.Width, form.Height, 0, 0));
+            }
+            else
+            {
+                form.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, form.Width, form.Height, 20, 20));
+            }
+            
+        }
+        static public void BordesControl(Control c)
+        {
+                c.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, c.Width, c.Height, 20, 20));
+        }
+
 
 
         static public void DataGridView(DataGridView dg)

@@ -21,14 +21,9 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
             InitializeComponent();
         }
 
-        private void buttonCargar_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void UiModificarTecnico_Load(object sender, EventArgs e)
         {
-            textBoxDniCuit.Text = viejo.dni.ToString();
+            textBoxDni.Text = viejo.dni.ToString();
             tbNombre.Text = viejo.nombre;
             textBoxTelefono.Text = viejo.telefono;
         }
@@ -36,7 +31,7 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
         private void buttonModificar_Click(object sender, EventArgs e)
         {
             TecnicoController.Modificar(
-                   textBoxDniCuit.Text,
+                   textBoxDni.Text,
                    tbNombre.Text,
                    textBoxTelefono.Text,
                    viejo

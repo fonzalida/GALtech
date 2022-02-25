@@ -22,13 +22,15 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
 
         private void UiAgregarOrden_Load(object sender, EventArgs e)
         {
-            buttonCargar.Enabled = false;
-            
+            buttonCargar.Enabled = false;         
         }
 
         private void buttonCargar_Click(object sender, EventArgs e)
         {
-            OrdenController.Cargar(tbTareaDesarrollar.Text, mtIdCliente.Text, dtFechaRecepcion.Text);
+            OrdenController.Cargar(
+                tbTareaDesarrollar.Text, 
+                mtIdCliente.Text, 
+                dtFechaRecepcion.Text);
             this.Close();
         }
 

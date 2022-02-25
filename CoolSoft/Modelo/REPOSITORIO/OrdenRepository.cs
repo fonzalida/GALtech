@@ -29,19 +29,7 @@ namespace CoolSoft.Modelo.REPOSITORIO
             return conexion.QueryId(cmd);
         }
 
-        public static void eliminar(Orden p)
-        {
-            
-            Conexion conexion = new Conexion();
-            MySqlCommand cmd = new MySqlCommand(
-                "Delete from orden "+ 
-                "where IdOrden = @IdOrden and Completada = 0"
-                );
-
-            cmd.Parameters.AddWithValue("@IdOrden", p.idOrden);
-
-            conexion.QueryInsertDeleteUpdate(cmd);
-        }
+        
 
         public static bool BuscarUno(int IdOrden)
         {
@@ -73,9 +61,23 @@ namespace CoolSoft.Modelo.REPOSITORIO
             cmd.Parameters.AddWithValue("@Completada2", pn.completada);
 
             Conexion conexion = new Conexion();
-            //conexion.QueryId(cmd) no necesitamos retornar el id
             conexion.QueryInsertDeleteUpdate(cmd);
             
+        }
+
+        public static void eliminar(Orden p)
+        {
+
+            Conexion conexion = new Conexion();
+            MySqlCommand cmd = new MySqlCommand(
+                "UPDATE orden " +
+                "SET Eliminada = 1 " +
+                "where IdOrden = @IdOrden"
+                );
+
+            cmd.Parameters.AddWithValue("@IdOrden", p.idOrden);
+
+            conexion.QueryInsertDeleteUpdate(cmd);
         }
 
         //public static DataTable ListarTodos()
@@ -98,7 +100,8 @@ namespace CoolSoft.Modelo.REPOSITORIO
                 "Cliente.IdCliente " +
                 "FROM ORDEN " +
                 "INNER JOIN CLIENTE " +
-                "ON ORDEN.IDCLIENTE = CLIENTE.IDCLIENTE";
+                "ON ORDEN.IDCLIENTE = CLIENTE.IDCLIENTE " +
+                "where eliminada = 0";
             
 
             //            INNER JOIN TecnicoOrden
@@ -126,7 +129,7 @@ namespace CoolSoft.Modelo.REPOSITORIO
                 "FROM ORDEN " +
                 "INNER JOIN CLIENTE " +
                 "ON ORDEN.IDCLIENTE = CLIENTE.IDCLIENTE " +
-                "WHERE FechaRecepcion BETWEEN \" " + desde.ToString("yyyy/MM/dd") + "\" AND \" " + hasta.ToString("yyyy/MM/dd") + "\" ";
+                "WHERE FechaRecepcion BETWEEN \" " + desde.ToString("yyyy/MM/dd") + "\" AND \" " + hasta.ToString("yyyy/MM/dd") + "\" and eliminada = 0";
 
 
             

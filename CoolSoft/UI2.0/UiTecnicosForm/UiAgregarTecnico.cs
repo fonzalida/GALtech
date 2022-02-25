@@ -25,7 +25,7 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
         private void buttonCargar_Click(object sender, EventArgs e)
         {
             TecnicoController.Cargar(
-                textBoxDniCuit.Text,
+                textBoxDni.Text,
                 tbNombre.Text,
                 textBoxTelefono.Text
                 );
@@ -43,7 +43,8 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
 
         private void ValidarText()
         {
-            if (textBoxDniCuit.Text == "" || tbNombre.Text == "")
+            if ( (textBoxDni.Text == "" || tbNombre.Text == "") || 
+                textBoxDni.Text.Length < 8)
             {
                 buttonCargar.Enabled = false;
             }
@@ -53,9 +54,5 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
             }
         }
 
-        private void tbNombre_TextChanged(object sender, EventArgs e)
-        {
-            ValidarText();
-        }
     }
 }

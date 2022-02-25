@@ -17,14 +17,14 @@ namespace CoolSoft.Modelo.REPOSITORIO
 
          MySqlCommand cmd = new MySqlCommand(
                       "INSERT INTO PARTEORDEN" +
-                       "(IdParte, IdOrden, FechaInicio, FechaFin, Completa)" +
-                       " VALUES (@IdParte, @IdOrden, @FechaInicio, @FechaFin, @Completa)"
+                       "(IdParte, IdOrden, Completa)" +
+                       " VALUES (@IdParte, @IdOrden, @Completa)"
                        );
 
           cmd.Parameters.AddWithValue("@IdParte", p.idParte);
           cmd.Parameters.AddWithValue("@IdOrden", p.idOrden);
-          cmd.Parameters.AddWithValue("@FechaInicio", p.fechaInicio);
-          cmd.Parameters.AddWithValue("@FechaFin", p.fechaFin);
+          //cmd.Parameters.AddWithValue("@FechaInicio", p.fechaInicio);
+          //cmd.Parameters.AddWithValue("@FechaFin", p.fechaFin);
           cmd.Parameters.AddWithValue("@Completa", p.completa);
 
             Conexion conexion = new Conexion();
@@ -62,15 +62,15 @@ namespace CoolSoft.Modelo.REPOSITORIO
 
             MySqlCommand cmd = new MySqlCommand(
                 "UPDATE PARTEORDEN" +
-                 "SET FechaInicio = @FechaInicio2, FechaFin = @FechaFin2, Completa = @Completa2" +
+                 "SET Completa = @Completa2" +
                   "where IdParte = @IdParte");
 
           
 
             cmd.Parameters.AddWithValue("@IdParte", pn.idParte);
 
-            cmd.Parameters.AddWithValue("@FechaInicio2", pn.fechaInicio);
-            cmd.Parameters.AddWithValue("@FechaFin2", pn.fechaFin);
+            //cmd.Parameters.AddWithValue("@FechaInicio2", pn.fechaInicio);
+            //cmd.Parameters.AddWithValue("@FechaFin2", pn.fechaFin);
             cmd.Parameters.AddWithValue("@Completa2", pn.completa);
 
             Conexion conexion = new Conexion();

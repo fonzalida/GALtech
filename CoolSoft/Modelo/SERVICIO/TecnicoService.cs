@@ -15,17 +15,14 @@ namespace CoolSoft.Modelo.SERVICIO
         {
             if (!TecnicoRepository.BuscarUno(t.dni))
             {
-                TecnicoRepository.agregar(t);
+                TecnicoRepository.Agregar(t);
             }
             else
             {
                 MessageBox.Show("El técnico ya se encuentra cargado");
                 
             }
-
-            return t.dni;
-
-            
+            return t.dni; 
         }
 
         static public void Modificar(Tecnico viejo, Tecnico modificado)
@@ -33,9 +30,10 @@ namespace CoolSoft.Modelo.SERVICIO
             TecnicoRepository.modificar(viejo, modificado);
         }
 
+
         static public void Eliminar(Tecnico t)
         {
-                TecnicoRepository.eliminar(t);     
+                TecnicoRepository.Eliminar(t);     
         }
 
 

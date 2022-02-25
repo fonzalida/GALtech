@@ -525,5 +525,8 @@
   <ItemGroup>
     <None Include="Resources\delete_white.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\limpiar.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
