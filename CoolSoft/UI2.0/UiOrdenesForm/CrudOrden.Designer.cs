@@ -124,7 +124,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.buttonLimpiarSeleccion.Location = new System.Drawing.Point(635, 20);
             this.buttonLimpiarSeleccion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonLimpiarSeleccion.Name = "buttonLimpiarSeleccion";
-            this.buttonLimpiarSeleccion.Size = new System.Drawing.Size(191, 37);
+            this.buttonLimpiarSeleccion.Size = new System.Drawing.Size(232, 37);
             this.buttonLimpiarSeleccion.TabIndex = 18;
             this.buttonLimpiarSeleccion.Text = "Limpiar Selección";
             this.buttonLimpiarSeleccion.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
