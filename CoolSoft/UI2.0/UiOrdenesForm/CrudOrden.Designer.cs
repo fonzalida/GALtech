@@ -42,6 +42,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.comboBoxFiltro = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.buttonRefrescar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.buttonVer = new System.Windows.Forms.Button();
             this.buttonCancelar = new System.Windows.Forms.Button();
@@ -256,11 +257,32 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.panelMenu.Size = new System.Drawing.Size(1021, 126);
             this.panelMenu.TabIndex = 2;
             // 
+            // buttonRefrescar
+            // 
+            this.buttonRefrescar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonRefrescar.BackColor = System.Drawing.Color.ForestGreen;
+            this.buttonRefrescar.FlatAppearance.BorderSize = 0;
+            this.buttonRefrescar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonRefrescar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonRefrescar.ForeColor = System.Drawing.SystemColors.Control;
+            this.buttonRefrescar.Image = global::CoolSoft.Properties.Resources.refresh;
+            this.buttonRefrescar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonRefrescar.Location = new System.Drawing.Point(18, 8);
+            this.buttonRefrescar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonRefrescar.Name = "buttonRefrescar";
+            this.buttonRefrescar.Size = new System.Drawing.Size(152, 54);
+            this.buttonRefrescar.TabIndex = 16;
+            this.buttonRefrescar.Text = "Refrescar";
+            this.buttonRefrescar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonRefrescar.UseVisualStyleBackColor = false;
+            this.buttonRefrescar.Click += new System.EventHandler(this.buttonRefrescar_Click);
+            // 
             // panel1
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.panel1.Controls.Add(this.buttonRefrescar);
             this.panel1.Controls.Add(this.buttonVer);
             this.panel1.Controls.Add(this.buttonCancelar);
             this.panel1.Location = new System.Drawing.Point(545, 0);
@@ -509,5 +531,6 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
         public System.Windows.Forms.TextBox textBoxOrden;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button buttonLimpiarSeleccion;
+        public System.Windows.Forms.Button buttonRefrescar;
     }
 }

@@ -39,6 +39,9 @@ namespace CoolSoft.UI2._0.UiClientesForm
         {
             EstadoInicial();
             Format.DataGridView(dataGridView1);
+
+            buttonRefrescar.Location = buttonVer.Location;
+
         }
 
         private void buttonAgregar_Click(object sender, EventArgs e)
@@ -74,6 +77,9 @@ namespace CoolSoft.UI2._0.UiClientesForm
 
             buttonLimpiarSeleccion.Visible = false;
 
+            buttonRefrescar.Visible = false;
+            buttonVer.Visible = true;
+
         }
 
         private void EstadoVer()
@@ -85,7 +91,8 @@ namespace CoolSoft.UI2._0.UiClientesForm
             buttonVer.Enabled = false;
             buttonCancelar.Enabled = true;
 
-
+            buttonRefrescar.Visible = true;
+            buttonVer.Visible = false;
         }
 
 
@@ -100,6 +107,8 @@ namespace CoolSoft.UI2._0.UiClientesForm
             FormatearDataGrid();
 
         }
+
+        
 
         private void FormatearDataGrid()
         {
@@ -267,6 +276,16 @@ namespace CoolSoft.UI2._0.UiClientesForm
             textBoxDni.Text = "";
             textBoxNombre.Text = "";
             dataGridView1.ClearSelection();
+        }
+
+        private void buttonRefrescar_Click(object sender, EventArgs e)
+        {
+            EstadoVer();
+            tablaCliente = ClienteRepository.ListarTodos();
+            dataGridView1.DataSource = null;
+            dataGridView1.DataSource = tablaCliente;
+
+            FormatearDataGrid();
         }
     }
 }

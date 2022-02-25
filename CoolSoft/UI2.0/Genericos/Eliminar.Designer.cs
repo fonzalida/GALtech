@@ -45,7 +45,7 @@ namespace CoolSoft.UI2._0.Genericos
             this.panelBorde.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelBorde.Location = new System.Drawing.Point(0, 0);
             this.panelBorde.Name = "panelBorde";
-            this.panelBorde.Size = new System.Drawing.Size(460, 50);
+            this.panelBorde.Size = new System.Drawing.Size(447, 50);
             this.panelBorde.TabIndex = 1;
             this.panelBorde.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelBorde_MouseDown);
             // 
@@ -64,14 +64,14 @@ namespace CoolSoft.UI2._0.Genericos
             // buttonCancelar
             // 
             this.buttonCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonCancelar.BackColor = System.Drawing.Color.Snow;
+            this.buttonCancelar.BackColor = System.Drawing.Color.LightPink;
             this.buttonCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.buttonCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCancelar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCancelar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.buttonCancelar.Image = global::CoolSoft.Properties.Resources.clear;
             this.buttonCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonCancelar.Location = new System.Drawing.Point(236, 231);
+            this.buttonCancelar.Location = new System.Drawing.Point(223, 209);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(152, 54);
             this.buttonCancelar.TabIndex = 6;
@@ -89,7 +89,7 @@ namespace CoolSoft.UI2._0.Genericos
             this.buttonEliminar.ForeColor = System.Drawing.SystemColors.Control;
             this.buttonEliminar.Image = global::CoolSoft.Properties.Resources.delete_white;
             this.buttonEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonEliminar.Location = new System.Drawing.Point(78, 231);
+            this.buttonEliminar.Location = new System.Drawing.Point(65, 209);
             this.buttonEliminar.Name = "buttonEliminar";
             this.buttonEliminar.Size = new System.Drawing.Size(152, 54);
             this.buttonEliminar.TabIndex = 5;
@@ -111,9 +111,9 @@ namespace CoolSoft.UI2._0.Genericos
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(185, 132);
+            this.label2.Location = new System.Drawing.Point(183, 136);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(101, 36);
+            this.label2.Size = new System.Drawing.Size(81, 29);
             this.label2.TabIndex = 8;
             this.label2.Text = "label2";
             // 
@@ -121,7 +121,8 @@ namespace CoolSoft.UI2._0.Genericos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(460, 314);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(206)))), ((int)(((byte)(206)))));
+            this.ClientSize = new System.Drawing.Size(447, 275);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonCancelar);

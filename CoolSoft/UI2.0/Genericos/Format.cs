@@ -62,6 +62,8 @@ namespace CoolSoft.UI2._0.Genericos
             //ENCABEZADOS COLUMNAS
             dg.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
             dg.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(44, 44, 84);
+            
+            //228, 231, 243
             dg.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 14, FontStyle.Bold);
             dg.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dg.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
@@ -73,6 +75,7 @@ namespace CoolSoft.UI2._0.Genericos
             dg.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
 
             //FILAS
+            dg.RowsDefaultCellStyle.BackColor = Color.FromArgb(228, 231, 243);
             dg.DefaultCellStyle.Font = new Font("Arial", 12, FontStyle.Regular);
             dg.DefaultCellStyle.ForeColor = SystemColors.ControlText;
             dg.DefaultCellStyle.SelectionBackColor = SystemColors.Highlight;

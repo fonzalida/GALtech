@@ -59,6 +59,8 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             checkBoxTodos.Checked = true;
             dateTimePickerDesde.Value = new DateTime(DateTime.Now.Date.Year, DateTime.Now.Date.Month, 01);
             dateTimePickerDesde.Value = DateTime.Now.Date;
+
+            buttonRefrescar.Location = buttonVer.Location;
         }
 
         private void buttonAgregar_Click(object sender, EventArgs e)
@@ -87,10 +89,14 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             buttonPartes.Enabled = false;
             buttonPartes.Visible = false;
 
+
             buttonLimpiarSeleccion.Visible = false;
 
             buttonVer.Enabled = true;
             buttonCancelar.Enabled = false;
+
+            buttonRefrescar.Visible = false;
+            buttonVer.Visible = true;
 
         }
 
@@ -103,6 +109,9 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
 
             buttonVer.Enabled = false;
             buttonCancelar.Enabled = true;
+
+            buttonRefrescar.Visible = true;
+            buttonVer.Visible = false;
 
 
         }
@@ -282,7 +291,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
                     dataGridView1.Rows[b.listaIndices[b.actual]].Selected = true;
                     b.actual++;
                     b.nuevaBusqueda = false;
-                    FiltrarGrid();
+                    //FiltrarGrid();
 
                 }
                 else
@@ -338,6 +347,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             FiltrarGrid();
+           
         }
 
         private void FiltrarGrid()
@@ -362,8 +372,8 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
                     break;
 
             }
-
             dataGridView1.ClearSelection();
+
         }
 
         private void checkBoxTodos_CheckedChanged(object sender, EventArgs e)
@@ -400,6 +410,12 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             textBoxOrden.Text = "";
             textBoxNombre.Text = "";
             dataGridView1.ClearSelection();
+        }
+
+        private void buttonRefrescar_Click(object sender, EventArgs e)
+        {
+            CargarGrid();
+            FiltrarGrid();
         }
     }
 }

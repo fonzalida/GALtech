@@ -43,6 +43,9 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
         {
             EstadoInicial();
             Format.DataGridView(dataGridView1);
+
+            buttonRefrescar.Location = buttonVer.Location;
+
         }
 
         private void buttonAgregar_Click(object sender, EventArgs e)
@@ -78,6 +81,9 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
             buttonVer.Enabled = true;
             buttonCancelar.Enabled = false;
 
+            buttonRefrescar.Visible = false;
+            buttonVer.Visible = true;
+
         }
 
         private void EstadoVer()
@@ -88,6 +94,9 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
 
             buttonVer.Enabled = false;
             buttonCancelar.Enabled = true;
+
+            buttonRefrescar.Visible = true;
+            buttonVer.Visible = false;
 
 
         }
@@ -283,6 +292,16 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
             textBoxDni.Text = "";
             textBoxNombre.Text = "";
             dataGridView1.ClearSelection();
+        }
+
+        private void buttonRefrescar_Click(object sender, EventArgs e)
+        {
+            EstadoVer();
+            tablaTecnico = TecnicoRepository.ListarTodos();
+            dataGridView1.DataSource = null;
+            dataGridView1.DataSource = tablaTecnico;
+
+            FormatearDataGrid();
         }
     }
 }

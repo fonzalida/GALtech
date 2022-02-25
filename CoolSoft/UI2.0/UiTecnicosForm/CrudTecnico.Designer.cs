@@ -44,6 +44,7 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
             this.buttonVer = new System.Windows.Forms.Button();
             this.buttonEliminar = new System.Windows.Forms.Button();
             this.buttonDetalles = new System.Windows.Forms.Button();
+            this.buttonRefrescar = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.panelSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -114,7 +115,7 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
             this.textBoxDni.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxDni.MaxLength = 8;
             this.textBoxDni.Name = "textBoxDni";
-            this.textBoxDni.Size = new System.Drawing.Size(163, 26);
+            this.textBoxDni.Size = new System.Drawing.Size(163, 30);
             this.textBoxDni.TabIndex = 14;
             this.textBoxDni.TextChanged += new System.EventHandler(this.TextBoxDni_TextChanged);
             this.textBoxDni.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxDni_KeyPress);
@@ -126,7 +127,7 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(192, 11);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(122, 17);
+            this.label4.Size = new System.Drawing.Size(143, 20);
             this.label4.TabIndex = 13;
             this.label4.Text = "Nombre y apellido";
             // 
@@ -136,7 +137,7 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(19, 11);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(29, 17);
+            this.label5.Size = new System.Drawing.Size(35, 20);
             this.label5.TabIndex = 12;
             this.label5.Text = "Dni";
             // 
@@ -165,7 +166,7 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
             this.textBoxNombre.Location = new System.Drawing.Point(196, 34);
             this.textBoxNombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxNombre.Name = "textBoxNombre";
-            this.textBoxNombre.Size = new System.Drawing.Size(283, 26);
+            this.textBoxNombre.Size = new System.Drawing.Size(283, 30);
             this.textBoxNombre.TabIndex = 1;
             this.textBoxNombre.TextChanged += new System.EventHandler(this.textBoxNombre_TextChanged);
             this.textBoxNombre.MouseDown += new System.Windows.Forms.MouseEventHandler(this.textBoxNombre_MouseDown);
@@ -189,6 +190,7 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
             // panelMenu
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.panelMenu, 2);
+            this.panelMenu.Controls.Add(this.buttonRefrescar);
             this.panelMenu.Controls.Add(this.buttonAgregar);
             this.panelMenu.Controls.Add(this.buttonCancelar);
             this.panelMenu.Controls.Add(this.buttonVer);
@@ -293,6 +295,26 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
             this.buttonDetalles.UseVisualStyleBackColor = false;
             this.buttonDetalles.Click += new System.EventHandler(this.buttonDetalles_Click);
             // 
+            // buttonRefrescar
+            // 
+            this.buttonRefrescar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonRefrescar.BackColor = System.Drawing.Color.ForestGreen;
+            this.buttonRefrescar.FlatAppearance.BorderSize = 0;
+            this.buttonRefrescar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonRefrescar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonRefrescar.ForeColor = System.Drawing.SystemColors.Control;
+            this.buttonRefrescar.Image = global::CoolSoft.Properties.Resources.refresh;
+            this.buttonRefrescar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonRefrescar.Location = new System.Drawing.Point(496, 2);
+            this.buttonRefrescar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonRefrescar.Name = "buttonRefrescar";
+            this.buttonRefrescar.Size = new System.Drawing.Size(152, 54);
+            this.buttonRefrescar.TabIndex = 21;
+            this.buttonRefrescar.Text = "Refrescar";
+            this.buttonRefrescar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonRefrescar.UseVisualStyleBackColor = false;
+            this.buttonRefrescar.Click += new System.EventHandler(this.buttonRefrescar_Click);
+            // 
             // CrudTecnico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -330,5 +352,6 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
         public System.Windows.Forms.Button buttonVer;
         public System.Windows.Forms.TextBox textBoxDni;
         private System.Windows.Forms.Button buttonLimpiarSeleccion;
+        public System.Windows.Forms.Button buttonRefrescar;
     }
 }
