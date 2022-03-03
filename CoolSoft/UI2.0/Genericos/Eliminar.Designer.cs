@@ -84,6 +84,7 @@ namespace CoolSoft.UI2._0.Genericos
             this.buttonEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonEliminar.BackColor = System.Drawing.Color.Maroon;
             this.buttonEliminar.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.buttonEliminar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.buttonEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonEliminar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonEliminar.ForeColor = System.Drawing.SystemColors.Control;

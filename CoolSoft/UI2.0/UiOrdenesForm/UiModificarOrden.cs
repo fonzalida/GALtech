@@ -1,4 +1,5 @@
-﻿using CoolSoft.Modelo.ENTIDADES;
+﻿using CoolSoft.Controlador;
+using CoolSoft.Modelo.ENTIDADES;
 using CoolSoft.Modelo.REPOSITORIO;
 using CoolSoft.UI2._0.Genericos;
 using System;
@@ -93,6 +94,17 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
         private void buttonCancelar_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void buttonModificar_Click(object sender, EventArgs e)
+        {
+            OrdenController.Modificar(
+                dtFechaRecepcion.Text,
+                tbTareaDesarrollar.Text,
+                mtIdCliente.Text,
+                checkBoxCompletada.Checked,
+                textBoxImporte.Text,
+                vieja);
         }
 
 

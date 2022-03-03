@@ -31,7 +31,6 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
                 tbTareaDesarrollar.Text, 
                 mtIdCliente.Text, 
                 dtFechaRecepcion.Text);
-            this.Close();
         }
 
         private void buttonBuscar_Click(object sender, EventArgs e)

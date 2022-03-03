@@ -70,7 +70,7 @@ namespace CoolSoft.Modelo.SERVICIO
         }
 
 
-        static public void modificarOrden<T>(T objetoViejo, T objectoNuevo)
+        static public void modificar<T>(T objetoViejo, T objectoNuevo)
         {
             
             if (objetoViejo is Orden)

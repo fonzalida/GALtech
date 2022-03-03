@@ -263,12 +263,12 @@ namespace CoolSoft.UI2._0.UiClientesForm
 
         private void textBoxDni_MouseDown(object sender, MouseEventArgs e)
         {
-            textBoxNombre.Text = "";
+            //textBoxNombre.Text = "";
         }
 
         private void textBoxNombre_MouseDown(object sender, MouseEventArgs e)
         {
-            textBoxDni.Text = "";
+            //textBoxDni.Text = "";
         }
 
         private void buttonLimpiarSeleccion_Click(object sender, EventArgs e)
@@ -286,6 +286,16 @@ namespace CoolSoft.UI2._0.UiClientesForm
             dataGridView1.DataSource = tablaCliente;
 
             FormatearDataGrid();
+        }
+
+        private void textBoxDni_Enter(object sender, EventArgs e)
+        {
+            textBoxNombre.Text = "";
+        }
+
+        private void textBoxNombre_Enter(object sender, EventArgs e)
+        {
+            textBoxDni.Text = "";
         }
     }
 }

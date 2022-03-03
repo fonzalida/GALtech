@@ -211,6 +211,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.buttonModificar.Text = "Modificar";
             this.buttonModificar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonModificar.UseVisualStyleBackColor = false;
+            this.buttonModificar.Click += new System.EventHandler(this.buttonModificar_Click);
             // 
             // UiModificarOrden
             // 

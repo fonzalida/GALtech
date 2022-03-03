@@ -42,8 +42,8 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.comboBoxFiltro = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panelMenu = new System.Windows.Forms.Panel();
-            this.buttonRefrescar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.buttonRefrescar = new System.Windows.Forms.Button();
             this.buttonVer = new System.Windows.Forms.Button();
             this.buttonCancelar = new System.Windows.Forms.Button();
             this.buttonPartes = new System.Windows.Forms.Button();
@@ -257,6 +257,20 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.panelMenu.Size = new System.Drawing.Size(1021, 126);
             this.panelMenu.TabIndex = 2;
             // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.panel1.Controls.Add(this.buttonRefrescar);
+            this.panel1.Controls.Add(this.buttonVer);
+            this.panel1.Controls.Add(this.buttonCancelar);
+            this.panel1.Location = new System.Drawing.Point(545, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(476, 62);
+            this.panel1.TabIndex = 17;
+            // 
             // buttonRefrescar
             // 
             this.buttonRefrescar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -276,20 +290,6 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.buttonRefrescar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonRefrescar.UseVisualStyleBackColor = false;
             this.buttonRefrescar.Click += new System.EventHandler(this.buttonRefrescar_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.panel1.Controls.Add(this.buttonRefrescar);
-            this.panel1.Controls.Add(this.buttonVer);
-            this.panel1.Controls.Add(this.buttonCancelar);
-            this.panel1.Location = new System.Drawing.Point(545, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(476, 62);
-            this.panel1.TabIndex = 17;
             // 
             // buttonVer
             // 
@@ -375,6 +375,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.dateTimePickerDesde.Name = "dateTimePickerDesde";
             this.dateTimePickerDesde.Size = new System.Drawing.Size(153, 30);
             this.dateTimePickerDesde.TabIndex = 4;
+            this.dateTimePickerDesde.ValueChanged += new System.EventHandler(this.dateTimePickerDesde_ValueChanged);
             // 
             // checkBoxTodos
             // 

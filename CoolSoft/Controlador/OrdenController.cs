@@ -75,5 +75,29 @@ namespace CoolSoft.Controlador
 
         }
 
+        internal static void Modificar(
+            string fechaRecepcion,
+            string tareaDesarrollar,
+            string idCliente, 
+            bool completada, 
+            string importe,
+            Orden vieja)
+        {
+            Orden orden = new Orden();
+            orden.fechaRecepcion = DateTime.Parse(fechaRecepcion);
+            orden.tareaDesarrollar = CG.EsNullOString(tareaDesarrollar);
+            orden.idCliente = int.Parse(idCliente);
+
+            if (completada)
+                orden.completada = 1;
+            else
+                orden.completada = 0;
+
+            float f;
+            if (float.TryParse(importe, out f))
+                orden.precio = f;
+
+            OrdenService.modificar(vieja, orden);
+        }
     }
 }

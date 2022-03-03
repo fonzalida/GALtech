@@ -16,6 +16,7 @@ namespace CoolSoft.UI2._0
         int indiceActivo = -1;
         string titulo = "Hola";
         bool transicionActiva = false;
+        bool menuMinimizado = false;
 
         Form[] ListaForm = new Form[4];
 
@@ -293,19 +294,30 @@ namespace CoolSoft.UI2._0
 
         private void buttonMenu_Click(object sender, EventArgs e)
         {
-            int iFormWidth;
-            if (panelMenu.Width == 230)
-            {
-                iFormWidth = 65;
-            }
-            else
-            {
-                iFormWidth = 230;
-            }
-            //Transition.run(panelMenu, "Width", iFormWidth, new TransitionType_EaseInEaseOut(200));
-            Transition.run(panelMenu, "Width", iFormWidth, new TransitionType_EaseInEaseOut(300));
+            TransicionMenu(true);
         }
 
+        private void TransicionMenu(bool boton)
+        {
+            int iFormWidth;
+            if (panelMenu.Width < 230)
+                iFormWidth = 230;
+            else
+                iFormWidth = 65;
+
+            if (boton)
+            {
+                menuMinimizado = !menuMinimizado;
+                if (menuMinimizado)
+                {
+                }
+                else
+                {
+                }
+            }
+            
+            Transition.run(panelMenu, "Width", iFormWidth, new TransitionType_EaseInEaseOut(150));
+        }
 
         private void Transicion(int an, int ac)
         {

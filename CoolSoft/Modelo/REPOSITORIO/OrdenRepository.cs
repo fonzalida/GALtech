@@ -16,8 +16,8 @@ namespace CoolSoft.Modelo.REPOSITORIO
         {
             MySqlCommand cmd = new MySqlCommand(
                 "INSERT INTO ORDEN" +
-                "(FechaRecepcion ,TareaDesarrollar, IdCliente) " +
-                "VALUES (@FechaRecepcion, @TareaDesarrollar, @IdCliente);" +
+                "(FechaRecepcion ,TareaDesarrollar, IdCliente, Precio) " +
+                "VALUES (@FechaRecepcion, @TareaDesarrollar, @IdCliente, 0);" +
                "SELECT LAST_INSERT_ID();"
                 );
 
@@ -47,15 +47,14 @@ namespace CoolSoft.Modelo.REPOSITORIO
         {
 
             MySqlCommand cmd = new MySqlCommand(
-                "UPDATE Orden" +
-                 "SET FechaRecepcion = @FechaRecepcion2, TareaDesarrollar = @TareaDesarrollar2, Precio = @Precio2 ,IdCliente = @IdCliente2, Completada = @Completada2" +
+                "UPDATE Orden " +
+                 "SET FechaRecepcion = @FechaRecepcion2, TareaDesarrollar = @TareaDesarrollar2, Precio = @Precio2 ,IdCliente = @IdCliente2, Completada = @Completada2 " +
                   "WHERE IdOrden = @IdOrden ");
 
-            cmd.Parameters.AddWithValue("@IdOrden", p.fechaRecepcion);
+            cmd.Parameters.AddWithValue("@IdOrden", p.idOrden);
 
-            cmd.Parameters.AddWithValue("@FechaRecepcion2", pn.fechaRecepcion);
+            cmd.Parameters.AddWithValue("@FechaRecepcion2", pn.fechaRecepcion.Date.ToString("yyyy-MM-dd"));
             cmd.Parameters.AddWithValue("@TareaDesarrollar2", pn.tareaDesarrollar);
-            //cmd.Parameters.AddWithValue("@TareaDesarrollada2", pn.tareaDesarrollada);
             cmd.Parameters.AddWithValue("@Precio2",pn.precio);
             cmd.Parameters.AddWithValue("@IdCliente2", pn.idCliente);
             cmd.Parameters.AddWithValue("@Completada2", pn.completada);
@@ -161,14 +160,6 @@ namespace CoolSoft.Modelo.REPOSITORIO
                 "INNER JOIN CLIENTE " +
                 "ON ORDEN.IDCLIENTE = CLIENTE.IDCLIENTE " +
                 "WHERE Completada = \"" + i + "\"";
-
-
-            //            INNER JOIN TecnicoOrden
-            //ON ParteOrden.IdParte = TecnicoOrden.IdParte
-            //and TecnicoOrden.Dni = { dni tecnico}
-            //            and ParteOrden.Completa = 0
-            //INNER JOIN Orden
-            //ON ParteOrden.IdOrden = Orden.IdOrden
 
             Conexion conexion = new Conexion();
             return conexion.QuerySelect(query);

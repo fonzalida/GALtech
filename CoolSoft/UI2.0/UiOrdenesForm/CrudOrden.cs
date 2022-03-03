@@ -98,6 +98,8 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             buttonRefrescar.Visible = false;
             buttonVer.Visible = true;
 
+            dateTimePickerHasta.MinDate = dateTimePickerDesde.Value;
+
         }
 
         private void EstadoVer()
@@ -416,6 +418,11 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
         {
             CargarGrid();
             FiltrarGrid();
+        }
+
+        private void dateTimePickerDesde_ValueChanged(object sender, EventArgs e)
+        {
+            dateTimePickerHasta.MinDate = dateTimePickerDesde.Value;
         }
     }
 }
