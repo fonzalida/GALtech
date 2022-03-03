@@ -110,12 +110,6 @@
     <Compile Include="Modelo\SERVICIO\ClienteService.cs" />
     <Compile Include="Modelo\SERVICIO\OrdenService.cs" />
     <Compile Include="Modelo\SERVICIO\TecnicoService.cs" />
-    <Compile Include="Test.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Test.Designer.cs">
-      <DependentUpon>Test.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UI2.0\Genericos\Eliminar.cs">
@@ -215,99 +209,6 @@
     <Compile Include="UI2.0\UiTecnicosForm\UiModificarTecnico.Designer.cs">
       <DependentUpon>UiModificarTecnico.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\FormsCliente\ClienteAgregar.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vista\FormsCliente\ClienteAgregar.Designer.cs">
-      <DependentUpon>ClienteAgregar.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Vista\FormsCliente\ClienteDetalles.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vista\FormsCliente\ClienteDetalles.Designer.cs">
-      <DependentUpon>ClienteDetalles.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Vista\FormsCliente\ClienteVer.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vista\FormsCliente\ClienteVer.Designer.cs">
-      <DependentUpon>ClienteVer.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Vista\FormPresentacion.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vista\FormPresentacion.Designer.cs">
-      <DependentUpon>FormPresentacion.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Vista\FormularioPrincipal.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vista\FormularioPrincipal.Designer.cs">
-      <DependentUpon>FormularioPrincipal.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Vista\Herencia\Agregar.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vista\Herencia\Agregar.Designer.cs">
-      <DependentUpon>Agregar.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Vista\Herencia\Base.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vista\Herencia\Base.Designer.cs">
-      <DependentUpon>Base.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Vista\Herencia\Detalles.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vista\Herencia\Detalles.Designer.cs">
-      <DependentUpon>Detalles.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Vista\Herencia\Historico.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vista\Herencia\Historico.Designer.cs">
-      <DependentUpon>Historico.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Vista\Herencia\Seleccion.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vista\Herencia\Seleccion.Designer.cs">
-      <DependentUpon>Seleccion.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Vista\FormsOrden\OrdenAgregar.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vista\FormsOrden\OrdenAgregar.Designer.cs">
-      <DependentUpon>OrdenAgregar.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Vista\FormsOrden\OrdenesVer.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vista\FormsOrden\OrdenesVer.Designer.cs">
-      <DependentUpon>OrdenesVer.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Vista\FormsOrden\Orden_Agregar\ClienteSeleccion.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vista\FormsOrden\Orden_Agregar\ClienteSeleccion.Designer.cs">
-      <DependentUpon>ClienteSeleccion.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Vista\FormsTecnico\TecnicoAgregar.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vista\FormsTecnico\TecnicoAgregar.Designer.cs">
-      <DependentUpon>TecnicoAgregar.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Vista\FormsTecnico\TecnicosVer.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vista\FormsTecnico\TecnicosVer.Designer.cs">
-      <DependentUpon>TecnicosVer.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="Test.resx">
-      <DependentUpon>Test.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -365,51 +266,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI2.0\UiTecnicosForm\UiModificarTecnico.resx">
       <DependentUpon>UiModificarTecnico.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vista\FormsCliente\ClienteAgregar.resx">
-      <DependentUpon>ClienteAgregar.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vista\FormsCliente\ClienteDetalles.resx">
-      <DependentUpon>ClienteDetalles.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vista\FormsCliente\ClienteVer.resx">
-      <DependentUpon>ClienteVer.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vista\FormPresentacion.resx">
-      <DependentUpon>FormPresentacion.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vista\FormularioPrincipal.resx">
-      <DependentUpon>FormularioPrincipal.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vista\Herencia\Agregar.resx">
-      <DependentUpon>Agregar.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vista\Herencia\Base.resx">
-      <DependentUpon>Base.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vista\Herencia\Detalles.resx">
-      <DependentUpon>Detalles.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vista\Herencia\Historico.resx">
-      <DependentUpon>Historico.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vista\Herencia\Seleccion.resx">
-      <DependentUpon>Seleccion.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vista\FormsOrden\OrdenAgregar.resx">
-      <DependentUpon>OrdenAgregar.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vista\FormsOrden\OrdenesVer.resx">
-      <DependentUpon>OrdenesVer.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vista\FormsOrden\Orden_Agregar\ClienteSeleccion.resx">
-      <DependentUpon>ClienteSeleccion.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vista\FormsTecnico\TecnicoAgregar.resx">
-      <DependentUpon>TecnicoAgregar.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vista\FormsTecnico\TecnicosVer.resx">
-      <DependentUpon>TecnicosVer.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
