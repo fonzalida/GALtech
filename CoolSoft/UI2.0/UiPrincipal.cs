@@ -115,28 +115,6 @@ namespace CoolSoft.UI2._0
         {
 
             CambiarFormulario(0);
-            //if (formActivo != 0)
-            //{
-            //    if (this.panelContenedor.Controls.Count > 0)
-            //        this.panelContenedor.Controls.RemoveAt(0);
-
-            //    formActivo = 0;
-
-            //    CambiarTextoTitulo("BIENVENIDO");
-
-            //    if (ListaForm[formActivo] == null) 
-            //    {
-            //        Console.WriteLine("ENCONTRO NULL");
-            //        Presentacion fh = new Presentacion();
-            //        fh.TopLevel = false;
-            //        fh.Dock = DockStyle.Fill;
-            //        ListaForm[formActivo] = fh;
-            //        fh.Show();
-            //        this.panelContenedor.Controls.Add(ListaForm[formActivo]);
-            //    }   
-            //    else
-            //        this.panelContenedor.Controls.Add(ListaForm[formActivo]);
-            //}
         }
 
         private void buttonClientes_Click(object sender, EventArgs e)
@@ -216,61 +194,6 @@ namespace CoolSoft.UI2._0
                     }
 
                     Transicion(indiceAntiguo, indiceActivo);
-
-
-
-
-                    //if (formActivo != indice)
-                    //{
-                    //    if (this.panelContenedor.Controls.Count > 0)
-                    //        this.panelContenedor.Controls.RemoveAt(0);
-
-                    //    formActivo = indice;
-
-                    //    if (ListaForm[formActivo] == null)
-                    //    {
-                    //        Form fh = new Form();
-                    //        Console.WriteLine("ENCONTRO NULL");
-                    //        switch (indice)
-                    //        {
-                    //            case 0:
-                    //                CambiarTextoTitulo("INICIO");
-                    //                fh = new Presentacion();
-                    //                break;   
-
-                    //            case 1:
-                    //                CambiarTextoTitulo("CLIENTES");
-                    //                fh = new CrudCliente();
-                    //                break;
-
-                    //            case 2:
-                    //                CambiarTextoTitulo("TECNICOS");
-                    //                fh = new CrudTecnico();
-                    //                break;
-
-                    //            case 3:
-                    //                CambiarTextoTitulo("ORDENES");
-                    //                fh = new CrudOrden(this);
-                    //                break;
-                    //        }
-                    //        fh.Size = panelContenedor.Size;
-                    //        fh.TopLevel = false;
-                    //        //fh.Dock = DockStyle.Fill;
-                    //        ListaForm[formActivo] = fh;
-                    //        fh.Show();
-                    //        this.panelContenedor.Controls.Add(ListaForm[formActivo]);
-                    //    }
-                    //    else
-                    //    {
-                    //        switch (indice)
-                    //        {
-                    //            case 0:CambiarTextoTitulo("INICIO");break;
-                    //            case 1:CambiarTextoTitulo("CLIENTES");break;
-                    //            case 2:CambiarTextoTitulo("TECNICOS");break;
-                    //            case 3:CambiarTextoTitulo("ORDENES"); break;
-                    //        }
-                    //        this.panelContenedor.Controls.Add(ListaForm[formActivo]);
-                    //    }
 
                 }
             }
