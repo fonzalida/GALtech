@@ -33,6 +33,14 @@ namespace CoolSoft.UI2._0.UiClientesForm
             this.panelBorde.SuspendLayout();
             this.SuspendLayout();
             // 
+            // label7
+            // 
+            this.label7.Text = "Teléfono 2";
+            // 
+            // label6
+            // 
+            this.label6.Text = "Teléfono 1";
+            // 
             // tbNombre
             // 
             this.tbNombre.TextChanged += new System.EventHandler(this.textBox_TextChanged);
@@ -47,7 +55,7 @@ namespace CoolSoft.UI2._0.UiClientesForm
             // 
             // labelTitulo
             // 
-            this.labelTitulo.Size = new System.Drawing.Size(210, 24);
+            this.labelTitulo.Size = new System.Drawing.Size(173, 19);
             this.labelTitulo.Text = "MODIFICAR CLIENTE";
             // 
             // buttonCancelar
@@ -80,7 +88,7 @@ namespace CoolSoft.UI2._0.UiClientesForm
             // 
             // UiModificarCliente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(205)))));
             this.ClientSize = new System.Drawing.Size(657, 391);

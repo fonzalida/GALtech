@@ -46,7 +46,7 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
             // 
             this.labelTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelTitulo.Size = new System.Drawing.Size(167, 19);
-            this.labelTitulo.Text = "AGREGAR TECNICO";
+            this.labelTitulo.Text = "AGREGAR TÉCNICO";
             // 
             // buttonCancelar
             // 
@@ -67,7 +67,7 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(66, 18);
             this.label6.TabIndex = 63;
-            this.label6.Text = "Telefono";
+            this.label6.Text = "Teléfono";
             // 
             // label2
             // 

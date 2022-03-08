@@ -95,7 +95,7 @@ namespace CoolSoft.UI2._0
             this.buttonOrdenes.Name = "buttonOrdenes";
             this.buttonOrdenes.Size = new System.Drawing.Size(230, 50);
             this.buttonOrdenes.TabIndex = 2;
-            this.buttonOrdenes.Text = "Ordenes";
+            this.buttonOrdenes.Text = "Órdenes";
             this.buttonOrdenes.UseVisualStyleBackColor = true;
             this.buttonOrdenes.Click += new System.EventHandler(this.buttonOrdenes_Click);
             // 
@@ -112,7 +112,7 @@ namespace CoolSoft.UI2._0
             this.buttonTecnicos.Name = "buttonTecnicos";
             this.buttonTecnicos.Size = new System.Drawing.Size(230, 50);
             this.buttonTecnicos.TabIndex = 1;
-            this.buttonTecnicos.Text = "Tecnicos";
+            this.buttonTecnicos.Text = "Técnicos";
             this.buttonTecnicos.UseVisualStyleBackColor = true;
             this.buttonTecnicos.Click += new System.EventHandler(this.buttonTecnicos_Click);
             // 
@@ -171,7 +171,7 @@ namespace CoolSoft.UI2._0
             this.labelTitulo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.labelTitulo.Location = new System.Drawing.Point(400, 5);
             this.labelTitulo.Name = "labelTitulo";
-            this.labelTitulo.Size = new System.Drawing.Size(284, 52);
+            this.labelTitulo.Size = new System.Drawing.Size(226, 42);
             this.labelTitulo.TabIndex = 4;
             this.labelTitulo.Text = "BIENVENIDO";
             this.labelTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelBorde_MouseDown);

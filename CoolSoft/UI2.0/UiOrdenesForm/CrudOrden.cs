@@ -148,7 +148,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
         private void FormatearDataGrid()
         {
 
-            dataGridView1.Columns["IdOrden"].HeaderText = "N° Orden";
+            dataGridView1.Columns["IdOrden"].HeaderText = "N° Órden";
 
             dataGridView1.Columns["TareaDesarrollar"].HeaderText = "Tarea";
             dataGridView1.Columns["TareaDesarrollar"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
@@ -183,7 +183,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
         private void buttonEliminar_Click(object sender, EventArgs e)
         {
 
-            string texto = "Örden N° " + dataGridView1.SelectedRows[0].Cells["IdOrden"].Value.ToString();
+            string texto = "Órden N° " + dataGridView1.SelectedRows[0].Cells["IdOrden"].Value.ToString();
             Eliminar fEliminar = new Eliminar(texto);
             Format.FormularioBorde(fEliminar, false);
             fEliminar.StartPosition = FormStartPosition.CenterScreen;

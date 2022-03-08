@@ -74,7 +74,7 @@ namespace CoolSoft.UI2._0.UiClientesForm
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(79, 18);
             this.label7.TabIndex = 58;
-            this.label7.Text = "Telefono 2";
+            this.label7.Text = "Teléfono 2";
             // 
             // label6
             // 
@@ -84,7 +84,7 @@ namespace CoolSoft.UI2._0.UiClientesForm
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(79, 18);
             this.label6.TabIndex = 57;
-            this.label6.Text = "Telefono 1";
+            this.label6.Text = "Teléfono 1";
             // 
             // label5
             // 

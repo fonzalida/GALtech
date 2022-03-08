@@ -33,6 +33,10 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
             this.panelBorde.SuspendLayout();
             this.SuspendLayout();
             // 
+            // label6
+            // 
+            this.label6.Text = "Teléfono";
+            // 
             // tbNombre
             // 
             this.tbNombre.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
@@ -51,7 +55,7 @@ namespace CoolSoft.UI2._0.UiTecnicosForm
             // labelTitulo
             // 
             this.labelTitulo.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.labelTitulo.Size = new System.Drawing.Size(215, 24);
+            this.labelTitulo.Size = new System.Drawing.Size(176, 19);
             this.labelTitulo.Text = "MODIFICAR TÉCNICO";
             // 
             // buttonCancelar

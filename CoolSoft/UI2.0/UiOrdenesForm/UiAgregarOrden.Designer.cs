@@ -47,7 +47,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             // labelTitulo
             // 
             this.labelTitulo.Size = new System.Drawing.Size(153, 19);
-            this.labelTitulo.Text = "AGREGAR ORDEN";
+            this.labelTitulo.Text = "AGREGAR ÓRDEN";
             // 
             // buttonCancelar
             // 
