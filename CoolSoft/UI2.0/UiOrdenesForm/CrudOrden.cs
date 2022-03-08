@@ -58,7 +58,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
 
             checkBoxTodos.Checked = true;
             dateTimePickerDesde.Value = new DateTime(DateTime.Now.Date.Year, DateTime.Now.Date.Month, 01);
-            dateTimePickerDesde.Value = DateTime.Now.Date;
+            dateTimePickerHasta.Value = DateTime.Now.Date;
 
             buttonRefrescar.Location = buttonVer.Location;
         }
@@ -141,6 +141,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             }
             dataGridView1.DataSource = null;
             dataGridView1.DataSource = tablaOrden;
+            FiltrarGrid();
 
             FormatearDataGrid();
         }
@@ -155,6 +156,9 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             
             dataGridView1.Columns["IdCliente"].Visible = false;
             dataGridView1.Columns["Completada"].Visible = false;
+
+            dataGridView1.Columns["Importe"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+
             dataGridView1.ClearSelection();
         }
 

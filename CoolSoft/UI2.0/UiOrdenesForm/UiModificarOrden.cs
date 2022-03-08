@@ -31,6 +31,13 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             tbTareaDesarrollar.Text = vieja.tareaDesarrollar;
             mtIdCliente.Text = vieja.idCliente.ToString();
             buttonModificar.Enabled = false;
+            textBoxImporte.Text = vieja.precio.ToString();
+
+            if(vieja.completada == 0)
+                checkBoxCompletada.Checked = false;
+            else
+                checkBoxCompletada.Checked = true;
+
             textBoxNombreCliente.Text = ClienteRepository.BuscarNombre(vieja.idCliente);
 
         }
@@ -88,6 +95,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             if (result == DialogResult.OK)
             {
                 mtIdCliente.Text = fagregar.idCliente.ToString();
+                textBoxNombreCliente.Text = ClienteRepository.BuscarNombre(int.Parse(mtIdCliente.Text));
             }
         }
 

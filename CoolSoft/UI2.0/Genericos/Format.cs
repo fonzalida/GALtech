@@ -57,6 +57,8 @@ namespace CoolSoft.UI2._0.Genericos
             dg.BorderStyle = BorderStyle.None;
             dg.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dg.MultiSelect = false;
+            dg.BorderStyle = BorderStyle.None;
+            dg.CellBorderStyle = DataGridViewCellBorderStyle.None;
 
 
             //ENCABEZADOS COLUMNAS
