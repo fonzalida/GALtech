@@ -1,4 +1,6 @@
-﻿using MySql.Data.MySqlClient;
+﻿
+using MySqlConnector;
+//using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -16,8 +18,8 @@ namespace CoolSoft.Modelo
 
         public Conexion()
         {
-            cadenaConexion = ConfigurationManager.ConnectionStrings["StringConexion"].ConnectionString;
-            //cadenaConexion = "server=localhost;port=3306;user id=root;password=;database=biosgastro"; 
+            //cadenaConexion = ConfigurationManager.ConnectionStrings["StringConexion"].ConnectionString;
+            cadenaConexion = "server=localhost;port=3306;user id=root;password=password;database=biosgastro"; 
             conexionBD = new MySqlConnection(cadenaConexion);
         }
 

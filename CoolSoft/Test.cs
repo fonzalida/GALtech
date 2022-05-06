@@ -1,7 +1,8 @@
 ﻿using CoolSoft.Modelo.ENTIDADES;
 using CoolSoft.Modelo.REPOSITORIO;
 using CoolSoft.Modelo.SERVICIO;
-using MySql.Data.MySqlClient;
+using MySqlConnector;
+//using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;

@@ -6,7 +6,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CoolSoft.Modelo.ENTIDADES;
-using MySql.Data.MySqlClient;
+using MySqlConnector;
+//using MySql.Data.MySqlClient;
 
 namespace CoolSoft.Modelo.REPOSITORIO
 {
