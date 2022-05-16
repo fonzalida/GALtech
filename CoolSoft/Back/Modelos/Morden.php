@@ -55,6 +55,24 @@
         return $resultado=$sql->fetchAll(PDO::FETCH_ASSOC);
       }
 
+      public function get_tecnico($dni){
+        $conectar= parent::conexion();
+        parent::set_names();
+        $sql="SELECT * FROM tecnico where Dni = ?";
+        $sql=$conectar->prepare($sql);
+        $sql->bindValue(1,$dni);
+        $sql->execute();
+
+
+        if($resultado=$sql->fetchAll(PDO::FETCH_ASSOC) != null ){
+          return $resultado=$sql->fetchAll(PDO::FETCH_ASSOC);
+        }else{
+          return '0';
+        }
+
+      }
+
+
       /*
       UPDATE biosgastro.parteorden
 SET FechaInicio={FechaInicio del body}, FechaFin={FechaFin del body}, TareaDesarrollada={TareaDesarrolladadel body}, Completa=1

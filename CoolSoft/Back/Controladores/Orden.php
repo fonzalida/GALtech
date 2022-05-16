@@ -24,6 +24,10 @@
         $datos=$orden->update_parte_orden($body["FechaInicio"],$body["FechaFin"],$body["TareaDesarrollada"],$body["IdParte"],$body["Completada"],$body["IdOrden"]);
         echo "Correcto";
       break;
+      case 'Login':
+      $datos=$orden->get_tecnico($body["DNI"]);
+      echo json_encode($datos);
+      break;
 
       default:
         // code...
