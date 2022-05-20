@@ -10,8 +10,6 @@ namespace CoolSoft.Modelo.ENTIDADES
     {
         public long idParte { get; set; }
         public int idOrden { get; set; }
-        public DateTime fechaInicio { get; set; }
-        public DateTime fechaFin { get; set; }
         public int completa { get; set; }
 
         public ParteOrden() { }

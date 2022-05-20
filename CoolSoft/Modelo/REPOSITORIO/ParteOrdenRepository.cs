@@ -47,7 +47,7 @@ namespace CoolSoft.Modelo.REPOSITORIO
 
         public static bool BuscarUno(long IdParte)
         {
-            String query = "SELECT * FROM PARTEORDEN WHERE IdParte = \"" + IdParte + "\"";
+            String query = "SELECT * FROM PARTEORDEN WHERE IdParte =" + IdParte;
 
             Conexion conexion = new Conexion();
             if (conexion.QuerySelect(query).Rows.Count == 1)
@@ -78,13 +78,14 @@ namespace CoolSoft.Modelo.REPOSITORIO
             conexion.QueryInsertDeleteUpdate(cmd);
         }
 
-        public static DataTable ListarTodos()
+        public static DataTable ListarTodos(int idOrden)
         {
-            String query = "SELECT * FROM PARTEORDEN";
+            String query = "SELECT * FROM PARTEORDEN WHERE IdOrden = " + idOrden;
 
             Conexion conexion = new Conexion();
             return conexion.QuerySelect(query);
 
         }
+
     }
 }

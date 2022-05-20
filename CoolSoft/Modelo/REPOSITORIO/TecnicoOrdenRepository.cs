@@ -65,14 +65,21 @@ namespace CoolSoft.Modelo.REPOSITORIO
 
         }
 
-        public static DataTable ListarTodos()
+        public static DataTable ListarTodos(int idParte)
         {
-            String query = "SELECT * FROM TECNICOORDEN";
+            String query = "SELECT * FROM TECNICOORDEN "+
+                           "INNER JOIN PARTEORDEN " +
+                           "ON TECNICOORDEN.IDPARTE = PARTEORDEN.IDPARTE " +
+                           "INNER JOIN TECNICO " +
+                           "ON TECNICO.DNI = TECNICOORDEN.DNI " +
+                           "WHERE PARTEORDEN.IdParte = " + idParte ;
 
             Conexion conexion = new Conexion();
             return conexion.QuerySelect(query);
 
         }
+
+
 
         public static bool BuscarUno(TecnicoOrden t)
         {

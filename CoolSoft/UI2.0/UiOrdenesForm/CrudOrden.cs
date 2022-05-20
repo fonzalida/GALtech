@@ -43,7 +43,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
         {
            
             formPrincipal = p;
-
+            
             b.nuevaBusqueda = true;
             fagregar = null;
             InitializeComponent();
@@ -86,7 +86,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             buttonEliminar.Enabled = false;
             buttonDetalles.Enabled = false;
 
-            buttonPartes.Enabled = false;
+            buttonPartes.Enabled = true;
             buttonPartes.Visible = false;
 
 
@@ -114,11 +114,46 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
 
             buttonRefrescar.Visible = true;
             buttonVer.Visible = false;
+            buttonPartes.Visible = true;
+            buttonPartes.Enabled = false;
 
 
         }
 
+        /*
+           private void buttonVer_Click(object sender, EventArgs e)
+        {
+            EstadoVer();
+            tablaCliente = ClienteRepository.ListarTodos();
+            dataGridView1.DataSource = null;
+            dataGridView1.DataSource = tablaCliente;
+
+            FormatearDataGrid();
+
+        }
+
         
+
+        private void FormatearDataGrid()
+        {
+            
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dataGridView1.Columns["IdCliente"].HeaderText = "ID";
+            dataGridView1.Columns["DNICUIT"].HeaderText = "DNI / CUIT";
+            dataGridView1.Columns["Domicilio"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dataGridView1.ClearSelection();
+
+        }
+
+        dataGridView1.SelectedRows[0].Cells["IdOrden"].Value.ToString()
+
+        private void buttonCancelar_Click(object sender, EventArgs e)
+        {
+            EstadoInicial();
+            dataGridView1.DataSource = null;
+        }
+         
+         */
 
         private void buttonVer_Click(object sender, EventArgs e)
         {
@@ -339,12 +374,14 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
                 buttonLimpiarSeleccion.Visible = true;
                 buttonEliminar.Enabled = true;
                 buttonDetalles.Enabled = true;
+                buttonPartes.Enabled = true;
             }
             else
             {
                 buttonLimpiarSeleccion.Visible = false;
                 buttonEliminar.Enabled = false;
                 buttonDetalles.Enabled = false;
+                buttonPartes.Enabled = false;
             }
         }
 
