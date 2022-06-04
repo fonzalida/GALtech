@@ -84,5 +84,15 @@ namespace CoolSoft.Modelo.REPOSITORIO
             return conexion.QuerySelect(query);
 
         }
+
+        public static DataTable ListarTodosMat(int idParte)
+        {
+            String query = "SELECT * FROM MATERIAL "+
+                           "WHERE MATERIAL.IdParte = " + idParte ;
+
+            Conexion conexion = new Conexion();
+            return conexion.QuerySelect(query);
+
+        }
     }
 }

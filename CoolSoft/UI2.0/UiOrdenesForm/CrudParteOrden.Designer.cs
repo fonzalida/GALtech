@@ -35,15 +35,16 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.buttonCancelar = new System.Windows.Forms.Button();
             this.buttonVer = new System.Windows.Forms.Button();
             this.buttonDetalles = new System.Windows.Forms.Button();
+            this.boton_chancho = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.buttonAgregar = new System.Windows.Forms.Button();
             this.buttonEliminar = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.boton_chancho = new System.Windows.Forms.Button();
             this.Descripcion = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
@@ -52,6 +53,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -83,6 +85,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.panelMenu.Controls.Add(this.buttonCancelar);
             this.panelMenu.Controls.Add(this.buttonVer);
             this.panelMenu.Controls.Add(this.buttonDetalles);
+            this.panelMenu.Controls.Add(this.boton_chancho);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMenu.Location = new System.Drawing.Point(2, 474);
             this.panelMenu.Margin = new System.Windows.Forms.Padding(2);
@@ -165,6 +168,17 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.buttonDetalles.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonDetalles.UseVisualStyleBackColor = false;
             // 
+            // boton_chancho
+            // 
+            this.boton_chancho.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.boton_chancho.Location = new System.Drawing.Point(370, 13);
+            this.boton_chancho.Name = "boton_chancho";
+            this.boton_chancho.Size = new System.Drawing.Size(91, 24);
+            this.boton_chancho.TabIndex = 2;
+            this.boton_chancho.Text = "boton chancho";
+            this.boton_chancho.UseVisualStyleBackColor = false;
+            this.boton_chancho.Click += new System.EventHandler(this.boton_chancho_Click);
+            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.dataGridView1);
@@ -225,10 +239,10 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.Control;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.dataGridView3);
             this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.checkBox1);
-            this.panel2.Controls.Add(this.boton_chancho);
             this.panel2.Controls.Add(this.Descripcion);
             this.panel2.Controls.Add(this.textBox1);
             this.panel2.Controls.Add(this.dataGridView2);
@@ -237,6 +251,16 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(441, 401);
             this.panel2.TabIndex = 4;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // dataGridView3
+            // 
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Location = new System.Drawing.Point(3, 165);
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.Size = new System.Drawing.Size(201, 231);
+            this.dataGridView3.TabIndex = 7;
+            this.dataGridView3.SelectionChanged += new System.EventHandler(this.dataGridView3_SelectionChanged);
             // 
             // button2
             // 
@@ -277,23 +301,12 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(73, 130);
+            this.checkBox1.Location = new System.Drawing.Point(73, 120);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(82, 17);
             this.checkBox1.TabIndex = 4;
             this.checkBox1.Text = "Completada";
             this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // boton_chancho
-            // 
-            this.boton_chancho.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.boton_chancho.Location = new System.Drawing.Point(64, 227);
-            this.boton_chancho.Name = "boton_chancho";
-            this.boton_chancho.Size = new System.Drawing.Size(91, 24);
-            this.boton_chancho.TabIndex = 2;
-            this.boton_chancho.Text = "boton chancho";
-            this.boton_chancho.UseVisualStyleBackColor = false;
-            this.boton_chancho.Click += new System.EventHandler(this.boton_chancho_Click);
             // 
             // Descripcion
             // 
@@ -309,16 +322,18 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.textBox1.Location = new System.Drawing.Point(30, 36);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(174, 63);
             this.textBox1.TabIndex = 2;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // dataGridView2
             // 
             this.dataGridView2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(73, 0);
+            this.dataGridView2.Location = new System.Drawing.Point(207, 0);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(366, 325);
+            this.dataGridView2.Size = new System.Drawing.Size(232, 325);
             this.dataGridView2.TabIndex = 1;
             // 
             // CrudParteOrden
@@ -338,6 +353,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
 
@@ -363,5 +379,6 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Label Descripcion;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.DataGridView dataGridView3;
     }
 }
