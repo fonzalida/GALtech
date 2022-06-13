@@ -16,8 +16,9 @@ namespace CoolSoft.Modelo
 
         public Conexion()
         {
-            cadenaConexion = ConfigurationManager.ConnectionStrings["StringConexion"].ConnectionString;
-            //cadenaConexion = "server=localhost;port=3306;user id=root;password=;database=biosgastro"; 
+            //cadenaConexion = ConfigurationManager.ConnectionStrings["StringConexion"].ConnectionString;
+            cadenaConexion = "server=localhost;port=3306;user id=root;password=;database=biosgastro"; 
+            //cadenaConexion = "server=45.152.46.1;port=3306;user id=u198557509_biosgastro;password=Galtech2022;database=u198557509_biosgastro"; 
             conexionBD = new MySqlConnection(cadenaConexion);
         }
 

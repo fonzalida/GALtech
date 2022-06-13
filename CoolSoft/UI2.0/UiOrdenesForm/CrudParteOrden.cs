@@ -37,8 +37,9 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             EstadoInicial();
             Format.DataGridView(dataGridView1);
             Format.DataGridView(dataGridView2);
+            Format.DataGridView(dataGridView3);
 
-            
+
             formPrincipal.CambiarTextoTitulo("Trabajos de Órden N° "+ formOrden.dataGridView1.SelectedRows[0].Cells["IdOrden"].Value.ToString());
 
             
@@ -209,17 +210,17 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             {
                
                 tablaTecnico = TecnicoOrdenRepository.ListarTodos(int.Parse(dataGridView1.SelectedRows[0].Cells["IdParte"].Value.ToString()));
-                dataGridView2.DataSource = null;
-                dataGridView2.DataSource = tablaTecnico;
-                dataGridView2.ClearSelection();
+                dataGridView3.DataSource = null;
+                dataGridView3.DataSource = tablaTecnico;
+                dataGridView3.ClearSelection();
                 FormatearDataGrid2();
                 
                 //textBox1.Text = dataGridView1.SelectedRows[1].Cells["TareaDesarrollada"].Value.ToString();
 
                 tablaMaterial = MaterialRepository.ListarTodosMat(int.Parse(dataGridView1.SelectedRows[0].Cells["IdParte"].Value.ToString()));
-                dataGridView3.DataSource = null;
-                dataGridView3.DataSource = tablaMaterial;
-                dataGridView3.ClearSelection();
+                dataGridView2.DataSource = null;
+                dataGridView2.DataSource = tablaMaterial;
+                dataGridView2.ClearSelection();
                 
                 FormatearDataGrid3();
 
@@ -234,18 +235,18 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
 
         private void FormatearDataGrid2()
         {
-            dataGridView2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            dataGridView2.Columns["Dni"].Visible = false;
-            dataGridView2.Columns["FechaInicio"].Visible = false;
-            dataGridView2.Columns["FechaFin"].Visible = false;
-            dataGridView2.Columns["IdParte"].Visible = false;
-            dataGridView2.Columns["IdParte1"].Visible = false;
-            dataGridView2.Columns["TareaDesarrollada"].Visible = false;
-            dataGridView2.Columns["IdOrden"].Visible = false;
-            dataGridView2.Columns["Completa"].Visible = false;
-            dataGridView2.Columns["Dni1"].Visible = false;
-            dataGridView2.Columns["Telefono"].Visible = false;
-            dataGridView2.Columns["Activo"].Visible = false;
+            dataGridView3.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dataGridView3.Columns["Dni"].Visible = false;
+            dataGridView3.Columns["FechaInicio"].Visible = false;
+            dataGridView3.Columns["FechaFin"].Visible = false;
+            dataGridView3.Columns["IdParte"].Visible = false;
+            dataGridView3.Columns["IdParte1"].Visible = false;
+            dataGridView3.Columns["TareaDesarrollada"].Visible = false;
+            dataGridView3.Columns["IdOrden"].Visible = false;
+            dataGridView3.Columns["Completa"].Visible = false;
+            dataGridView3.Columns["Dni1"].Visible = false;
+            dataGridView3.Columns["Telefono"].Visible = false;
+            dataGridView3.Columns["Activo"].Visible = false;
 
         }
 
@@ -253,13 +254,13 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
         {
             dataGridView3.ClearSelection();
 
-            dataGridView3.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            dataGridView3.Columns["IdParte"].Visible=false;
-            dataGridView3.Columns["IdMat"].Visible = false;
-            dataGridView3.Columns["IdOrden"].Visible = false;
+            dataGridView2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dataGridView2.Columns["IdParte"].Visible=false;
+            dataGridView2.Columns["IdMat"].Visible = false;
+            dataGridView2.Columns["IdOrden"].Visible = false;
             
-            dataGridView3.Columns["Cantidad"].HeaderText = "Cantidad";
-            dataGridView3.Columns["Descripcion"].HeaderText = "Descripción";
+            dataGridView2.Columns["Cantidad"].HeaderText = "Cantidad";
+            dataGridView2.Columns["Descripcion"].HeaderText = "Material";
 
         }
 
