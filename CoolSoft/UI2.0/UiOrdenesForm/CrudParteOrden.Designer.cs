@@ -337,7 +337,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.checkBox1.AutoSize = true;
             this.checkBox1.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(15, 49);
+            this.checkBox1.Location = new System.Drawing.Point(9, 49);
             this.checkBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(140, 29);
