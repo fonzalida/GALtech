@@ -93,6 +93,7 @@
     <Compile Include="Controlador\ClienteController.cs" />
     <Compile Include="Controlador\CG.cs" />
     <Compile Include="Controlador\OrdenController.cs" />
+    <Compile Include="Controlador\ParteOrdenController.cs" />
     <Compile Include="Controlador\TecnicoController.cs" />
     <Compile Include="Modelo\Conexion.cs" />
     <Compile Include="Modelo\ENTIDADES\Cliente.cs" />
@@ -365,6 +366,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI2.0\UiOrdenesForm\UiModificarOrden.resx">
       <DependentUpon>UiModificarOrden.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI2.0\UiOrdenesForm\UiModificarParteOrden.resx">
+      <DependentUpon>UiModificarParteOrden.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI2.0\UiOrdenesForm\UiSeleccionarCliente.resx">
       <DependentUpon>UiSeleccionarCliente.cs</DependentUpon>

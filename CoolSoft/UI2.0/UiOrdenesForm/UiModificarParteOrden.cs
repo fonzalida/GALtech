@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CoolSoft.Modelo.ENTIDADES;
+using CoolSoft.UI2._0.Genericos;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,10 +12,12 @@ using System.Windows.Forms;
 
 namespace CoolSoft.UI2._0.UiOrdenesForm
 {
-    public partial class UiModificarParteOrden : Form
+    public partial class UiModificarParteOrden : UiAgregarOrden
     {
-        public UiModificarParteOrden()
+        Orden vieja;
+        public UiModificarParteOrden(Orden v)
         {
+            vieja = v;
             InitializeComponent();
         }
     }

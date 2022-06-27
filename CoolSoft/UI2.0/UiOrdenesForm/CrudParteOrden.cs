@@ -11,13 +11,13 @@ using System.Windows.Forms;
 using Transitions;
 using CoolSoft.Modelo.REPOSITORIO;
 using CoolSoft.Modelo.ENTIDADES;
-
+using CoolSoft.Controlador;
 
 namespace CoolSoft.UI2._0.UiOrdenesForm
 {
     public partial class CrudParteOrden : Form
     {
-        
+        UiAgregarParteOrden fagregar;
         UiPrincipal formPrincipal;
         CrudOrden formOrden;
         DataTable tablaParte;
@@ -277,6 +277,33 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void buttonEliminar_Click(object sender, EventArgs e)
+        {
+            string texto = "Parte Órden N° " + dataGridView1.SelectedRows[0].Cells["IdParte"].Value.ToString();
+            Eliminar fEliminar = new Eliminar(texto);
+            Format.FormularioBorde(fEliminar, false);
+            fEliminar.StartPosition = FormStartPosition.CenterScreen;
+            var result = fEliminar.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+
+                ParteOrdenController.EliminarParteOrden(dataGridView1.SelectedRows[0].Cells);
+                EstadoVer();
+            }
+        }
+
+        private void buttonAgregar_Click(object sender, EventArgs e)
+        {
+            fagregar = new UiAgregarParteOrden();
+            Format.FormularioBorde(fagregar, false);
+            fagregar.StartPosition = FormStartPosition.CenterScreen;
+            var result = fagregar.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                EstadoVer();
+            }
         }
     }
 }
