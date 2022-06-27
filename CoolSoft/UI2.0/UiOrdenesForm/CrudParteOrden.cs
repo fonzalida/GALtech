@@ -305,5 +305,10 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
                 EstadoVer();
             }
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
