@@ -7,40 +7,40 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
+
 
 namespace CoolSoft.UI2._0.UiOrdenesForm
 {
-    public partial class UiSeleccionarCliente : CoolSoft.UI2._0.Genericos.UiAgregar
+    public partial class UiSeleccionarTécnico : CoolSoft.UI2._0.Genericos.UiAgregar
     {
-
-        DataTable tablaCliente;
-        UiAgregarOrden formAgregar;
-
-        public UiSeleccionarCliente(UiAgregarOrden f)
+        DataTable tablaTecnico;
+        UiAgregarParteOrden formAgregar;
+        public UiSeleccionarTécnico(UiAgregarParteOrden f)
         {
             formAgregar = f;
             InitializeComponent();
         }
 
-        private void UiSeleccionarCliente_Load(object sender, EventArgs e)
+        private void UiSeleccionarTécnico_Load(object sender, EventArgs e)
         {
-            tablaCliente = ClienteRepository.ListarTodos();
-            dataGridView1.DataSource = tablaCliente;
+            tablaTecnico= TecnicoRepository.ListarTodos();
+            dataGridView1.DataSource = tablaTecnico;
             Format.DataGridView(dataGridView1);
             buttonCargar.Enabled = false;
         }
 
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
         {
-            if(dataGridView1.SelectedRows.Count > 0)
+            if (dataGridView1.SelectedRows.Count > 0)
             {
                 buttonCargar.Enabled = true;
-                formAgregar.idCliente = int.Parse(dataGridView1.SelectedRows[0].Cells[0].Value.ToString());
+                //formAgregar.idParte = int.Parse(dataGridView1.SelectedRows[0].Cells[0].Value.ToString()); como agrego al tecnico?
             }
             else
             {
-                formAgregar.idCliente = -1;
+                //formAgregar.idParte = -1;
                 buttonCargar.Enabled = false;
             }
         }
@@ -53,9 +53,9 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             }
             if (actual.Text != "")
             {
-                if (tablaCliente == null)
+                if (tablaTecnico == null)
                 {
-                    tablaCliente = ClienteRepository.ListarTodos();
+                    tablaTecnico = TecnicoRepository.ListarTodos();
                 }
 
                 EnumerableRowCollection<DataRow> resultado;
@@ -66,13 +66,13 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
                     //            where a.Field<long>(indice).ToString().Contains(actual.Text)
                     //            select a;
 
-                    resultado = from a in tablaCliente.AsEnumerable()
+                    resultado = from a in tablaTecnico.AsEnumerable()
                                 where a.Field<long>(indice).ToString().IndexOf(actual.Text, StringComparison.OrdinalIgnoreCase) >= 0
                                 select a;
                 }
                 else
                 {
-                    resultado = from a in tablaCliente.AsEnumerable()
+                    resultado = from a in tablaTecnico.AsEnumerable()
                                 where a.Field<string>(indice).IndexOf(actual.Text, StringComparison.OrdinalIgnoreCase) >= 0
                                 select a;
                 }
@@ -92,17 +92,21 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             else
             {
                 dataGridView1.DataSource = null;
-                dataGridView1.DataSource = tablaCliente;
+                dataGridView1.DataSource = tablaTecnico;
                 FormatearDataGrid();
             }
         }
 
-
-        private void textBoxDni_KeyPress(object sender, KeyPressEventArgs e)
+        private void FormatearDataGrid()
         {
-            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
-        }
 
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dataGridView1.Columns[0].HeaderText = "DNI / CUIT";
+            dataGridView1.Columns[1].HeaderText = "NOMBRE";
+            dataGridView1.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dataGridView1.ClearSelection();
+
+        }
 
         private void textBoxDni_TextChanged(object sender, EventArgs e)
         {
@@ -114,6 +118,11 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             BuscarTexto(textBoxNombre, textBoxDni, 2);
         }
 
+        private void textBoxDni_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
         private void textBoxDni_MouseDown(object sender, MouseEventArgs e)
         {
             textBoxNombre.Text = "";
@@ -122,23 +131,6 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
         private void textBoxNombre_MouseDown(object sender, MouseEventArgs e)
         {
             textBoxDni.Text = "";
-        }
-
-
-        private void FormatearDataGrid()
-        {
-
-            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            dataGridView1.Columns[0].HeaderText = "ID";
-            dataGridView1.Columns[1].HeaderText = "DNI / CUIT";
-            dataGridView1.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            dataGridView1.ClearSelection();
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }

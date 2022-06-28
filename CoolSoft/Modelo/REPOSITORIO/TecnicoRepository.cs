@@ -97,5 +97,16 @@ namespace CoolSoft.Modelo.REPOSITORIO
             return conexion.QuerySelect(query);
 
         }
+
+        public static string BuscarNombre(int dni)
+        {
+            String query = "SELECT Nombre FROM CLIENTE WHERE dni = " + dni;
+            Conexion conexion = new Conexion();
+            var resultado = conexion.QuerySelect(query);
+            Console.WriteLine(resultado.Rows.Count);
+            return resultado.Rows[0].Field<string>("Nombre");
+
+
+        }
     }
 }

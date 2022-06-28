@@ -310,5 +310,20 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string texto =" Material "+ dataGridView2.SelectedRows[0].Cells["descripcion"].Value.ToString() + ", Cantidad " + dataGridView2.SelectedRows[0].Cells["cantidad"].Value.ToString();
+            Eliminar fEliminar = new Eliminar(texto);
+            Format.FormularioBorde(fEliminar, false);
+            fEliminar.StartPosition = FormStartPosition.CenterScreen;
+            var result = fEliminar.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+
+                MaterialController.EliminarMaterial(dataGridView2.SelectedRows[0].Cells);
+                EstadoVer();
+            }
+        }
     }
 }

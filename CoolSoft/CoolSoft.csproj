@@ -92,6 +92,7 @@
   <ItemGroup>
     <Compile Include="Controlador\ClienteController.cs" />
     <Compile Include="Controlador\CG.cs" />
+    <Compile Include="Controlador\MaterialController.cs" />
     <Compile Include="Controlador\OrdenController.cs" />
     <Compile Include="Controlador\ParteOrdenController.cs" />
     <Compile Include="Controlador\TecnicoController.cs" />
@@ -203,6 +204,12 @@
     </Compile>
     <Compile Include="UI2.0\UiOrdenesForm\UiSeleccionarCliente.Designer.cs">
       <DependentUpon>UiSeleccionarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI2.0\UiOrdenesForm\UiSeleccionarTécnico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI2.0\UiOrdenesForm\UiSeleccionarTécnico.Designer.cs">
+      <DependentUpon>UiSeleccionarTécnico.cs</DependentUpon>
     </Compile>
     <Compile Include="UI2.0\UiPrincipal.cs">
       <SubType>Form</SubType>
@@ -372,6 +379,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI2.0\UiOrdenesForm\UiSeleccionarCliente.resx">
       <DependentUpon>UiSeleccionarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI2.0\UiOrdenesForm\UiSeleccionarTécnico.resx">
+      <DependentUpon>UiSeleccionarTécnico.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI2.0\UiPrincipal.resx">
       <DependentUpon>UiPrincipal.cs</DependentUpon>

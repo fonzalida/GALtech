@@ -41,11 +41,19 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.labelTitulo.Size = new System.Drawing.Size(162, 19);
             this.labelTitulo.Text = "MODIFICAR ÓRDEN";
             // 
+            // buttonCancelar
+            // 
+            this.buttonCancelar.Location = new System.Drawing.Point(266, 434);
+            // 
+            // buttonCargar
+            // 
+            this.buttonCargar.Location = new System.Drawing.Point(108, 434);
+            // 
             // UiModificarParteOrden
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 473);
             this.Name = "UiModificarParteOrden";
             this.Text = "UiModificarParteOrden";
             this.panelBorde.ResumeLayout(false);

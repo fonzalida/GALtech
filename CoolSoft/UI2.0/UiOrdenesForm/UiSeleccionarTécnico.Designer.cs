@@ -1,17 +1,17 @@
 ﻿
 namespace CoolSoft.UI2._0.UiOrdenesForm
 {
-    partial class UiSeleccionarCliente
+    partial class UiSeleccionarTécnico
     {
         /// <summary>
-        /// Variable del diseñador necesaria.
+        /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        /// Limpiar los recursos que se estén usando.
+        /// Clean up any resources being used.
         /// </summary>
-        /// <param name="disposing">true si los recursos administrados se deben desechar; false en caso contrario.</param>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -21,11 +21,11 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             base.Dispose(disposing);
         }
 
-        #region Código generado por el Diseñador de Windows Forms
+        #region Windows Form Designer generated code
 
         /// <summary>
-        /// Método necesario para admitir el Diseñador. No se puede modificar
-        /// el contenido de este método con el editor de código.
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
@@ -43,27 +43,20 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             // panelBorde
             // 
             this.panelBorde.BackColor = System.Drawing.Color.DarkGoldenrod;
-            this.panelBorde.Size = new System.Drawing.Size(467, 50);
+            this.panelBorde.Size = new System.Drawing.Size(543, 50);
             // 
             // labelTitulo
             // 
-            this.labelTitulo.Size = new System.Drawing.Size(201, 19);
-            this.labelTitulo.Text = "SELECCIONAR CLIENTE";
+            this.labelTitulo.Size = new System.Drawing.Size(204, 19);
+            this.labelTitulo.Text = "SELECCIONAR TÉCNICO";
             // 
             // buttonCancelar
             // 
-            this.buttonCancelar.BackColor = System.Drawing.Color.DarkGoldenrod;
-            this.buttonCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonCancelar.Location = new System.Drawing.Point(303, 492);
-            this.buttonCancelar.Size = new System.Drawing.Size(150, 44);
+            this.buttonCancelar.Location = new System.Drawing.Point(235, 634);
             // 
             // buttonCargar
             // 
-            this.buttonCargar.BackColor = System.Drawing.Color.DarkGoldenrod;
-            this.buttonCargar.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.buttonCargar.Location = new System.Drawing.Point(145, 492);
-            this.buttonCargar.Size = new System.Drawing.Size(150, 44);
-            this.buttonCargar.Text = "Aceptar";
+            this.buttonCargar.Location = new System.Drawing.Point(77, 634);
             // 
             // panel1
             // 
@@ -71,10 +64,10 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.panel1.Controls.Add(this.textBoxNombre);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Location = new System.Drawing.Point(16, 82);
+            this.panel1.Location = new System.Drawing.Point(41, 56);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(433, 67);
-            this.panel1.TabIndex = 40;
+            this.panel1.TabIndex = 41;
             // 
             // textBoxDni
             // 
@@ -123,28 +116,30 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 155);
+            this.dataGridView1.Location = new System.Drawing.Point(41, 129);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(443, 312);
-            this.dataGridView1.TabIndex = 38;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.TabIndex = 42;
             this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
             // 
-            // UiSeleccionarCliente
+            // UiSeleccionarTécnico
             // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(232)))), ((int)(((byte)(187)))));
-            this.ClientSize = new System.Drawing.Size(467, 558);
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(543, 541);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "UiSeleccionarCliente";
-            this.Load += new System.EventHandler(this.UiSeleccionarCliente_Load);
+            this.Controls.Add(this.panel1);
+            this.Name = "UiSeleccionarTécnico";
+            this.Text = "UiSeleccionarTécnico";
+            this.Load += new System.EventHandler(this.UiSeleccionarTécnico_Load);
             this.Controls.SetChildIndex(this.panelBorde, 0);
             this.Controls.SetChildIndex(this.buttonCargar, 0);
             this.Controls.SetChildIndex(this.buttonCancelar, 0);
-            this.Controls.SetChildIndex(this.dataGridView1, 0);
             this.Controls.SetChildIndex(this.panel1, 0);
+            this.Controls.SetChildIndex(this.dataGridView1, 0);
             this.panelBorde.ResumeLayout(false);
             this.panelBorde.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -157,10 +152,10 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
         #endregion
 
         private System.Windows.Forms.Panel panel1;
+        public System.Windows.Forms.TextBox textBoxDni;
         public System.Windows.Forms.TextBox textBoxNombre;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView dataGridView1;
-        public System.Windows.Forms.TextBox textBoxDni;
     }
 }
