@@ -13,15 +13,16 @@ namespace CoolSoft.Controlador
     {
         public static void Cargar(
             
-            string IdParte,
-            string FechaInicio
+            //string IdParte,
+            string FechaInicio,
+            string TareaDesarrollada
             )
         {
             ParteOrden parte = new ParteOrden();
 
-            parte.idParte = int.Parse(IdParte);
+            //parte.idParte = int.Parse(IdParte);
             parte.fechaInicio = DateTime.Parse(FechaInicio);
-
+            parte.tareaDesarrollada = TareaDesarrollada;
             OrdenService.Agregar(parte);
         }
 
@@ -69,14 +70,15 @@ namespace CoolSoft.Controlador
         internal static void Modificar(
             
             string FechaInicio,
-            string FechaFin,
+            string TareaDesarrollada,
             bool completada,
             ParteOrden vieja)
         {
             ParteOrden parte = new ParteOrden();
             parte.fechaInicio = DateTime.Parse(FechaInicio);
-            parte.fechaFin = DateTime.Parse(FechaFin);
-            //orden.tareaDesarrollada = CG.EsNullOString(tareaDesarrollada);
+            parte.tareaDesarrollada = TareaDesarrollada;
+            parte.completa = int.Parse(completada.ToString());
+            parte.tareaDesarrollada = CG.EsNullOString(TareaDesarrollada);
           
 
             if (completada)

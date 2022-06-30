@@ -19,9 +19,9 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
     {
         ParteOrden vieja;
         
-        UiAgregarParteOrden fagregar;
+        UiAgregParteOrden fagregar;
         UiAgregarMaterial fagregarMat;
-        UiModificarParteOrden fModificar;
+        UiModifParteOrden fModificar;
         UiPrincipal formPrincipal;
         CrudOrden formOrden;
         DataTable tablaParte;
@@ -300,7 +300,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
 
         private void buttonAgregar_Click(object sender, EventArgs e)
         {
-            fagregar = new UiAgregarParteOrden();
+            fagregar = new UiAgregParteOrden();
             Format.FormularioBorde(fagregar, false);
             fagregar.StartPosition = FormStartPosition.CenterScreen;
             var result = fagregar.ShowDialog();
@@ -347,7 +347,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             vieja = ParteOrdenController.DataGridViewToParteOrden(dataGridView1.SelectedRows[0].Cells);
 
 
-            fModificar = new UiModificarParteOrden(vieja);
+            fModificar = new UiModifParteOrden(vieja);
             Format.FormularioBorde(fModificar, false);
             fModificar.StartPosition = FormStartPosition.CenterScreen;
             var result = fModificar.ShowDialog();

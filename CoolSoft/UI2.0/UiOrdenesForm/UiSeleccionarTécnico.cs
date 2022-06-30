@@ -16,8 +16,8 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
     public partial class UiSeleccionarTécnico : CoolSoft.UI2._0.Genericos.UiAgregar
     {
         DataTable tablaTecnico;
-        UiAgregarParteOrden formAgregar;
-        public UiSeleccionarTécnico(UiAgregarParteOrden f)
+        UiAgregParteOrden formAgregar;
+        public UiSeleccionarTécnico(UiAgregParteOrden f)
         {
             formAgregar = f;
             InitializeComponent();
@@ -36,11 +36,11 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             if (dataGridView1.SelectedRows.Count > 0)
             {
                 buttonCargar.Enabled = true;
-                //formAgregar.idParte = int.Parse(dataGridView1.SelectedRows[0].Cells[0].Value.ToString()); como agrego al tecnico?
+                formAgregar.dni = int.Parse(dataGridView1.SelectedRows[0].Cells[0].Value.ToString());
             }
             else
             {
-                //formAgregar.idParte = -1;
+                formAgregar.dni = -1;
                 buttonCargar.Enabled = false;
             }
         }
@@ -62,10 +62,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
 
                 if (indice == 1)
                 {
-                    //resultado = from a in tablaCliente.AsEnumerable() 
-                    //            where a.Field<long>(indice).ToString().Contains(actual.Text)
-                    //            select a;
-
+                    
                     resultado = from a in tablaTecnico.AsEnumerable()
                                 where a.Field<long>(indice).ToString().IndexOf(actual.Text, StringComparison.OrdinalIgnoreCase) >= 0
                                 select a;

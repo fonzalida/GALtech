@@ -193,6 +193,12 @@
     <Compile Include="UI2.0\UiOrdenesForm\UiAgregarParteOrden.Designer.cs">
       <DependentUpon>UiAgregarParteOrden.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI2.0\UiOrdenesForm\UiAgregParteOrden.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI2.0\UiOrdenesForm\UiAgregParteOrden.Designer.cs">
+      <DependentUpon>UiAgregParteOrden.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI2.0\UiOrdenesForm\UiModificarOrden.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -204,6 +210,12 @@
     </Compile>
     <Compile Include="UI2.0\UiOrdenesForm\UiModificarParteOrden.Designer.cs">
       <DependentUpon>UiModificarParteOrden.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI2.0\UiOrdenesForm\UiModifParteOrden.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI2.0\UiOrdenesForm\UiModifParteOrden.Designer.cs">
+      <DependentUpon>UiModifParteOrden.cs</DependentUpon>
     </Compile>
     <Compile Include="UI2.0\UiOrdenesForm\UiSeleccionarCliente.cs">
       <SubType>Form</SubType>
@@ -380,11 +392,17 @@
     <EmbeddedResource Include="UI2.0\UiOrdenesForm\UiAgregarParteOrden.resx">
       <DependentUpon>UiAgregarParteOrden.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI2.0\UiOrdenesForm\UiAgregParteOrden.resx">
+      <DependentUpon>UiAgregParteOrden.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI2.0\UiOrdenesForm\UiModificarOrden.resx">
       <DependentUpon>UiModificarOrden.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI2.0\UiOrdenesForm\UiModificarParteOrden.resx">
       <DependentUpon>UiModificarParteOrden.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI2.0\UiOrdenesForm\UiModifParteOrden.resx">
+      <DependentUpon>UiModifParteOrden.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI2.0\UiOrdenesForm\UiSeleccionarCliente.resx">
       <DependentUpon>UiSeleccionarCliente.cs</DependentUpon>
