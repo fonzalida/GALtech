@@ -78,7 +78,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.tableLayoutPanel1.Controls.Add(this.panel2, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(9, 10);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 65F));
@@ -97,7 +97,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.panelMenu.Controls.Add(this.boton_chancho);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMenu.Location = new System.Drawing.Point(2, 474);
-            this.panelMenu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelMenu.Margin = new System.Windows.Forms.Padding(2);
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(766, 61);
             this.panelMenu.TabIndex = 2;
@@ -112,7 +112,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.buttonCerrar.Image = global::CoolSoft.Properties.Resources.clear;
             this.buttonCerrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonCerrar.Location = new System.Drawing.Point(648, 1);
-            this.buttonCerrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonCerrar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonCerrar.MaximumSize = new System.Drawing.Size(114, 44);
             this.buttonCerrar.Name = "buttonCerrar";
             this.buttonCerrar.Size = new System.Drawing.Size(114, 44);
@@ -132,7 +132,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.buttonCancelar.Image = global::CoolSoft.Properties.Resources.cancel;
             this.buttonCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonCancelar.Location = new System.Drawing.Point(487, 0);
-            this.buttonCancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonCancelar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(114, 44);
             this.buttonCancelar.TabIndex = 19;
@@ -151,7 +151,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.buttonVer.Image = global::CoolSoft.Properties.Resources.check;
             this.buttonVer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonVer.Location = new System.Drawing.Point(238, 0);
-            this.buttonVer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonVer.Margin = new System.Windows.Forms.Padding(2);
             this.buttonVer.Name = "buttonVer";
             this.buttonVer.Size = new System.Drawing.Size(114, 44);
             this.buttonVer.TabIndex = 18;
@@ -169,13 +169,14 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.buttonDetalles.Image = global::CoolSoft.Properties.Resources.edit;
             this.buttonDetalles.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonDetalles.Location = new System.Drawing.Point(100, 2);
-            this.buttonDetalles.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonDetalles.Margin = new System.Windows.Forms.Padding(2);
             this.buttonDetalles.Name = "buttonDetalles";
             this.buttonDetalles.Size = new System.Drawing.Size(114, 44);
             this.buttonDetalles.TabIndex = 1;
             this.buttonDetalles.Text = "Detalles";
             this.buttonDetalles.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonDetalles.UseVisualStyleBackColor = false;
+            this.buttonDetalles.Click += new System.EventHandler(this.buttonDetalles_Click);
             // 
             // boton_chancho
             // 
@@ -219,7 +220,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.buttonEliminar.Image = global::CoolSoft.Properties.Resources.delete;
             this.buttonEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonEliminar.Location = new System.Drawing.Point(172, 344);
-            this.buttonEliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonEliminar.Name = "buttonEliminar";
             this.buttonEliminar.Size = new System.Drawing.Size(114, 44);
             this.buttonEliminar.TabIndex = 2;
@@ -237,7 +238,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.buttonAgregar.Image = global::CoolSoft.Properties.Resources.add;
             this.buttonAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonAgregar.Location = new System.Drawing.Point(19, 344);
-            this.buttonAgregar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonAgregar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonAgregar.Name = "buttonAgregar";
             this.buttonAgregar.Size = new System.Drawing.Size(114, 44);
             this.buttonAgregar.TabIndex = 0;
@@ -353,7 +354,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.button2.ForeColor = System.Drawing.SystemColors.Control;
             this.button2.Image = global::CoolSoft.Properties.Resources.delete;
             this.button2.Location = new System.Drawing.Point(98, 343);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(37, 33);
             this.button2.TabIndex = 6;
@@ -370,12 +371,13 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.button1.ForeColor = System.Drawing.SystemColors.Control;
             this.button1.Image = global::CoolSoft.Properties.Resources.add;
             this.button1.Location = new System.Drawing.Point(57, 343);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(37, 33);
             this.button1.TabIndex = 5;
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -448,7 +450,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.ClientSize = new System.Drawing.Size(788, 557);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "CrudParteOrden";
             this.Text = "CrudParteOrden";
             this.Load += new System.EventHandler(this.CrudParteOrden_Load);

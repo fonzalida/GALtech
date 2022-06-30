@@ -47,11 +47,9 @@ namespace CoolSoft.Controlador
 
             parte.idParte = int.Parse(dr["IdParte"].Value.ToString());
             parte.fechaInicio = DateTime.Parse(dr["FechaInicio"].Value.ToString());
-            parte.fechaFin = DateTime.Parse(dr["FechaFin"].Value.ToString());
+            parte.fechaFin = DateTime.Parse(dr["fechaFin"].Value.ToString());
             
 
-            
-            Console.WriteLine(dr["Completada"].Value.ToString());
 
             if (dr["Completa"].Value.ToString() == "True")
             {

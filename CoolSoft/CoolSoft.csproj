@@ -175,6 +175,12 @@
     <Compile Include="UI2.0\UiOrdenesForm\CrudParteOrden.Designer.cs">
       <DependentUpon>CrudParteOrden.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI2.0\UiOrdenesForm\UiAgregarMaterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI2.0\UiOrdenesForm\UiAgregarMaterial.Designer.cs">
+      <DependentUpon>UiAgregarMaterial.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI2.0\UiOrdenesForm\UiAgregarOrden.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -364,6 +370,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI2.0\UiOrdenesForm\CrudParteOrden.resx">
       <DependentUpon>CrudParteOrden.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI2.0\UiOrdenesForm\UiAgregarMaterial.resx">
+      <DependentUpon>UiAgregarMaterial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI2.0\UiOrdenesForm\UiAgregarOrden.resx">
       <DependentUpon>UiAgregarOrden.cs</DependentUpon>

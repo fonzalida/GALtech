@@ -17,7 +17,11 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
 {
     public partial class CrudParteOrden : Form
     {
+        ParteOrden vieja;
+        
         UiAgregarParteOrden fagregar;
+        UiAgregarMaterial fagregarMat;
+        UiModificarParteOrden fModificar;
         UiPrincipal formPrincipal;
         CrudOrden formOrden;
         DataTable tablaParte;
@@ -73,7 +77,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             //buttonRefrescar.Visible = false;
             buttonVer.Visible = true;
             buttonCancelar.Visible = false;
-            buttonDetalles.Visible = false;
+            buttonDetalles.Visible = true;
             //dateTimePickerHasta.MinDate = dateTimePickerDesde.Value;
             
         }
@@ -86,7 +90,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             //panelFechas.Enabled = false;
 
             buttonAgregar.Enabled = true;
-
+            buttonDetalles.Enabled = true;
             buttonVer.Enabled = false;
             buttonCancelar.Enabled = true;
 
@@ -322,6 +326,33 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             {
 
                 MaterialController.EliminarMaterial(dataGridView2.SelectedRows[0].Cells);
+                EstadoVer();
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            fagregarMat = new UiAgregarMaterial();
+            Format.FormularioBorde(fagregarMat, false);
+            fagregarMat.StartPosition = FormStartPosition.CenterScreen;
+            var result = fagregarMat.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                EstadoVer();
+            }
+        }
+
+        private void buttonDetalles_Click(object sender, EventArgs e)
+        {
+            vieja = ParteOrdenController.DataGridViewToParteOrden(dataGridView1.SelectedRows[0].Cells);
+
+
+            fModificar = new UiModificarParteOrden(vieja);
+            Format.FormularioBorde(fModificar, false);
+            fModificar.StartPosition = FormStartPosition.CenterScreen;
+            var result = fModificar.ShowDialog();
+            if (result == DialogResult.OK)
+            {
                 EstadoVer();
             }
         }
