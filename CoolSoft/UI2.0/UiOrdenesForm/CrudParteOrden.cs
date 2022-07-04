@@ -262,7 +262,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             dataGridView2.Columns["IdParte"].Visible=false;
             dataGridView2.Columns["IdMat"].Visible = false;
             dataGridView2.Columns["IdOrden"].Visible = false;
-            
+            dataGridView2.Columns["TareaDesarrollada"].Visible = false;
             dataGridView2.Columns["Cantidad"].HeaderText = "Cantidad";
             dataGridView2.Columns["Descripcion"].HeaderText = "Material";
 
@@ -275,7 +275,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            //textBox1.Text = dataGridView1.SelectedRows[1].Cells["TareaDesarrollada"].Value.ToString();
+            textBox1.Text = dataGridView1.SelectedRows[0].Cells["TareaDesarrollada"].Value.ToString();
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)

@@ -35,7 +35,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.buttonCancelar = new System.Windows.Forms.Button();
             this.buttonVer = new System.Windows.Forms.Button();
             this.buttonDetalles = new System.Windows.Forms.Button();
-            this.boton_chancho = new System.Windows.Forms.Button();
+            this.boton_refrescar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.buttonEliminar = new System.Windows.Forms.Button();
@@ -94,7 +94,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.panelMenu.Controls.Add(this.buttonCancelar);
             this.panelMenu.Controls.Add(this.buttonVer);
             this.panelMenu.Controls.Add(this.buttonDetalles);
-            this.panelMenu.Controls.Add(this.boton_chancho);
+            this.panelMenu.Controls.Add(this.boton_refrescar);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMenu.Location = new System.Drawing.Point(2, 474);
             this.panelMenu.Margin = new System.Windows.Forms.Padding(2);
@@ -178,16 +178,17 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.buttonDetalles.UseVisualStyleBackColor = false;
             this.buttonDetalles.Click += new System.EventHandler(this.buttonDetalles_Click);
             // 
-            // boton_chancho
+            // boton_refrescar
             // 
-            this.boton_chancho.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.boton_chancho.Location = new System.Drawing.Point(370, 13);
-            this.boton_chancho.Name = "boton_chancho";
-            this.boton_chancho.Size = new System.Drawing.Size(91, 24);
-            this.boton_chancho.TabIndex = 2;
-            this.boton_chancho.Text = "boton chancho";
-            this.boton_chancho.UseVisualStyleBackColor = false;
-            this.boton_chancho.Click += new System.EventHandler(this.boton_chancho_Click);
+            this.boton_refrescar.BackColor = System.Drawing.Color.ForestGreen;
+            this.boton_refrescar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.boton_refrescar.Location = new System.Drawing.Point(369, 8);
+            this.boton_refrescar.Name = "boton_refrescar";
+            this.boton_refrescar.Size = new System.Drawing.Size(91, 31);
+            this.boton_refrescar.TabIndex = 2;
+            this.boton_refrescar.Text = "Refrescar";
+            this.boton_refrescar.UseVisualStyleBackColor = false;
+            this.boton_refrescar.Click += new System.EventHandler(this.boton_chancho_Click);
             // 
             // panel1
             // 
@@ -480,7 +481,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.Button boton_chancho;
+        private System.Windows.Forms.Button boton_refrescar;
         public System.Windows.Forms.Button button2;
         public System.Windows.Forms.Button button1;
         private System.Windows.Forms.CheckBox checkBox1;

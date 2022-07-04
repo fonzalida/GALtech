@@ -22,7 +22,7 @@ namespace CoolSoft.Controlador
 
             //parte.idParte = int.Parse(IdParte);
             parte.fechaInicio = DateTime.Parse(FechaInicio);
-            parte.tareaDesarrollada = TareaDesarrollada;
+            parte.tareaDesarrollada = CG.EsNullOString(TareaDesarrollada);
             OrdenService.Agregar(parte);
         }
 
@@ -49,6 +49,7 @@ namespace CoolSoft.Controlador
             parte.idParte = int.Parse(dr["IdParte"].Value.ToString());
             parte.fechaInicio = DateTime.Parse(dr["FechaInicio"].Value.ToString());
             parte.fechaFin = DateTime.Parse(dr["fechaFin"].Value.ToString());
+            parte.tareaDesarrollada = dr["TareaDesarrollada"].Value.ToString();
             
 
 
@@ -76,9 +77,9 @@ namespace CoolSoft.Controlador
         {
             ParteOrden parte = new ParteOrden();
             parte.fechaInicio = DateTime.Parse(FechaInicio);
-            parte.tareaDesarrollada = TareaDesarrollada;
-            parte.completa = int.Parse(completada.ToString());
             parte.tareaDesarrollada = CG.EsNullOString(TareaDesarrollada);
+            parte.completa = int.Parse(completada.ToString());
+            
           
 
             if (completada)

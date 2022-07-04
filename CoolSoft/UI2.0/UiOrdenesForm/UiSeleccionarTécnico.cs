@@ -60,7 +60,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
 
                 EnumerableRowCollection<DataRow> resultado;
 
-                if (indice == 1)
+                if (indice == 0)
                 {
                     
                     resultado = from a in tablaTecnico.AsEnumerable()

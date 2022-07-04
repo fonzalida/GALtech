@@ -18,14 +18,15 @@ namespace CoolSoft.Modelo.REPOSITORIO
          MySqlCommand cmd = new MySqlCommand(
                       "INSERT INTO PARTEORDEN" +
                        "(IdParte, IdOrden, Completa, FechaInicio, FechaFin)" +
-                       " VALUES (@IdParte, @IdOrden, @Completa, @FechaInicio, @FechaFin)"
+                       " VALUES (@IdParte, @IdOrden, @Completa, @FechaInicio, @FechaFin, @TareaDesarrollada)"
                        );
 
           cmd.Parameters.AddWithValue("@IdParte", p.idParte);
           cmd.Parameters.AddWithValue("@IdOrden", p.idOrden);
           cmd.Parameters.AddWithValue("@FechaInicio", p.fechaInicio);
           cmd.Parameters.AddWithValue("@FechaFin", p.fechaFin);
-          cmd.Parameters.AddWithValue("@Completa", p.completa);
+            cmd.Parameters.AddWithValue("@TareaDesarrollada", p.tareaDesarrollada);
+            cmd.Parameters.AddWithValue("@Completa", p.completa);
 
             Conexion conexion = new Conexion();
             conexion.QueryInsertDeleteUpdate(cmd);
@@ -71,6 +72,7 @@ namespace CoolSoft.Modelo.REPOSITORIO
 
             cmd.Parameters.AddWithValue("@FechaInicio2", pn.fechaInicio);
             cmd.Parameters.AddWithValue("@FechaFin2", pn.fechaFin);
+            cmd.Parameters.AddWithValue("@TareaDesarrollada2", pn.tareaDesarrollada);
             cmd.Parameters.AddWithValue("@Completa2", pn.completa);
 
             Conexion conexion = new Conexion();
