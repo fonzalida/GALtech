@@ -46,7 +46,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             // 
             // labelTitulo
             // 
-            this.labelTitulo.Size = new System.Drawing.Size(153, 19);
+            this.labelTitulo.Size = new System.Drawing.Size(186, 24);
             this.labelTitulo.Text = "AGREGAR ÓRDEN";
             // 
             // buttonCancelar
@@ -65,9 +65,11 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.dtFechaRecepcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtFechaRecepcion.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtFechaRecepcion.Location = new System.Drawing.Point(19, 93);
+            this.dtFechaRecepcion.MaxDate = new System.DateTime(2022, 7, 5, 0, 0, 0, 0);
             this.dtFechaRecepcion.Name = "dtFechaRecepcion";
-            this.dtFechaRecepcion.Size = new System.Drawing.Size(205, 26);
+            this.dtFechaRecepcion.Size = new System.Drawing.Size(205, 30);
             this.dtFechaRecepcion.TabIndex = 30;
+            this.dtFechaRecepcion.Value = new System.DateTime(2022, 7, 5, 0, 0, 0, 0);
             // 
             // label3
             // 
@@ -75,7 +77,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(12, 310);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(58, 20);
+            this.label3.Size = new System.Drawing.Size(73, 25);
             this.label3.TabIndex = 29;
             this.label3.Text = "Cliente";
             // 
@@ -85,7 +87,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(12, 143);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(145, 20);
+            this.label2.Size = new System.Drawing.Size(182, 25);
             this.label2.TabIndex = 28;
             this.label2.Text = "Tarea a desarrollar:";
             // 
@@ -95,7 +97,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(15, 70);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(149, 20);
+            this.label1.Size = new System.Drawing.Size(184, 25);
             this.label1.TabIndex = 27;
             this.label1.Text = "Fecha de recepción";
             // 
@@ -108,7 +110,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.mtIdCliente.Name = "mtIdCliente";
             this.mtIdCliente.PromptChar = ' ';
             this.mtIdCliente.ReadOnly = true;
-            this.mtIdCliente.Size = new System.Drawing.Size(219, 19);
+            this.mtIdCliente.Size = new System.Drawing.Size(219, 23);
             this.mtIdCliente.TabIndex = 25;
             this.mtIdCliente.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.mtIdCliente.TextChanged += new System.EventHandler(this.mtIdCliente_TextChanged);
@@ -149,7 +151,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.textBoxNombreCliente.Location = new System.Drawing.Point(195, 310);
             this.textBoxNombreCliente.Name = "textBoxNombreCliente";
             this.textBoxNombreCliente.ReadOnly = true;
-            this.textBoxNombreCliente.Size = new System.Drawing.Size(219, 19);
+            this.textBoxNombreCliente.Size = new System.Drawing.Size(219, 23);
             this.textBoxNombreCliente.TabIndex = 76;
             this.textBoxNombreCliente.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 

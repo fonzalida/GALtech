@@ -401,7 +401,6 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             FiltrarGrid();
-           
         }
 
         private void FiltrarGrid()

@@ -22,7 +22,8 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
 
         private void UiAgregarOrden_Load(object sender, EventArgs e)
         {
-            buttonCargar.Enabled = false;         
+            buttonCargar.Enabled = false;
+            dtFechaRecepcion.MaxDate = DateTime.Now;
         }
 
         private void buttonCargar_Click(object sender, EventArgs e)
