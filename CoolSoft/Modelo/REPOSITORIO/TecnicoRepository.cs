@@ -16,8 +16,8 @@ namespace CoolSoft.Modelo.REPOSITORIO
             // String query = "Insert into Tecnico (dni) values (" + p.dni +")";
 
             MySqlCommand cmd = new MySqlCommand(
-               "INSERT INTO TECNICO" +
-                "(dni, nombre, telefono)" +
+               "INSERT INTO tecnico" +
+                "(Dni, Nombre, Telefono)" +
                  " VALUES (@dni, @nombre, @telefono); " +
                   " SELECT LAST_INSERT_ID();"
                );
@@ -35,9 +35,9 @@ namespace CoolSoft.Modelo.REPOSITORIO
         {
             Conexion conexion = new Conexion();
             MySqlCommand cmd = new MySqlCommand(
-               "UPDATE TECNICO " +
-                 "SET activo = 1 " +
-                  "where dni = @dni  ");
+               "UPDATE tecnico " +
+                 "SET Activo = 1 " +
+                  "where Dni = @dni  ");
             cmd.Parameters.AddWithValue("@dni", dni);
             conexion.QueryInsertDeleteUpdate(cmd);
         }
@@ -47,9 +47,9 @@ namespace CoolSoft.Modelo.REPOSITORIO
             Conexion conexion = new Conexion();
 
             MySqlCommand cmd = new MySqlCommand(
-               "UPDATE TECNICO " +
-                 "SET activo = 0 " +
-                  "where dni = @dni  ");
+               "UPDATE tecnico " +
+                 "SET Activo = 0 " +
+                  "where Dni = @dni  ");
            
 
             cmd.Parameters.AddWithValue("@dni", p.dni);
@@ -62,9 +62,9 @@ namespace CoolSoft.Modelo.REPOSITORIO
         {
 
             MySqlCommand cmd = new MySqlCommand(
-                "UPDATE TECNICO " +
-                 "SET dni = @dni2, nombre = @nombre2, telefono = @telefono2, Activo = 1 " +
-                  "where dni = @dni  ");
+                "UPDATE tecnico " +
+                 "SET Dni = @dni2, Nombre = @nombre2, Telefono = @telefono2, Activo = 1 " +
+                  "where Dni = @dni  ");
 
             cmd.Parameters.AddWithValue("@dni", viejo.dni);
 
@@ -79,7 +79,7 @@ namespace CoolSoft.Modelo.REPOSITORIO
 
         public static bool BuscarUno(int dni)
         {
-            String query = "SELECT * FROM TECNICO WHERE dni = \"" + dni + "\"";
+            String query = "SELECT * FROM tecnico WHERE Dni = \"" + dni + "\"";
 
             Conexion conexion = new Conexion();
             if (conexion.QuerySelect(query).Rows.Count == 1)
@@ -91,7 +91,7 @@ namespace CoolSoft.Modelo.REPOSITORIO
 
         public static DataTable ListarTodos()
         {
-            String query = "SELECT * FROM TECNICO WHERE Activo = 1";
+            String query = "SELECT * FROM tecnico WHERE Activo = 1";
 
             Conexion conexion = new Conexion();
             return conexion.QuerySelect(query);
@@ -100,7 +100,7 @@ namespace CoolSoft.Modelo.REPOSITORIO
 
         public static string BuscarNombre(int dni)
         {
-            String query = "SELECT Nombre FROM CLIENTE WHERE dni = " + dni;
+            String query = "SELECT Nombre FROM tecnico WHERE Dni = " + dni;
             Conexion conexion = new Conexion();
             var resultado = conexion.QuerySelect(query);
             Console.WriteLine(resultado.Rows.Count);

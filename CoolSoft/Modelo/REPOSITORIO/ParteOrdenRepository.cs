@@ -16,7 +16,7 @@ namespace CoolSoft.Modelo.REPOSITORIO
             // String query = "Insert into parteorden (idp, id, fechainicio, fechafin, completa) values (" + p.IdP + "," + p.Id + "," + p.FechaInicio + "," + p.FechaFin + "," + p.Completa + ")";
 
          MySqlCommand cmd = new MySqlCommand(
-                      "INSERT INTO PARTEORDEN" +
+                      "INSERT INTO parteorden" +
                        "(IdParte, IdOrden, Completa, FechaInicio, FechaFin)" +
                        " VALUES (@IdParte, @IdOrden, @Completa, @FechaInicio, @FechaFin, @TareaDesarrollada)"
                        );
@@ -37,7 +37,7 @@ namespace CoolSoft.Modelo.REPOSITORIO
             Conexion conexion = new Conexion();
 
             MySqlCommand cmd = new MySqlCommand(
-                "DELETE FROM PARTEORDEN " +
+                "DELETE FROM parteorden " +
                 "where IdParte = @IdParte"
                 );
 
@@ -48,7 +48,7 @@ namespace CoolSoft.Modelo.REPOSITORIO
 
         public static bool BuscarUno(long IdParte)
         {
-            String query = "SELECT * FROM PARTEORDEN WHERE IdParte =" + IdParte;
+            String query = "SELECT * FROM parteorden WHERE IdParte =" + IdParte;
 
             Conexion conexion = new Conexion();
             if (conexion.QuerySelect(query).Rows.Count == 1)
@@ -62,7 +62,7 @@ namespace CoolSoft.Modelo.REPOSITORIO
         {
 
             MySqlCommand cmd = new MySqlCommand(
-                "UPDATE PARTEORDEN" +
+                "UPDATE parteorden" +
                  "SET Completa = @Completa2" +
                   "where IdParte = @IdParte");
 
@@ -82,7 +82,7 @@ namespace CoolSoft.Modelo.REPOSITORIO
 
         public static DataTable ListarTodos(int idOrden)
         {
-            String query = "SELECT * FROM PARTEORDEN WHERE IdOrden = " + idOrden;
+            String query = "SELECT * FROM parteorden WHERE IdOrden = " + idOrden;
 
             Conexion conexion = new Conexion();
             return conexion.QuerySelect(query);
