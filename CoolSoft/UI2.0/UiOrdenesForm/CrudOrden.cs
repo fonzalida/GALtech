@@ -308,19 +308,19 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
                 b.actual = 0;
 
                 EnumerableRowCollection<int> resultado;
-
+                var tablaTemp = (dataGridView1.DataSource as DataTable).DefaultView.ToTable();
 
                 if (indice == 1)
                 {
-                    resultado = from a in tablaOrden.AsEnumerable()
+                    resultado = from a in tablaTemp.AsEnumerable()
                                 where a.Field<int>(indice).ToString().StartsWith(actual.Text)
-                                select tablaOrden.Rows.IndexOf(a);
+                                select tablaTemp.Rows.IndexOf(a);
                 }
                 else
                 {
-                    resultado = from a in tablaOrden.AsEnumerable()
+                    resultado = from a in tablaTemp.AsEnumerable()
                                 where a.Field<string>(indice).IndexOf(actual.Text, StringComparison.OrdinalIgnoreCase) >= 0
-                                select tablaOrden.Rows.IndexOf(a);
+                                select tablaTemp.Rows.IndexOf(a);
                 }
 
                 if (resultado.Count() > 0)
@@ -330,6 +330,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
                     FormatearDataGrid();
                     Console.WriteLine("Indice de la busqueda " + b.listaIndices[b.actual]);
                     dataGridView1.Rows[b.listaIndices[b.actual]].Selected = true;
+                    dataGridView1.CurrentCell = dataGridView1.Rows[b.listaIndices[b.actual]].Cells[0];
                     b.actual++;
                     b.nuevaBusqueda = false;
                     //FiltrarGrid();
@@ -347,6 +348,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
                 {
                     dataGridView1.ClearSelection();
                     dataGridView1.Rows[b.listaIndices[b.actual]].Selected = true;
+                    dataGridView1.CurrentCell = dataGridView1.Rows[b.listaIndices[b.actual]].Cells[0];
                     b.actual++;
                 }
                 else
@@ -416,6 +418,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
 
             }
             dataGridView1.ClearSelection();
+            
 
         }
 

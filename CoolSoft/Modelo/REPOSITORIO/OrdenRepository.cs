@@ -11,7 +11,7 @@ using MySqlConnector;
 namespace CoolSoft.Modelo.REPOSITORIO
 {
     public static class OrdenRepository
-    {
+    { 
         public static int agregar(Orden p)
         {
             MySqlCommand cmd = new MySqlCommand(
