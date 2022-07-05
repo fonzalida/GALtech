@@ -18,14 +18,14 @@ namespace CoolSoft.Modelo.REPOSITORIO
          MySqlCommand cmd = new MySqlCommand(
                       "INSERT INTO parteorden" +
                        "(IdParte, IdOrden, Completa, FechaInicio, FechaFin)" +
-                       " VALUES (@IdParte, @IdOrden, @Completa, @FechaInicio, @FechaFin, @TareaDesarrollada)"
+                       " VALUES (@IdParte, @IdOrden, @Completa, @FechaInicio, @FechaFin)"
                        );
 
           cmd.Parameters.AddWithValue("@IdParte", p.idParte);
           cmd.Parameters.AddWithValue("@IdOrden", p.idOrden);
           cmd.Parameters.AddWithValue("@FechaInicio", p.fechaInicio);
           cmd.Parameters.AddWithValue("@FechaFin", p.fechaFin);
-            cmd.Parameters.AddWithValue("@TareaDesarrollada", p.tareaDesarrollada);
+           // cmd.Parameters.AddWithValue("@TareaDesarrollada", p.tareaDesarrollada);
             cmd.Parameters.AddWithValue("@Completa", p.completa);
 
             Conexion conexion = new Conexion();

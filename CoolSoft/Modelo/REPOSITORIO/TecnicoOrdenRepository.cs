@@ -69,7 +69,7 @@ namespace CoolSoft.Modelo.REPOSITORIO
         {
             String query = "SELECT * FROM tecnicoorden "+
                            "INNER JOIN parteorden " +
-                           "ON tecnicoorden.IDPARTE = parteorden.IdParte" +
+                           "ON tecnicoorden.IdParte = parteorden.IdParte " +
                            "INNER JOIN tecnico " +
                            "ON tecnico.Dni = tecnicoorden.Dni " +
                            "WHERE parteorden.IdParte = " + idParte ;

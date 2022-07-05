@@ -18,7 +18,7 @@ namespace CoolSoft.Modelo.REPOSITORIO
                 "INSERT INTO orden" +
                 "(FechaRecepcion ,TareaDesarrollar, IdCliente, Precio) " +
                 "VALUES (@FechaRecepcion, @TareaDesarrollar, @IdCliente, 0);" +
-               "SELECT LAST_INSERT_ID();"
+                "SELECT LAST_INSERT_ID();"
                 );
 
             cmd.Parameters.AddWithValue("@FechaRecepcion",p.fechaRecepcion.Date.ToString("yyyy-MM-dd"));
@@ -99,7 +99,7 @@ namespace CoolSoft.Modelo.REPOSITORIO
                 "cliente.IdCliente " +
                 "FROM orden " +
                 "INNER JOIN cliente " +
-                "ON ORDEN.IDCLIENTE = cliente.IdCliente " +
+                "ON orden.IdCliente = cliente.IdCliente " +
                 "where Eliminada = 0";
             
 

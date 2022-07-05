@@ -262,7 +262,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             dataGridView2.Columns["IdParte"].Visible=false;
             dataGridView2.Columns["IdMat"].Visible = false;
             dataGridView2.Columns["IdOrden"].Visible = false;
-            dataGridView2.Columns["TareaDesarrollada"].Visible = false;
+           // dataGridView2.Columns["TareaDesarrollada"].Visible = false;
             dataGridView2.Columns["Cantidad"].HeaderText = "Cantidad";
             dataGridView2.Columns["Descripcion"].HeaderText = "Material";
 
