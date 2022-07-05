@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CoolSoft.Modelo.ENTIDADES;
-using MySql.Data.MySqlClient;
+using MySqlConnector;
 
 namespace CoolSoft.Modelo.REPOSITORIO
 {
@@ -91,7 +91,7 @@ namespace CoolSoft.Modelo.REPOSITORIO
         public static DataTable ListarTodos()
         {
             String query =
-                "SELECT DATE_FORMAT(DATE(FechaRecepcion), \"%d %c %Y\") AS Recepcion, " +
+                "SELECT DATE_FORMAT(DATE(FechaRecepcion), \"%d-%c-%Y\") AS Recepcion, " +
                 "IdOrden, TareaDesarrollar, " +
                 "Nombre AS Cliente, " +
                 "Precio AS Importe, " +
@@ -100,7 +100,8 @@ namespace CoolSoft.Modelo.REPOSITORIO
                 "FROM orden " +
                 "INNER JOIN cliente " +
                 "ON orden.IdCliente = cliente.IdCliente " +
-                "where Eliminada = 0";
+                "where Eliminada = 0" +
+                " order by IdOrden desc";
             
 
             //            INNER JOIN TecnicoOrden
