@@ -316,7 +316,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
                                 where a.Field<int>(indice).ToString().Equals(actual.Text)
                                 select tablaTemp.Rows.IndexOf(a);
                 }
-                else
+                else //busca por cliente
                 {
                     resultado = from a in tablaTemp.AsEnumerable()
                                 where a.Field<string>(indice).IndexOf(actual.Text, StringComparison.OrdinalIgnoreCase) >= 0
@@ -338,12 +338,12 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
                 }
                 else
                 {
-                    //dataGridView1.ClearSelection();
-                    //MessageBox.Show("No se encontro ningun resultado");
-                    //b.nuevaBusqueda = true;
-
+                    dataGridView1.ClearSelection();
+                    MessageBox.Show("No se encontro ningun resultado");
                     b.nuevaBusqueda = true;
-                    BuscarTexto(actual, indice);
+
+                    //b.nuevaBusqueda = true;
+                    //BuscarTexto(actual, indice);
 
                 }
             }
@@ -406,6 +406,8 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
 
         private void FiltrarGrid()
         {
+            b.nuevaBusqueda = true;
+
             string rowFilter;
             switch (comboBoxFiltro.Text)
             {
