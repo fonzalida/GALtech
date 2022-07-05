@@ -321,7 +321,7 @@ namespace CoolSoft.UI2._0
 
         private void Transicion(int an, int ac)
         {
-            Transition t = new Transition(new TransitionType_EaseInEaseOut(150));
+            Transition t = new Transition(new TransitionType_EaseInEaseOut(200));
             if(an != -1)
             {
                 t.TransitionCompletedEvent += new EventHandler<Transition.Args>(OnTransitionCompleted);
@@ -336,11 +336,13 @@ namespace CoolSoft.UI2._0
 
                 if (an < ac)
                 {
+                    //Screen.PrimaryScreen.Bounds.Height;
 
                     this.panelContenedor.Controls[1].Location = new Point(0, panelContenedor.Height);
                     this.panelContenedor.Controls[1].Show();
 
-                    t.add(this.panelContenedor.Controls[0], "Top", -panelContenedor.Height);
+                    //t.add(this.panelContenedor.Controls[0], "Top", -panelContenedor.Height);
+                    t.add(this.panelContenedor.Controls[0], "Top", -Screen.PrimaryScreen.Bounds.Height);
                     t.add(this.panelContenedor.Controls[1], "Top", 0);
                     transicionActiva = true;
                     t.run();
@@ -348,10 +350,10 @@ namespace CoolSoft.UI2._0
                 else
                 {
 
-                    this.panelContenedor.Controls[1].Location = new Point(0, -panelContenedor.Height);
+                    this.panelContenedor.Controls[1].Location = new Point(0, - Screen.PrimaryScreen.Bounds.Height);
                     this.panelContenedor.Controls[1].Show();
 
-                    t.add(this.panelContenedor.Controls[0], "Top", panelContenedor.Height);
+                    t.add(this.panelContenedor.Controls[0], "Top", Screen.PrimaryScreen.Bounds.Height);
                     t.add(this.panelContenedor.Controls[1], "Top", 0);
                     transicionActiva = true;
                     t.run();

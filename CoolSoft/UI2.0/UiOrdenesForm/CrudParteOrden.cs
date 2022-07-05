@@ -113,7 +113,8 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             //t.add(this, "Top", 690);
 
             t.add(formOrden.tableLayoutPanel1, "Left", 12);
-            t.add(this, "Left", 1460);
+            t.add(this, "Left", Screen.PrimaryScreen.Bounds.Width);
+            //t.add(this, "Left", 1460);
             t.run();
 
         }
