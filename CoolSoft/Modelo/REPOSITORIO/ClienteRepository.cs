@@ -15,7 +15,7 @@ namespace CoolSoft.Modelo.REPOSITORIO
         {
 
             MySqlCommand cmd = new MySqlCommand(
-               "INSERT INTO CLIENTE" +
+               "INSERT INTO cliente" +
                "(DniCuit, Nombre, Domicilio, Localidad, Provincia, Telefono1, Telefono2)" +
                " VALUES (@DniCuit, @Nombre, @Domicilio, @Localidad, @Provincia, @Telefono1, @Telefono2); " +
                "SELECT LAST_INSERT_ID();"
@@ -56,7 +56,7 @@ namespace CoolSoft.Modelo.REPOSITORIO
             Conexion conexion = new Conexion();
 
             MySqlCommand cmd = new MySqlCommand(
-               "DELETE FROM CLIENTE" +
+               "DELETE FROM cliente" +
                "where IdCliente = @IdCliente"
                );
 
@@ -67,7 +67,7 @@ namespace CoolSoft.Modelo.REPOSITORIO
 
         public static bool BuscarUno(long DniCuit)
         {
-            String query = "SELECT * FROM CLIENTE WHERE DniCuit = \"" + DniCuit + "\"";
+            String query = "SELECT * FROM cliente WHERE DniCuit = \"" + DniCuit + "\"";
 
             Conexion conexion = new Conexion();
             if (conexion.QuerySelect(query).Rows.Count == 1)
@@ -83,7 +83,7 @@ namespace CoolSoft.Modelo.REPOSITORIO
         {
 
             MySqlCommand cmd = new MySqlCommand(
-                "UPDATE CLIENTE " +
+                "UPDATE cliente " +
                  "SET DniCuit = @DniCuit2, Nombre = @Nombre2, Domicilio = @Domicilio2, Localidad = @Localidad2, Provincia = @Provincia2, Telefono1 = @Telefono12, Telefono2 = @Telefono22 " +
                   "where IdCliente = @idCliente  ");
 
@@ -104,7 +104,7 @@ namespace CoolSoft.Modelo.REPOSITORIO
 
         public static DataTable ListarTodos()
         {
-            String query = "SELECT * FROM CLIENTE";
+            String query = "SELECT * FROM cliente";
 
             Conexion conexion = new Conexion();
             return conexion.QuerySelect(query);
@@ -123,7 +123,7 @@ namespace CoolSoft.Modelo.REPOSITORIO
         public static DataTable Buscar(long DniCuit)
         {
             //String query = "SELECT * FROM CLIENTE WHERE DNICUIT = \"" + DniCuit + "\"";
-            String query = "SELECT idcliente as Numero, DniCuit as 'Dni/Cuit', Nombre FROM CLIENTE ";
+            String query = "SELECT IdCliente as Numero, DniCuit as 'Dni/Cuit', Nombre FROM CLIENTE ";
             string query2 = "WHERE CAST(DNICUIT as CHAR) LIKE '%" + DniCuit + "%'";
 
             Conexion conexion = new Conexion();
@@ -143,7 +143,7 @@ namespace CoolSoft.Modelo.REPOSITORIO
 
         public static string BuscarNombre(int idCliente)
         {
-            String query = "SELECT Nombre FROM CLIENTE WHERE idCliente = " + idCliente;
+            String query = "SELECT Nombre FROM cliente WHERE IdCliente = " + idCliente;
             Conexion conexion = new Conexion();
             var resultado = conexion.QuerySelect(query);
             Console.WriteLine(resultado.Rows.Count);

@@ -16,7 +16,7 @@ namespace CoolSoft.Modelo.REPOSITORIO
             //String query = "Insert into tecnicoorden (dni, idp, id) values (" + p.dni + "," + p.idp + "," + p.id + ")";
 
             MySqlCommand cmd = new MySqlCommand(
-                            "INSERT INTO TECNICOORDEN" +
+                            "INSERT INTO tecnicoorden" +
                              "(Dni, IdParte)" +
                              " VALUES (@Dni, @IdParte)"
                              );
@@ -33,7 +33,7 @@ namespace CoolSoft.Modelo.REPOSITORIO
             Conexion conexion = new Conexion();
 
             MySqlCommand cmd = new MySqlCommand(
-                "DELETE FROM TECNICOORDEN " +
+                "DELETE FROM tecnicoorden " +
                 "where Dni = @Dni and IdParte = @IdParte"
                 );
 
@@ -48,7 +48,7 @@ namespace CoolSoft.Modelo.REPOSITORIO
         {
 
             MySqlCommand cmd = new MySqlCommand(
-                "UPDATE PARTEORDEN" +
+                "UPDATE tecnicoorden" +
                  "SET Dni = @Dni2 " +
                   "where Dni = @Dni and IdParte = @IdParte");
 
@@ -67,12 +67,12 @@ namespace CoolSoft.Modelo.REPOSITORIO
 
         public static DataTable ListarTodos(int idParte)
         {
-            String query = "SELECT * FROM TECNICOORDEN "+
-                           "INNER JOIN PARTEORDEN " +
-                           "ON TECNICOORDEN.IDPARTE = PARTEORDEN.IDPARTE " +
-                           "INNER JOIN TECNICO " +
-                           "ON TECNICO.DNI = TECNICOORDEN.DNI " +
-                           "WHERE PARTEORDEN.IdParte = " + idParte ;
+            String query = "SELECT * FROM tecnicoorden "+
+                           "INNER JOIN parteorden " +
+                           "ON tecnicoorden.IdParte = parteorden.IdParte " +
+                           "INNER JOIN tecnico " +
+                           "ON tecnico.Dni = tecnicoorden.Dni " +
+                           "WHERE parteorden.IdParte = " + idParte ;
 
             Conexion conexion = new Conexion();
             return conexion.QuerySelect(query);
@@ -84,12 +84,12 @@ namespace CoolSoft.Modelo.REPOSITORIO
         public static bool BuscarUno(TecnicoOrden t)
         {
             String query =
-                "select * from TECNICOORDEN " +
-                "INNER JOIN PARTEORDEN " +
-                "ON TECNICOORDEN.IDPARTE = PARTEORDEN.IDPARTE " +
-                "WHERE TECNICOORDEN.Dni = \"" + t.dni + "\" and " +
-                "PARTEORDEN.IdParte = \"" + t.idParte + "\" and " +
-                "PARTEORDEN.COMPLETA = 0";
+                "select * from tecnicoorden " +
+                "INNER JOIN parteorden " +
+                "ON tecnicoorden.IdParte = parteorden.IdParte " +
+                "WHERE tecnicoorden.Dni = \"" + t.dni + "\" and " +
+                "parteorden.IdParte = \"" + t.idParte + "\" and " +
+                "parteorden.Completa = 0";
 
             //"SELECT * FROM TECNICOORDEN " +
             //"where Dni = \"" + t.dni + "\" and " +

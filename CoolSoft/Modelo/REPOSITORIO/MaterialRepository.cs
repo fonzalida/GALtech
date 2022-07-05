@@ -16,7 +16,7 @@ namespace CoolSoft.Modelo.REPOSITORIO
             //String query = "Insert into material (IdMat, IdOrden, Cantidad, Descripcion) values (" + p.IdMat + "," + p.IdOrden + "," + p.cantidad + "," + p.descripcion + ")";
            
             MySqlCommand cmd = new MySqlCommand(
-                           "INSERT INTO MATERIAL" +
+                           "INSERT INTO material" +
                            "(IdMat, IdOrden, Cantidad, Descripcion)" +
                            " VALUES (@IdMat, @IdOrden, @Cantidad, @Descripcion)"
                            );
@@ -35,7 +35,7 @@ namespace CoolSoft.Modelo.REPOSITORIO
             Conexion conexion = new Conexion();
 
             MySqlCommand cmd = new MySqlCommand(
-                "DELETE FROM MATERIAL " +
+                "DELETE FROM material " +
                 "where IdMat = @IdMat and IdOrden = @IdOrden"
                 );
 
@@ -47,7 +47,7 @@ namespace CoolSoft.Modelo.REPOSITORIO
 
         public static bool BuscarUno(int IdMat, int IdOrden)
         {
-            String query = "SELECT * FROM MATERIAL WHERE Idmat = \"" + IdMat + "\" and IdOrden = \"" + IdOrden + "\"";
+            String query = "SELECT * FROM material WHERE IdMat = \"" + IdMat + "\" and IdOrden = \"" + IdOrden + "\"";
 
             Conexion conexion = new Conexion();
             if (conexion.QuerySelect(query).Rows.Count == 1)
@@ -61,7 +61,7 @@ namespace CoolSoft.Modelo.REPOSITORIO
         {
 
             MySqlCommand cmd = new MySqlCommand(
-                "UPDATE MATERIAL" +
+                "UPDATE material" +
                  "SET Cantidad = @Cantidad2, Descripcion = @Descripcion2 " +
                   "where IdMat = @IdMat and IdOrden = @IdOrden ");
 
@@ -78,7 +78,7 @@ namespace CoolSoft.Modelo.REPOSITORIO
 
         public static DataTable ListarTodos()
         {
-            String query = "SELECT * FROM MATERIAL";
+            String query = "SELECT * FROM material";
 
             Conexion conexion = new Conexion();
             return conexion.QuerySelect(query);
@@ -87,8 +87,8 @@ namespace CoolSoft.Modelo.REPOSITORIO
 
         public static DataTable ListarTodosMat(int idParte)
         {
-            String query = "SELECT * FROM MATERIAL "+
-                           "WHERE MATERIAL.IdParte = " + idParte ;
+            String query = "SELECT * FROM material "+
+                           "WHERE material.IdParte = " + idParte ;
 
             Conexion conexion = new Conexion();
             return conexion.QuerySelect(query);

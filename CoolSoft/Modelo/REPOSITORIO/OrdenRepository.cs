@@ -15,10 +15,10 @@ namespace CoolSoft.Modelo.REPOSITORIO
         public static int agregar(Orden p)
         {
             MySqlCommand cmd = new MySqlCommand(
-                "INSERT INTO ORDEN" +
+                "INSERT INTO orden" +
                 "(FechaRecepcion ,TareaDesarrollar, IdCliente, Precio) " +
                 "VALUES (@FechaRecepcion, @TareaDesarrollar, @IdCliente, 0);" +
-               "SELECT LAST_INSERT_ID();"
+                "SELECT LAST_INSERT_ID();"
                 );
 
             cmd.Parameters.AddWithValue("@FechaRecepcion",p.fechaRecepcion.Date.ToString("yyyy-MM-dd"));
@@ -33,7 +33,7 @@ namespace CoolSoft.Modelo.REPOSITORIO
 
         public static bool BuscarUno(int IdOrden)
         {
-            String query = "SELECT * FROM ORDEN WHERE IdOrden = \"" + IdOrden + "\"";
+            String query = "SELECT * FROM orden WHERE IdOrden = \"" + IdOrden + "\"";
 
             Conexion conexion = new Conexion();
             if (conexion.QuerySelect(query).Rows.Count == 1)
@@ -47,7 +47,7 @@ namespace CoolSoft.Modelo.REPOSITORIO
         {
 
             MySqlCommand cmd = new MySqlCommand(
-                "UPDATE Orden " +
+                "UPDATE orden " +
                  "SET FechaRecepcion = @FechaRecepcion2, TareaDesarrollar = @TareaDesarrollar2, Precio = @Precio2 ,IdCliente = @IdCliente2, Completada = @Completada2 " +
                   "WHERE IdOrden = @IdOrden ");
 
@@ -96,11 +96,11 @@ namespace CoolSoft.Modelo.REPOSITORIO
                 "Nombre AS Cliente, " +
                 "Precio AS Importe, " +
                 "Completada, " +
-                "Cliente.IdCliente " +
-                "FROM ORDEN " +
-                "INNER JOIN CLIENTE " +
-                "ON ORDEN.IDCLIENTE = CLIENTE.IDCLIENTE " +
-                "where eliminada = 0";
+                "cliente.IdCliente " +
+                "FROM orden " +
+                "INNER JOIN cliente " +
+                "ON orden.IdCliente = cliente.IdCliente " +
+                "where Eliminada = 0";
             
 
             //            INNER JOIN TecnicoOrden
@@ -124,11 +124,11 @@ namespace CoolSoft.Modelo.REPOSITORIO
                 "Nombre AS Cliente, " +
                 "Precio AS Importe, " +
                 "Completada, " +
-                "Cliente.IdCliente " +
-                "FROM ORDEN " +
-                "INNER JOIN CLIENTE " +
-                "ON ORDEN.IDCLIENTE = CLIENTE.IDCLIENTE " +
-                "WHERE FechaRecepcion BETWEEN \" " + desde.ToString("yyyy/MM/dd") + "\" AND \" " + hasta.ToString("yyyy/MM/dd") + "\" and eliminada = 0";
+                "cliente.IdCliente " +
+                "FROM orden " +
+                "INNER JOIN cliente " +
+                "ON orden.IdCliente = cliente.IdCliente " +
+                "WHERE FechaRecepcion BETWEEN \" " + desde.ToString("yyyy/MM/dd") + "\" AND \" " + hasta.ToString("yyyy/MM/dd") + "\" and Eliminada = 0";
 
 
             
@@ -155,10 +155,10 @@ namespace CoolSoft.Modelo.REPOSITORIO
                 "SELECT DATE_FORMAT(DATE(FechaRecepcion), \"%d %c %Y\") AS Recepcion, " +
                 "IdOrden, TareaDesarrollar, " +
                 "Nombre AS Cliente, Precio AS Importe, " +
-                "Completada, Cliente.IdCliente " +
-                "FROM ORDEN " +
-                "INNER JOIN CLIENTE " +
-                "ON ORDEN.IDCLIENTE = CLIENTE.IDCLIENTE " +
+                "Completada, cliente.IdCliente " +
+                "FROM orden " +
+                "INNER JOIN cliente " +
+                "ON orden.IdCliente = cliente.IdCliente " +
                 "WHERE Completada = \"" + i + "\"";
 
             Conexion conexion = new Conexion();
