@@ -313,7 +313,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
                 if (indice == 1)
                 {
                     resultado = from a in tablaTemp.AsEnumerable()
-                                where a.Field<int>(indice).ToString().StartsWith(actual.Text)
+                                where a.Field<int>(indice).ToString().Equals(actual.Text)
                                 select tablaTemp.Rows.IndexOf(a);
                 }
                 else
@@ -338,8 +338,13 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
                 }
                 else
                 {
-                    dataGridView1.ClearSelection();
-                    MessageBox.Show("No se encontro ningun resultado");
+                    //dataGridView1.ClearSelection();
+                    //MessageBox.Show("No se encontro ningun resultado");
+                    //b.nuevaBusqueda = true;
+
+                    b.nuevaBusqueda = true;
+                    BuscarTexto(actual, indice);
+
                 }
             }
             else
@@ -353,8 +358,12 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
                 }
                 else
                 {
-                    dataGridView1.ClearSelection();
-                    MessageBox.Show("No hay mas elementos que buscar");
+                    //dataGridView1.ClearSelection();
+                    //MessageBox.Show("No hay mas elementos que buscar");
+                    //b.nuevaBusqueda = true;
+
+                    b.nuevaBusqueda = true;
+                    BuscarTexto(actual, indice);
                 }
             }
         }
