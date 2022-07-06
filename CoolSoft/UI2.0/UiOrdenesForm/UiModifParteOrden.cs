@@ -58,5 +58,10 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
                 checkBoxCompletada.Checked,
                 vieja);
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

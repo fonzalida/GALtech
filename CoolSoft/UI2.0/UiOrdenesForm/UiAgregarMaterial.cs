@@ -20,7 +20,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
 
         private void UiAgregarMaterial_Load(object sender, EventArgs e)
         {
-            button1.Enabled = false;
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -29,6 +29,11 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
                 textBoxMaterial.Text,
                 textBoxCant.Text);
             //como sabe para q orden cargar?
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

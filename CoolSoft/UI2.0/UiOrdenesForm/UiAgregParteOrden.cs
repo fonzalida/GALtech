@@ -43,5 +43,10 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
                 mtDni.Text = dni.ToString();
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
