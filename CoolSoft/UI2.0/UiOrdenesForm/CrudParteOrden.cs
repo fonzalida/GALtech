@@ -451,6 +451,8 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             vieja = ParteOrdenController.DataGridViewToParteOrden(dataGridView1.SelectedRows[0].Cells);
             ParteOrdenController.Modificar(textBox1.Text, checkBox1.Checked,vieja);
 
+            MostrarDetalles(true);
+
         }
 
         private void button4_Click(object sender, EventArgs e)
