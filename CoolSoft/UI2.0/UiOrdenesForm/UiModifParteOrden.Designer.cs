@@ -39,6 +39,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.mtDni = new System.Windows.Forms.MaskedTextBox();
             this.tbTareaDesarrollada = new System.Windows.Forms.TextBox();
             this.buttonModificar = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.panelBorde.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -181,12 +182,31 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.buttonModificar.UseVisualStyleBackColor = false;
             this.buttonModificar.Click += new System.EventHandler(this.buttonModificar_Click);
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Olive;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.SystemColors.Control;
+            this.button2.Image = global::CoolSoft.Properties.Resources.cancel;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(273, 485);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(146, 54);
+            this.button2.TabIndex = 92;
+            this.button2.Text = "Cancelar";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // UiModifParteOrden
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(205)))));
             this.ClientSize = new System.Drawing.Size(538, 561);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.buttonModificar);
             this.Controls.Add(this.textBoxNombreTecnico);
             this.Controls.Add(this.checkBoxCompletada);
@@ -213,6 +233,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.Controls.SetChildIndex(this.checkBoxCompletada, 0);
             this.Controls.SetChildIndex(this.textBoxNombreTecnico, 0);
             this.Controls.SetChildIndex(this.buttonModificar, 0);
+            this.Controls.SetChildIndex(this.button2, 0);
             this.panelBorde.ResumeLayout(false);
             this.panelBorde.PerformLayout();
             this.ResumeLayout(false);
@@ -232,5 +253,6 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
         private System.Windows.Forms.MaskedTextBox mtDni;
         private System.Windows.Forms.TextBox tbTareaDesarrollada;
         public System.Windows.Forms.Button buttonModificar;
+        public System.Windows.Forms.Button button2;
     }
 }
