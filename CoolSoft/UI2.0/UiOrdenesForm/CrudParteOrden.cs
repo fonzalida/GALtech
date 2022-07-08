@@ -27,12 +27,15 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
         DataTable tablaParte;
         DataTable tablaTecnico;
         DataTable tablaMaterial;
+        int NroOrden;
 
-        public CrudParteOrden(UiPrincipal p, CrudOrden o)
+        public CrudParteOrden(UiPrincipal p, CrudOrden o, string numero)
         {
+            
             formPrincipal = p;
             formOrden = o;
             InitializeComponent();
+            NroOrden = int.Parse(numero);
         }
 
         private void CrudParteOrden_Load(object sender, EventArgs e)
@@ -40,13 +43,13 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             
             EstadoInicial();
             Format.DataGridView(dataGridView1);
-            Format.DataGridView(dataGridView2);
-            Format.DataGridView(dataGridView3);
+            Format.DataGridView(dataGridViewMateriales);
+            Format.DataGridView(dataGridViewTecnicos);
+
+            //formPrincipal.CambiarTextoTitulo("Trabajos de Órden N° "+ NroOrden);
+            label2.Text = "Trabajos de Órden N° " + NroOrden;
 
 
-            formPrincipal.CambiarTextoTitulo("Trabajos de Órden N° "+ formOrden.dataGridView1.SelectedRows[0].Cells["IdOrden"].Value.ToString());
-
-            
         }
 
         private void EstadoInicial()
@@ -61,8 +64,9 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             //panelSuperior.Enabled = false;
             //panelFechas.Enabled = true;
 
-            buttonAgregar.Enabled = true;
-            buttonEliminar.Enabled = true;
+            buttonAgregar.Enabled = false;
+            buttonEliminar.Enabled = false;
+            buttonRefrescar.Visible = false;
             //buttonDetalles.Enabled = false;
 
             /*buttonPartes.Enabled = true;
@@ -76,8 +80,8 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
 
             //buttonRefrescar.Visible = false;
             buttonVer.Visible = true;
-            buttonCancelar.Visible = false;
-            buttonDetalles.Visible = true;
+            //buttonCancelar.Visible = false;
+            buttonDetalles.Visible = false;
             //dateTimePickerHasta.MinDate = dateTimePickerDesde.Value;
             
         }
@@ -91,10 +95,8 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
 
             buttonAgregar.Enabled = true;
             buttonDetalles.Enabled = true;
-            buttonVer.Enabled = false;
-            buttonCancelar.Enabled = true;
-
-            //buttonRefrescar.Visible = true;
+            //buttonCancelar.Enabled = true;
+            buttonRefrescar.Visible = true;
             buttonVer.Visible = false;
             /*buttonPartes.Visible = true;
             buttonPartes.Enabled = false;*/
@@ -132,16 +134,22 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
         }
 
 
-        private void buttonVer_Click(object sender, EventArgs e)
+        public void CargarPartes()
         {
-            
-            EstadoVer();
-            tablaParte = ParteOrdenRepository.ListarTodos(int.Parse(formOrden.dataGridView1.SelectedRows[0].Cells["IdOrden"].Value.ToString()));
+            tablaParte = ParteOrdenRepository.ListarTodos(NroOrden);
             //dataGridView1.ClearSelection();
             dataGridView1.DataSource = null;
             dataGridView1.DataSource = tablaParte;
 
             FormatearDataGrid();
+
+        }
+
+        private void buttonVer_Click(object sender, EventArgs e)
+        {
+            
+            EstadoVer();
+            CargarPartes();
 
 
         }
@@ -150,15 +158,20 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
         {
             dataGridView1.ClearSelection();
 
-            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            dataGridView1.Columns["IdParte"].HeaderText = "Parte";
+            //dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dataGridView1.Columns["IdParte"].HeaderText = "Numero de Tarea";
+            
             dataGridView1.Columns["TareaDesarrollada"].Visible = false;
             //dataGridView1.Columns["TareaDesarrollada"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
            
             dataGridView1.Columns["IdOrden"].Visible = false;
             dataGridView1.Columns["Completa"].Visible = false;
-            dataGridView1.Columns["FechaInicio"].HeaderText = "Inicio";
-            dataGridView1.Columns["FechaFin"].HeaderText = "Fin";
+            dataGridView1.Columns["FechaInicio"].Visible = false;
+            dataGridView1.Columns["FechaFin"].Visible = false;
+
+
+            dataGridView1.Columns["IdParte"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            
 
 
         }
@@ -213,59 +226,68 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
 
             if (dataGridView1.SelectedRows.Count > 0)
             {
-               
+
+                labelTituloTarea.Text = "Tarea Nº " + dataGridView1.SelectedRows[0].Cells["IdParte"].Value.ToString();
+
                 tablaTecnico = TecnicoOrdenRepository.ListarTodos(int.Parse(dataGridView1.SelectedRows[0].Cells["IdParte"].Value.ToString()));
-                dataGridView3.DataSource = null;
-                dataGridView3.DataSource = tablaTecnico;
-                dataGridView3.ClearSelection();
-                FormatearDataGrid2();
+                dataGridViewTecnicos.DataSource = null;
+                dataGridViewTecnicos.DataSource = tablaTecnico;
+                dataGridViewTecnicos.ClearSelection();
+                FormatearDataGridTec();
                 
+
                 //textBox1.Text = dataGridView1.SelectedRows[1].Cells["TareaDesarrollada"].Value.ToString();
 
                 tablaMaterial = MaterialRepository.ListarTodosMat(int.Parse(dataGridView1.SelectedRows[0].Cells["IdParte"].Value.ToString()));
-                dataGridView2.DataSource = null;
-                dataGridView2.DataSource = tablaMaterial;
-                dataGridView2.ClearSelection();
-                
-                FormatearDataGrid3();
+                dataGridViewMateriales.DataSource = null;
+                dataGridViewMateriales.DataSource = tablaMaterial;
+                dataGridViewMateriales.ClearSelection();
+                FormatearDataGridMat();
 
+                buttonEliminar.Enabled = true;
                 
             }
             else
             {
-                dataGridView2.DataSource = null;
-                dataGridView3.DataSource = null;
+
+                labelTituloTarea.Text = "Tarea:";
+                buttonEliminar.Enabled = false;
+                dataGridViewMateriales.DataSource = null;
+                dataGridViewTecnicos.DataSource = null;
             }
         }
 
-        private void FormatearDataGrid2()
+        private void FormatearDataGridTec()
         {
-            dataGridView3.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            dataGridView3.Columns["Dni"].Visible = false;
-            dataGridView3.Columns["FechaInicio"].Visible = false;
-            dataGridView3.Columns["FechaFin"].Visible = false;
-            dataGridView3.Columns["IdParte"].Visible = false;
-            dataGridView3.Columns["IdParte1"].Visible = false;
-            dataGridView3.Columns["TareaDesarrollada"].Visible = false;
-            dataGridView3.Columns["IdOrden"].Visible = false;
-            dataGridView3.Columns["Completa"].Visible = false;
-            dataGridView3.Columns["Dni1"].Visible = false;
-            dataGridView3.Columns["Telefono"].Visible = false;
-            dataGridView3.Columns["Activo"].Visible = false;
+            dataGridViewTecnicos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
 
+            dataGridViewTecnicos.Columns["Dni"].Visible = false;
+            dataGridViewTecnicos.Columns["FechaInicio"].Visible = false;
+            dataGridViewTecnicos.Columns["FechaFin"].Visible = false;
+            dataGridViewTecnicos.Columns["IdParte"].Visible = false;
+            dataGridViewTecnicos.Columns["IdParte1"].Visible = false;
+            dataGridViewTecnicos.Columns["TareaDesarrollada"].Visible = false;
+            dataGridViewTecnicos.Columns["IdOrden"].Visible = false;
+            dataGridViewTecnicos.Columns["Completa"].Visible = false;
+            dataGridViewTecnicos.Columns["Dni1"].Visible = false;
+            dataGridViewTecnicos.Columns["Telefono"].Visible = false;
+            dataGridViewTecnicos.Columns["Activo"].Visible = false;
+            dataGridViewTecnicos.Columns["Nombre"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
         }
 
-        private void FormatearDataGrid3()
+        private void FormatearDataGridMat()
         {
-            dataGridView3.ClearSelection();
+            dataGridViewTecnicos.ClearSelection();
 
-            dataGridView2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            dataGridView2.Columns["IdParte"].Visible=false;
-            dataGridView2.Columns["IdMat"].Visible = false;
-            dataGridView2.Columns["IdOrden"].Visible = false;
+            dataGridViewMateriales.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dataGridViewMateriales.Columns["IdParte"].Visible=false;
+            dataGridViewMateriales.Columns["IdMat"].Visible = false;
+            dataGridViewMateriales.Columns["IdOrden"].Visible = false;
            // dataGridView2.Columns["TareaDesarrollada"].Visible = false;
-            dataGridView2.Columns["Cantidad"].HeaderText = "Cantidad";
-            dataGridView2.Columns["Descripcion"].HeaderText = "Material";
+
+            dataGridViewMateriales.Columns["Cantidad"].HeaderText = "Cantidad";
+            dataGridViewMateriales.Columns["Descripcion"].HeaderText = "Material";
+            dataGridViewMateriales.Columns["Descripcion"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
 
         }
 
@@ -296,19 +318,32 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
 
                 ParteOrdenController.EliminarParteOrden(dataGridView1.SelectedRows[0].Cells);
                 EstadoVer();
+                CargarPartes();
+
             }
         }
 
         private void buttonAgregar_Click(object sender, EventArgs e)
         {
-            fagregar = new UiAgregParteOrden();
-            Format.FormularioBorde(fagregar, false);
-            fagregar.StartPosition = FormStartPosition.CenterScreen;
-            var result = fagregar.ShowDialog();
-            if (result == DialogResult.OK)
-            {
-                EstadoVer();
-            }
+            //fagregar = new UiAgregParteOrden();
+            //Format.FormularioBorde(fagregar, false);
+            //fagregar.StartPosition = FormStartPosition.CenterScreen;
+            //var result = fagregar.ShowDialog();
+            //if (result == DialogResult.OK)
+            //{
+            //    EstadoVer();
+            //}
+
+            ParteOrdenController.Agregar(NroOrden);
+
+            EstadoVer();
+            tablaParte = ParteOrdenRepository.ListarTodos(NroOrden);
+            //dataGridView1.ClearSelection();
+            dataGridView1.DataSource = null;
+            dataGridView1.DataSource = tablaParte;
+
+            FormatearDataGrid();
+
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -318,7 +353,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string texto =" Material "+ dataGridView2.SelectedRows[0].Cells["descripcion"].Value.ToString() + ", Cantidad " + dataGridView2.SelectedRows[0].Cells["cantidad"].Value.ToString();
+            string texto =" Material "+ dataGridViewMateriales.SelectedRows[0].Cells["descripcion"].Value.ToString() + ", Cantidad " + dataGridViewMateriales.SelectedRows[0].Cells["cantidad"].Value.ToString();
             Eliminar fEliminar = new Eliminar(texto);
             Format.FormularioBorde(fEliminar, false);
             fEliminar.StartPosition = FormStartPosition.CenterScreen;
@@ -326,7 +361,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             if (result == DialogResult.OK)
             {
 
-                MaterialController.EliminarMaterial(dataGridView2.SelectedRows[0].Cells);
+                MaterialController.EliminarMaterial(dataGridViewMateriales.SelectedRows[0].Cells);
                 EstadoVer();
             }
         }
@@ -356,6 +391,12 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             {
                 EstadoVer();
             }
+        }
+
+        private void buttonRefrescar_Click(object sender, EventArgs e)
+        {
+            
+            CargarPartes();
         }
     }
 }

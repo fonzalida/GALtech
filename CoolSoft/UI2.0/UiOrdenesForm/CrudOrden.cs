@@ -239,7 +239,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
 
         private void buttonPartes_Click(object sender, EventArgs e)
         {
-            formParte = new CrudParteOrden(formPrincipal, this);
+            formParte = new CrudParteOrden(formPrincipal, this, dataGridView1.SelectedRows[0].Cells["IdOrden"].Value.ToString());
             formParte.TopLevel = false;
             formParte.Size = this.Size;
             this.Controls.Add(formParte);

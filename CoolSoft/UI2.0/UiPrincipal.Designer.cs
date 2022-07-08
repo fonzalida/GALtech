@@ -171,7 +171,7 @@ namespace CoolSoft.UI2._0
             this.labelTitulo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.labelTitulo.Location = new System.Drawing.Point(400, 5);
             this.labelTitulo.Name = "labelTitulo";
-            this.labelTitulo.Size = new System.Drawing.Size(226, 42);
+            this.labelTitulo.Size = new System.Drawing.Size(284, 52);
             this.labelTitulo.TabIndex = 4;
             this.labelTitulo.Text = "BIENVENIDO";
             this.labelTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelBorde_MouseDown);
@@ -195,7 +195,7 @@ namespace CoolSoft.UI2._0
             this.pictureNormalForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(84)))));
             this.pictureNormalForm.BackgroundImage = global::CoolSoft.Properties.Resources.fullscreenExitForm;
             this.pictureNormalForm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureNormalForm.Location = new System.Drawing.Point(972, 12);
+            this.pictureNormalForm.Location = new System.Drawing.Point(833, 12);
             this.pictureNormalForm.Name = "pictureNormalForm";
             this.pictureNormalForm.Size = new System.Drawing.Size(30, 30);
             this.pictureNormalForm.TabIndex = 2;
@@ -214,6 +214,7 @@ namespace CoolSoft.UI2._0
             this.pictureMaximizarForm.Size = new System.Drawing.Size(30, 30);
             this.pictureMaximizarForm.TabIndex = 1;
             this.pictureMaximizarForm.TabStop = false;
+            this.pictureMaximizarForm.Visible = false;
             this.pictureMaximizarForm.Click += new System.EventHandler(this.pictureMaximizarForm_Click);
             // 
             // pictureCerrarForm

@@ -11,18 +11,13 @@ namespace CoolSoft.Controlador
 {
     static class ParteOrdenController
     {
-        public static void Cargar(
-            
-            //string IdParte,
-            string FechaInicio,
-            string TareaDesarrollada
+        public static void Agregar(
+            int NroOrden
             )
         {
             ParteOrden parte = new ParteOrden();
 
-            //parte.idParte = int.Parse(IdParte);
-            parte.fechaInicio = DateTime.Parse(FechaInicio);
-            parte.tareaDesarrollada = CG.EsNullOString(TareaDesarrollada);
+            parte.idOrden = NroOrden;
             OrdenService.Agregar(parte);
         }
 

@@ -22,10 +22,10 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ParteOrdenController.Cargar(
-                dtFechaInicio.Text,
-                tbTareaDesarrollada.Text
-                );
+            //ParteOrdenController.Cargar(
+            //    dtFechaInicio.Text,
+            //    tbTareaDesarrollada.Text
+            //    );
         }
 
         private void UiAgregParteOrden_Load(object sender, EventArgs e)

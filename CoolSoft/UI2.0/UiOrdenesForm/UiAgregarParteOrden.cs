@@ -28,10 +28,10 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
 
         private void buttonCargar_Click(object sender, EventArgs e)
         {
-            ParteOrdenController.Cargar(
-                tbTareaDesarrollar.Text,
-                //hay q ver q mas se agrega
-                dtFechaRecepcion.Text);
+            //ParteOrdenController.Cargar(
+            //    tbTareaDesarrollar.Text,
+            //    //hay q ver q mas se agrega
+            //    dtFechaRecepcion.Text);
         }
 
         private void buttonBuscar_Click(object sender, EventArgs e)
