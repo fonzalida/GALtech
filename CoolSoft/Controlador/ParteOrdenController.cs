@@ -64,14 +64,11 @@ namespace CoolSoft.Controlador
         }
 
         internal static void Modificar(
-            
-            string FechaInicio,
             string TareaDesarrollada,
             bool completada,
             ParteOrden vieja)
         {
             ParteOrden parte = new ParteOrden();
-            parte.fechaInicio = DateTime.Parse(FechaInicio);
             parte.tareaDesarrollada = CG.EsNullOString(TareaDesarrollada);
             parte.completa = int.Parse(completada.ToString());
             

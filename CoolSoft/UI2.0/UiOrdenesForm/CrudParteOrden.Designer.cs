@@ -42,12 +42,15 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.panelBotonVerRefresh = new System.Windows.Forms.Panel();
             this.buttonRefrescar = new System.Windows.Forms.Button();
             this.buttonVer = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.panelDetalles = new System.Windows.Forms.Panel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.buttonGuardarParte = new System.Windows.Forms.Button();
             this.labelTituloTarea = new System.Windows.Forms.Label();
             this.tableLayoutColumnaDerecha = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
+            this.buttonAgregarMat = new System.Windows.Forms.Button();
+            this.buttonEliminarMat = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.dataGridViewMateriales = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -57,11 +60,11 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.tableLayoutColumnaIzquierda = new System.Windows.Forms.TableLayoutPanel();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.dataGridViewTecnicos = new System.Windows.Forms.DataGridView();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.buttonAgregarTec = new System.Windows.Forms.Button();
+            this.buttonEliminarTec = new System.Windows.Forms.Button();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.Descripcion = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -72,16 +75,17 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.tableLayoutPartes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panelBotonVerRefresh.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.panelDetalles.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutColumnaDerecha.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
+            this.tableLayoutPanel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMateriales)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutColumnaIzquierda.SuspendLayout();
             this.tableLayoutPanel8.SuspendLayout();
-            this.tableLayoutPanel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTecnicos)).BeginInit();
+            this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -95,7 +99,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 57.92208F));
             this.tableLayoutPanel1.Controls.Add(this.panelMenu, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.panel2, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.panelDetalles, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 12);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -307,18 +311,18 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.buttonVer.UseVisualStyleBackColor = false;
             this.buttonVer.Click += new System.EventHandler(this.buttonVer_Click);
             // 
-            // panel2
+            // panelDetalles
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.Control;
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.tableLayoutPanel3);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(436, 84);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(587, 493);
-            this.panel2.TabIndex = 4;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            this.panelDetalles.BackColor = System.Drawing.SystemColors.Control;
+            this.panelDetalles.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelDetalles.Controls.Add(this.tableLayoutPanel3);
+            this.panelDetalles.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelDetalles.Location = new System.Drawing.Point(436, 84);
+            this.panelDetalles.Margin = new System.Windows.Forms.Padding(4);
+            this.panelDetalles.Name = "panelDetalles";
+            this.panelDetalles.Size = new System.Drawing.Size(587, 493);
+            this.panelDetalles.TabIndex = 4;
+            this.panelDetalles.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // tableLayoutPanel3
             // 
@@ -356,7 +360,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.buttonGuardarParte.Text = "Guardar cambios";
             this.buttonGuardarParte.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonGuardarParte.UseVisualStyleBackColor = false;
-            this.buttonGuardarParte.Visible = false;
+            this.buttonGuardarParte.Click += new System.EventHandler(this.buttonGuardarParte_Click);
             // 
             // labelTituloTarea
             // 
@@ -389,18 +393,67 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             // 
             this.tableLayoutPanel5.ColumnCount = 1;
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel9, 0, 2);
             this.tableLayoutPanel5.Controls.Add(this.label5, 0, 0);
             this.tableLayoutPanel5.Controls.Add(this.dataGridViewMateriales, 0, 1);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 103);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
-            this.tableLayoutPanel5.RowCount = 2;
+            this.tableLayoutPanel5.RowCount = 3;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel5.Size = new System.Drawing.Size(281, 319);
             this.tableLayoutPanel5.TabIndex = 10;
+            // 
+            // tableLayoutPanel9
+            // 
+            this.tableLayoutPanel9.ColumnCount = 2;
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel9.Controls.Add(this.buttonAgregarMat, 0, 0);
+            this.tableLayoutPanel9.Controls.Add(this.buttonEliminarMat, 1, 0);
+            this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel9.Location = new System.Drawing.Point(3, 272);
+            this.tableLayoutPanel9.Name = "tableLayoutPanel9";
+            this.tableLayoutPanel9.RowCount = 1;
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 44F));
+            this.tableLayoutPanel9.Size = new System.Drawing.Size(275, 44);
+            this.tableLayoutPanel9.TabIndex = 11;
+            // 
+            // buttonAgregarMat
+            // 
+            this.buttonAgregarMat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonAgregarMat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(71)))), ((int)(((byte)(135)))));
+            this.buttonAgregarMat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonAgregarMat.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAgregarMat.ForeColor = System.Drawing.SystemColors.Control;
+            this.buttonAgregarMat.Image = global::CoolSoft.Properties.Resources.add;
+            this.buttonAgregarMat.Location = new System.Drawing.Point(85, 2);
+            this.buttonAgregarMat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonAgregarMat.Name = "buttonAgregarMat";
+            this.buttonAgregarMat.Size = new System.Drawing.Size(49, 40);
+            this.buttonAgregarMat.TabIndex = 5;
+            this.buttonAgregarMat.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonAgregarMat.UseVisualStyleBackColor = false;
+            this.buttonAgregarMat.Click += new System.EventHandler(this.buttonAgregarMat_Click);
+            // 
+            // buttonEliminarMat
+            // 
+            this.buttonEliminarMat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(71)))), ((int)(((byte)(135)))));
+            this.buttonEliminarMat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEliminarMat.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonEliminarMat.ForeColor = System.Drawing.SystemColors.Control;
+            this.buttonEliminarMat.Image = global::CoolSoft.Properties.Resources.delete;
+            this.buttonEliminarMat.Location = new System.Drawing.Point(140, 2);
+            this.buttonEliminarMat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonEliminarMat.Name = "buttonEliminarMat";
+            this.buttonEliminarMat.Size = new System.Drawing.Size(49, 40);
+            this.buttonEliminarMat.TabIndex = 6;
+            this.buttonEliminarMat.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonEliminarMat.UseVisualStyleBackColor = false;
+            this.buttonEliminarMat.Click += new System.EventHandler(this.buttonEliminarMat_Click);
             // 
             // label5
             // 
@@ -421,7 +474,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.dataGridViewMateriales.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridViewMateriales.Name = "dataGridViewMateriales";
             this.dataGridViewMateriales.RowHeadersWidth = 51;
-            this.dataGridViewMateriales.Size = new System.Drawing.Size(273, 271);
+            this.dataGridViewMateriales.Size = new System.Drawing.Size(273, 221);
             this.dataGridViewMateriales.TabIndex = 1;
             // 
             // tableLayoutPanel2
@@ -513,9 +566,9 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             // 
             this.tableLayoutPanel8.ColumnCount = 1;
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel8.Controls.Add(this.tableLayoutPanel9, 0, 2);
             this.tableLayoutPanel8.Controls.Add(this.label3, 0, 0);
             this.tableLayoutPanel8.Controls.Add(this.dataGridViewTecnicos, 0, 1);
+            this.tableLayoutPanel8.Controls.Add(this.tableLayoutPanel4, 0, 2);
             this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel8.Location = new System.Drawing.Point(3, 153);
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
@@ -525,55 +578,6 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel8.Size = new System.Drawing.Size(280, 269);
             this.tableLayoutPanel8.TabIndex = 10;
-            // 
-            // tableLayoutPanel9
-            // 
-            this.tableLayoutPanel9.ColumnCount = 2;
-            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel9.Controls.Add(this.button1, 0, 0);
-            this.tableLayoutPanel9.Controls.Add(this.button2, 1, 0);
-            this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel9.Location = new System.Drawing.Point(3, 222);
-            this.tableLayoutPanel9.Name = "tableLayoutPanel9";
-            this.tableLayoutPanel9.RowCount = 1;
-            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 44F));
-            this.tableLayoutPanel9.Size = new System.Drawing.Size(274, 44);
-            this.tableLayoutPanel9.TabIndex = 11;
-            // 
-            // button1
-            // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(71)))), ((int)(((byte)(135)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.Control;
-            this.button1.Image = global::CoolSoft.Properties.Resources.add;
-            this.button1.Location = new System.Drawing.Point(85, 2);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(49, 40);
-            this.button1.TabIndex = 5;
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(71)))), ((int)(((byte)(135)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.Control;
-            this.button2.Image = global::CoolSoft.Properties.Resources.delete;
-            this.button2.Location = new System.Drawing.Point(140, 2);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(49, 40);
-            this.button2.TabIndex = 6;
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label3
             // 
@@ -600,6 +604,55 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.dataGridViewTecnicos.TabIndex = 7;
             this.dataGridViewTecnicos.SelectionChanged += new System.EventHandler(this.dataGridView3_SelectionChanged);
             // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.ColumnCount = 2;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.Controls.Add(this.buttonAgregarTec, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.buttonEliminarTec, 1, 0);
+            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 222);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 1;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 44F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(274, 44);
+            this.tableLayoutPanel4.TabIndex = 9;
+            // 
+            // buttonAgregarTec
+            // 
+            this.buttonAgregarTec.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonAgregarTec.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(71)))), ((int)(((byte)(135)))));
+            this.buttonAgregarTec.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonAgregarTec.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAgregarTec.ForeColor = System.Drawing.SystemColors.Control;
+            this.buttonAgregarTec.Image = global::CoolSoft.Properties.Resources.add;
+            this.buttonAgregarTec.Location = new System.Drawing.Point(85, 2);
+            this.buttonAgregarTec.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonAgregarTec.Name = "buttonAgregarTec";
+            this.buttonAgregarTec.Size = new System.Drawing.Size(49, 40);
+            this.buttonAgregarTec.TabIndex = 6;
+            this.buttonAgregarTec.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonAgregarTec.UseVisualStyleBackColor = false;
+            this.buttonAgregarTec.Click += new System.EventHandler(this.buttonAgregarTec_Click);
+            // 
+            // buttonEliminarTec
+            // 
+            this.buttonEliminarTec.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(71)))), ((int)(((byte)(135)))));
+            this.buttonEliminarTec.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEliminarTec.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonEliminarTec.ForeColor = System.Drawing.SystemColors.Control;
+            this.buttonEliminarTec.Image = global::CoolSoft.Properties.Resources.delete;
+            this.buttonEliminarTec.Location = new System.Drawing.Point(140, 2);
+            this.buttonEliminarTec.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonEliminarTec.Name = "buttonEliminarTec";
+            this.buttonEliminarTec.Size = new System.Drawing.Size(49, 40);
+            this.buttonEliminarTec.TabIndex = 7;
+            this.buttonEliminarTec.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonEliminarTec.UseVisualStyleBackColor = false;
+            this.buttonEliminarTec.Click += new System.EventHandler(this.button4_Click);
+            // 
             // tableLayoutPanel6
             // 
             this.tableLayoutPanel6.ColumnCount = 1;
@@ -623,9 +676,9 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.Descripcion.Location = new System.Drawing.Point(4, 0);
             this.Descripcion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Descripcion.Name = "Descripcion";
-            this.Descripcion.Size = new System.Drawing.Size(114, 25);
+            this.Descripcion.Size = new System.Drawing.Size(182, 25);
             this.Descripcion.TabIndex = 3;
-            this.Descripcion.Text = "Descripción";
+            this.Descripcion.Text = "Tarea desarrollada:";
             // 
             // textBox1
             // 
@@ -668,11 +721,12 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.tableLayoutPartes.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panelBotonVerRefresh.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
+            this.panelDetalles.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutColumnaDerecha.ResumeLayout(false);
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel5.PerformLayout();
+            this.tableLayoutPanel9.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMateriales)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
@@ -680,8 +734,8 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.tableLayoutColumnaIzquierda.PerformLayout();
             this.tableLayoutPanel8.ResumeLayout(false);
             this.tableLayoutPanel8.PerformLayout();
-            this.tableLayoutPanel9.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTecnicos)).EndInit();
+            this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel6.ResumeLayout(false);
             this.tableLayoutPanel6.PerformLayout();
             this.ResumeLayout(false);
@@ -698,10 +752,10 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
         public System.Windows.Forms.Button buttonAgregar;
         public System.Windows.Forms.Button buttonCerrar;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panelDetalles;
         private System.Windows.Forms.DataGridView dataGridViewMateriales;
-        public System.Windows.Forms.Button button2;
-        public System.Windows.Forms.Button button1;
+        public System.Windows.Forms.Button buttonEliminarMat;
+        public System.Windows.Forms.Button buttonAgregarMat;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Label Descripcion;
         private System.Windows.Forms.TextBox textBox1;
@@ -727,5 +781,8 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         public System.Windows.Forms.Button buttonGuardarParte;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
+        public System.Windows.Forms.Button buttonAgregarTec;
+        public System.Windows.Forms.Button buttonEliminarTec;
     }
 }

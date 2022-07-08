@@ -42,6 +42,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
         {
             
             EstadoInicial();
+            panelDetalles.Visible = false;
             Format.DataGridView(dataGridView1);
             Format.DataGridView(dataGridViewMateriales);
             Format.DataGridView(dataGridViewTecnicos);
@@ -136,6 +137,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
 
         public void CargarPartes()
         {
+            
             tablaParte = ParteOrdenRepository.ListarTodos(NroOrden);
             //dataGridView1.ClearSelection();
             dataGridView1.DataSource = null;
@@ -228,6 +230,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             {
 
                 labelTituloTarea.Text = "Tarea Nº " + dataGridView1.SelectedRows[0].Cells["IdParte"].Value.ToString();
+                
 
                 tablaTecnico = TecnicoOrdenRepository.ListarTodos(int.Parse(dataGridView1.SelectedRows[0].Cells["IdParte"].Value.ToString()));
                 dataGridViewTecnicos.DataSource = null;
@@ -244,12 +247,16 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
                 dataGridViewMateriales.ClearSelection();
                 FormatearDataGridMat();
 
+                MostrarDetalles(true);
+
+                panelDetalles.Visible = true;
                 buttonEliminar.Enabled = true;
                 
             }
             else
             {
-
+                panelDetalles.Visible = false;
+                MostrarDetalles(false);
                 labelTituloTarea.Text = "Tarea:";
                 buttonEliminar.Enabled = false;
                 dataGridViewMateriales.DataSource = null;
@@ -306,6 +313,32 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
 
         }
 
+        private void MostrarDetalles(bool v)
+        {
+
+            if (v)
+            {
+                ParteOrden p = ParteOrdenController.DataGridViewToParteOrden(dataGridView1.SelectedRows[0].Cells);
+
+                checkBox1.Checked = (p.completa == 1);
+                textBox1.Text = p.tareaDesarrollada;
+                textFechas.Text = p.fechaInicio.ToString("dd-MM-yyyy") + " - " + p.fechaFin.ToString("dd-MM-yyyy");
+                textHoras.Text = (p.fechaFin - p.fechaInicio).Hours.ToString("HH:mm");
+            }
+            else
+            {
+                checkBox1.Checked = false;
+                textBox1.Text = "";
+                textFechas.Text = "";
+                textHoras.Text = "";
+            }
+
+
+
+            
+
+        }
+
         private void buttonEliminar_Click(object sender, EventArgs e)
         {
             string texto = "Parte Órden N° " + dataGridView1.SelectedRows[0].Cells["IdParte"].Value.ToString();
@@ -351,7 +384,16 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void ActualizarMateriales()
+        {
+            tablaMaterial = MaterialRepository.ListarTodosMat(int.Parse(dataGridView1.SelectedRows[0].Cells["IdParte"].Value.ToString()));
+            dataGridViewMateriales.DataSource = null;
+            dataGridViewMateriales.DataSource = tablaMaterial;
+            dataGridViewMateriales.ClearSelection();
+            FormatearDataGridMat();
+        }
+
+        private void buttonEliminarMat_Click(object sender, EventArgs e)
         {
             string texto =" Material "+ dataGridViewMateriales.SelectedRows[0].Cells["descripcion"].Value.ToString() + ", Cantidad " + dataGridViewMateriales.SelectedRows[0].Cells["cantidad"].Value.ToString();
             Eliminar fEliminar = new Eliminar(texto);
@@ -363,10 +405,11 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
 
                 MaterialController.EliminarMaterial(dataGridViewMateriales.SelectedRows[0].Cells);
                 EstadoVer();
+                ActualizarMateriales();
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void buttonAgregarMat_Click(object sender, EventArgs e)
         {
             fagregarMat = new UiAgregarMaterial();
             Format.FormularioBorde(fagregarMat, false);
@@ -395,8 +438,38 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
 
         private void buttonRefrescar_Click(object sender, EventArgs e)
         {
-            
+            dataGridView1.ClearSelection();
             CargarPartes();
+        }
+
+        private void buttonGuardarParte_Click(object sender, EventArgs e)
+        {
+
+            ParteOrden p = new ParteOrden();
+
+            vieja = ParteOrdenController.DataGridViewToParteOrden(dataGridView1.SelectedRows[0].Cells);
+            ParteOrdenController.Modificar(textBox1.Text, checkBox1.Checked,vieja);
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            string texto = " Tecnico " + dataGridViewTecnicos.SelectedRows[0].Cells["Nombre"].Value.ToString();
+            Eliminar fEliminar = new Eliminar(texto);
+            Format.FormularioBorde(fEliminar, false);
+            fEliminar.StartPosition = FormStartPosition.CenterScreen;
+            var result = fEliminar.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+
+                TecnicoOrdenController.Eliminar(dataGridViewTecnicos.SelectedRows[0].Cells);
+                EstadoVer();
+            }
+        }
+
+        private void buttonAgregarTec_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

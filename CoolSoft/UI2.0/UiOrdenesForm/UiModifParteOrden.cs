@@ -53,7 +53,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
         private void buttonModificar_Click(object sender, EventArgs e)
         {
             ParteOrdenController.Modificar(
-                dtFechaInicio.Text,
+                
                 tbTareaDesarrollada.Text,
                 checkBoxCompletada.Checked,
                 vieja);
