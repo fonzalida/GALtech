@@ -80,7 +80,7 @@ namespace CoolSoft.Modelo.REPOSITORIO
         }
 
 
-        public static bool BuscarUno(int dni,int idParte)
+        public static bool BuscarUno(int dni,long idParte)
         {
             String query =
                 "select * from tecnicoorden " +

@@ -30,7 +30,7 @@ namespace CoolSoft.Modelo.SERVICIO
 
             else if (objeto is TecnicoOrden)
             {
-                if(!TecnicoOrdenRepository.BuscarUno(objeto as TecnicoOrden))
+                if(!TecnicoOrdenRepository.BuscarUno( (objeto as TecnicoOrden).dni, (objeto as TecnicoOrden).idParte ))
                 {
                     TecnicoOrdenRepository.agregar(objeto as TecnicoOrden);
                     
