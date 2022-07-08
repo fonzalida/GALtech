@@ -59,7 +59,7 @@ namespace CoolSoft.Modelo.REPOSITORIO
 
             MySqlCommand cmd = new MySqlCommand(
                 "UPDATE parteorden " +
-                 "SET Completa = @Completa2, TareaDesarrollada = TareaDesarrollada2 " +
+                 "SET Completa = @Completa2, TareaDesarrollada = @TareaDesarrollada2 " +
                   "where IdParte = @IdParte");
 
           
