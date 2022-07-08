@@ -80,15 +80,14 @@ namespace CoolSoft.Modelo.REPOSITORIO
         }
 
 
-
-        public static bool BuscarUno(TecnicoOrden t)
+        public static bool BuscarUno(int dni,int idParte)
         {
             String query =
                 "select * from tecnicoorden " +
                 "INNER JOIN parteorden " +
                 "ON tecnicoorden.IdParte = parteorden.IdParte " +
-                "WHERE tecnicoorden.Dni = \"" + t.dni + "\" and " +
-                "parteorden.IdParte = \"" + t.idParte + "\" and " +
+                "WHERE tecnicoorden.Dni = \"" + dni + "\" and " +
+                "parteorden.IdParte = \"" + idParte + "\" and " +
                 "parteorden.Completa = 0";
 
             //"SELECT * FROM TECNICOORDEN " +

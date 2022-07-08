@@ -108,6 +108,7 @@
     <Compile Include="Controlador\OrdenController.cs" />
     <Compile Include="Controlador\ParteOrdenController.cs" />
     <Compile Include="Controlador\TecnicoController.cs" />
+    <Compile Include="Controlador\TecnicoOrdenController.cs" />
     <Compile Include="Modelo\Conexion.cs" />
     <Compile Include="Modelo\ENTIDADES\Cliente.cs" />
     <Compile Include="Modelo\ENTIDADES\Material.cs" />
