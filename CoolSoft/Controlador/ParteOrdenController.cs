@@ -70,9 +70,6 @@ namespace CoolSoft.Controlador
         {
             ParteOrden parte = new ParteOrden();
             parte.tareaDesarrollada = CG.EsNullOString(TareaDesarrollada);
-            parte.completa = int.Parse(completada.ToString());
-            
-          
 
             if (completada)
                 parte.completa = 1;
