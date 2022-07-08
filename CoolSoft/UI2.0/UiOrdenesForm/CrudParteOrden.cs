@@ -305,7 +305,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            textBox1.Text = dataGridView1.SelectedRows[0].Cells["TareaDesarrollada"].Value.ToString();
+            //textBox1.Text = dataGridView1.SelectedRows[0].Cells["TareaDesarrollada"].Value.ToString();
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
