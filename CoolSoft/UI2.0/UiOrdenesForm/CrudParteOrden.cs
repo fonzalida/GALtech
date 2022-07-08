@@ -322,8 +322,9 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
 
                 checkBox1.Checked = (p.completa == 1);
                 textBox1.Text = p.tareaDesarrollada;
-                textFechas.Text = p.fechaInicio.ToString("dd-MM-yyyy") + " - " + p.fechaFin.ToString("dd-MM-yyyy");
-                textHoras.Text = (p.fechaFin - p.fechaInicio).Hours.ToString("HH:mm");
+                textFechas.Text = "Inicio: " + p.fechaInicio.ToString("dd-MM-yyyy HH:mm") + Environment.NewLine + "Inicio: "+  p.fechaFin.ToString("dd-MM-yyyy HH:mm");
+                TimeSpan resta = p.fechaFin - p.fechaInicio;
+                textHoras.Text = resta.Hours.ToString().PadLeft(2,'0') + ":" + resta.Minutes.ToString().PadLeft(2, '0');
             }
             else
             {

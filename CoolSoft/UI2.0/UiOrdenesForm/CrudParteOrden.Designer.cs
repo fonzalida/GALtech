@@ -95,8 +95,8 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 42.07792F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 57.92208F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
             this.tableLayoutPanel1.Controls.Add(this.panelMenu, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.panelDetalles, 1, 1);
@@ -169,7 +169,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.panel1.Location = new System.Drawing.Point(4, 84);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(424, 493);
+            this.panel1.Size = new System.Drawing.Size(300, 493);
             this.panel1.TabIndex = 3;
             // 
             // tableLayoutPartes
@@ -190,23 +190,23 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.tableLayoutPartes.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
             this.tableLayoutPartes.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPartes.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
-            this.tableLayoutPartes.Size = new System.Drawing.Size(424, 493);
+            this.tableLayoutPartes.Size = new System.Drawing.Size(300, 493);
             this.tableLayoutPartes.TabIndex = 11;
             // 
             // buttonEliminar
             // 
             this.buttonEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(71)))), ((int)(((byte)(135)))));
-            this.buttonEliminar.Dock = System.Windows.Forms.DockStyle.Right;
+            this.buttonEliminar.Dock = System.Windows.Forms.DockStyle.Top;
             this.buttonEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonEliminar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonEliminar.ForeColor = System.Drawing.SystemColors.Control;
             this.buttonEliminar.Image = global::CoolSoft.Properties.Resources.delete;
             this.buttonEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonEliminar.Location = new System.Drawing.Point(286, 435);
+            this.buttonEliminar.Location = new System.Drawing.Point(202, 435);
             this.buttonEliminar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.buttonEliminar.MaximumSize = new System.Drawing.Size(135, 54);
+            this.buttonEliminar.MaximumSize = new System.Drawing.Size(0, 54);
             this.buttonEliminar.Name = "buttonEliminar";
-            this.buttonEliminar.Size = new System.Drawing.Size(135, 54);
+            this.buttonEliminar.Size = new System.Drawing.Size(95, 54);
             this.buttonEliminar.TabIndex = 2;
             this.buttonEliminar.Text = "Eliminar";
             this.buttonEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -216,7 +216,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             // buttonAgregar
             // 
             this.buttonAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(71)))), ((int)(((byte)(135)))));
-            this.buttonAgregar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonAgregar.Dock = System.Windows.Forms.DockStyle.Top;
             this.buttonAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAgregar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAgregar.ForeColor = System.Drawing.SystemColors.Control;
@@ -224,9 +224,9 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.buttonAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonAgregar.Location = new System.Drawing.Point(3, 435);
             this.buttonAgregar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.buttonAgregar.MaximumSize = new System.Drawing.Size(135, 54);
+            this.buttonAgregar.MaximumSize = new System.Drawing.Size(0, 54);
             this.buttonAgregar.Name = "buttonAgregar";
-            this.buttonAgregar.Size = new System.Drawing.Size(135, 54);
+            this.buttonAgregar.Size = new System.Drawing.Size(93, 54);
             this.buttonAgregar.TabIndex = 0;
             this.buttonAgregar.Text = "Agregar";
             this.buttonAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -242,7 +242,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.label4.Location = new System.Drawing.Point(4, 0);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(416, 60);
+            this.label4.Size = new System.Drawing.Size(292, 60);
             this.label4.TabIndex = 9;
             this.label4.Text = "Trabajos";
             // 
@@ -255,7 +255,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(416, 365);
+            this.dataGridView1.Size = new System.Drawing.Size(292, 365);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridView1_CellFormatting);
             this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
@@ -265,9 +265,9 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.panelBotonVerRefresh.Controls.Add(this.buttonRefrescar);
             this.panelBotonVerRefresh.Controls.Add(this.buttonVer);
             this.panelBotonVerRefresh.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelBotonVerRefresh.Location = new System.Drawing.Point(144, 436);
+            this.panelBotonVerRefresh.Location = new System.Drawing.Point(102, 436);
             this.panelBotonVerRefresh.Name = "panelBotonVerRefresh";
-            this.panelBotonVerRefresh.Size = new System.Drawing.Size(135, 54);
+            this.panelBotonVerRefresh.Size = new System.Drawing.Size(94, 54);
             this.panelBotonVerRefresh.TabIndex = 10;
             // 
             // buttonRefrescar
@@ -284,7 +284,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.buttonRefrescar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonRefrescar.MaximumSize = new System.Drawing.Size(0, 54);
             this.buttonRefrescar.Name = "buttonRefrescar";
-            this.buttonRefrescar.Size = new System.Drawing.Size(135, 54);
+            this.buttonRefrescar.Size = new System.Drawing.Size(94, 54);
             this.buttonRefrescar.TabIndex = 17;
             this.buttonRefrescar.Text = "Refrescar";
             this.buttonRefrescar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -304,7 +304,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.buttonVer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonVer.MaximumSize = new System.Drawing.Size(0, 54);
             this.buttonVer.Name = "buttonVer";
-            this.buttonVer.Size = new System.Drawing.Size(135, 54);
+            this.buttonVer.Size = new System.Drawing.Size(94, 54);
             this.buttonVer.TabIndex = 18;
             this.buttonVer.Text = "Ver";
             this.buttonVer.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -317,10 +317,10 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.panelDetalles.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelDetalles.Controls.Add(this.tableLayoutPanel3);
             this.panelDetalles.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDetalles.Location = new System.Drawing.Point(436, 84);
+            this.panelDetalles.Location = new System.Drawing.Point(312, 84);
             this.panelDetalles.Margin = new System.Windows.Forms.Padding(4);
             this.panelDetalles.Name = "panelDetalles";
-            this.panelDetalles.Size = new System.Drawing.Size(587, 493);
+            this.panelDetalles.Size = new System.Drawing.Size(711, 493);
             this.panelDetalles.TabIndex = 4;
             this.panelDetalles.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
@@ -340,7 +340,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(585, 491);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(709, 491);
             this.tableLayoutPanel3.TabIndex = 7;
             // 
             // buttonGuardarParte
@@ -352,7 +352,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.buttonGuardarParte.ForeColor = System.Drawing.SystemColors.Control;
             this.buttonGuardarParte.Image = global::CoolSoft.Properties.Resources.edit;
             this.buttonGuardarParte.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonGuardarParte.Location = new System.Drawing.Point(367, 2);
+            this.buttonGuardarParte.Location = new System.Drawing.Point(491, 2);
             this.buttonGuardarParte.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonGuardarParte.Name = "buttonGuardarParte";
             this.buttonGuardarParte.Size = new System.Drawing.Size(215, 54);
@@ -369,7 +369,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.labelTituloTarea.Location = new System.Drawing.Point(4, 0);
             this.labelTituloTarea.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelTituloTarea.Name = "labelTituloTarea";
-            this.labelTituloTarea.Size = new System.Drawing.Size(284, 60);
+            this.labelTituloTarea.Size = new System.Drawing.Size(346, 60);
             this.labelTituloTarea.TabIndex = 5;
             this.labelTituloTarea.Text = "Tarea:";
             this.labelTituloTarea.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -381,12 +381,12 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.tableLayoutColumnaDerecha.Controls.Add(this.tableLayoutPanel5, 0, 1);
             this.tableLayoutColumnaDerecha.Controls.Add(this.tableLayoutPanel2, 0, 0);
             this.tableLayoutColumnaDerecha.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutColumnaDerecha.Location = new System.Drawing.Point(295, 63);
+            this.tableLayoutColumnaDerecha.Location = new System.Drawing.Point(357, 63);
             this.tableLayoutColumnaDerecha.Name = "tableLayoutColumnaDerecha";
             this.tableLayoutColumnaDerecha.RowCount = 2;
             this.tableLayoutColumnaDerecha.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutColumnaDerecha.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutColumnaDerecha.Size = new System.Drawing.Size(287, 425);
+            this.tableLayoutColumnaDerecha.Size = new System.Drawing.Size(349, 425);
             this.tableLayoutColumnaDerecha.TabIndex = 7;
             // 
             // tableLayoutPanel5
@@ -403,7 +403,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(281, 319);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(343, 319);
             this.tableLayoutPanel5.TabIndex = 10;
             // 
             // tableLayoutPanel9
@@ -419,7 +419,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.tableLayoutPanel9.RowCount = 1;
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 44F));
-            this.tableLayoutPanel9.Size = new System.Drawing.Size(275, 44);
+            this.tableLayoutPanel9.Size = new System.Drawing.Size(337, 44);
             this.tableLayoutPanel9.TabIndex = 11;
             // 
             // buttonAgregarMat
@@ -430,7 +430,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.buttonAgregarMat.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAgregarMat.ForeColor = System.Drawing.SystemColors.Control;
             this.buttonAgregarMat.Image = global::CoolSoft.Properties.Resources.add;
-            this.buttonAgregarMat.Location = new System.Drawing.Point(85, 2);
+            this.buttonAgregarMat.Location = new System.Drawing.Point(116, 2);
             this.buttonAgregarMat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonAgregarMat.Name = "buttonAgregarMat";
             this.buttonAgregarMat.Size = new System.Drawing.Size(49, 40);
@@ -446,7 +446,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.buttonEliminarMat.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonEliminarMat.ForeColor = System.Drawing.SystemColors.Control;
             this.buttonEliminarMat.Image = global::CoolSoft.Properties.Resources.delete;
-            this.buttonEliminarMat.Location = new System.Drawing.Point(140, 2);
+            this.buttonEliminarMat.Location = new System.Drawing.Point(171, 2);
             this.buttonEliminarMat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonEliminarMat.Name = "buttonEliminarMat";
             this.buttonEliminarMat.Size = new System.Drawing.Size(49, 40);
@@ -474,14 +474,14 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.dataGridViewMateriales.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridViewMateriales.Name = "dataGridViewMateriales";
             this.dataGridViewMateriales.RowHeadersWidth = 51;
-            this.dataGridViewMateriales.Size = new System.Drawing.Size(273, 221);
+            this.dataGridViewMateriales.Size = new System.Drawing.Size(335, 221);
             this.dataGridViewMateriales.TabIndex = 1;
             // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 2;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 81F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel2.Controls.Add(this.textFechas, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.label6, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.textHoras, 1, 0);
@@ -491,7 +491,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(281, 94);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(343, 94);
             this.tableLayoutPanel2.TabIndex = 13;
             // 
             // textFechas
@@ -504,7 +504,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.textFechas.Multiline = true;
             this.textFechas.Name = "textFechas";
             this.textFechas.ReadOnly = true;
-            this.textFechas.Size = new System.Drawing.Size(273, 46);
+            this.textFechas.Size = new System.Drawing.Size(335, 46);
             this.textFechas.TabIndex = 11;
             // 
             // label6
@@ -514,20 +514,20 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.label6.Location = new System.Drawing.Point(4, 0);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(166, 25);
+            this.label6.Size = new System.Drawing.Size(165, 40);
             this.label6.TabIndex = 10;
-            this.label6.Text = "Horas trabajadas:";
+            this.label6.Text = "Horas trabajadas (HH:MM):";
             // 
             // textHoras
             // 
             this.textHoras.Dock = System.Windows.Forms.DockStyle.Top;
             this.textHoras.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textHoras.Location = new System.Drawing.Point(204, 4);
+            this.textHoras.Location = new System.Drawing.Point(247, 4);
             this.textHoras.Margin = new System.Windows.Forms.Padding(4);
             this.textHoras.Multiline = true;
             this.textHoras.Name = "textHoras";
             this.textHoras.ReadOnly = true;
-            this.textHoras.Size = new System.Drawing.Size(73, 26);
+            this.textHoras.Size = new System.Drawing.Size(92, 26);
             this.textHoras.TabIndex = 12;
             this.textHoras.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -545,7 +545,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.tableLayoutColumnaIzquierda.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutColumnaIzquierda.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutColumnaIzquierda.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutColumnaIzquierda.Size = new System.Drawing.Size(286, 425);
+            this.tableLayoutColumnaIzquierda.Size = new System.Drawing.Size(348, 425);
             this.tableLayoutColumnaIzquierda.TabIndex = 6;
             // 
             // checkBox1
@@ -576,7 +576,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(280, 269);
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(342, 269);
             this.tableLayoutPanel8.TabIndex = 10;
             // 
             // label3
@@ -600,7 +600,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.dataGridViewTecnicos.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridViewTecnicos.Name = "dataGridViewTecnicos";
             this.dataGridViewTecnicos.RowHeadersWidth = 51;
-            this.dataGridViewTecnicos.Size = new System.Drawing.Size(272, 171);
+            this.dataGridViewTecnicos.Size = new System.Drawing.Size(334, 171);
             this.dataGridViewTecnicos.TabIndex = 7;
             this.dataGridViewTecnicos.SelectionChanged += new System.EventHandler(this.dataGridView3_SelectionChanged);
             // 
@@ -617,7 +617,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 44F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(274, 44);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(336, 44);
             this.tableLayoutPanel4.TabIndex = 9;
             // 
             // buttonAgregarTec
@@ -628,7 +628,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.buttonAgregarTec.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAgregarTec.ForeColor = System.Drawing.SystemColors.Control;
             this.buttonAgregarTec.Image = global::CoolSoft.Properties.Resources.add;
-            this.buttonAgregarTec.Location = new System.Drawing.Point(85, 2);
+            this.buttonAgregarTec.Location = new System.Drawing.Point(116, 2);
             this.buttonAgregarTec.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonAgregarTec.Name = "buttonAgregarTec";
             this.buttonAgregarTec.Size = new System.Drawing.Size(49, 40);
@@ -644,7 +644,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.buttonEliminarTec.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonEliminarTec.ForeColor = System.Drawing.SystemColors.Control;
             this.buttonEliminarTec.Image = global::CoolSoft.Properties.Resources.delete;
-            this.buttonEliminarTec.Location = new System.Drawing.Point(140, 2);
+            this.buttonEliminarTec.Location = new System.Drawing.Point(171, 2);
             this.buttonEliminarTec.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonEliminarTec.Name = "buttonEliminarTec";
             this.buttonEliminarTec.Size = new System.Drawing.Size(49, 40);
@@ -666,7 +666,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.tableLayoutPanel6.RowCount = 2;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(280, 94);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(342, 94);
             this.tableLayoutPanel6.TabIndex = 9;
             // 
             // Descripcion
@@ -688,21 +688,22 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(272, 46);
+            this.textBox1.Size = new System.Drawing.Size(334, 46);
             this.textBox1.TabIndex = 2;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label2
             // 
+            this.tableLayoutPanel1.SetColumnSpan(this.label2, 2);
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(4, 0);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(424, 80);
+            this.label2.Size = new System.Drawing.Size(1019, 80);
             this.label2.TabIndex = 6;
             this.label2.Text = "Orden Nº";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // CrudParteOrden
             // 
