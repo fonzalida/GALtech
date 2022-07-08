@@ -44,15 +44,16 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.buttonVer = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.buttonGuardarParte = new System.Windows.Forms.Button();
             this.labelTituloTarea = new System.Windows.Forms.Label();
             this.tableLayoutColumnaDerecha = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.label5 = new System.Windows.Forms.Label();
             this.dataGridViewMateriales = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.textHoras = new System.Windows.Forms.TextBox();
             this.textFechas = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.textHoras = new System.Windows.Forms.TextBox();
             this.tableLayoutColumnaIzquierda = new System.Windows.Forms.TableLayoutPanel();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
@@ -65,7 +66,6 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.Descripcion = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.buttonGuardarParte = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.panelMenu.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -339,6 +339,25 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.tableLayoutPanel3.Size = new System.Drawing.Size(585, 491);
             this.tableLayoutPanel3.TabIndex = 7;
             // 
+            // buttonGuardarParte
+            // 
+            this.buttonGuardarParte.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonGuardarParte.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(71)))), ((int)(((byte)(135)))));
+            this.buttonGuardarParte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonGuardarParte.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonGuardarParte.ForeColor = System.Drawing.SystemColors.Control;
+            this.buttonGuardarParte.Image = global::CoolSoft.Properties.Resources.edit;
+            this.buttonGuardarParte.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonGuardarParte.Location = new System.Drawing.Point(367, 2);
+            this.buttonGuardarParte.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonGuardarParte.Name = "buttonGuardarParte";
+            this.buttonGuardarParte.Size = new System.Drawing.Size(215, 54);
+            this.buttonGuardarParte.TabIndex = 22;
+            this.buttonGuardarParte.Text = "Guardar cambios";
+            this.buttonGuardarParte.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonGuardarParte.UseVisualStyleBackColor = false;
+            this.buttonGuardarParte.Visible = false;
+            // 
             // labelTituloTarea
             // 
             this.labelTituloTarea.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -422,19 +441,6 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.tableLayoutPanel2.Size = new System.Drawing.Size(281, 94);
             this.tableLayoutPanel2.TabIndex = 13;
             // 
-            // textHoras
-            // 
-            this.textHoras.Dock = System.Windows.Forms.DockStyle.Top;
-            this.textHoras.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textHoras.Location = new System.Drawing.Point(204, 4);
-            this.textHoras.Margin = new System.Windows.Forms.Padding(4);
-            this.textHoras.Multiline = true;
-            this.textHoras.Name = "textHoras";
-            this.textHoras.ReadOnly = true;
-            this.textHoras.Size = new System.Drawing.Size(73, 26);
-            this.textHoras.TabIndex = 12;
-            this.textHoras.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // textFechas
             // 
             this.tableLayoutPanel2.SetColumnSpan(this.textFechas, 2);
@@ -445,7 +451,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.textFechas.Multiline = true;
             this.textFechas.Name = "textFechas";
             this.textFechas.ReadOnly = true;
-            this.textFechas.Size = new System.Drawing.Size(273, 73);
+            this.textFechas.Size = new System.Drawing.Size(273, 46);
             this.textFechas.TabIndex = 11;
             // 
             // label6
@@ -458,6 +464,19 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.label6.Size = new System.Drawing.Size(166, 25);
             this.label6.TabIndex = 10;
             this.label6.Text = "Horas trabajadas:";
+            // 
+            // textHoras
+            // 
+            this.textHoras.Dock = System.Windows.Forms.DockStyle.Top;
+            this.textHoras.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textHoras.Location = new System.Drawing.Point(204, 4);
+            this.textHoras.Margin = new System.Windows.Forms.Padding(4);
+            this.textHoras.Multiline = true;
+            this.textHoras.Name = "textHoras";
+            this.textHoras.ReadOnly = true;
+            this.textHoras.Size = new System.Drawing.Size(73, 26);
+            this.textHoras.TabIndex = 12;
+            this.textHoras.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // tableLayoutColumnaIzquierda
             // 
@@ -616,7 +635,7 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(272, 133);
+            this.textBox1.Size = new System.Drawing.Size(272, 46);
             this.textBox1.TabIndex = 2;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -631,25 +650,6 @@ namespace CoolSoft.UI2._0.UiOrdenesForm
             this.label2.TabIndex = 6;
             this.label2.Text = "Orden Nº";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // buttonGuardarParte
-            // 
-            this.buttonGuardarParte.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonGuardarParte.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(71)))), ((int)(((byte)(135)))));
-            this.buttonGuardarParte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonGuardarParte.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonGuardarParte.ForeColor = System.Drawing.SystemColors.Control;
-            this.buttonGuardarParte.Image = global::CoolSoft.Properties.Resources.edit;
-            this.buttonGuardarParte.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonGuardarParte.Location = new System.Drawing.Point(367, 2);
-            this.buttonGuardarParte.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.buttonGuardarParte.Name = "buttonGuardarParte";
-            this.buttonGuardarParte.Size = new System.Drawing.Size(215, 54);
-            this.buttonGuardarParte.TabIndex = 22;
-            this.buttonGuardarParte.Text = "Guardar cambios";
-            this.buttonGuardarParte.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonGuardarParte.UseVisualStyleBackColor = false;
-            this.buttonGuardarParte.Visible = false;
             // 
             // CrudParteOrden
             // 
